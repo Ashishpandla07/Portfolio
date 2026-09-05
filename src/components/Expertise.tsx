@@ -6,7 +6,7 @@ import Chip from '@mui/material/Chip';
 import '../assets/styles/Expertise.scss';
 
 const labelsFirst = [
-    "FP&A",
+    "Financial Planning & Analysis",
     "Budgeting & Forecasting",
     "Financial Modelling",
     "Variance Analysis",
