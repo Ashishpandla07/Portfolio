@@ -14,8 +14,12 @@ function Project() {
             <div className="projects-grid">
                 <div className="project">
                     <img src={costOptimization} className="zoom" alt="Cost Optimization" width="100%" />
-                    <h2>₹50 Lacs Annual Cost Savings</h2>
-                    <p>Spearheaded strategic cost-control initiatives across cost centers at Cargo Partner, identified operational leakages, and delivered ~₹50 Lacs in annual savings through structured variance analysis.</p>
+                    <h2>Cost Optimization</h2>
+                    <p>
+                        <li>Led strategic cost-control initiatives across multiple cost centers to identify and operational leakages.</li>
+                        <li>Delivered 50 lakhs in annual savings through targeted cost optimization initiatives.</li>
+                        <li>Strengthened cost efficiency and operational performance through data-driven analysis and corrective actions.</li>
+                    </p>
                 </div>
                 <div className="project">
                     <img src={financialGrowth} className="zoom" alt="Profitability Turnaround" width="100%" />
