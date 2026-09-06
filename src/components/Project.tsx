@@ -26,7 +26,7 @@ function Project() {
                 <img src={financeDashboard} className="zoom" alt="MIS Dashboards" width="100%"/>
                 <h2>Financial Modeling & MIS Dashboards</h2>
                 <p> 
-                <li>Dynamic Dashboards: Built comprehensive MIS trackers (Budget vs. Actual, Sales Rankings, KPIs Report, ROP Tracker,and Volume Analysis).</li>
+                <li>Dynamic Dashboards: Built comprehensive MIS trackers (Budget vs. Actual, Sales Rankings, KPIs Report, ROP Tracker, and Volume Analysis).</li>
                 <li>Business Insights: Delivered actionable financial models to enable real-time, data-driven decision-making for senior leadership.</li>
                 </p>
             </div>
@@ -34,10 +34,10 @@ function Project() {
                 <img src={achievementAward} className="zoom" alt="Employee of the Year" width="100%"/>
                 <h2>Awards and Recognition</h2>
                     <p>
-                        <li> Employee of the Year 2021 at Cars24</li>
-                        <li> Detail-Oriented Awardee 2022 at Cars24</li>
-                        <li> Received GEM Award at Cargo Partner in 2024 & 2025</li>
-                        <li> Outstanding/Excellent ratings in appraisal cycles of 2021, 2022, 2023, 2025 & 2026</li>
+                        <li> Employee of the Year 2021 at Cars24.</li>
+                        <li> Detail-Oriented Awardee in 2022 at Cars24.</li>
+                        <li> Received GEM Award at Cargo Partner in 2024 & 2025.</li>
+                        <li> Outstanding/Excellent ratings in appraisal cycles of 2021, 2022, 2023, 2025, and 2026.</li>
                     </p>
             </div>
             <div className="project">
@@ -48,7 +48,11 @@ function Project() {
             <div className="project">
                 <img src={businessPartnering} className="zoom" alt="Business Partnering" width="100%"/>
                 <h2>International Expansion & Business Partnering</h2>
-                <p>Supported global expansion by setting up financial processes, compliance frameworks, and capital structures across multiple markets. Collaborated with business heads to co-pilot strategic growth and cross-functional efficiency.</p>
+                <p>
+                    <li> Entity Structuring & Compliance: Managed banking setups, company structuring, and local compliance for overseas entities.</li>
+                    <li> End-to-End Process Setup: Scaled Indian operational workflows globally, establishing books of accounts, Setting up of finance function, and cross-functional business processes.</li>
+                    <li> Business Partnering: Partnered directly with business heads to drive cross-functional efficiency and business growth.</li>
+                </p>
             </div>
         </div>
     </div>
