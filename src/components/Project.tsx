@@ -30,7 +30,7 @@ function Project() {
             <div className="project">
                 <img src={achievementAward} className="zoom" alt="Employee of the Year" width="100%"/>
                 <h2>Awards and Recognition</h2>
-                <p>Awarded Employee of the Year 2021 at Cars24 for exceptional performance. Also recognized as Detail-Oriented Awardee 2022, and received GEM Award at Cargo Partner in 2024 & 2025.Consistently received Outstanding/Excellent ratings in appraisal cycles of 2021, 2022, 2023, 2025 & 2026</p>
+                <p> Employee of the Year 2021 at Cars24. Detail-Oriented Awardee 2022. Received GEM Award at Cargo Partner in 2024 & 2025. Outstanding/Excellent ratings in appraisal cycles of 2021, 2022, 2023, 2025 & 2026</p>
             </div>
             <div className="project">
                 <img src={auditCompliance} className="zoom" alt="Audit & Compliance" width="100%"/>
