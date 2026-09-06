@@ -11,31 +11,44 @@ const labelsFirst = [
     "Financial Modelling",
     "Variance Analysis",
     "P&L Management",
-    "Working Capital Mgmt",
+    "Working Capital Management",
     "Cost Optimization",
+    "KPI Dashboards",
     "Business Partnering",
+    "Fundraising",
+    "Investors Relations",
+    
 ];
 
 const labelsSecond = [
-    "Ind-AS",
-    "IFRS",
+    "Ind-AS and IFRS",
     "Financial Reporting",
+    "Financial Consolidation",
     "Statutory Audit",
+    "Internal Audit",
     "Tax Audit",
     "ICFR",
+    "Transfer Pricing",
+    "Risk Management",
+    "ESOP Management",
+    "Corporate Governance",
     "GST Compliance",
-    "Internal Controls",
     "Due Diligence",
+    
+    
 ];
 
 const labelsThird = [
-    "SAP HANA",
+    "SAP S/4HANA",
     "SAP B1",
+    "Cargowise Certified",
     "Power BI",
-    "Advanced Excel",
     "Tableau",
+    "Advanced Excel",
     "Salesforce",
-    "Tally",
+    "Tally Prime",
+    "Process Automation",
+    "Data Modeling",
 ];
 
 function Expertise() {
