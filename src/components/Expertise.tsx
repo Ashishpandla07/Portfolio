@@ -1,5 +1,4 @@
-import React from "react";
-import '@fortawesome/free-regular-svg-icons'
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChartLine, faShieldHalved, faDatabase } from '@fortawesome/free-solid-svg-icons';
 import Chip from '@mui/material/Chip';
@@ -16,7 +15,7 @@ const labelsFirst = [
     "KPI Dashboards",
     "Business Partnering",
     "Fundraising",
-    "Investor Relations",
+    "Investor Relations"
 ];
 
 const labelsSecond = [
@@ -33,11 +32,11 @@ const labelsSecond = [
     "Risk Management",
     "Corporate Governance",
     "ESOP Management",
-    "Due Diligence",
+    "Due Diligence"
 ];
 
 const labelsThird = [
-   "SAP S/4HANA",
+    "SAP S/4HANA",
     "SAP B1",
     "CargoWise Certified",
     "Power BI",
@@ -46,7 +45,7 @@ const labelsThird = [
     "Salesforce",
     "Tally Prime",
     "Process Automation",
-    "Data Modeling",
+    "Data Modeling"
 ];
 
 function Expertise() {
