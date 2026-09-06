@@ -25,8 +25,10 @@ function Project() {
             <div className="project">
                 <img src={financeDashboard} className="zoom" alt="MIS Dashboards" width="100%"/>
                 <h2>Financial Modeling & MIS Dashboards</h2>
+                <p> 
                 <li>Dynamic Dashboards: Built comprehensive MIS trackers (Budget vs. Actual, Sales Rankings, KPIs Report, ROP Tracker,and Volume Analysis).</li>
                 <li>Business Insights: Delivered actionable financial models to enable real-time, data-driven decision-making for senior leadership.</li>
+                </p>
             </div>
             <div className="project">
                 <img src={achievementAward} className="zoom" alt="Employee of the Year" width="100%"/>
