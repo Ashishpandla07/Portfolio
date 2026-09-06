@@ -11,7 +11,6 @@ const labelsFirst = [
     "Financial Modelling",
     "Variance Analysis",
     "P&L Management",
-    "Working Capital Mgt",
     "Cost Optimization",
     "KPI Dashboards",
     "Business Partnering",
