@@ -8,58 +8,58 @@ import financialGrowth from '../assets/images/financial_growth.jpg';
 import '../assets/styles/Project.scss';
 
 function Project() {
-    return(
-    <div className="projects-container" id="projects">
-        <h1>Key Achievements</h1>
-        <div className="projects-grid">
-            <div className="project">
-                <img src={costOptimization} className="zoom" alt="Cost Optimization" width="100%"/>
-                <h2>₹50 Lacs Annual Cost Savings</h2>
-                <p>Spearheaded strategic cost-control initiatives across cost centers at Cargo Partner, identified operational leakages, and delivered ~₹50 Lacs in annual savings through structured variance analysis.</p>
-            </div>
-            <div className="project">
-                <img src={financialGrowth} className="zoom" alt="Profitability Turnaround" width="100%"/>
-                <h2>20% Productivity Boost & Profitability Turnaround</h2>
-                <p>Analyzed critical margins (Gross Margin, Net Margin, EBITDA) and drove a 20% boost in operational productivity, turning ~75% of profit centers from loss to profit at Cargo Partner.</p>
-            </div>
-            <div className="project">
-                <img src={financeDashboard} className="zoom" alt="MIS Dashboards" width="100%"/>
-                <h2>Financial Modeling & MIS Dashboards</h2>
-                <p> 
-                <li>Dynamic Dashboards: Built comprehensive MIS trackers (Budget vs. Actual, Sales Rankings, KPIs Report, ROP Tracker, and Volume Analysis).</li>
-                <li>Business Insights: Delivered actionable financial models to enable real-time, data-driven decision-making for senior leadership.</li>
-                </p>
-            </div>
-            <div className="project">
-                <img src={achievementAward} className="zoom" alt="Employee of the Year" width="100%"/>
-                <h2>Awards and Recognition</h2>
+    return (
+        <div className="projects-container" id="projects">
+            <h1>Key Achievements</h1>
+            <div className="projects-grid">
+                <div className="project">
+                    <img src={costOptimization} className="zoom" alt="Cost Optimization" width="100%" />
+                    <h2>₹50 Lacs Annual Cost Savings</h2>
+                    <p>Spearheaded strategic cost-control initiatives across cost centers at Cargo Partner, identified operational leakages, and delivered ~₹50 Lacs in annual savings through structured variance analysis.</p>
+                </div>
+                <div className="project">
+                    <img src={financialGrowth} className="zoom" alt="Profitability Turnaround" width="100%" />
+                    <h2>20% Productivity Boost & Profitability Turnaround</h2>
+                    <p>Analyzed critical margins (Gross Margin, Net Margin, EBITDA) and drove a 20% boost in operational productivity, turning ~75% of profit centers from loss to profit at Cargo Partner.</p>
+                </div>
+                <div className="project">
+                    <img src={financeDashboard} className="zoom" alt="MIS Dashboards" width="100%" />
+                    <h2>Financial Modeling & MIS Dashboards</h2>
+                    <p>
+                        <li>Dynamic Dashboards: Built comprehensive MIS trackers (Budget vs. Actual, Sales Rankings, KPIs Report, ROP Tracker, and Volume Analysis).</li>
+                        <li>Business Insights: Delivered actionable financial models to enable real-time, data-driven decision-making for senior leadership.</li>
+                    </p>
+                </div>
+                <div className="project">
+                    <img src={achievementAward} className="zoom" alt="Employee of the Year" width="100%" />
+                    <h2>Awards and Recognition</h2>
                     <p>
                         <li> Employee of the Year 2021 at Cars24.</li>
                         <li> Detail-Oriented Awardee in 2022 at Cars24.</li>
                         <li> Received GEM Award at Cargo Partner in 2024 & 2025.</li>
                         <li> Outstanding/Excellent ratings in appraisal cycles of 2021, 2022, 2023, 2025, and 2026.</li>
                     </p>
-            </div>
-            <div className="project">
-                <img src={auditCompliance} className="zoom" alt="Audit & Compliance" width="100%"/>
-                <h2>Capital Transactions & Audit Management</h2>
-                <p>
-                   <li> ₹80 Cr ESOP Buyback: Managed the complete financial execution and capital structuring for the share buyback program at Cars24.</li>
-                   <li> Audit Management: Spearheaded Statutory, Internal, Tax, and ICFR audits, liaising directly with Big-4 firms (EY and Grant Thornton).</li>
-                   <li> Process Excellence & Compliance: Successfully remediated previous high-risk audit points, driving the team to secure the company's first-time clean Internal Audit and ICFR reports at Cars24.</li>
+                </div>
+                <div className="project">
+                    <img src={auditCompliance} className="zoom" alt="Audit & Compliance" width="100%" />
+                    <h2>Capital Transactions & Audit Management</h2>
+                    <p>
+                        <li> <span className="highlight-text">₹80 Cr ESOP Buyback:</span>Managed the complete financial execution and capital structuring for the share buyback program at Cars24.</li>
+                        <li> Audit Management: Spearheaded Statutory, Internal, Tax, and ICFR audits, liaising directly with Big-4 firms (EY and Grant Thornton).</li>
+                        <li> Process Excellence & Compliance: Successfully remediated previous high-risk audit points, driving the team to secure the company's first ever clean Internal Audit and ICFR reports at Cars24.</li>
                     </p>
-            </div>
-            <div className="project">
-                <img src={businessPartnering} className="zoom" alt="Business Partnering" width="100%"/>
-                <h2>International Expansion & Business Partnering</h2>
-                <p>
-                    <li> Entity Structuring & Compliance: Managed banking setups, company structuring, and local compliance for overseas entities.</li>
-                    <li> End-to-End Process Setup: Scaled Indian operational workflows globally, establishing books of accounts, Setting up of finance function, and cross-functional business processes.</li>
-                    <li> Business Partnering: Partnered directly with business heads to drive cross-functional efficiency and business growth.</li>
-                </p>
+                </div>
+                <div className="project">
+                    <img src={businessPartnering} className="zoom" alt="Business Partnering" width="100%" />
+                    <h2>International Expansion & Business Partnering</h2>
+                    <p>
+                        <li> Entity Structuring & Compliance: Managed banking setups, company structuring, and local compliance for overseas entities.</li>
+                        <li> End-to-End Process Setup: Scaled Indian operational workflows globally, establishing books of accounts, Setting up of finance function, and cross-functional business processes.</li>
+                        <li> Business Partnering: Partnered directly with business heads to drive cross-functional efficiency and business growth.</li>
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
     );
 }
 
