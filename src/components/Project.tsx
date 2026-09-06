@@ -23,8 +23,12 @@ function Project() {
                 </div>
                 <div className="project">
                     <img src={financialGrowth} className="zoom" alt="Profitability Turnaround" width="100%" />
-                    <h2>20% Productivity Boost & Profitability Turnaround</h2>
-                    <p>Analyzed critical margins (Gross Margin, Net Margin, EBITDA) and drove a 20% boost in operational productivity, turning ~75% of profit centers from loss to profit at Cargo Partner.</p>
+                    <h2>Financial Turnaround & Profitability Improvement</h2>
+                    <p>
+                        <li>Led profitability turnaround initiatives, transforming ~75% of profit centers into profitable businesses through margin optimization, cost discipline, and performance improvement.</li>
+                        <li>Delivered a 20% improvement in operational productivity by identifying performance gaps and implementing data-driven business interventions.</li>
+                        <li>Improved ROI from 1x to 2x through sales performance analysis, targeted corrective actions, and stronger financial decision-making.</li>
+                    </p>
                 </div>
                 <div className="project">
                     <img src={financeDashboard} className="zoom" alt="MIS Dashboards" width="100%" />
