@@ -17,8 +17,7 @@ const labelsFirst = [
     "Business Partnering",
     "Fundraising",
     "Investors Relations",
-    
-];
+    ];
 
 const labelsSecond = [
     "Ind-AS and IFRS",
@@ -34,8 +33,6 @@ const labelsSecond = [
     "Corporate Governance",
     "GST Compliance",
     "Due Diligence",
-    
-    
 ];
 
 const labelsThird = [
