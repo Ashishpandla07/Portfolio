@@ -32,7 +32,7 @@ function Project() {
                 <h2>Awards and Recognition</h2>
                     <p>
                         <li> Employee of the Year 2021 at Cars24</li>
-                        <li> Detail-Oriented Awardee 2022</li>
+                        <li> Detail-Oriented Awardee 2022 at Cars24</li>
                         <li> Received GEM Award at Cargo Partner in 2024 & 2025</li>
                         <li> Outstanding/Excellent ratings in appraisal cycles of 2021, 2022, 2023, 2025 & 2026</li>
                     </p>
