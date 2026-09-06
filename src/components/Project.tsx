@@ -43,7 +43,11 @@ function Project() {
             <div className="project">
                 <img src={auditCompliance} className="zoom" alt="Audit & Compliance" width="100%"/>
                 <h2>Capital Transactions & Audit Management</h2>
-                <p>Managed the entire financial execution for an ₹80 Cr ESOP share buyback at Cars24. Led statutory, Internal, Tax, and ICFR audits in coordination with Big-4 firms EY and Grant Thornton.</p>
+                <p>
+                   <li> ₹80 Cr ESOP Buyback: Managed the complete financial execution and capital structuring for the share buyback program at Cars24.</li>
+                   <li> Audit Management: Spearheaded Statutory, Internal, Tax, and ICFR audits, liaising directly with Big-4 firms (EY and Grant Thornton).</li>
+                   <li> Process Excellence & Compliance: Successfully remediated previous high-risk audit points, driving the team to secure the company's first-time clean Internal Audit and ICFR reports at Cars24.</li>
+                    </p>
             </div>
             <div className="project">
                 <img src={businessPartnering} className="zoom" alt="Business Partnering" width="100%"/>
