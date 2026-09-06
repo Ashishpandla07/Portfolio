@@ -24,8 +24,9 @@ function Project() {
             </div>
             <div className="project">
                 <img src={financeDashboard} className="zoom" alt="MIS Dashboards" width="100%"/>
-                <h2>Dynamic MIS Dashboards & Financial Models</h2>
-                <p>Developed comprehensive financial models and dynamic MIS dashboards (Budget vs. Actual, Sales Rankings, KPI Trackers) enabling real-time data-driven decision-making for senior leadership.</p>
+                <h2>Financial Modeling & MIS Dashboards</h2>
+                <p>Dynamic Dashboards: Built comprehensive MIS trackers (Budget vs. Actual, Sales Rankings, KPIs Report, ROP Tracker,and Volume Analysis).</p>
+                <p>Business Insights: Delivered actionable financial models to enable real-time, data-driven decision-making for senior leadership.</p>
             </div>
             <div className="project">
                 <img src={achievementAward} className="zoom" alt="Employee of the Year" width="100%"/>
@@ -39,8 +40,8 @@ function Project() {
             </div>
             <div className="project">
                 <img src={auditCompliance} className="zoom" alt="Audit & Compliance" width="100%"/>
-                <h2>₹80 Cr ESOP Buyback & Audit Leadership</h2>
-                <p>Managed the entire financial execution for an ₹80 Cr ESOP share buyback at Cars24. Led statutory, tax, and ICFR audits in coordination with Big-4 firms EY and Grant Thornton.</p>
+                <h2>Capital Transactions & Audit Management</h2>
+                <p>Managed the entire financial execution for an ₹80 Cr ESOP share buyback at Cars24. Led statutory, Internal, Tax, and ICFR audits in coordination with Big-4 firms EY and Grant Thornton.</p>
             </div>
             <div className="project">
                 <img src={businessPartnering} className="zoom" alt="Business Partnering" width="100%"/>
