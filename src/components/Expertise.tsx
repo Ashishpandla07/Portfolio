@@ -6,7 +6,7 @@ import Chip from '@mui/material/Chip';
 import '../assets/styles/Expertise.scss';
 
 const labelsFirst = [
-    "Financial Planning & Analysis",
+    "Financial Planning & Analysis,
     "Budgeting & Forecasting",
     "Financial Modelling",
     "Variance Analysis",
@@ -16,7 +16,7 @@ const labelsFirst = [
     "KPI Dashboards",
     "Business Partnering",
     "Fundraising",
-    "Investor Relations"
+    "Investor Relations",
 ];
 
 const labelsSecond = [
@@ -33,7 +33,7 @@ const labelsSecond = [
     "Risk Management",
     "Corporate Governance",
     "ESOP Management",
-    "Due Diligence"
+    "Due Diligence",
 ];
 
 const labelsThird = [
@@ -46,7 +46,7 @@ const labelsThird = [
     "Salesforce",
     "Tally Prime",
     "Process Automation",
-    "Data Modeling"
+    "Data Modeling",
 ];
 
 function Expertise() {
