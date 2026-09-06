@@ -16,8 +16,8 @@ function Main() {
             <a href="https://linkedin.com/in/ipandla" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
             <a href="mailto:ashishpandla07@gmail.com" target="_blank" rel="noreferrer"><EmailIcon/></a>
           </div>
-          <h1>Ashish Pandla</h1>
-          <p>Senior Finance Leader | CA | FP&A & Financial Controlling</p>
+          <h1>CA Ashish Pandla</h1>
+          <p>Senior Finance Leader | FP&A, Controllership & Strategic Finance | 8 years of experience | Driving Profitability & Business Growth</p>
 
           <div className="mobile_social_icons">
             <a href="https://linkedin.com/in/ipandla" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
