@@ -10,7 +10,7 @@ function Footer() {
         <a href="https://linkedin.com/in/ipandla" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
         <a href="mailto:ashishpandla07@gmail.com" target="_blank" rel="noreferrer"><EmailIcon/></a>
       </div>
-      <p>© 2026 Ashish Pandla · CA, M.Com · Gurugram, Haryana</p>
+      <p>© 2026 Ashish Pandla · Chartered Accountant · Gurugram, Haryana</p>
     </footer>
   );
 }
