@@ -102,25 +102,88 @@
     }
   }
 
+  /* Timeline Flow Indicators (Present -> Past) */
+  .timeline-flow-indicator {
+    max-width: 950px;
+    margin: 0 auto 20px auto;
+    display: flex;
+    align-items: center;
+
+    &.bottom-indicator {
+      margin-top: 25px;
+      margin-bottom: 0;
+      justify-content: flex-start;
+      padding-left: 20px;
+    }
+
+    .flow-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+
+      &.top-badge {
+        background: rgba(80, 0, 202, 0.15);
+        color: #00d2ff;
+        border: 1px solid rgba(0, 210, 255, 0.35);
+      }
+
+      &.bottom-badge {
+        background: rgba(255, 255, 255, 0.05);
+        color: #9ca3af;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .pulse-beacon {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #10b981;
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+        animation: pulse 2s infinite;
+      }
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    }
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+    }
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+    }
+  }
+
   /* ========================================================
-     VIEW 1: STEPPED PROMOTION GRAPH (LINKEDIN TRAJECTORY)
+     VIEW 1: STEPPED PROMOTION GRAPH (REVERSE FLOW: PRESENT -> PAST)
      ======================================================== */
   .stepped-promotion-chart {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 22px;
     max-width: 950px;
     margin: 0 auto;
     position: relative;
 
-    &::before {
+    &.reverse-flow::before {
       content: '';
       position: absolute;
-      left: 32px;
-      top: 30px;
-      bottom: 30px;
+      left: 36px;
+      top: 25px;
+      bottom: 25px;
       width: 3px;
-      background: linear-gradient(180deg, #5000ca 0%, #00d2ff 60%, rgba(255, 255, 255, 0.15) 100%);
+      background: linear-gradient(180deg, #00d2ff 0%, #5000ca 45%, #64748b 90%, rgba(255, 255, 255, 0.15) 100%);
       z-index: 0;
       border-radius: 3px;
     }
@@ -129,24 +192,39 @@
       position: relative;
       z-index: 1;
       display: flex;
-      gap: 20px;
+      gap: 22px;
       background: #ffffff;
       color: #272822;
       border-radius: 14px;
-      padding: 22px 24px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      padding: 24px 26px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
       border-left: 5px solid #5000ca;
 
       &:hover {
-        transform: translateX(4px);
-        box-shadow: 0 10px 28px rgba(80, 0, 202, 0.18);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 28px rgba(80, 0, 202, 0.14);
       }
 
+      /* Prominent Latest/Current Role Card */
       &.current-step {
-        border-left: 5px solid #00d2ff;
-        background: linear-gradient(135deg, #ffffff 0%, #f4f9ff 100%);
-        box-shadow: 0 8px 30px rgba(0, 210, 255, 0.18);
+        border-left: 6px solid #5000ca;
+        background: linear-gradient(135deg, #ffffff 0%, #f7f5ff 100%);
+        box-shadow: 0 8px 30px rgba(80, 0, 202, 0.16);
+
+        &:hover {
+          box-shadow: 0 12px 36px rgba(80, 0, 202, 0.22);
+        }
+
+        .step-elevation-badge {
+          background: rgba(80, 0, 202, 0.12);
+          border-color: rgba(80, 0, 202, 0.35);
+
+          .level-indicator {
+            color: #5000ca;
+            font-size: 0.90rem;
+          }
+        }
       }
 
       .step-elevation-badge {
@@ -155,11 +233,11 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        min-width: 85px;
-        padding: 8px 12px;
-        background: rgba(80, 0, 202, 0.08);
+        min-width: 88px;
+        padding: 10px 12px;
+        background: rgba(80, 0, 202, 0.06);
         border-radius: 10px;
-        border: 1px solid rgba(80, 0, 202, 0.2);
+        border: 1px solid rgba(80, 0, 202, 0.18);
 
         .level-indicator {
           font-size: 0.85rem;
@@ -183,6 +261,19 @@
             margin-right: 3px;
           }
         }
+
+        .active-role-tag {
+          font-size: 0.65rem;
+          font-weight: 800;
+          color: #10b981;
+          background: rgba(16, 185, 129, 0.12);
+          border: 1px solid rgba(16, 185, 129, 0.3);
+          padding: 1px 6px;
+          border-radius: 10px;
+          margin-top: 6px;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
       }
 
       .step-body {
@@ -204,11 +295,11 @@
             border-radius: 6px;
             border: 1px solid #e5e7eb;
             box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
-            height: 34px;
-            min-width: 65px;
+            height: 36px;
+            min-width: 70px;
 
             .company-brand-logo {
-              max-height: 24px;
+              max-height: 26px;
               max-width: 100px;
               width: auto;
               height: auto;
@@ -241,10 +332,28 @@
               }
             }
           }
+
+          .current-prominence-tag {
+            margin-left: auto;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.74rem;
+            font-weight: 700;
+            color: #065f46;
+            background: #d1fae5;
+            border: 1px solid #a7f3d0;
+            padding: 3px 10px;
+            border-radius: 14px;
+
+            svg {
+              color: #10b981;
+            }
+          }
         }
 
         .role-heading {
-          font-size: 1.22rem;
+          font-size: 1.25rem;
           font-weight: 800;
           color: #111827;
           margin: 4px 0 2px 0;
@@ -264,7 +373,7 @@
           font-size: 0.82rem;
           font-weight: 600;
           color: #5000ca;
-          margin-bottom: 10px;
+          margin-bottom: 12px;
         }
 
         .promotion-milestone-pill {
@@ -292,7 +401,7 @@
           gap: 6px;
 
           .skill-chip {
-            font-size: 0.76rem;
+            font-size: 0.75rem;
             font-weight: 600;
             padding: 3px 10px;
             background: #f3f4f6;
@@ -306,7 +415,7 @@
   }
 
   /* ========================================================
-     VIEW 2: COMPANY WORKED WITH YEAR-ON-YEAR CHART
+     VIEW 2: COMPANY WORKED WITH YEAR-ON-YEAR CHART (PRESENT -> PAST)
      ======================================================== */
   .yoy-company-section {
     max-width: 950px;
@@ -342,19 +451,24 @@
           color: #9ca3af;
           font-family: 'Courier Prime', monospace;
           font-weight: 600;
+
+          .highlight-present {
+            color: #00d2ff;
+            font-weight: 800;
+          }
         }
       }
 
       .yoy-cards-list {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 22px;
 
         .yoy-company-card {
           background: #ffffff;
           color: #272822;
           border-radius: 12px;
-          padding: 22px 24px;
+          padding: 24px 26px;
           border-left: 6px solid #5000ca;
           box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
           transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -362,6 +476,12 @@
           &:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+          }
+
+          &.current-company-card {
+            border-left: 6px solid #5000ca;
+            background: linear-gradient(135deg, #ffffff 0%, #f7f5ff 100%);
+            box-shadow: 0 6px 24px rgba(80, 0, 202, 0.12);
           }
 
           .card-top-row {
@@ -386,8 +506,8 @@
                 border-radius: 6px;
                 border: 1px solid #e5e7eb;
                 box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
-                height: 38px;
-                min-width: 72px;
+                height: 40px;
+                min-width: 74px;
 
                 .company-brand-logo {
                   max-height: 28px;
@@ -399,17 +519,37 @@
                 }
               }
 
-              .company-main-name {
-                font-size: 1.25rem;
-                font-weight: 800;
-                color: #111827;
-                margin: 0 0 2px 0;
+              .company-title-wrap {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                flex-wrap: wrap;
+
+                .company-main-name {
+                  font-size: 1.25rem;
+                  font-weight: 800;
+                  color: #111827;
+                  margin: 0;
+                }
+
+                .current-org-tag {
+                  font-size: 0.70rem;
+                  font-weight: 700;
+                  text-transform: uppercase;
+                  letter-spacing: 0.5px;
+                  color: #065f46;
+                  background: #d1fae5;
+                  border: 1px solid #a7f3d0;
+                  padding: 2px 8px;
+                  border-radius: 12px;
+                }
               }
 
               .company-meta-line {
                 font-size: 0.82rem;
                 color: #6b7280;
                 font-weight: 500;
+                margin-top: 3px;
               }
             }
 
@@ -643,19 +783,32 @@
       }
     }
 
-    .stepped-promotion-chart::before {
+    .timeline-flow-indicator {
+      justify-content: center;
+      &.bottom-indicator {
+        padding-left: 0;
+        justify-content: center;
+      }
+    }
+
+    .stepped-promotion-chart.reverse-flow::before {
       display: none;
     }
 
     .stepped-promotion-chart .promotion-step-card {
       flex-direction: column;
-      padding: 16px;
-      gap: 12px;
+      padding: 18px 16px;
+      gap: 14px;
 
       .step-elevation-badge {
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
+      }
+
+      .step-body .company-logo-header .current-prominence-tag {
+        margin-left: 0;
+        margin-top: 4px;
       }
     }
 

@@ -8,7 +8,8 @@ import {
   faArrowTrendUp, 
   faCalendarAlt, 
   faCheckCircle,
-  faLocationDot
+  faLocationDot,
+  faCircleCheck
 } from '@fortawesome/free-solid-svg-icons';
 import cars24Logo from '../assets/images/cars24_logo.png';
 import cargoPartnerLogo from '../assets/images/cargo_partner_logo.jpg';
@@ -51,78 +52,22 @@ interface CompanyYoY {
   skillsSummary: string[];
 }
 
+// Ordered in REVERSE CHRONOLOGICAL ORDER: Present (Latest) at Top → Past at Bottom
 const promotionData: PromotionNode[] = [
   {
-    period: "Jan 2019 – Dec 2019",
-    duration: "1 yr",
-    role: "Audit Executive",
-    company: "N K Jain & Co.",
-    companyShort: "N K Jain & Co.",
+    period: "Apr 2026 – Present",
+    duration: "6 mos",
+    role: "Senior Manager Controlling",
+    company: "cargo-partner",
+    companyShort: "cargo-partner",
     location: "Gurugram, Haryana, India",
-    logo: icaiLogo,
-    type: "foundation",
-    badge: "Statutory Assurance & Risk Advisory",
-    subheading: "Rigorous forensic verification & corporate compliance baseline",
-    level: 1,
-    skills: ["Audit & Assurance", "ICFR Frameworks", "GST Compliance", "Direct Tax Advisory"]
-  },
-  {
-    period: "Dec 2019 – Mar 2021",
-    duration: "1 yr 4 mos",
-    role: "Team Lead",
-    company: "CARS24",
-    companyShort: "CARS24",
-    location: "Gurugram, Haryana, India",
-    workMode: "On-site",
-    logo: cars24Logo,
-    type: "foundation",
-    badge: "Scalable Finance Process Architecture",
-    subheading: "Building enterprise transaction rails for rapid scale",
-    level: 2,
-    skills: ["Company Law", "P2P & O2C Workflows", "Financial Reconciliations", "Internal Controls"]
-  },
-  {
-    period: "Apr 2021 – Mar 2022",
-    duration: "1 yr",
-    role: "Assistant Manager",
-    company: "CARS24",
-    companyShort: "CARS24",
-    location: "Gurugram, Haryana, India",
-    logo: cars24Logo,
-    type: "award",
-    badge: "Employee of the Year · FinOps",
-    subheading: "Continuous closing workflows & automated reconciliations",
-    level: 3,
-    skills: ["Account Reconciliation", "Teamwork", "Ind AS Reporting", "Financial Statements"]
-  },
-  {
-    period: "Apr 2022 – Mar 2023",
-    duration: "1 yr",
-    role: "Manager",
-    company: "CARS24",
-    companyShort: "CARS24",
-    location: "Gurugram, Haryana, India",
-    logo: cars24Logo,
-    type: "award",
-    badge: "Big-4 Audit & Ind AS Lead",
-    subheading: "Zero-defect statutory audit defense & technical accounting",
-    level: 4,
-    skills: ["Management", "Leadership", "Statutory & ICFR Audits (EY/GT)", "Ind AS 115 & 116"]
-  },
-  {
-    period: "Apr 2023 – Aug 2023",
-    duration: "5 mos",
-    role: "Senior Manager",
-    company: "CARS24",
-    companyShort: "CARS24",
-    location: "Gurugram, Haryana, India",
-    workMode: "On-site",
-    logo: cars24Logo,
+    workMode: "Hybrid",
+    logo: cargoPartnerLogo,
     type: "promotion",
-    badge: "Controllership & Capital Markets Lead",
-    subheading: "₹80 Cr ESOP buyback governance & international expansion",
-    level: 5,
-    skills: ["Business Ethics", "Team Management", "₹80 Cr ESOP Buyback", "Global Expansion"]
+    badge: "India Lead · Strategic Controllership",
+    subheading: "Executive FP&A, commercial governance & leadership",
+    level: 6,
+    skills: ["Strategic FP&A", "India Controlling Lead", "Profitability Turnaround", "Executive Leadership"]
   },
   {
     period: "Aug 2023 – Mar 2026",
@@ -140,19 +85,76 @@ const promotionData: PromotionNode[] = [
     skills: ["Budget Forecasting", "Business Partner Relations", "FP&A", "SAP & Power BI"]
   },
   {
-    period: "Apr 2026 – Present",
-    duration: "6 mos",
-    role: "Senior Manager Controlling",
-    company: "cargo-partner",
-    companyShort: "cargo-partner",
+    period: "Apr 2023 – Aug 2023",
+    duration: "5 mos",
+    role: "Senior Manager",
+    company: "CARS24",
+    companyShort: "CARS24",
     location: "Gurugram, Haryana, India",
-    workMode: "Hybrid",
-    logo: cargoPartnerLogo,
+    workMode: "On-site",
+    logo: cars24Logo,
     type: "promotion",
-    badge: "India Lead · Strategic Controllership",
-    subheading: "Executive FP&A, commercial governance & leadership",
-    level: 6,
-    skills: ["Strategic FP&A", "India Controlling Lead", "Profitability Turnaround", "Executive Leadership"]
+    badge: "Controllership & Capital Markets Lead",
+    subheading: "₹80 Cr ESOP buyback governance & international expansion",
+    level: 5,
+    skills: ["Business Ethics", "Team Management", "₹80 Cr ESOP Buyback", "Global Expansion"]
+  },
+  {
+    period: "Apr 2022 – Mar 2023",
+    duration: "1 yr",
+    role: "Manager",
+    company: "CARS24",
+    companyShort: "CARS24",
+    location: "Gurugram, Haryana, India",
+    logo: cars24Logo,
+    type: "award",
+    badge: "Big-4 Audit & Ind AS Lead",
+    subheading: "Zero-defect statutory audit defense & technical accounting",
+    level: 4,
+    skills: ["Management", "Leadership", "Statutory & ICFR Audits (EY/GT)", "Ind AS 115 & 116"]
+  },
+  {
+    period: "Apr 2021 – Mar 2022",
+    duration: "1 yr",
+    role: "Assistant Manager",
+    company: "CARS24",
+    companyShort: "CARS24",
+    location: "Gurugram, Haryana, India",
+    logo: cars24Logo,
+    type: "award",
+    badge: "Employee of the Year · FinOps",
+    subheading: "Continuous closing workflows & automated reconciliations",
+    level: 3,
+    skills: ["Account Reconciliation", "Teamwork", "Ind AS Reporting", "Financial Statements"]
+  },
+  {
+    period: "Dec 2019 – Mar 2021",
+    duration: "1 yr 4 mos",
+    role: "Team Lead",
+    company: "CARS24",
+    companyShort: "CARS24",
+    location: "Gurugram, Haryana, India",
+    workMode: "On-site",
+    logo: cars24Logo,
+    type: "foundation",
+    badge: "Scalable Finance Process Architecture",
+    subheading: "Building enterprise transaction rails for rapid scale",
+    level: 2,
+    skills: ["Company Law", "P2P & O2C Workflows", "Financial Reconciliations", "Internal Controls"]
+  },
+  {
+    period: "Jan 2019 – Dec 2019",
+    duration: "1 yr",
+    role: "Audit Executive",
+    company: "N K Jain & Co.",
+    companyShort: "N K Jain & Co.",
+    location: "Gurugram, Haryana, India",
+    logo: icaiLogo,
+    type: "foundation",
+    badge: "Statutory Assurance & Risk Advisory",
+    subheading: "Rigorous forensic verification & corporate compliance baseline",
+    level: 1,
+    skills: ["Audit & Assurance", "ICFR Frameworks", "GST Compliance", "Direct Tax Advisory"]
   }
 ];
 
@@ -254,7 +256,7 @@ function Timeline() {
         <div className="history-header">
           <h1>Experience</h1>
           <p className="timeline-subtitle">
-            Year-on-Year Corporate Trajectory & Promotion Graph (from LinkedIn)
+            Executive Career Progression · Present → Past Reverse Chronological Flow
           </p>
 
           {/* Tab Selector */}
@@ -274,7 +276,7 @@ function Timeline() {
           </div>
         </div>
 
-        {/* VIEW 1: PROMOTION GRAPH FROM LINKEDIN */}
+        {/* VIEW 1: PROMOTION GRAPH FROM LINKEDIN (PRESENT → PAST) */}
         {activeTab === 'graph' && (
           <div className="promotion-graph-section">
             <div className="graph-intro-bar">
@@ -284,11 +286,11 @@ function Timeline() {
               </div>
               <div className="metric-box">
                 <span className="metric-val">5 Promotions</span>
-                <span className="metric-lbl">Career Ladder</span>
+                <span className="metric-lbl">Career Trajectory</span>
               </div>
               <div className="metric-box">
                 <span className="metric-val">6 Levels</span>
-                <span className="metric-lbl">Elevation Steps</span>
+                <span className="metric-lbl">Executive Hierarchy</span>
               </div>
               <div className="metric-box">
                 <span className="metric-val">5+ Honors</span>
@@ -296,15 +298,26 @@ function Timeline() {
               </div>
             </div>
 
-            {/* Stepped Elevation Promotion Chart */}
-            <div className="stepped-promotion-chart">
+            {/* Timeline Direction Indicator */}
+            <div className="timeline-flow-indicator">
+              <span className="flow-badge top-badge">
+                <span className="pulse-beacon" /> PRESENT · LATEST ROLE
+              </span>
+            </div>
+
+            {/* Stepped Elevation Promotion Chart (Reverse Chronological: Top = Present, Bottom = Past) */}
+            <div className="stepped-promotion-chart reverse-flow">
               {promotionData.map((node, index) => {
-                const isCurrent = index === promotionData.length - 1;
+                const isCurrent = index === 0;
                 return (
-                  <div key={index} className={`promotion-step-card level-${node.level} ${isCurrent ? 'current-step' : ''}`}>
+                  <div 
+                    key={index} 
+                    className={`promotion-step-card level-${node.level} ${isCurrent ? 'current-step' : ''}`}
+                  >
                     <div className="step-elevation-badge">
                       <span className="level-indicator">Level {node.level}</span>
                       <span className="step-year"><FontAwesomeIcon icon={faCalendarAlt} /> {node.duration}</span>
+                      {isCurrent && <span className="active-role-tag">Active</span>}
                     </div>
 
                     <div className="step-body">
@@ -318,6 +331,11 @@ function Timeline() {
                             <FontAwesomeIcon icon={faLocationDot} /> {node.location} {node.workMode ? `· ${node.workMode}` : ''}
                           </span>
                         </div>
+                        {isCurrent && (
+                          <div className="current-prominence-tag">
+                            <FontAwesomeIcon icon={faCircleCheck} /> Current Position
+                          </div>
+                        )}
                       </div>
 
                       <h3 className="role-heading">{node.role}</h3>
@@ -341,84 +359,103 @@ function Timeline() {
                 );
               })}
             </div>
+
+            <div className="timeline-flow-indicator bottom-indicator">
+              <span className="flow-badge bottom-badge">
+                CAREER FOUNDATION · 2019
+              </span>
+            </div>
           </div>
         )}
 
-        {/* VIEW 2: YEAR-ON-YEAR COMPANY WORKED WITH CHART */}
+        {/* VIEW 2: YEAR-ON-YEAR COMPANY WORKED WITH CHART (PRESENT → PAST) */}
         {activeTab === 'yoy' && (
           <div className="yoy-company-section">
             <div className="yoy-chart-container">
               <div className="yoy-scale-header">
-                <div className="scale-title">Company Experience & Promotion Ladder</div>
+                <div className="scale-title">Company Tenures & Promotion Ladders (Present → Past)</div>
                 <div className="scale-years">
-                  <span>2019</span>
-                  <span>2020</span>
-                  <span>2021</span>
-                  <span>2022</span>
-                  <span>2023</span>
-                  <span>2024</span>
+                  <span className="highlight-present">Present</span>
+                  <span>2026</span>
                   <span>2025</span>
-                  <span>2026+</span>
+                  <span>2024</span>
+                  <span>2023</span>
+                  <span>2022</span>
+                  <span>2021</span>
+                  <span>2020</span>
+                  <span>2019</span>
                 </div>
               </div>
 
               {/* Company YoY Cards */}
               <div className="yoy-cards-list">
-                {companyYoYData.map((item, index) => (
-                  <div key={index} className="yoy-company-card" style={{ borderLeftColor: item.color }}>
-                    <div className="card-top-row">
-                      <div className="company-info-group">
-                        <div className="company-logo-wrapper">
-                          <img src={item.logo} alt={item.shortName} className="company-brand-logo" />
-                        </div>
-                        <div>
-                          <h3 className="company-main-name">{item.company}</h3>
-                          <div className="company-meta-line">
-                            {item.employmentType} · {item.duration} · {item.location} {item.workMode ? `· ${item.workMode}` : ''}
+                {companyYoYData.map((item, index) => {
+                  const isCurrentCompany = index === 0;
+                  return (
+                    <div 
+                      key={index} 
+                      className={`yoy-company-card ${isCurrentCompany ? 'current-company-card' : ''}`}
+                      style={{ borderLeftColor: item.color }}
+                    >
+                      <div className="card-top-row">
+                        <div className="company-info-group">
+                          <div className="company-logo-wrapper">
+                            <img src={item.logo} alt={item.shortName} className="company-brand-logo" />
                           </div>
-                        </div>
-                      </div>
-
-                      <div className="tenure-badge-box">
-                        <span className="tenure-duration" style={{ background: item.color }}>
-                          {item.duration}
-                        </span>
-                        <span className="tenure-period">{item.period}</span>
-                      </div>
-                    </div>
-
-                    {/* Progression Ladder Inside Company */}
-                    <div className="company-roles-ladder">
-                      <div className="ladder-label">Promotion Progression:</div>
-                      {item.rolesLadder.map((r, rIdx) => (
-                        <div key={rIdx} className="ladder-step">
-                          <div className="ladder-bullet" style={{ background: item.color }} />
-                          <div className="ladder-content">
-                            <div className="ladder-title-row">
-                              <span className="ladder-title">{r.title}</span>
-                              <span className="ladder-date">{r.period} · {r.duration}</span>
+                          <div>
+                            <div className="company-title-wrap">
+                              <h3 className="company-main-name">{item.company}</h3>
+                              {isCurrentCompany && (
+                                <span className="current-org-tag">Current Employer</span>
+                              )}
                             </div>
-                            {r.badge && (
-                              <div className="ladder-badge">
-                                <FontAwesomeIcon icon={faAward} /> {r.badge}
-                              </div>
-                            )}
+                            <div className="company-meta-line">
+                              {item.employmentType} · {item.duration} · {item.location} {item.workMode ? `· ${item.workMode}` : ''}
+                            </div>
                           </div>
                         </div>
-                      ))}
-                    </div>
 
-                    {/* Key Skills from LinkedIn */}
-                    <div className="company-skills-footer">
-                      <span className="skills-lbl">Associated Skills:</span>
-                      <div className="skill-chips-row">
-                        {item.skillsSummary.map((skill, sIdx) => (
-                          <span key={sIdx} className="skill-chip">{skill}</span>
+                        <div className="tenure-badge-box">
+                          <span className="tenure-duration" style={{ background: item.color }}>
+                            {item.duration}
+                          </span>
+                          <span className="tenure-period">{item.period}</span>
+                        </div>
+                      </div>
+
+                      {/* Progression Ladder Inside Company */}
+                      <div className="company-roles-ladder">
+                        <div className="ladder-label">Promotion Progression (Latest First):</div>
+                        {item.rolesLadder.map((r, rIdx) => (
+                          <div key={rIdx} className="ladder-step">
+                            <div className="ladder-bullet" style={{ background: item.color }} />
+                            <div className="ladder-content">
+                              <div className="ladder-title-row">
+                                <span className="ladder-title">{r.title}</span>
+                                <span className="ladder-date">{r.period} · {r.duration}</span>
+                              </div>
+                              {r.badge && (
+                                <div className="ladder-badge">
+                                  <FontAwesomeIcon icon={faAward} /> {r.badge}
+                                </div>
+                              )}
+                            </div>
+                          </div>
                         ))}
                       </div>
+
+                      {/* Key Skills from LinkedIn */}
+                      <div className="company-skills-footer">
+                        <span className="skills-lbl">Associated Skills:</span>
+                        <div className="skill-chips-row">
+                          {item.skillsSummary.map((skill, sIdx) => (
+                            <span key={sIdx} className="skill-chip">{skill}</span>
+                          ))}
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </div>
