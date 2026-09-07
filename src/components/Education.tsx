@@ -39,7 +39,7 @@ function Education() {
               <span className="credential-badge">Professional Qualification</span>
               <span className="year-pill">
                 <CalendarTodayIcon />
-                <span>ICAI Member</span>
+                <span>2018</span>
               </span>
             </div>
 
@@ -56,6 +56,9 @@ function Education() {
             <div className="card-body">
               <div className="highlights-heading">Key Highlights & Honors</div>
               <ul className="highlights-list">
+                <li>
+                  <strong>Academic Honors & Exemptions:</strong> Secured prestigious merit exemptions in Strategic Financial Management (SFM), Advanced Management Accounting (AMA), and ISCA.
+                </li>
                 <li>
                   <strong>Rigorous Statutory Compliance:</strong> Comprehensive mastery of corporate governance standards, statutory audits, and ICFR controls for multinational corporations.
                 </li>
@@ -86,7 +89,7 @@ function Education() {
               <span className="credential-badge">Academic Qualifications</span>
               <span className="year-pill">
                 <CalendarTodayIcon />
-                <span>Master's & Bachelor's</span>
+                <span>2014 – 2016</span>
               </span>
             </div>
 
@@ -105,11 +108,11 @@ function Education() {
               <div className="degree-sub-entry">
                 <div className="sub-entry-header">
                   <h3>Master of Commerce (M.Com)</h3>
-                  <span className="sub-year">Post-Graduation</span>
+                  <span className="sub-year">2016</span>
                 </div>
                 <p className="sub-institution">University of Rajasthan</p>
                 <p className="sub-description">
-                  <strong>Specialization:</strong> Advanced Financial Management, Strategic Cost Accounting, and Quantitative Business Analysis with high academic distinction.
+                  <strong>Specialization:</strong> Advanced Financial Management, Strategic Cost Accounting, and Quantitative Business Analysis.
                 </p>
               </div>
 
@@ -117,7 +120,7 @@ function Education() {
               <div className="degree-sub-entry">
                 <div className="sub-entry-header">
                   <h3>Bachelor of Commerce (B.Com)</h3>
-                  <span className="sub-year">Graduation</span>
+                  <span className="sub-year">2014</span>
                 </div>
                 <p className="sub-institution">University of Rajasthan</p>
                 <p className="sub-description">
