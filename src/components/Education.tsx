@@ -43,9 +43,7 @@ function Education() {
                 <strong>Articleship Experience:</strong> 3 years of hands-on exposure managing client engagements, statutory audits, and regulatory filings.
               </li>
               <li>
-                <strong>Financial Reporting:</strong> Proven mastery in preparing Ind AS/IFRS financial statements and designing ICFR control matrices.
-              </li>
-              <li>
+                              <li>
                 <strong>Taxation & Advisory:</strong> Strategic capability in corporate tax planning, GST compliance, and transfer pricing documentation.
               </li>
               <li>
