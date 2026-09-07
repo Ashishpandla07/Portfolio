@@ -43,7 +43,6 @@ function Education() {
                 <strong>Articleship Experience:</strong> 3 years of hands-on exposure managing client engagements, statutory audits, and regulatory filings.
               </li>
               <li>
-                              <li>
                 <strong>Taxation & Advisory:</strong> Strategic capability in corporate tax planning, GST compliance, and transfer pricing documentation.
               </li>
               <li>
