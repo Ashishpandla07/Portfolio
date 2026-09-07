@@ -5,9 +5,23 @@ import icaiLogo from '../assets/images/icai_logo.png';
 import rajasthanLogo from '../assets/images/rajasthan_university_logo.png';
 import '../assets/styles/Education.scss';
 
+const caSkills = [
+  "Statutory Compliance",
+  "Financial Governance",
+  "Taxation Framework",
+  "Ind-AS / IFRS",
+  "ICFR & Internal Controls",
+  "Auditing & Assurance"
+];
 
-
-
+const academicSkills = [
+  "Corporate Financial Management",
+  "Advanced Financial Accounting",
+  "Cost & Management Accounting",
+  "Corporate & Mercantile Law",
+  "Auditing Principles",
+  "Business Economics"
+];
 
 function Education() {
   return (
@@ -43,15 +57,23 @@ function Education() {
               <div className="highlights-heading">Key Highlights & Honors</div>
               <ul className="highlights-list">
                 <li>
-                  <strong>Articleship Experience: 3 years of hands-on exposure managing client engagements, statutory audits, and regulatory filings. 
-                  <li> <strong>Financial Reporting:</strong> Proven mastery in preparing Ind AS/IFRS financial statements and designing ICFR control matrices.
-
-                  <li> <strong>Taxation & Advisory:</strong> Strategic capability in corporate tax planning, GST compliance, and transfer pricing documentation.
-
-                  <li> <strong>Technology & Analytics:</strong> Hands-on command of digital auditing tools (CAATs), ERP systems, and Excel modeling gained via Advanced ITT.
-
-                  <li>Management & Leadership: Polished executive communication, negotiation, and decision-making skills honed through ICAI's GMCS courses.Academic Honors & Exemptions:</strong> Secured prestigious merit exemptions in Strategic Financial Management (SFM), Advanced Management Accounting (AMA), and ISCA.
-                
+                  <strong>Exemptions:</strong> Secured exemptions in Strategic Financial Management (SFM), Advanced Management Accounting (AMA), and ISCA.
+                </li>
+                <li>
+                  <strong>Articleship Experience:</strong> 3 years of hands-on exposure managing client engagements, statutory audits, and regulatory filings.
+                </li>
+                <li>
+                  <strong>Financial Reporting:</strong> Proven mastery in preparing Ind AS/IFRS financial statements and designing ICFR control matrices.
+                </li>
+                <li>
+                  <strong>Taxation & Advisory:</strong> Strategic capability in corporate tax planning, GST compliance, and transfer pricing documentation.
+                </li>
+                <li>
+                  <strong>Technology & Analytics:</strong> Hands-on command of digital auditing tools (CAATs), ERP systems, and Excel modeling gained via Advanced ITT.
+                </li>
+                <li>
+                  <strong>Management & Leadership:</strong> Polished executive communication, negotiation, and decision-making skills honed through ICAI's GMCS courses.
+                </li>
               </ul>
             </div>
           </div>
@@ -88,8 +110,6 @@ function Education() {
             </div>
 
             <div className="card-body">
-            
-
               {/* Bachelor's Degree Sub-entry */}
               <div className="degree-sub-entry">
                 <div className="sub-entry-header">
@@ -101,7 +121,8 @@ function Education() {
                   <strong>Specialization:</strong> Corporate & Mercantile Law, Auditing Principles, Financial Accounting, and Macroeconomic Governance.
                 </p>
               </div>
-               {/* Master's Degree Sub-entry */}
+
+              {/* Master's Degree Sub-entry */}
               <div className="degree-sub-entry">
                 <div className="sub-entry-header">
                   <h3>Master of Commerce (M.Com)</h3>
