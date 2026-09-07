@@ -13,7 +13,7 @@ function Project() {
             <h1>Key Achievements</h1>
             <div className="projects-grid">
                 <div className="project">
-                    <img src={costOptimization} className="zoom" alt="Cost Optimization" width="80%" />
+                    <img src={costOptimization} className="zoom" alt="Cost Optimization" width="100%" />
                     <h2>Cost Optimization</h2>
                     <p>
                         <li>Led strategic cost-control initiatives across multiple cost centers to identify and operational leakages.</li>
@@ -22,7 +22,7 @@ function Project() {
                     </p>
                 </div>
                 <div className="project">
-                    <img src={financialGrowth} className="zoom" alt="Profitability Turnaround" width="80%" />
+                    <img src={financialGrowth} className="zoom" alt="Profitability Turnaround" width="100%" />
                     <h2>Financial Turnaround & Profitability Improvement</h2>
                     <p>
                         <li>Led profitability turnaround initiatives, making ~75% of profit centers profitable through margin improvement and cost optimization.</li>
@@ -31,7 +31,7 @@ function Project() {
                     </p>
                 </div>
                 <div className="project">
-                    <img src={financeDashboard} className="zoom" alt="MIS Dashboards" width="80%" />
+                    <img src={financeDashboard} className="zoom" alt="MIS Dashboards" width="100%" />
                     <h2>Financial Modeling & MIS Dashboards</h2>
                     <p>
                         <li><strong>Dynamic Dashboards:</strong> Built comprehensive MIS trackers (Budget vs. Actual, Sales Rankings, KPIs Report, ROP Tracker, and Volume Analysis).</li>
@@ -39,7 +39,7 @@ function Project() {
                     </p>
                 </div>
                 <div className="project">
-                    <img src={achievementAward} className="zoom" alt="Employee of the Year" width="80%" />
+                    <img src={achievementAward} className="zoom" alt="Employee of the Year" width="100%" />
                     <h2>Awards and Recognition</h2>
                     <p>
                         <li> Employee of the Year 2021 at Cars24.</li>
@@ -49,7 +49,7 @@ function Project() {
                     </p>
                 </div>
                 <div className="project">
-                    <img src={auditCompliance} className="zoom" alt="Audit & Compliance" width="80%" />
+                    <img src={auditCompliance} className="zoom" alt="Audit & Compliance" width="100%" />
                     <h2>Capital Transactions & Audit Management</h2>
                     <p>
                         <li> <strong>₹80 Cr ESOP Buyback:</strong> Managed the complete financial execution and capital structuring for the share buyback program at Cars24.</li>
@@ -58,7 +58,7 @@ function Project() {
                     </p>
                 </div>
                 <div className="project">
-                    <img src={businessPartnering} className="zoom" alt="Business Partnering" width="80%" />
+                    <img src={businessPartnering} className="zoom" alt="Business Partnering" width="100%" />
                     <h2>International Expansion & Business Partnering</h2>
                     <p>
                         <li> <strong>Entity Structuring & Compliance:</strong> Managed banking setups, company structuring, and local compliance for overseas entities.</li>
