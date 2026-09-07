@@ -5,7 +5,6 @@ import {
   faBuilding, 
   faAward, 
   faTrophy, 
-  faStar, 
   faArrowTrendUp, 
   faCalendarAlt, 
   faCheckCircle 
@@ -17,9 +16,9 @@ interface PromotionNode {
   role: string;
   company: string;
   companyShort: string;
-  type: "promotion" | "award" | "qualification" | "foundation";
+  type: "promotion" | "award" | "foundation";
   badge: string;
-  level: number; // 1 to 5 for elevation
+  level: number;
   chips: string[];
 }
 
@@ -39,44 +38,24 @@ interface CompanyTenure {
 
 const promotionData: PromotionNode[] = [
   {
-    year: "2015 – 2018",
-    role: "CA Articleship Trainee",
-    company: "N K Jain & Co., Chartered Accountants",
-    companyShort: "N K Jain & Co.",
-    type: "foundation",
-    badge: "ICAI Mandatory Articleship (3 Yrs)",
-    level: 1,
-    chips: ["Statutory Audits", "Tax Audit (Sec 44AB)", "CAATs", "Direct Taxation"]
-  },
-  {
-    year: "2018",
-    role: "Chartered Accountant (CA)",
-    company: "The Institute of Chartered Accountants of India",
-    companyShort: "ICAI",
-    type: "qualification",
-    badge: "Qualified Chartered Accountant · Exemptions in AMA, ISCA & SFM",
-    level: 2,
-    chips: ["ICAI Certified", "Advanced Financial Management", "Corporate Laws"]
-  },
-  {
     year: "2019",
     role: "Audit Executive",
     company: "N K Jain & Co., Chartered Accountants",
     companyShort: "N K Jain & Co.",
-    type: "promotion",
-    badge: "Post-Qualification Promotion · Risk & Audit Practice",
-    level: 3,
-    chips: ["Internal Audits", "ICFR Assurance", "GST Compliances", "Tax Advisory"]
+    type: "foundation",
+    badge: "Post-Qualification Practice · Risk Assurance & Taxation",
+    level: 1,
+    chips: ["Internal Audits", "ICFR Assurance", "GST Compliances", "Direct Tax Advisory"]
   },
   {
     year: "2019 – 2021",
     role: "Manager – Finance & Accounts",
     company: "Cars24 Services Pvt. Ltd.",
     companyShort: "Cars24",
-    type: "foundation",
+    type: "promotion",
     badge: "Corporate Controlling Transition",
-    level: 3,
-    chips: ["P2P & O2C Workflows", "Financial Controls", "Ind AS Reporting"]
+    level: 2,
+    chips: ["P2P & O2C Workflows", "Financial Controls", "Ind AS Reporting", "Process Automation"]
   },
   {
     year: "2021",
@@ -85,7 +64,7 @@ const promotionData: PromotionNode[] = [
     companyShort: "Cars24",
     type: "promotion",
     badge: "Promoted to Controllership · Employee of the Year 2021",
-    level: 4,
+    level: 3,
     chips: ["Ind AS 109, 115, 116", "Statutory Audit Lead (EY/GT)", "₹80 Cr ESOP Buyback"]
   },
   {
@@ -94,9 +73,9 @@ const promotionData: PromotionNode[] = [
     company: "Cars24 Services Pvt. Ltd.",
     companyShort: "Cars24",
     type: "award",
-    badge: "Mr. Detail Oriented Award 2022 · Consistent 5/5 Rating",
-    level: 4,
-    chips: ["Global Entity Expansion", "ICFR Systems", "Team Leadership (10 Members)"]
+    badge: "Mr. Detail Oriented Award 2022 · Outstanding 5/5 Rating",
+    level: 3,
+    chips: ["Global Entity Expansion", "ICFR Frameworks", "Team Leadership (10 Members)"]
   },
   {
     year: "2023 – Present",
@@ -105,7 +84,7 @@ const promotionData: PromotionNode[] = [
     companyShort: "Cargo Partner (Nippon Express)",
     type: "promotion",
     badge: "Promoted to India Lead · GEM Award 2024 & 2025 · Top Support Function 2024",
-    level: 5,
+    level: 4,
     chips: ["Strategic FP&A", "AOP & Forecasting", "Profitability Turnaround", "SAP & Power BI"]
   }
 ];
@@ -147,37 +126,23 @@ const companyTenureData: CompanyTenure[] = [
   },
   {
     company: "N K Jain & Co., Chartered Accountants",
-    shortName: "N K Jain & Co. (Post-CA)",
+    shortName: "N K Jain & Co.",
     role: "Audit Executive",
     period: "Jan 2019 – Dec 2019",
     duration: "1 Year",
     startYear: 2019,
-    endYear: 2019.9,
+    endYear: 2020,
     totalYears: 1.0,
     color: "#0284c7",
-    badge: "Post-Qualification Assurance & GST Practice",
+    badge: "Post-Qualification Assurance & Direct/Indirect Tax Practice",
     achievements: [
       "Risk-based internal audits and physical control verifications",
       "Supervised direct and indirect taxation (GST returns & audits)"
     ]
-  },
-  {
-    company: "N K Jain & Co., Chartered Accountants",
-    shortName: "N K Jain & Co. (Articleship)",
-    role: "Chartered Accountant Trainee (Articleship)",
-    period: "2015 – 2018",
-    duration: "3 Years",
-    startYear: 2015,
-    endYear: 2018,
-    totalYears: 3.0,
-    color: "#475569",
-    badge: "ICAI Mandatory 3-Year Articleship",
-    achievements: [
-      "Statutory audits (Companies Act, 2013) & Tax Audits (Form 3CD)",
-      "CAATs analytical procedures & ledger reconciliations"
-    ]
   }
 ];
+
+const TOTAL_POST_QUAL_YEARS = 7.35;
 
 function Timeline() {
   const [activeTab, setActiveTab] = useState<"graph" | "yoy">("graph");
@@ -188,7 +153,7 @@ function Timeline() {
         <div className="history-header">
           <h1>Career Progression & History</h1>
           <p className="timeline-subtitle">
-            Year-on-Year Growth Trajectory, Corporate Tenures & Promotion Milestones (2015 – Present)
+            Post-Qualification Growth Trajectory, Corporate Tenures & Promotion Milestones (2019 – Present)
           </p>
 
           {/* Tab Selector */}
@@ -213,15 +178,15 @@ function Timeline() {
           <div className="promotion-graph-section">
             <div className="graph-intro-bar">
               <div className="metric-box">
-                <span className="metric-val">8+ Years</span>
-                <span className="metric-lbl">Total Experience</span>
+                <span className="metric-val">7.5+ Years</span>
+                <span className="metric-lbl">Post-CA Experience</span>
               </div>
               <div className="metric-box">
-                <span className="metric-val">5 Levels</span>
+                <span className="metric-val">4 Levels</span>
                 <span className="metric-lbl">Career Elevation</span>
               </div>
               <div className="metric-box">
-                <span className="metric-val">3 Top Brands</span>
+                <span className="metric-val">3 Corporate Brands</span>
                 <span className="metric-lbl">Corporate Tenures</span>
               </div>
               <div className="metric-box">
@@ -252,7 +217,6 @@ function Timeline() {
                       <div className="promotion-milestone-pill">
                         {node.type === 'award' && <FontAwesomeIcon icon={faTrophy} />}
                         {node.type === 'promotion' && <FontAwesomeIcon icon={faArrowTrendUp} />}
-                        {node.type === 'qualification' && <FontAwesomeIcon icon={faStar} />}
                         {node.type === 'foundation' && <FontAwesomeIcon icon={faCheckCircle} />}
                         <span>{node.badge}</span>
                       </div>
@@ -278,11 +242,12 @@ function Timeline() {
               <div className="yoy-scale-header">
                 <div className="scale-title">Company Tenure & Year-on-Year Timeline</div>
                 <div className="scale-years">
-                  <span>2015</span>
-                  <span>2017</span>
                   <span>2019</span>
+                  <span>2020</span>
                   <span>2021</span>
+                  <span>2022</span>
                   <span>2023</span>
+                  <span>2024</span>
                   <span>2025</span>
                   <span>Present</span>
                 </div>
@@ -316,12 +281,12 @@ function Timeline() {
                           className="timeline-visual-fill"
                           style={{ 
                             background: item.color,
-                            width: `${Math.min(100, Math.round((item.totalYears / 10.5) * 100))}%`
+                            width: `${Math.min(100, Math.round((item.totalYears / TOTAL_POST_QUAL_YEARS) * 100))}%`
                           }}
                         />
                       </div>
                       <span className="tenure-percentage-label">
-                        {Math.round((item.totalYears / 10.5) * 100)}% of Total Career
+                        {Math.round((item.totalYears / TOTAL_POST_QUAL_YEARS) * 100)}% of Post-CA Career
                       </span>
                     </div>
 
