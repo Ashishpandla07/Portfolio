@@ -104,17 +104,7 @@ function Education() {
             </div>
 
             <div className="card-body">
-              {/* Master's Degree Sub-entry */}
-              <div className="degree-sub-entry">
-                <div className="sub-entry-header">
-                  <h3>Master of Commerce (M.Com)</h3>
-                  <span className="sub-year">2016</span>
-                </div>
-                <p className="sub-institution">University of Rajasthan</p>
-                <p className="sub-description">
-                  <strong>Specialization:</strong> Advanced Financial Management, Strategic Cost Accounting, and Quantitative Business Analysis.
-                </p>
-              </div>
+            
 
               {/* Bachelor's Degree Sub-entry */}
               <div className="degree-sub-entry">
@@ -125,6 +115,17 @@ function Education() {
                 <p className="sub-institution">University of Rajasthan</p>
                 <p className="sub-description">
                   <strong>Specialization:</strong> Corporate & Mercantile Law, Auditing Principles, Financial Accounting, and Macroeconomic Governance.
+                </p>
+              </div>
+               {/* Master's Degree Sub-entry */}
+              <div className="degree-sub-entry">
+                <div className="sub-entry-header">
+                  <h3>Master of Commerce (M.Com)</h3>
+                  <span className="sub-year">2016</span>
+                </div>
+                <p className="sub-institution">University of Rajasthan</p>
+                <p className="sub-description">
+                  <strong>Specialization:</strong> Advanced Financial Management, Strategic Cost Accounting, and Quantitative Business Analysis.
                 </p>
               </div>
             </div>
