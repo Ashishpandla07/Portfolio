@@ -191,26 +191,55 @@
         .company-logo-header {
           display: flex;
           align-items: center;
-          gap: 10px;
-          margin-bottom: 6px;
+          gap: 12px;
+          margin-bottom: 8px;
           flex-wrap: wrap;
 
-          .company-logo-pill {
-            font-size: 0.70rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            padding: 2px 7px;
-            border-radius: 4px;
-            background: rgba(80, 0, 202, 0.09);
-            color: #5000ca;
-            border: 1px solid rgba(80, 0, 202, 0.22);
+          .company-logo-wrapper {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff;
+            padding: 3px 8px;
+            border-radius: 6px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+            height: 34px;
+            min-width: 65px;
+
+            .company-brand-logo {
+              max-height: 24px;
+              max-width: 100px;
+              width: auto;
+              height: auto;
+              object-fit: contain;
+              display: block;
+            }
           }
 
-          .company-title-text {
-            font-size: 0.88rem;
-            font-weight: 700;
-            color: #4b5563;
+          .company-header-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+
+            .company-title-text {
+              font-size: 0.95rem;
+              font-weight: 700;
+              color: #111827;
+            }
+
+            .company-location-text {
+              font-size: 0.76rem;
+              color: #6b7280;
+              display: flex;
+              align-items: center;
+              gap: 4px;
+
+              svg {
+                color: #9ca3af;
+                font-size: 0.74rem;
+              }
+            }
           }
         }
 
@@ -218,8 +247,15 @@
           font-size: 1.22rem;
           font-weight: 800;
           color: #111827;
-          margin: 0 0 8px 0;
+          margin: 4px 0 2px 0;
           line-height: 1.35;
+        }
+
+        .role-timeline-sub {
+          font-size: 0.82rem;
+          font-weight: 600;
+          color: #5000ca;
+          margin-bottom: 10px;
         }
 
         .promotion-milestone-pill {
@@ -303,13 +339,13 @@
       .yoy-cards-list {
         display: flex;
         flex-direction: column;
-        gap: 18px;
+        gap: 20px;
 
         .yoy-company-card {
           background: #ffffff;
           color: #272822;
           border-radius: 12px;
-          padding: 20px 22px;
+          padding: 22px 24px;
           border-left: 6px solid #5000ca;
           box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
           transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -325,37 +361,46 @@
             align-items: flex-start;
             flex-wrap: wrap;
             gap: 14px;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
 
             .company-info-group {
               display: flex;
               align-items: flex-start;
-              gap: 12px;
+              gap: 14px;
 
-              .company-logo-pill {
-                font-size: 0.70rem;
-                font-weight: 700;
-                text-transform: uppercase;
-                letter-spacing: 0.5px;
-                padding: 4px 8px;
-                border-radius: 4px;
-                background: rgba(80, 0, 202, 0.09);
-                color: #5000ca;
-                border: 1px solid rgba(80, 0, 202, 0.24);
-                margin-top: 3px;
+              .company-logo-wrapper {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background: #ffffff;
+                padding: 4px 10px;
+                border-radius: 6px;
+                border: 1px solid #e5e7eb;
+                box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+                height: 38px;
+                min-width: 72px;
+
+                .company-brand-logo {
+                  max-height: 28px;
+                  max-width: 110px;
+                  width: auto;
+                  height: auto;
+                  object-fit: contain;
+                  display: block;
+                }
               }
 
               .company-main-name {
-                font-size: 1.18rem;
+                font-size: 1.25rem;
                 font-weight: 800;
                 color: #111827;
                 margin: 0 0 2px 0;
               }
 
-              .company-designation {
-                font-size: 0.90rem;
-                color: #4b5563;
-                font-weight: 600;
+              .company-meta-line {
+                font-size: 0.82rem;
+                color: #6b7280;
+                font-weight: 500;
               }
             }
 
@@ -381,74 +426,128 @@
             }
           }
 
-          /* Progress Bar of Career Span */
-          .timeline-visual-bar-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin: 10px 0 14px 0;
+          /* Roles Ladder */
+          .company-roles-ladder {
+            margin: 14px 0;
+            padding: 14px 16px;
+            background: #f9fafb;
+            border-radius: 8px;
+            border: 1px solid #f3f4f6;
 
-            .timeline-visual-track {
-              flex: 1;
-              height: 7px;
-              background: #e5e7eb;
-              border-radius: 4px;
-              overflow: hidden;
+            .ladder-label {
+              font-size: 0.76rem;
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 0.5px;
+              color: #4b5563;
+              margin-bottom: 12px;
+            }
 
-              .timeline-visual-fill {
-                height: 100%;
-                border-radius: 4px;
-                transition: width 0.5s ease;
+            .ladder-step {
+              display: flex;
+              align-items: flex-start;
+              gap: 12px;
+              position: relative;
+              padding-bottom: 12px;
+
+              &:last-child {
+                padding-bottom: 0;
+              }
+
+              &:not(:last-child)::before {
+                content: '';
+                position: absolute;
+                left: 4px;
+                top: 14px;
+                bottom: 0;
+                width: 2px;
+                background: #e5e7eb;
+              }
+
+              .ladder-bullet {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                margin-top: 5px;
+                flex-shrink: 0;
+              }
+
+              .ladder-content {
+                flex: 1;
+
+                .ladder-title-row {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  flex-wrap: wrap;
+                  gap: 6px;
+
+                  .ladder-title {
+                    font-size: 0.90rem;
+                    font-weight: 700;
+                    color: #111827;
+                  }
+
+                  .ladder-date {
+                    font-size: 0.78rem;
+                    color: #6b7280;
+                    font-weight: 500;
+                  }
+                }
+
+                .ladder-badge {
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 4px;
+                  font-size: 0.74rem;
+                  font-weight: 600;
+                  color: #925400;
+                  background: #fff8e6;
+                  border: 1px solid #ffe58f;
+                  padding: 2px 8px;
+                  border-radius: 10px;
+                  margin-top: 4px;
+
+                  svg {
+                    color: #d48806;
+                    font-size: 0.75rem;
+                  }
+                }
               }
             }
-
-            .tenure-percentage-label {
-              font-size: 0.74rem;
-              font-weight: 700;
-              color: #6b7280;
-              white-space: nowrap;
-            }
           }
 
-          .card-milestone-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 0.78rem;
-            font-weight: 700;
-            color: #925400;
-            background: #fff8e6;
-            border: 1px solid #ffe58f;
-            padding: 3px 10px;
-            border-radius: 14px;
-            margin-bottom: 12px;
-
-            svg {
-              color: #d48806;
-              font-size: 0.8rem;
-            }
-          }
-
-          .yoy-highlights-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+          /* Skills Footer */
+          .company-skills-footer {
             display: flex;
-            flex-direction: column;
-            gap: 6px;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px dashed #e5e7eb;
 
-            li {
-              font-size: 0.86rem;
-              color: #374151;
-              line-height: 1.45;
+            .skills-lbl {
+              font-size: 0.76rem;
+              font-weight: 700;
+              color: #4b5563;
+              text-transform: uppercase;
+              letter-spacing: 0.5px;
+            }
+
+            .skill-chips-row {
               display: flex;
-              align-items: center;
-              gap: 8px;
+              flex-wrap: wrap;
+              gap: 6px;
 
-              svg {
-                color: #10b981;
-                font-size: 0.78rem;
-                flex-shrink: 0;
+              .skill-chip {
+                font-size: 0.74rem;
+                font-weight: 600;
+                padding: 2px 8px;
+                background: #f3f4f6;
+                color: #374151;
+                border-radius: 10px;
+                border: 1px solid #e5e7eb;
               }
             }
           }
