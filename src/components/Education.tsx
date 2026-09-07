@@ -5,23 +5,9 @@ import icaiLogo from '../assets/images/icai_logo.png';
 import rajasthanLogo from '../assets/images/rajasthan_university_logo.png';
 import '../assets/styles/Education.scss';
 
-const caSkills = [
-  "Statutory Compliance",
-  "Financial Governance",
-  "Taxation Framework",
-  "Ind-AS / IFRS",
-  "ICFR & Internal Controls",
-  "Auditing & Assurance"
-];
 
-const academicSkills = [
-  "Corporate Financial Management",
-  "Advanced Financial Accounting",
-  "Cost & Management Accounting",
-  "Corporate & Mercantile Law",
-  "Auditing Principles",
-  "Business Economics"
-];
+
+
 
 function Education() {
   return (
@@ -57,17 +43,15 @@ function Education() {
               <div className="highlights-heading">Key Highlights & Honors</div>
               <ul className="highlights-list">
                 <li>
-                  <strong>Academic Honors & Exemptions:</strong> Secured prestigious merit exemptions in Strategic Financial Management (SFM), Advanced Management Accounting (AMA), and ISCA.
-                </li>
-                <li>
-                  <strong>Rigorous Statutory Compliance:</strong> Comprehensive mastery of corporate governance standards, statutory audits, and ICFR controls for multinational corporations.
-                </li>
-                <li>
-                  <strong>Financial Governance & Ind-AS / IFRS:</strong> In-depth expertise across Ind-AS (109, 115, 116, 102), financial reporting, controllership, and enterprise risk management.
-                </li>
-                <li>
-                  <strong>Rigorous Taxation Framework:</strong> Extensive practice in direct & indirect taxation, GST advisory, international transfer pricing, and strategic tax planning.
-                </li>
+                  <strong>Articleship Experience: 3 years of hands-on exposure managing client engagements, statutory audits, and regulatory filings. 
+                  <li> <strong>Financial Reporting:</strong> Proven mastery in preparing Ind AS/IFRS financial statements and designing ICFR control matrices.
+
+                  <li> <strong>Taxation & Advisory:</strong> Strategic capability in corporate tax planning, GST compliance, and transfer pricing documentation.
+
+                  <li> <strong>Technology & Analytics:</strong> Hands-on command of digital auditing tools (CAATs), ERP systems, and Excel modeling gained via Advanced ITT.
+
+                  <li>Management & Leadership: Polished executive communication, negotiation, and decision-making skills honed through ICAI's GMCS courses.Academic Honors & Exemptions:</strong> Secured prestigious merit exemptions in Strategic Financial Management (SFM), Advanced Management Accounting (AMA), and ISCA.
+                
               </ul>
             </div>
           </div>
