@@ -4,7 +4,7 @@
 
   .experience-header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 
     .header-eyebrow {
       display: inline-flex;
@@ -33,7 +33,7 @@
       color: #9ca3af;
       font-size: 1.05rem;
       max-width: 680px;
-      margin: 0 auto 30px auto;
+      margin: 0 auto 25px auto;
       line-height: 1.5;
     }
   }
@@ -44,7 +44,7 @@
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 16px;
     max-width: 960px;
-    margin: 0 auto 35px auto;
+    margin: 0 auto 25px auto;
 
     .metric-cell {
       background: rgba(255, 255, 255, 0.03);
@@ -79,6 +79,39 @@
     }
   }
 
+  /* Expand / Collapse All Controls */
+  .clubbed-controls-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    .toggle-all-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      padding: 8px 20px;
+      border-radius: 25px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #e5e7eb;
+      cursor: pointer;
+      transition: all 0.25s ease;
+
+      &:hover {
+        background: #5000ca;
+        color: #ffffff;
+        border-color: #5000ca;
+        box-shadow: 0 4px 14px rgba(80, 0, 202, 0.4);
+      }
+
+      svg {
+        font-size: 0.80rem;
+      }
+    }
+  }
+
   /* Timeline Flow Markers (Present -> Past) */
   .timeline-flow-marker {
     max-width: 960px;
@@ -89,7 +122,7 @@
     &.bottom-marker {
       margin-top: 25px;
       margin-bottom: 0;
-      padding-left: 20px;
+      padding-left: 10px;
     }
 
     .marker-pill {
@@ -118,12 +151,12 @@
         border-radius: 50%;
         background: #10b981;
         box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
-        animation: pulseBeacon 2s infinite;
+        animation: beaconPulse 2s infinite;
       }
     }
   }
 
-  @keyframes pulseBeacon {
+  @keyframes beaconPulse {
     0% {
       transform: scale(0.95);
       box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
@@ -139,361 +172,468 @@
   }
 
   /* ========================================================
-     CORPORATE VERTICAL TIMELINE (REVERSE CHRONOLOGICAL)
+     CLUBBED COMPANY-WISE TIMELINE
      ======================================================== */
-  .corporate-timeline {
+  .clubbed-company-timeline {
     max-width: 960px;
     margin: 0 auto;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 
-    &::before {
-      content: '';
-      position: absolute;
-      left: 35px;
-      top: 25px;
-      bottom: 25px;
-      width: 2px;
-      background: linear-gradient(180deg, #00d2ff 0%, #5000ca 40%, #64748b 85%, rgba(255, 255, 255, 0.1) 100%);
-      z-index: 0;
-      border-radius: 2px;
-    }
+    .company-clubbed-card {
+      background: #ffffff;
+      color: #272822;
+      border-radius: 14px;
+      padding: 24px 26px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+      border: 1px solid #e5e7eb;
+      border-left: 6px solid #5000ca;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 
-    .timeline-card-wrapper {
-      display: flex;
-      gap: 24px;
-      position: relative;
-      margin-bottom: 26px;
-      z-index: 1;
-
-      &:last-child {
-        margin-bottom: 0;
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
       }
 
-      /* Vertical Track Node */
-      .timeline-track-node {
-        width: 72px;
-        flex-shrink: 0;
+      &.is-current-company {
+        border-left: 6px solid #5000ca;
+        background: linear-gradient(135deg, #ffffff 0%, #f7f5ff 100%);
+        box-shadow: 0 8px 32px rgba(80, 0, 202, 0.15);
+      }
+
+      /* Main Header (Company info + Toggle +/- button) */
+      .company-main-header {
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
-        padding-top: 18px;
+        flex-wrap: wrap;
+        gap: 16px;
+        cursor: pointer;
+        user-select: none;
 
-        .node-circle {
-          width: 14px;
-          height: 14px;
-          border-radius: 50%;
-          background: #5000ca;
-          border: 3px solid #0f1017;
-          box-shadow: 0 0 0 3px rgba(80, 0, 202, 0.4);
-          transition: transform 0.2s ease;
-        }
-
-        .level-tag {
-          font-size: 0.72rem;
-          font-weight: 800;
-          color: #9ca3af;
-          background: rgba(255, 255, 255, 0.05);
-          border: 1px solid rgba(255, 255, 255, 0.1);
-          padding: 2px 7px;
-          border-radius: 6px;
-          margin-top: 8px;
-          letter-spacing: 0.5px;
-        }
-      }
-
-      /* Prominent Current Role Node */
-      &.is-current .timeline-track-node {
-        .node-circle {
-          background: #00d2ff;
-          box-shadow: 0 0 0 4px rgba(0, 210, 255, 0.4), 0 0 12px rgba(0, 210, 255, 0.6);
-        }
-
-        .level-tag {
-          color: #00d2ff;
-          border-color: rgba(0, 210, 255, 0.35);
-          background: rgba(0, 210, 255, 0.1);
-        }
-      }
-
-      /* The Experience Card */
-      .timeline-card {
-        flex: 1;
-        background: #ffffff;
-        color: #272822;
-        border-radius: 14px;
-        padding: 24px 28px;
-        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
-        border: 1px solid #e5e7eb;
-        transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
-
-        &:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 10px 28px rgba(80, 0, 202, 0.14);
-          border-color: rgba(80, 0, 202, 0.35);
-        }
-
-        /* Top Bar: Company info, Logo, Dates */
-        .card-top-bar {
+        .company-meta-left {
           display: flex;
-          justify-content: space-between;
-          align-items: flex-start;
-          flex-wrap: wrap;
+          align-items: center;
           gap: 14px;
-          margin-bottom: 14px;
-          padding-bottom: 14px;
-          border-bottom: 1px solid #f3f4f6;
+          flex-wrap: wrap;
 
-          .company-branding {
+          .company-logo-frame {
+            height: 42px;
+            width: 82px;
+            background: #ffffff;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
             display: flex;
             align-items: center;
-            gap: 12px;
+            justify-content: center;
+            padding: 3px 6px;
+            flex-shrink: 0;
 
-            .company-logo-box {
-              height: 38px;
-              width: 78px;
-              background: #ffffff;
-              border-radius: 6px;
-              border: 1px solid #e5e7eb;
-              box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+            .company-logo-img {
+              max-height: 30px;
+              max-width: 74px;
+              width: auto;
+              height: auto;
+              object-fit: contain;
+              display: block;
+            }
+          }
+
+          .company-identity-text {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+
+            .company-name-row {
               display: flex;
               align-items: center;
-              justify-content: center;
-              padding: 2px 6px;
+              gap: 10px;
+              flex-wrap: wrap;
 
-              .company-logo-img {
-                max-height: 26px;
-                max-width: 70px;
-                width: auto;
-                height: auto;
-                object-fit: contain;
-                display: block;
+              .company-title {
+                font-size: 1.30rem;
+                font-weight: 800;
+                color: #111827;
+                margin: 0;
+                line-height: 1.25;
+              }
+
+              .current-org-pill {
+                display: inline-flex;
+                align-items: center;
+                gap: 4px;
+                font-size: 0.70rem;
+                font-weight: 700;
+                color: #065f46;
+                background: #d1fae5;
+                border: 1px solid #a7f3d0;
+                padding: 2px 8px;
+                border-radius: 12px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+
+                svg {
+                  color: #10b981;
+                }
               }
             }
 
-            .company-text-meta {
+            .company-submeta {
+              font-size: 0.82rem;
+              color: #4b5563;
+              font-weight: 500;
+              display: flex;
+              align-items: center;
+              flex-wrap: wrap;
+              gap: 6px;
+
+              .sep {
+                color: #9ca3af;
+                font-size: 0.75rem;
+              }
+
+              .workmode-tag {
+                background: #f3f4f6;
+                color: #374151;
+                padding: 1px 7px;
+                border-radius: 4px;
+                font-weight: 600;
+                font-size: 0.75rem;
+              }
+
+              svg {
+                color: #9ca3af;
+                font-size: 0.74rem;
+                margin-right: 2px;
+              }
+            }
+          }
+        }
+
+        .company-toggle-right {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          margin-left: auto;
+
+          .tenure-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #ffffff;
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 20px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+            svg {
+              font-size: 0.72rem;
+            }
+          }
+
+          .plus-minus-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: rgba(80, 0, 202, 0.08);
+            color: #5000ca;
+            border: 1px solid rgba(80, 0, 202, 0.25);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+
+            &:hover {
+              background: #5000ca;
+              color: #ffffff;
+              border-color: #5000ca;
+              box-shadow: 0 2px 8px rgba(80, 0, 202, 0.3);
+            }
+
+            svg {
+              font-size: 0.78rem;
+            }
+          }
+        }
+      }
+
+      /* Collapsed Summary Bar */
+      .collapsed-preview-bar {
+        background: #f9fafb;
+        border: 1px dashed #d1d5db;
+        border-radius: 8px;
+        padding: 10px 16px;
+        margin-top: 14px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        cursor: pointer;
+        transition: background 0.2s ease;
+
+        &:hover {
+          background: #f3f4f6;
+        }
+
+        .preview-label {
+          font-size: 0.84rem;
+          color: #4b5563;
+
+          .plus-symbol {
+            color: #5000ca;
+            font-size: 1rem;
+            font-weight: 800;
+          }
+        }
+
+        .preview-role-summary {
+          font-size: 0.82rem;
+          color: #5000ca;
+          font-weight: 600;
+        }
+      }
+
+      /* Expanded Nested Sub-Roles Ladder */
+      .nested-roles-ladder {
+        margin-top: 20px;
+        padding-top: 18px;
+        border-top: 1px solid #f3f4f6;
+        animation: fadeIn 0.3s ease-in-out;
+
+        .ladder-header-title {
+          font-size: 0.76rem;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 0.8px;
+          color: #6b7280;
+          margin-bottom: 16px;
+        }
+
+        .roles-list-track {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          position: relative;
+
+          &::before {
+            content: '';
+            position: absolute;
+            left: 17px;
+            top: 15px;
+            bottom: 25px;
+            width: 2px;
+            background: #e5e7eb;
+            z-index: 0;
+          }
+
+          .subrole-entry {
+            display: flex;
+            gap: 16px;
+            position: relative;
+            z-index: 1;
+
+            .track-bullet-column {
+              width: 36px;
+              flex-shrink: 0;
               display: flex;
               flex-direction: column;
-              gap: 2px;
+              align-items: center;
+              padding-top: 12px;
 
-              .company-name-row {
+              .bullet-node {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background: #ffffff;
+                border: 3px solid #5000ca;
+                box-shadow: 0 0 0 2px rgba(80, 0, 202, 0.2);
+              }
+
+              .level-chip {
+                font-size: 0.65rem;
+                font-weight: 800;
+                color: #6b7280;
+                background: #f3f4f6;
+                border: 1px solid #e5e7eb;
+                padding: 1px 5px;
+                border-radius: 4px;
+                margin-top: 6px;
+                letter-spacing: 0.5px;
+              }
+            }
+
+            .subrole-body {
+              flex: 1;
+              background: #fbfbfd;
+              border: 1px solid #edf0f5;
+              border-radius: 10px;
+              padding: 18px 20px;
+              transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+              &:hover {
+                border-color: rgba(80, 0, 202, 0.3);
+                box-shadow: 0 4px 14px rgba(80, 0, 202, 0.06);
+              }
+
+              .subrole-top-line {
                 display: flex;
-                align-items: center;
-                gap: 8px;
+                justify-content: space-between;
+                align-items: flex-start;
                 flex-wrap: wrap;
+                gap: 10px;
+                margin-bottom: 8px;
 
-                .company-name {
-                  font-size: 1.05rem;
-                  font-weight: 800;
-                  color: #111827;
+                .subrole-heading-wrap {
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                  flex-wrap: wrap;
+
+                  .subrole-title {
+                    font-size: 1.18rem;
+                    font-weight: 800;
+                    color: #111827;
+                    margin: 0;
+                  }
+
+                  .subrole-mode {
+                    font-size: 0.70rem;
+                    font-weight: 600;
+                    color: #4b5563;
+                    background: #e5e7eb;
+                    padding: 1px 6px;
+                    border-radius: 4px;
+                  }
+
+                  .active-now-tag {
+                    font-size: 0.68rem;
+                    font-weight: 700;
+                    color: #065f46;
+                    background: #d1fae5;
+                    border: 1px solid #a7f3d0;
+                    padding: 1px 6px;
+                    border-radius: 10px;
+                    text-transform: uppercase;
+                  }
                 }
 
-                .current-badge {
-                  display: inline-flex;
+                .subrole-duration-tag {
+                  display: flex;
                   align-items: center;
-                  gap: 4px;
-                  font-size: 0.70rem;
-                  font-weight: 700;
-                  color: #065f46;
-                  background: #d1fae5;
-                  border: 1px solid #a7f3d0;
-                  padding: 2px 8px;
-                  border-radius: 12px;
-                  text-transform: uppercase;
-                  letter-spacing: 0.5px;
+                  gap: 8px;
+                  font-size: 0.80rem;
+                  color: #4b5563;
+                  font-weight: 600;
 
-                  svg {
-                    color: #10b981;
+                  .role-duration-pill {
+                    font-size: 0.72rem;
+                    font-weight: 700;
+                    color: #ffffff;
+                    background: #5000ca;
+                    padding: 2px 7px;
+                    border-radius: 10px;
                   }
                 }
               }
 
-              .location-row {
+              /* Hero Badge */
+              .subrole-hero-badge {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
                 font-size: 0.78rem;
-                color: #6b7280;
+                font-weight: 700;
+                padding: 3px 10px;
+                border-radius: 16px;
+                margin-bottom: 12px;
+
+                &.type-award {
+                  color: #925400;
+                  background: #fff8e6;
+                  border: 1px solid #ffe58f;
+                  svg { color: #d48806; font-size: 0.82rem; }
+                }
+
+                &.type-promotion {
+                  color: #065f46;
+                  background: #ecfdf5;
+                  border: 1px solid #a7f3d0;
+                  svg { color: #10b981; font-size: 0.82rem; }
+                }
+
+                &.type-foundation {
+                  color: #1e40af;
+                  background: #eff6ff;
+                  border: 1px solid #bfdbfe;
+                  svg { color: #3b82f6; font-size: 0.82rem; }
+                }
+              }
+
+              /* Skills Row */
+              .subrole-skills-row {
                 display: flex;
                 align-items: center;
-                gap: 4px;
+                gap: 8px;
+                flex-wrap: wrap;
+                padding-top: 8px;
+                border-top: 1px dashed #e5e7eb;
 
-                svg {
-                  color: #9ca3af;
-                  font-size: 0.75rem;
+                .skills-prefix {
+                  font-size: 0.74rem;
+                  font-weight: 700;
+                  color: #6b7280;
+                  text-transform: uppercase;
+                  letter-spacing: 0.5px;
+                }
+
+                .skills-chip-group {
+                  display: flex;
+                  flex-wrap: wrap;
+                  gap: 6px;
+
+                  .subrole-skill-pill {
+                    font-size: 0.72rem;
+                    font-weight: 600;
+                    padding: 2px 8px;
+                    background: #f3f4f6;
+                    color: #374151;
+                    border-radius: 8px;
+                    border: 1px solid #e5e7eb;
+                  }
                 }
               }
             }
-          }
 
-          /* Date & Duration */
-          .date-duration-pill {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-
-            .date-range {
-              font-size: 0.82rem;
-              font-weight: 600;
-              color: #4b5563;
-              display: flex;
-              align-items: center;
-              gap: 5px;
-
-              svg {
-                color: #5000ca;
-                font-size: 0.78rem;
+            /* Active Subrole Prominence */
+            &.is-active-subrole {
+              .track-bullet-column .bullet-node {
+                background: #00d2ff;
+                border-color: #5000ca;
+                box-shadow: 0 0 0 3px rgba(0, 210, 255, 0.4);
               }
-            }
 
-            .duration-tag {
-              font-size: 0.74rem;
-              font-weight: 700;
-              color: #ffffff;
-              background: #5000ca;
-              padding: 2px 8px;
-              border-radius: 10px;
-            }
-          }
-        }
-
-        /* Role Heading & Level */
-        .role-title-row {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          gap: 10px;
-          margin-bottom: 10px;
-
-          .role-title {
-            font-size: 1.32rem;
-            font-weight: 800;
-            color: #111827;
-            margin: 0;
-            line-height: 1.35;
-          }
-
-          .level-badge {
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: #5000ca;
-            background: rgba(80, 0, 202, 0.08);
-            border: 1px solid rgba(80, 0, 202, 0.22);
-            padding: 2px 8px;
-            border-radius: 6px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            flex-shrink: 0;
-          }
-        }
-
-        /* Hero Milestone Pill */
-        .hero-milestone-pill {
-          display: inline-flex;
-          align-items: center;
-          gap: 6px;
-          font-size: 0.80rem;
-          font-weight: 700;
-          padding: 4px 12px;
-          border-radius: 20px;
-          margin-bottom: 14px;
-
-          &.type-award {
-            color: #925400;
-            background: #fff8e6;
-            border: 1px solid #ffe58f;
-            svg { color: #d48806; font-size: 0.85rem; }
-          }
-
-          &.type-promotion {
-            color: #065f46;
-            background: #ecfdf5;
-            border: 1px solid #a7f3d0;
-            svg { color: #10b981; font-size: 0.85rem; }
-          }
-
-          &.type-foundation {
-            color: #1e40af;
-            background: #eff6ff;
-            border: 1px solid #bfdbfe;
-            svg { color: #3b82f6; font-size: 0.85rem; }
-          }
-        }
-
-        /* Responsibilities Block (Fast Scannable Recruiter View) */
-        .responsibilities-block {
-          margin-bottom: 14px;
-
-          .responsibilities-title {
-            font-size: 0.76rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: #4b5563;
-            margin-bottom: 8px;
-          }
-
-          .responsibilities-list {
-            margin: 0;
-            padding-left: 18px;
-
-            li {
-              font-size: 0.88rem;
-              color: #272822;
-              line-height: 1.55;
-              margin-bottom: 6px;
-
-              strong {
-                color: #5000ca;
-                font-weight: 700;
+              .subrole-body {
+                background: #ffffff;
+                border-left: 4px solid #5000ca;
+                box-shadow: 0 2px 14px rgba(80, 0, 202, 0.1);
               }
             }
           }
-        }
-
-        /* Skills Chips */
-        .skills-block {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          flex-wrap: wrap;
-          padding-top: 10px;
-          border-top: 1px dashed #e5e7eb;
-
-          .skills-label {
-            font-size: 0.76rem;
-            font-weight: 700;
-            color: #4b5563;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-          }
-
-          .skills-chips {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-
-            .skill-chip {
-              font-size: 0.74rem;
-              font-weight: 600;
-              padding: 2px 8px;
-              background: #f3f4f6;
-              color: #374151;
-              border-radius: 8px;
-              border: 1px solid #e5e7eb;
-            }
-          }
-        }
-      }
-
-      /* Prominent Current Card Highlight */
-      &.is-current .timeline-card {
-        border-left: 5px solid #5000ca;
-        background: linear-gradient(135deg, #ffffff 0%, #f7f5ff 100%);
-        box-shadow: 0 6px 26px rgba(80, 0, 202, 0.15);
-
-        &:hover {
-          box-shadow: 0 12px 34px rgba(80, 0, 202, 0.22);
         }
       }
     }
   }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Light Mode Overrides */
@@ -520,9 +660,20 @@
       color: #6b7280;
     }
   }
+
+  .clubbed-controls-bar .toggle-all-btn {
+    background: #e5e7eb;
+    border-color: #d1d5db;
+    color: #374151;
+
+    &:hover {
+      background: #5000ca;
+      color: #ffffff;
+    }
+  }
 }
 
-/* Mobile Responsiveness (Single Column Flow) */
+/* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
   #history {
     padding: 40px 15px 60px 15px;
@@ -531,55 +682,51 @@
       font-size: 1.9rem;
     }
 
-    .timeline-flow-marker {
-      justify-content: center;
-      &.bottom-marker {
-        padding-left: 0;
-        justify-content: center;
-      }
-    }
+    .company-clubbed-card {
+      padding: 18px 16px;
 
-    .corporate-timeline::before {
-      left: 14px;
-    }
+      .company-main-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
 
-    .corporate-timeline .timeline-card-wrapper {
-      gap: 12px;
-
-      .timeline-track-node {
-        width: 30px;
-        padding-top: 14px;
-
-        .node-circle {
-          width: 12px;
-          height: 12px;
-        }
-
-        .level-tag {
-          font-size: 0.65rem;
-          padding: 1px 4px;
+        .company-toggle-right {
+          margin-left: 0;
+          width: 100%;
+          justify-content: space-between;
         }
       }
 
-      .timeline-card {
-        padding: 18px 16px;
+      .nested-roles-ladder .roles-list-track {
+        &::before {
+          left: 12px;
+        }
 
-        .card-top-bar {
-          flex-direction: column;
+        .subrole-entry {
           gap: 10px;
 
-          .date-duration-pill {
-            flex-wrap: wrap;
+          .track-bullet-column {
+            width: 24px;
+            padding-top: 10px;
+
+            .bullet-node {
+              width: 10px;
+              height: 10px;
+            }
+
+            .level-chip {
+              font-size: 0.60rem;
+              padding: 1px 3px;
+            }
           }
-        }
 
-        .role-title-row {
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 6px;
+          .subrole-body {
+            padding: 14px 12px;
 
-          .role-title {
-            font-size: 1.15rem;
+            .subrole-top-line {
+              flex-direction: column;
+              gap: 4px;
+            }
           }
         }
       }
