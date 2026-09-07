@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "./static/css/main.1dfdbeba.css",
-    "main.js": "./static/js/main.a20ea61a.js",
-    "static/js/453.b05d8aa5.chunk.js": "./static/js/453.b05d8aa5.chunk.js",
+    "main.css": "./static/css/main.7cdb382d.css",
+    "main.js": "./static/js/main.690b3e97.js",
+    "static/js/206.0d512b19.chunk.js": "./static/js/206.0d512b19.chunk.js",
     "static/media/achievement_award.jpg": "./static/media/achievement_award.5d597fc10563e75ee7fb.jpg",
     "static/media/business_partnering.jpg": "./static/media/business_partnering.e038fbef533e15c6d352.jpg",
     "static/media/finance_dashboard.jpg": "./static/media/finance_dashboard.fab9ca863e0a6cb4f195.jpg",
@@ -14,13 +14,10 @@
     "static/media/icai_logo.png": "./static/media/icai_logo.22001c2fb96f8179e759.png",
     "static/media/rajasthan_university_logo.png": "./static/media/rajasthan_university_logo.1cc8d52f66f6e2452e93.png",
     "static/media/profile.jpg": "./static/media/profile.c1825c0b984d7e74c0f7.jpg",
-    "index.html": "./index.html",
-    "main.1dfdbeba.css.map": "./static/css/main.1dfdbeba.css.map",
-    "main.a20ea61a.js.map": "./static/js/main.a20ea61a.js.map",
-    "453.b05d8aa5.chunk.js.map": "./static/js/453.b05d8aa5.chunk.js.map"
+    "index.html": "./index.html"
   },
   "entrypoints": [
-    "static/css/main.1dfdbeba.css",
-    "static/js/main.a20ea61a.js"
+    "static/css/main.7cdb382d.css",
+    "static/js/main.690b3e97.js"
   ]
 }
