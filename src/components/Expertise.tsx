@@ -18,8 +18,7 @@ const labelsFirst = [
 ];
 
 const labelsSecond = [
-    "Ind-AS",
-    "IFRS",
+    "Ind-AS/IFRS",
     "Financial Reporting",
     "Financial Consolidation",
     "Statutory Audit",
