@@ -1,99 +1,76 @@
 #history {
-  padding: 60px 5% 80px 5%;
+  padding: 65px 5% 90px 5%;
   position: relative;
 
-  .history-header {
+  .experience-header {
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 40px;
+
+    .header-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.80rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #00d2ff;
+      margin-bottom: 10px;
+
+      svg {
+        font-size: 0.75rem;
+      }
+    }
 
     h1 {
-      font-size: 2.4rem;
+      font-size: 2.5rem;
       font-weight: 800;
       letter-spacing: -0.5px;
       margin-bottom: 10px;
     }
 
-    .timeline-subtitle {
+    .experience-subtitle {
       color: #9ca3af;
       font-size: 1.05rem;
-      max-width: 720px;
-      margin: 0 auto 25px auto;
+      max-width: 680px;
+      margin: 0 auto 30px auto;
       line-height: 1.5;
     }
   }
 
-  /* View Switcher Tabs */
-  .career-view-tabs {
-    display: inline-flex;
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    padding: 5px;
-    border-radius: 30px;
-    gap: 8px;
-    margin-bottom: 30px;
-
-    .tab-btn {
-      background: transparent;
-      border: none;
-      color: #d1d5db;
-      font-size: 0.95rem;
-      font-weight: 600;
-      padding: 10px 22px;
-      border-radius: 25px;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.25s ease;
-
-      svg {
-        font-size: 0.9rem;
-      }
-
-      &:hover {
-        color: #ffffff;
-      }
-
-      &.active {
-        background: #5000ca;
-        color: #ffffff;
-        box-shadow: 0 4px 14px rgba(80, 0, 202, 0.4);
-      }
-    }
-  }
-
-  /* High Level Metric Bar */
-  .graph-intro-bar {
+  /* Metric Summary Strip */
+  .experience-metrics-strip {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 16px;
-    max-width: 950px;
+    max-width: 960px;
     margin: 0 auto 35px auto;
 
-    .metric-box {
-      background: rgba(255, 255, 255, 0.04);
+    .metric-cell {
+      background: rgba(255, 255, 255, 0.03);
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 12px;
-      padding: 18px 20px;
+      padding: 16px 20px;
       text-align: center;
       backdrop-filter: blur(8px);
       transition: transform 0.2s ease, border-color 0.2s ease;
 
       &:hover {
         transform: translateY(-2px);
-        border-color: rgba(80, 0, 202, 0.4);
+        border-color: rgba(80, 0, 202, 0.45);
       }
 
-      .metric-val {
+      .metric-number {
         display: block;
-        font-size: 1.6rem;
+        font-size: 1.65rem;
         font-weight: 800;
         color: #00d2ff;
         margin-bottom: 4px;
+        letter-spacing: -0.5px;
       }
 
-      .metric-lbl {
-        font-size: 0.82rem;
+      .metric-text {
+        font-size: 0.78rem;
         color: #9ca3af;
         text-transform: uppercase;
         letter-spacing: 0.5px;
@@ -102,55 +79,51 @@
     }
   }
 
-  /* Timeline Flow Indicators (Present -> Past) */
-  .timeline-flow-indicator {
-    max-width: 950px;
+  /* Timeline Flow Markers (Present -> Past) */
+  .timeline-flow-marker {
+    max-width: 960px;
     margin: 0 auto 20px auto;
     display: flex;
     align-items: center;
 
-    &.bottom-indicator {
+    &.bottom-marker {
       margin-top: 25px;
       margin-bottom: 0;
-      justify-content: flex-start;
       padding-left: 20px;
     }
 
-    .flow-badge {
+    .marker-pill {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      font-size: 0.76rem;
+      font-size: 0.74rem;
       font-weight: 800;
       letter-spacing: 1px;
       text-transform: uppercase;
       padding: 5px 14px;
       border-radius: 20px;
+      background: rgba(80, 0, 202, 0.15);
+      color: #00d2ff;
+      border: 1px solid rgba(0, 210, 255, 0.35);
 
-      &.top-badge {
-        background: rgba(80, 0, 202, 0.15);
-        color: #00d2ff;
-        border: 1px solid rgba(0, 210, 255, 0.35);
-      }
-
-      &.bottom-badge {
+      &.bottom-pill {
         background: rgba(255, 255, 255, 0.05);
         color: #9ca3af;
         border: 1px solid rgba(255, 255, 255, 0.1);
       }
 
-      .pulse-beacon {
+      .pulse-dot {
         width: 8px;
         height: 8px;
         border-radius: 50%;
         background: #10b981;
         box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
-        animation: pulse 2s infinite;
+        animation: pulseBeacon 2s infinite;
       }
     }
   }
 
-  @keyframes pulse {
+  @keyframes pulseBeacon {
     0% {
       transform: scale(0.95);
       box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
@@ -166,540 +139,357 @@
   }
 
   /* ========================================================
-     VIEW 1: STEPPED PROMOTION GRAPH (REVERSE FLOW: PRESENT -> PAST)
+     CORPORATE VERTICAL TIMELINE (REVERSE CHRONOLOGICAL)
      ======================================================== */
-  .stepped-promotion-chart {
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-    max-width: 950px;
+  .corporate-timeline {
+    max-width: 960px;
     margin: 0 auto;
     position: relative;
 
-    &.reverse-flow::before {
+    &::before {
       content: '';
       position: absolute;
-      left: 36px;
+      left: 35px;
       top: 25px;
       bottom: 25px;
-      width: 3px;
-      background: linear-gradient(180deg, #00d2ff 0%, #5000ca 45%, #64748b 90%, rgba(255, 255, 255, 0.15) 100%);
+      width: 2px;
+      background: linear-gradient(180deg, #00d2ff 0%, #5000ca 40%, #64748b 85%, rgba(255, 255, 255, 0.1) 100%);
       z-index: 0;
-      border-radius: 3px;
+      border-radius: 2px;
     }
 
-    .promotion-step-card {
-      position: relative;
-      z-index: 1;
+    .timeline-card-wrapper {
       display: flex;
-      gap: 22px;
-      background: #ffffff;
-      color: #272822;
-      border-radius: 14px;
-      padding: 24px 26px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-      border-left: 5px solid #5000ca;
+      gap: 24px;
+      position: relative;
+      margin-bottom: 26px;
+      z-index: 1;
 
-      &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 28px rgba(80, 0, 202, 0.14);
+      &:last-child {
+        margin-bottom: 0;
       }
 
-      /* Prominent Latest/Current Role Card */
-      &.current-step {
-        border-left: 6px solid #5000ca;
-        background: linear-gradient(135deg, #ffffff 0%, #f7f5ff 100%);
-        box-shadow: 0 8px 30px rgba(80, 0, 202, 0.16);
-
-        &:hover {
-          box-shadow: 0 12px 36px rgba(80, 0, 202, 0.22);
-        }
-
-        .step-elevation-badge {
-          background: rgba(80, 0, 202, 0.12);
-          border-color: rgba(80, 0, 202, 0.35);
-
-          .level-indicator {
-            color: #5000ca;
-            font-size: 0.90rem;
-          }
-        }
-      }
-
-      .step-elevation-badge {
+      /* Vertical Track Node */
+      .timeline-track-node {
+        width: 72px;
         flex-shrink: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        min-width: 88px;
-        padding: 10px 12px;
-        background: rgba(80, 0, 202, 0.06);
-        border-radius: 10px;
-        border: 1px solid rgba(80, 0, 202, 0.18);
+        padding-top: 18px;
 
-        .level-indicator {
-          font-size: 0.85rem;
-          font-weight: 800;
-          color: #5000ca;
-          text-transform: uppercase;
-          letter-spacing: 0.5px;
+        .node-circle {
+          width: 14px;
+          height: 14px;
+          border-radius: 50%;
+          background: #5000ca;
+          border: 3px solid #0f1017;
+          box-shadow: 0 0 0 3px rgba(80, 0, 202, 0.4);
+          transition: transform 0.2s ease;
         }
 
-        .step-year {
-          font-size: 0.76rem;
-          color: #4b5563;
-          font-weight: 600;
-          margin-top: 4px;
-          text-align: center;
-          white-space: nowrap;
-
-          svg {
-            font-size: 0.72rem;
-            color: #5000ca;
-            margin-right: 3px;
-          }
-        }
-
-        .active-role-tag {
-          font-size: 0.65rem;
+        .level-tag {
+          font-size: 0.72rem;
           font-weight: 800;
-          color: #10b981;
-          background: rgba(16, 185, 129, 0.12);
-          border: 1px solid rgba(16, 185, 129, 0.3);
-          padding: 1px 6px;
-          border-radius: 10px;
-          margin-top: 6px;
-          text-transform: uppercase;
+          color: #9ca3af;
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          padding: 2px 7px;
+          border-radius: 6px;
+          margin-top: 8px;
           letter-spacing: 0.5px;
         }
       }
 
-      .step-body {
+      /* Prominent Current Role Node */
+      &.is-current .timeline-track-node {
+        .node-circle {
+          background: #00d2ff;
+          box-shadow: 0 0 0 4px rgba(0, 210, 255, 0.4), 0 0 12px rgba(0, 210, 255, 0.6);
+        }
+
+        .level-tag {
+          color: #00d2ff;
+          border-color: rgba(0, 210, 255, 0.35);
+          background: rgba(0, 210, 255, 0.1);
+        }
+      }
+
+      /* The Experience Card */
+      .timeline-card {
         flex: 1;
+        background: #ffffff;
+        color: #272822;
+        border-radius: 14px;
+        padding: 24px 28px;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+        border: 1px solid #e5e7eb;
+        transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
 
-        .company-logo-header {
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 10px 28px rgba(80, 0, 202, 0.14);
+          border-color: rgba(80, 0, 202, 0.35);
+        }
+
+        /* Top Bar: Company info, Logo, Dates */
+        .card-top-bar {
           display: flex;
-          align-items: center;
-          gap: 12px;
-          margin-bottom: 8px;
+          justify-content: space-between;
+          align-items: flex-start;
           flex-wrap: wrap;
+          gap: 14px;
+          margin-bottom: 14px;
+          padding-bottom: 14px;
+          border-bottom: 1px solid #f3f4f6;
 
-          .company-logo-wrapper {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: #ffffff;
-            padding: 3px 8px;
-            border-radius: 6px;
-            border: 1px solid #e5e7eb;
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
-            height: 36px;
-            min-width: 70px;
-
-            .company-brand-logo {
-              max-height: 26px;
-              max-width: 100px;
-              width: auto;
-              height: auto;
-              object-fit: contain;
-              display: block;
-            }
-          }
-
-          .company-header-meta {
+          .company-branding {
             display: flex;
-            flex-direction: column;
-            gap: 2px;
+            align-items: center;
+            gap: 12px;
 
-            .company-title-text {
-              font-size: 0.95rem;
-              font-weight: 700;
-              color: #111827;
-            }
-
-            .company-location-text {
-              font-size: 0.76rem;
-              color: #6b7280;
+            .company-logo-box {
+              height: 38px;
+              width: 78px;
+              background: #ffffff;
+              border-radius: 6px;
+              border: 1px solid #e5e7eb;
+              box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
               display: flex;
               align-items: center;
-              gap: 4px;
+              justify-content: center;
+              padding: 2px 6px;
 
-              svg {
-                color: #9ca3af;
-                font-size: 0.74rem;
+              .company-logo-img {
+                max-height: 26px;
+                max-width: 70px;
+                width: auto;
+                height: auto;
+                object-fit: contain;
+                display: block;
               }
             }
-          }
 
-          .current-prominence-tag {
-            margin-left: auto;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            font-size: 0.74rem;
-            font-weight: 700;
-            color: #065f46;
-            background: #d1fae5;
-            border: 1px solid #a7f3d0;
-            padding: 3px 10px;
-            border-radius: 14px;
-
-            svg {
-              color: #10b981;
-            }
-          }
-        }
-
-        .role-heading {
-          font-size: 1.25rem;
-          font-weight: 800;
-          color: #111827;
-          margin: 4px 0 2px 0;
-          line-height: 1.35;
-        }
-
-        .role-subheading {
-          font-size: 0.88rem;
-          color: #4b5563;
-          font-weight: 500;
-          font-style: italic;
-          margin-bottom: 6px;
-          line-height: 1.4;
-        }
-
-        .role-timeline-sub {
-          font-size: 0.82rem;
-          font-weight: 600;
-          color: #5000ca;
-          margin-bottom: 12px;
-        }
-
-        .promotion-milestone-pill {
-          display: inline-flex;
-          align-items: center;
-          gap: 6px;
-          font-size: 0.80rem;
-          font-weight: 700;
-          color: #925400;
-          background: #fff8e6;
-          border: 1px solid #ffe58f;
-          padding: 4px 12px;
-          border-radius: 20px;
-          margin-bottom: 12px;
-
-          svg {
-            color: #d48806;
-            font-size: 0.85rem;
-          }
-        }
-
-        .skill-chips-row {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 6px;
-
-          .skill-chip {
-            font-size: 0.75rem;
-            font-weight: 600;
-            padding: 3px 10px;
-            background: #f3f4f6;
-            color: #374151;
-            border-radius: 12px;
-            border: 1px solid #e5e7eb;
-          }
-        }
-      }
-    }
-  }
-
-  /* ========================================================
-     VIEW 2: COMPANY WORKED WITH YEAR-ON-YEAR CHART (PRESENT -> PAST)
-     ======================================================== */
-  .yoy-company-section {
-    max-width: 950px;
-    margin: 0 auto;
-
-    .yoy-chart-container {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 16px;
-      padding: 26px;
-      backdrop-filter: blur(10px);
-
-      .yoy-scale-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin-bottom: 25px;
-        padding-bottom: 14px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
-        .scale-title {
-          font-size: 1.1rem;
-          font-weight: 700;
-          color: #ffffff;
-        }
-
-        .scale-years {
-          display: flex;
-          gap: 16px;
-          font-size: 0.82rem;
-          color: #9ca3af;
-          font-family: 'Courier Prime', monospace;
-          font-weight: 600;
-
-          .highlight-present {
-            color: #00d2ff;
-            font-weight: 800;
-          }
-        }
-      }
-
-      .yoy-cards-list {
-        display: flex;
-        flex-direction: column;
-        gap: 22px;
-
-        .yoy-company-card {
-          background: #ffffff;
-          color: #272822;
-          border-radius: 12px;
-          padding: 24px 26px;
-          border-left: 6px solid #5000ca;
-          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-          transition: transform 0.2s ease, box-shadow 0.2s ease;
-
-          &:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-          }
-
-          &.current-company-card {
-            border-left: 6px solid #5000ca;
-            background: linear-gradient(135deg, #ffffff 0%, #f7f5ff 100%);
-            box-shadow: 0 6px 24px rgba(80, 0, 202, 0.12);
-          }
-
-          .card-top-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            gap: 14px;
-            margin-bottom: 14px;
-
-            .company-info-group {
+            .company-text-meta {
               display: flex;
-              align-items: flex-start;
-              gap: 14px;
+              flex-direction: column;
+              gap: 2px;
 
-              .company-logo-wrapper {
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                background: #ffffff;
-                padding: 4px 10px;
-                border-radius: 6px;
-                border: 1px solid #e5e7eb;
-                box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
-                height: 40px;
-                min-width: 74px;
-
-                .company-brand-logo {
-                  max-height: 28px;
-                  max-width: 110px;
-                  width: auto;
-                  height: auto;
-                  object-fit: contain;
-                  display: block;
-                }
-              }
-
-              .company-title-wrap {
+              .company-name-row {
                 display: flex;
                 align-items: center;
-                gap: 10px;
+                gap: 8px;
                 flex-wrap: wrap;
 
-                .company-main-name {
-                  font-size: 1.25rem;
+                .company-name {
+                  font-size: 1.05rem;
                   font-weight: 800;
                   color: #111827;
-                  margin: 0;
                 }
 
-                .current-org-tag {
+                .current-badge {
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 4px;
                   font-size: 0.70rem;
                   font-weight: 700;
-                  text-transform: uppercase;
-                  letter-spacing: 0.5px;
                   color: #065f46;
                   background: #d1fae5;
                   border: 1px solid #a7f3d0;
                   padding: 2px 8px;
                   border-radius: 12px;
-                }
-              }
-
-              .company-meta-line {
-                font-size: 0.82rem;
-                color: #6b7280;
-                font-weight: 500;
-                margin-top: 3px;
-              }
-            }
-
-            .tenure-badge-box {
-              text-align: right;
-
-              .tenure-duration {
-                display: inline-block;
-                color: #ffffff;
-                font-size: 0.78rem;
-                font-weight: 700;
-                padding: 4px 10px;
-                border-radius: 12px;
-                margin-bottom: 4px;
-              }
-
-              .tenure-period {
-                display: block;
-                font-size: 0.78rem;
-                color: #6b7280;
-                font-weight: 600;
-              }
-            }
-          }
-
-          /* Roles Ladder */
-          .company-roles-ladder {
-            margin: 14px 0;
-            padding: 14px 16px;
-            background: #f9fafb;
-            border-radius: 8px;
-            border: 1px solid #f3f4f6;
-
-            .ladder-label {
-              font-size: 0.76rem;
-              font-weight: 700;
-              text-transform: uppercase;
-              letter-spacing: 0.5px;
-              color: #4b5563;
-              margin-bottom: 12px;
-            }
-
-            .ladder-step {
-              display: flex;
-              align-items: flex-start;
-              gap: 12px;
-              position: relative;
-              padding-bottom: 12px;
-
-              &:last-child {
-                padding-bottom: 0;
-              }
-
-              &:not(:last-child)::before {
-                content: '';
-                position: absolute;
-                left: 4px;
-                top: 14px;
-                bottom: 0;
-                width: 2px;
-                background: #e5e7eb;
-              }
-
-              .ladder-bullet {
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-                margin-top: 5px;
-                flex-shrink: 0;
-              }
-
-              .ladder-content {
-                flex: 1;
-
-                .ladder-title-row {
-                  display: flex;
-                  justify-content: space-between;
-                  align-items: center;
-                  flex-wrap: wrap;
-                  gap: 6px;
-
-                  .ladder-title {
-                    font-size: 0.90rem;
-                    font-weight: 700;
-                    color: #111827;
-                  }
-
-                  .ladder-date {
-                    font-size: 0.78rem;
-                    color: #6b7280;
-                    font-weight: 500;
-                  }
-                }
-
-                .ladder-badge {
-                  display: inline-flex;
-                  align-items: center;
-                  gap: 4px;
-                  font-size: 0.74rem;
-                  font-weight: 600;
-                  color: #925400;
-                  background: #fff8e6;
-                  border: 1px solid #ffe58f;
-                  padding: 2px 8px;
-                  border-radius: 10px;
-                  margin-top: 4px;
+                  text-transform: uppercase;
+                  letter-spacing: 0.5px;
 
                   svg {
-                    color: #d48806;
-                    font-size: 0.75rem;
+                    color: #10b981;
                   }
+                }
+              }
+
+              .location-row {
+                font-size: 0.78rem;
+                color: #6b7280;
+                display: flex;
+                align-items: center;
+                gap: 4px;
+
+                svg {
+                  color: #9ca3af;
+                  font-size: 0.75rem;
                 }
               }
             }
           }
 
-          /* Skills Footer */
-          .company-skills-footer {
+          /* Date & Duration */
+          .date-duration-pill {
             display: flex;
             align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-top: 10px;
-            padding-top: 10px;
-            border-top: 1px dashed #e5e7eb;
+            gap: 8px;
 
-            .skills-lbl {
-              font-size: 0.76rem;
-              font-weight: 700;
+            .date-range {
+              font-size: 0.82rem;
+              font-weight: 600;
               color: #4b5563;
-              text-transform: uppercase;
-              letter-spacing: 0.5px;
+              display: flex;
+              align-items: center;
+              gap: 5px;
+
+              svg {
+                color: #5000ca;
+                font-size: 0.78rem;
+              }
             }
 
-            .skill-chips-row {
-              display: flex;
-              flex-wrap: wrap;
-              gap: 6px;
+            .duration-tag {
+              font-size: 0.74rem;
+              font-weight: 700;
+              color: #ffffff;
+              background: #5000ca;
+              padding: 2px 8px;
+              border-radius: 10px;
+            }
+          }
+        }
 
-              .skill-chip {
-                font-size: 0.74rem;
-                font-weight: 600;
-                padding: 2px 8px;
-                background: #f3f4f6;
-                color: #374151;
-                border-radius: 10px;
-                border: 1px solid #e5e7eb;
+        /* Role Heading & Level */
+        .role-title-row {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 10px;
+
+          .role-title {
+            font-size: 1.32rem;
+            font-weight: 800;
+            color: #111827;
+            margin: 0;
+            line-height: 1.35;
+          }
+
+          .level-badge {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #5000ca;
+            background: rgba(80, 0, 202, 0.08);
+            border: 1px solid rgba(80, 0, 202, 0.22);
+            padding: 2px 8px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            flex-shrink: 0;
+          }
+        }
+
+        /* Hero Milestone Pill */
+        .hero-milestone-pill {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          font-size: 0.80rem;
+          font-weight: 700;
+          padding: 4px 12px;
+          border-radius: 20px;
+          margin-bottom: 14px;
+
+          &.type-award {
+            color: #925400;
+            background: #fff8e6;
+            border: 1px solid #ffe58f;
+            svg { color: #d48806; font-size: 0.85rem; }
+          }
+
+          &.type-promotion {
+            color: #065f46;
+            background: #ecfdf5;
+            border: 1px solid #a7f3d0;
+            svg { color: #10b981; font-size: 0.85rem; }
+          }
+
+          &.type-foundation {
+            color: #1e40af;
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            svg { color: #3b82f6; font-size: 0.85rem; }
+          }
+        }
+
+        /* Responsibilities Block (Fast Scannable Recruiter View) */
+        .responsibilities-block {
+          margin-bottom: 14px;
+
+          .responsibilities-title {
+            font-size: 0.76rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #4b5563;
+            margin-bottom: 8px;
+          }
+
+          .responsibilities-list {
+            margin: 0;
+            padding-left: 18px;
+
+            li {
+              font-size: 0.88rem;
+              color: #272822;
+              line-height: 1.55;
+              margin-bottom: 6px;
+
+              strong {
+                color: #5000ca;
+                font-weight: 700;
               }
             }
           }
+        }
+
+        /* Skills Chips */
+        .skills-block {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          flex-wrap: wrap;
+          padding-top: 10px;
+          border-top: 1px dashed #e5e7eb;
+
+          .skills-label {
+            font-size: 0.76rem;
+            font-weight: 700;
+            color: #4b5563;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+          }
+
+          .skills-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+
+            .skill-chip {
+              font-size: 0.74rem;
+              font-weight: 600;
+              padding: 2px 8px;
+              background: #f3f4f6;
+              color: #374151;
+              border-radius: 8px;
+              border: 1px solid #e5e7eb;
+            }
+          }
+        }
+      }
+
+      /* Prominent Current Card Highlight */
+      &.is-current .timeline-card {
+        border-left: 5px solid #5000ca;
+        background: linear-gradient(135deg, #ffffff 0%, #f7f5ff 100%);
+        box-shadow: 0 6px 26px rgba(80, 0, 202, 0.15);
+
+        &:hover {
+          box-shadow: 0 12px 34px rgba(80, 0, 202, 0.22);
         }
       }
     }
@@ -708,122 +498,89 @@
 
 /* Light Mode Overrides */
 .light-mode #history {
-  .history-header {
+  .experience-header {
     h1 {
       color: #111827;
     }
-    .timeline-subtitle {
+    .experience-subtitle {
       color: #4b5563;
     }
   }
 
-  .career-view-tabs {
-    background: #e5e7eb;
-    border-color: #d1d5db;
-
-    .tab-btn {
-      color: #374151;
-
-      &.active {
-        background: #5000ca;
-        color: #ffffff;
-      }
-    }
-  }
-
-  .graph-intro-bar .metric-box {
+  .experience-metrics-strip .metric-cell {
     background: #ffffff;
     border-color: #e5e7eb;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 
-    .metric-val {
+    .metric-number {
       color: #5000ca;
     }
 
-    .metric-lbl {
+    .metric-text {
       color: #6b7280;
-    }
-  }
-
-  .yoy-company-section .yoy-chart-container {
-    background: #ffffff;
-    border-color: #e5e7eb;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-
-    .yoy-scale-header {
-      border-color: #e5e7eb;
-
-      .scale-title {
-        color: #111827;
-      }
-      .scale-years {
-        color: #6b7280;
-      }
     }
   }
 }
 
-/* Responsive adjustments */
+/* Mobile Responsiveness (Single Column Flow) */
 @media screen and (max-width: 768px) {
   #history {
     padding: 40px 15px 60px 15px;
 
-    .history-header h1 {
-      font-size: 1.85rem;
+    .experience-header h1 {
+      font-size: 1.9rem;
     }
 
-    .career-view-tabs {
-      flex-direction: column;
-      width: 100%;
-      border-radius: 16px;
-
-      .tab-btn {
-        justify-content: center;
-        width: 100%;
-      }
-    }
-
-    .timeline-flow-indicator {
+    .timeline-flow-marker {
       justify-content: center;
-      &.bottom-indicator {
+      &.bottom-marker {
         padding-left: 0;
         justify-content: center;
       }
     }
 
-    .stepped-promotion-chart.reverse-flow::before {
-      display: none;
+    .corporate-timeline::before {
+      left: 14px;
     }
 
-    .stepped-promotion-chart .promotion-step-card {
-      flex-direction: column;
-      padding: 18px 16px;
-      gap: 14px;
+    .corporate-timeline .timeline-card-wrapper {
+      gap: 12px;
 
-      .step-elevation-badge {
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
+      .timeline-track-node {
+        width: 30px;
+        padding-top: 14px;
+
+        .node-circle {
+          width: 12px;
+          height: 12px;
+        }
+
+        .level-tag {
+          font-size: 0.65rem;
+          padding: 1px 4px;
+        }
       }
 
-      .step-body .company-logo-header .current-prominence-tag {
-        margin-left: 0;
-        margin-top: 4px;
-      }
-    }
+      .timeline-card {
+        padding: 18px 16px;
 
-    .yoy-company-section .yoy-chart-container {
-      padding: 16px;
+        .card-top-bar {
+          flex-direction: column;
+          gap: 10px;
 
-      .yoy-scale-header .scale-years {
-        display: none;
-      }
+          .date-duration-pill {
+            flex-wrap: wrap;
+          }
+        }
 
-      .yoy-cards-list .yoy-company-card .card-top-row {
-        flex-direction: column;
+        .role-title-row {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 6px;
 
-        .tenure-badge-box {
-          text-align: left;
+          .role-title {
+            font-size: 1.15rem;
+          }
         }
       }
     }
