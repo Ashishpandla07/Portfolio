@@ -1,167 +1,350 @@
-import React from "react";
+import React, { useState } from "react";
 import '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBriefcase, faBuilding, faChartLine, faAward, faTrophy, faStar } from '@fortawesome/free-solid-svg-icons';
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
+import { 
+  faBuilding, 
+  faAward, 
+  faTrophy, 
+  faStar, 
+  faArrowTrendUp, 
+  faCalendarAlt, 
+  faCheckCircle 
+} from '@fortawesome/free-solid-svg-icons';
 import '../assets/styles/Timeline.scss';
 
+interface PromotionNode {
+  year: string;
+  role: string;
+  company: string;
+  companyShort: string;
+  type: "promotion" | "award" | "qualification" | "foundation";
+  badge: string;
+  level: number; // 1 to 5 for elevation
+  chips: string[];
+}
+
+interface CompanyTenure {
+  company: string;
+  shortName: string;
+  role: string;
+  period: string;
+  duration: string;
+  startYear: number;
+  endYear: number;
+  totalYears: number;
+  color: string;
+  badge: string;
+  achievements: string[];
+}
+
+const promotionData: PromotionNode[] = [
+  {
+    year: "2015 – 2018",
+    role: "CA Articleship Trainee",
+    company: "N K Jain & Co., Chartered Accountants",
+    companyShort: "N K Jain & Co.",
+    type: "foundation",
+    badge: "ICAI Mandatory Articleship (3 Yrs)",
+    level: 1,
+    chips: ["Statutory Audits", "Tax Audit (Sec 44AB)", "CAATs", "Direct Taxation"]
+  },
+  {
+    year: "2018",
+    role: "Chartered Accountant (CA)",
+    company: "The Institute of Chartered Accountants of India",
+    companyShort: "ICAI",
+    type: "qualification",
+    badge: "Qualified Chartered Accountant · Exemptions in AMA, ISCA & SFM",
+    level: 2,
+    chips: ["ICAI Certified", "Advanced Financial Management", "Corporate Laws"]
+  },
+  {
+    year: "2019",
+    role: "Audit Executive",
+    company: "N K Jain & Co., Chartered Accountants",
+    companyShort: "N K Jain & Co.",
+    type: "promotion",
+    badge: "Post-Qualification Promotion · Risk & Audit Practice",
+    level: 3,
+    chips: ["Internal Audits", "ICFR Assurance", "GST Compliances", "Tax Advisory"]
+  },
+  {
+    year: "2019 – 2021",
+    role: "Manager – Finance & Accounts",
+    company: "Cars24 Services Pvt. Ltd.",
+    companyShort: "Cars24",
+    type: "foundation",
+    badge: "Corporate Controlling Transition",
+    level: 3,
+    chips: ["P2P & O2C Workflows", "Financial Controls", "Ind AS Reporting"]
+  },
+  {
+    year: "2021",
+    role: "Senior Manager / Finance Controller",
+    company: "Cars24 Services Pvt. Ltd.",
+    companyShort: "Cars24",
+    type: "promotion",
+    badge: "Promoted to Controllership · Employee of the Year 2021",
+    level: 4,
+    chips: ["Ind AS 109, 115, 116", "Statutory Audit Lead (EY/GT)", "₹80 Cr ESOP Buyback"]
+  },
+  {
+    year: "2022",
+    role: "Finance Controller",
+    company: "Cars24 Services Pvt. Ltd.",
+    companyShort: "Cars24",
+    type: "award",
+    badge: "Mr. Detail Oriented Award 2022 · Consistent 5/5 Rating",
+    level: 4,
+    chips: ["Global Entity Expansion", "ICFR Systems", "Team Leadership (10 Members)"]
+  },
+  {
+    year: "2023 – Present",
+    role: "Senior Manager – Controlling / Business Finance (India Lead)",
+    company: "Cargo Partner Logistics India Pvt. Ltd. (Nippon Express)",
+    companyShort: "Cargo Partner (Nippon Express)",
+    type: "promotion",
+    badge: "Promoted to India Lead · GEM Award 2024 & 2025 · Top Support Function 2024",
+    level: 5,
+    chips: ["Strategic FP&A", "AOP & Forecasting", "Profitability Turnaround", "SAP & Power BI"]
+  }
+];
+
+const companyTenureData: CompanyTenure[] = [
+  {
+    company: "Cargo Partner Logistics India Pvt. Ltd.",
+    shortName: "Cargo Partner (Nippon Express)",
+    role: "Senior Manager – Controlling / Business Finance (India Lead)",
+    period: "Aug 2023 – Present",
+    duration: "2.5+ Years",
+    startYear: 2023,
+    endYear: 2026,
+    totalYears: 2.6,
+    color: "#5000ca",
+    badge: "GEM Award (2024 & 2025) · Top Support Function Award",
+    achievements: [
+      "India Lead for Financial Controlling & Business Finance",
+      "Spearheaded Annual Operating Plans (AOP) and Profitability Turnaround",
+      "Turned ~75% profit centers profitable & generated ₹50+ Lacs recurring savings"
+    ]
+  },
+  {
+    company: "Cars24 Services Pvt. Ltd.",
+    shortName: "Cars24 Services",
+    role: "Senior Manager / Finance Controller",
+    period: "Dec 2019 – Aug 2023",
+    duration: "3 Years 9 Months",
+    startYear: 2019,
+    endYear: 2023,
+    totalYears: 3.75,
+    color: "#ff6b00",
+    badge: "Employee of the Year 2021 · Detail Oriented Award 2022 · Rated 5/5",
+    achievements: [
+      "Promoted to Controllership leading statutory & ICFR audits (EY, GT)",
+      "Compressed month-end closing from 11th to 7th day under Ind-AS",
+      "Managed ₹80 Cr ESOP share buyback & led 10-member finance team"
+    ]
+  },
+  {
+    company: "N K Jain & Co., Chartered Accountants",
+    shortName: "N K Jain & Co. (Post-CA)",
+    role: "Audit Executive",
+    period: "Jan 2019 – Dec 2019",
+    duration: "1 Year",
+    startYear: 2019,
+    endYear: 2019.9,
+    totalYears: 1.0,
+    color: "#0284c7",
+    badge: "Post-Qualification Assurance & GST Practice",
+    achievements: [
+      "Risk-based internal audits and physical control verifications",
+      "Supervised direct and indirect taxation (GST returns & audits)"
+    ]
+  },
+  {
+    company: "N K Jain & Co., Chartered Accountants",
+    shortName: "N K Jain & Co. (Articleship)",
+    role: "Chartered Accountant Trainee (Articleship)",
+    period: "2015 – 2018",
+    duration: "3 Years",
+    startYear: 2015,
+    endYear: 2018,
+    totalYears: 3.0,
+    color: "#475569",
+    badge: "ICAI Mandatory 3-Year Articleship",
+    achievements: [
+      "Statutory audits (Companies Act, 2013) & Tax Audits (Form 3CD)",
+      "CAATs analytical procedures & ledger reconciliations"
+    ]
+  }
+];
+
 function Timeline() {
+  const [activeTab, setActiveTab] = useState<"graph" | "yoy">("graph");
+
   return (
     <div id="history">
       <div className="items-container">
-        <h1>Career History</h1>
-        <p className="timeline-subtitle">Chartered Accountant & Finance Leader · Track Record of Strategic FP&A, Controllership & Value Creation</p>
-        <VerticalTimeline>
-          {/* Role 1: Cargo Partner Logistics */}
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
-            contentArrowStyle={{ borderRight: '7px solid white' }}
-            date="Aug 2023 – Present"
-            iconStyle={{ background: '#5000ca', color: '#fff' }}
-            icon={<FontAwesomeIcon icon={faBriefcase} />}
-          >
-            <div className="timeline-header-block">
-              <div className="company-logo-tag">
-                <span className="logo-placeholder-pill">[Company / Firm Logo]</span>
-                <span className="company-name">Cargo Partner Logistics India Pvt. Ltd.</span>
-              </div>
-              <div className="career-progression-badge">
-                <FontAwesomeIcon icon={faTrophy} /> GEM Award (2024 & 2025) · Top Support Function Award
-              </div>
-            </div>
+        <div className="history-header">
+          <h1>Career Progression & History</h1>
+          <p className="timeline-subtitle">
+            Year-on-Year Growth Trajectory, Corporate Tenures & Promotion Milestones (2015 – Present)
+          </p>
 
-            <h3 className="vertical-timeline-element-title">Senior Manager – Controlling / Business Finance (India Lead)</h3>
-            <h4 className="vertical-timeline-element-subtitle">Subsidiary of Nippon Express Group · Gurugram, India</h4>
+          {/* Tab Selector */}
+          <div className="career-view-tabs">
+            <button 
+              className={`tab-btn ${activeTab === 'graph' ? 'active' : ''}`}
+              onClick={() => setActiveTab('graph')}
+            >
+              <FontAwesomeIcon icon={faArrowTrendUp} /> Promotion Graph & Milestones
+            </button>
+            <button 
+              className={`tab-btn ${activeTab === 'yoy' ? 'active' : ''}`}
+              onClick={() => setActiveTab('yoy')}
+            >
+              <FontAwesomeIcon icon={faBuilding} /> Company Year-on-Year Chart
+            </button>
+          </div>
+        </div>
 
-            <ul>
-              <li>
-                <strong>Strategic FP&A & Corporate Forecasting:</strong> Orchestrated comprehensive Annual Operating Plans (AOP) and dynamic rolling forecasts across business units; developed variance analysis frameworks delivering real-time operating metrics and actionable insights to senior leadership.
-              </li>
-              <li>
-                <strong>Profitability Turnaround & Commercial ROI:</strong> Engineered profitability turnaround programs across decentralized logistics branches, converting ~75% of profit centers into profitable units, boosting operational productivity by 20%, and scaling ROI from 1x to 2x.
-              </li>
-              <li>
-                <strong>Cost Governance & Working Capital:</strong> Spearheaded strategic cost-control initiatives across cost centers, eliminating operational leakages to unlock ₹50+ Lacs in annual recurring savings while optimizing P2P and O2C cycles to strengthen liquidity.
-              </li>
-              <li>
-                <strong>Enterprise Business Intelligence & MIS:</strong> Architected automated BI reporting models and executive dashboards (Budget vs. Actual, Sales Rankings, Volume/Yield trackers) using SAP and Power BI for data-driven executive decision-making.
-              </li>
-            </ul>
-          </VerticalTimelineElement>
-
-          {/* Role 2: Cars24 Services */}
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
-            contentArrowStyle={{ borderRight: '7px solid white' }}
-            date="Dec 2019 – Aug 2023"
-            iconStyle={{ background: '#5000ca', color: '#fff' }}
-            icon={<FontAwesomeIcon icon={faBuilding} />}
-          >
-            <div className="timeline-header-block">
-              <div className="company-logo-tag">
-                <span className="logo-placeholder-pill">[Company / Firm Logo]</span>
-                <span className="company-name">Cars24 Services Pvt. Ltd.</span>
+        {/* VIEW 1: PROMOTION GRAPH FROM LINKEDIN */}
+        {activeTab === 'graph' && (
+          <div className="promotion-graph-section">
+            <div className="graph-intro-bar">
+              <div className="metric-box">
+                <span className="metric-val">8+ Years</span>
+                <span className="metric-lbl">Total Experience</span>
               </div>
-              <div className="career-progression-badge">
-                <FontAwesomeIcon icon={faAward} /> Employee of the Year (2021) · Detail-Oriented Award (2022) · Rated 5/5
+              <div className="metric-box">
+                <span className="metric-val">5 Levels</span>
+                <span className="metric-lbl">Career Elevation</span>
+              </div>
+              <div className="metric-box">
+                <span className="metric-val">3 Top Brands</span>
+                <span className="metric-lbl">Corporate Tenures</span>
+              </div>
+              <div className="metric-box">
+                <span className="metric-val">5+ Awards</span>
+                <span className="metric-lbl">Honors & Recognition</span>
               </div>
             </div>
 
-            <h3 className="vertical-timeline-element-title">Senior Manager / Finance Controller</h3>
-            <h4 className="vertical-timeline-element-subtitle">Cars24 Services Pvt. Ltd. · Gurugram, India</h4>
+            {/* Stepped Elevation Promotion Chart */}
+            <div className="stepped-promotion-chart">
+              {promotionData.map((node, index) => {
+                const isCurrent = index === promotionData.length - 1;
+                return (
+                  <div key={index} className={`promotion-step-card level-${node.level} ${isCurrent ? 'current-step' : ''}`}>
+                    <div className="step-elevation-badge">
+                      <span className="level-indicator">Level {node.level}</span>
+                      <span className="step-year"><FontAwesomeIcon icon={faCalendarAlt} /> {node.year}</span>
+                    </div>
 
-            <ul>
-              <li>
-                <strong>Statutory Controllership & Ind AS:</strong> Directed multi-entity financial statement consolidation and reporting under Ind AS (109, 115, 116, 102); compressed month-end financial closing schedules from the 11th to the 7th business day through process automation.
-              </li>
-              <li>
-                <strong>Statutory, Tax & ICFR Audit Leadership:</strong> Spearheaded statutory, tax, and Internal Financial Controls (ICFR) audits coordinating with Big-4 and top-tier audit firms (EY, Grant Thornton); established robust Risk & Control Matrices (RCM) achieving clean audit reports.
-              </li>
-              <li>
-                <strong>Capital Transactions & ESOP Execution:</strong> Managed the financial execution, regulatory reporting, and compliance governance for an ₹80 Cr ESOP share buyback program.
-              </li>
-              <li>
-                <strong>Global Expansion & Team Mentorship:</strong> Supported international expansion across Southeast Asia and Middle East markets, establishing banking channels, legal entity compliances, and controllership frameworks while mentoring a 10-member finance team.
-              </li>
-            </ul>
-          </VerticalTimelineElement>
+                    <div className="step-body">
+                      <div className="company-logo-header">
+                        <span className="company-logo-pill">[Company / Firm Logo]</span>
+                        <span className="company-title-text">{node.company}</span>
+                      </div>
 
-          {/* Role 3: N K Jain & Co. (Audit Executive) */}
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
-            contentArrowStyle={{ borderRight: '7px solid white' }}
-            date="Jan 2019 – Dec 2019"
-            iconStyle={{ background: '#5000ca', color: '#fff' }}
-            icon={<FontAwesomeIcon icon={faChartLine} />}
-          >
-            <div className="timeline-header-block">
-              <div className="company-logo-tag">
-                <span className="logo-placeholder-pill">[Company / Firm Logo]</span>
-                <span className="company-name">N K Jain & Co., Chartered Accountants</span>
+                      <h3 className="role-heading">{node.role}</h3>
+
+                      <div className="promotion-milestone-pill">
+                        {node.type === 'award' && <FontAwesomeIcon icon={faTrophy} />}
+                        {node.type === 'promotion' && <FontAwesomeIcon icon={faArrowTrendUp} />}
+                        {node.type === 'qualification' && <FontAwesomeIcon icon={faStar} />}
+                        {node.type === 'foundation' && <FontAwesomeIcon icon={faCheckCircle} />}
+                        <span>{node.badge}</span>
+                      </div>
+
+                      <div className="skill-chips-row">
+                        {node.chips.map((chip, i) => (
+                          <span key={i} className="skill-chip">{chip}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* VIEW 2: YEAR-ON-YEAR COMPANY WORKED WITH CHART */}
+        {activeTab === 'yoy' && (
+          <div className="yoy-company-section">
+            <div className="yoy-chart-container">
+              {/* Timeline Header Scale */}
+              <div className="yoy-scale-header">
+                <div className="scale-title">Company Tenure & Year-on-Year Timeline</div>
+                <div className="scale-years">
+                  <span>2015</span>
+                  <span>2017</span>
+                  <span>2019</span>
+                  <span>2021</span>
+                  <span>2023</span>
+                  <span>2025</span>
+                  <span>Present</span>
+                </div>
               </div>
-              <div className="career-progression-badge">
-                <FontAwesomeIcon icon={faStar} /> Post-Qualification Assurance & Direct/Indirect Tax Practice
+
+              {/* Company YoY Cards */}
+              <div className="yoy-cards-list">
+                {companyTenureData.map((item, index) => (
+                  <div key={index} className="yoy-company-card" style={{ borderLeftColor: item.color }}>
+                    <div className="card-top-row">
+                      <div className="company-info-group">
+                        <span className="company-logo-pill">[Company / Firm Logo]</span>
+                        <div>
+                          <h3 className="company-main-name">{item.company}</h3>
+                          <div className="company-designation">{item.role}</div>
+                        </div>
+                      </div>
+
+                      <div className="tenure-badge-box">
+                        <span className="tenure-duration" style={{ background: item.color }}>
+                          {item.duration}
+                        </span>
+                        <span className="tenure-period">{item.period}</span>
+                      </div>
+                    </div>
+
+                    {/* Progress Bar Visualization */}
+                    <div className="timeline-visual-bar-wrapper">
+                      <div className="timeline-visual-track">
+                        <div 
+                          className="timeline-visual-fill"
+                          style={{ 
+                            background: item.color,
+                            width: `${Math.min(100, Math.round((item.totalYears / 10.5) * 100))}%`
+                          }}
+                        />
+                      </div>
+                      <span className="tenure-percentage-label">
+                        {Math.round((item.totalYears / 10.5) * 100)}% of Total Career
+                      </span>
+                    </div>
+
+                    {/* Milestone / Award Tag */}
+                    <div className="card-milestone-tag">
+                      <FontAwesomeIcon icon={faAward} />
+                      <span>{item.badge}</span>
+                    </div>
+
+                    {/* Quick Highlights */}
+                    <ul className="yoy-highlights-list">
+                      {item.achievements.map((ach, aIdx) => (
+                        <li key={aIdx}>
+                          <FontAwesomeIcon icon={faCheckCircle} /> {ach}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
             </div>
-
-            <h3 className="vertical-timeline-element-title">Audit Executive</h3>
-            <h4 className="vertical-timeline-element-subtitle">N K Jain & Co., Chartered Accountants · Gurugram, India</h4>
-
-            <ul>
-              <li>
-                <strong>Internal Audits & Risk Assurance:</strong> Executed end-to-end risk-based internal audits and physical verification engagements across corporate clients, evaluating internal financial controls (IFC) and remediating control deficiencies.
-              </li>
-              <li>
-                <strong>Audit Planning & Substantive Testing:</strong> Formulated comprehensive audit programs, substantive testing procedures, and analytical reviews of financial statements in accordance with ICAI Standards on Auditing (SAs).
-              </li>
-              <li>
-                <strong>Taxation & GST Statutory Compliance:</strong> Supervised direct and indirect tax reporting, managing GST returns (GSTR-1, GSTR-3B, GSTR-9/9C) and Input Tax Credit (ITC) reconciliations with zero statutory penalty exposure.
-              </li>
-              <li>
-                <strong>Technical Advisory & Tax Research:</strong> Delivered expert technical advisory and research memoranda on complex GST disputes, corporate tax rulings, and statutory compliance defense during assessment proceedings.
-              </li>
-            </ul>
-          </VerticalTimelineElement>
-
-          {/* Role 4: N K Jain & Co. (CA Articleship) */}
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
-            contentArrowStyle={{ borderRight: '7px solid white' }}
-            date="2015 – 2018 (3 Years)"
-            iconStyle={{ background: '#5000ca', color: '#fff' }}
-            icon={<FontAwesomeIcon icon={faBriefcase} />}
-          >
-            <div className="timeline-header-block">
-              <div className="company-logo-tag">
-                <span className="logo-placeholder-pill">[Company / Firm Logo]</span>
-                <span className="company-name">N K Jain & Co., Chartered Accountants</span>
-              </div>
-              <div className="career-progression-badge">
-                <FontAwesomeIcon icon={faStar} /> ICAI 3-Year Articleship · Statutory & Tax Audits
-              </div>
-            </div>
-
-            <h3 className="vertical-timeline-element-title">Chartered Accountant Trainee (Articleship)</h3>
-            <h4 className="vertical-timeline-element-subtitle">N K Jain & Co., Chartered Accountants · Delhi NCR, India</h4>
-
-            <ul>
-              <li>
-                <strong>Statutory & Tax Audits:</strong> Managed statutory audits under the Companies Act, 2013 and prepared Tax Audit Reports under Section 44AB (Form 3CD) across manufacturing and trading entities.
-              </li>
-              <li>
-                <strong>CAATs & Ledger Verification:</strong> Utilized Computer-Assisted Audit Techniques (CAATs) and analytical procedures to verify internal controls, journal vouchers, vendor reconciliations, and bank statements.
-              </li>
-              <li>
-                <strong>Statutory Filings & Due Diligence:</strong> Managed TDS/TCS filings, corporate secretarial documentation (ROC filings), and vendor invoicing compliance, establishing deep foundational expertise across statutory accounting standards.
-              </li>
-            </ul>
-          </VerticalTimelineElement>
-        </VerticalTimeline>
+          </div>
+        )}
       </div>
     </div>
   );

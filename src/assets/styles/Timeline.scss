@@ -1,152 +1,570 @@
-.vertical-timeline span {
-    color: white;
-    font-family: 'Courier Prime', monospace;
-}
+#history {
+  padding: 60px 5% 80px 5%;
+  position: relative;
 
-.vertical-timeline p {
-    color: rgb(39, 40, 34);
-}
+  .history-header {
+    text-align: center;
+    margin-bottom: 35px;
 
-.timeline-subtitle {
-    color: #a0a0a0;
-    font-size: 1.05rem;
-    margin-top: -15px;
-    margin-bottom: 40px;
-    font-weight: 500;
-}
-
-.light-mode .timeline-subtitle {
-    color: #666;
-}
-
-.vertical-timeline-element p {
-    color: rgb(39, 40, 34);
-}
-
-.vertical-timeline-element-content {
-    border-radius: 12px !important;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
-    padding: 1.5em !important;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-
-    &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 26px rgba(80, 0, 202, 0.12) !important;
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
     }
-}
 
-.timeline-header-block {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 12px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #f0f0f5;
-}
+    .timeline-subtitle {
+      color: #9ca3af;
+      font-size: 1.05rem;
+      max-width: 720px;
+      margin: 0 auto 25px auto;
+      line-height: 1.5;
+    }
+  }
 
-.company-logo-tag {
+  /* View Switcher Tabs */
+  .career-view-tabs {
     display: inline-flex;
-    align-items: center;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 5px;
+    border-radius: 30px;
     gap: 8px;
-    flex-wrap: wrap;
+    margin-bottom: 30px;
 
-    .logo-placeholder-pill {
-        font-size: 0.72rem;
-        font-weight: 700;
+    .tab-btn {
+      background: transparent;
+      border: none;
+      color: #d1d5db;
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 10px 22px;
+      border-radius: 25px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s ease;
+
+      svg {
+        font-size: 0.9rem;
+      }
+
+      &:hover {
+        color: #ffffff;
+      }
+
+      &.active {
+        background: #5000ca;
+        color: #ffffff;
+        box-shadow: 0 4px 14px rgba(80, 0, 202, 0.4);
+      }
+    }
+  }
+
+  /* High Level Metric Bar */
+  .graph-intro-bar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    max-width: 950px;
+    margin: 0 auto 35px auto;
+
+    .metric-box {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 18px 20px;
+      text-align: center;
+      backdrop-filter: blur(8px);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+        border-color: rgba(80, 0, 202, 0.4);
+      }
+
+      .metric-val {
+        display: block;
+        font-size: 1.6rem;
+        font-weight: 800;
+        color: #00d2ff;
+        margin-bottom: 4px;
+      }
+
+      .metric-lbl {
+        font-size: 0.82rem;
+        color: #9ca3af;
         text-transform: uppercase;
         letter-spacing: 0.5px;
-        padding: 3px 8px;
-        border-radius: 4px;
-        background: rgba(80, 0, 202, 0.08);
-        color: #5000ca;
-        border: 1px solid rgba(80, 0, 202, 0.25);
-        font-family: inherit;
+        font-weight: 600;
+      }
+    }
+  }
+
+  /* ========================================================
+     VIEW 1: STEPPED PROMOTION GRAPH (LINKEDIN TRAJECTORY)
+     ======================================================== */
+  .stepped-promotion-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 950px;
+    margin: 0 auto;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 32px;
+      top: 30px;
+      bottom: 30px;
+      width: 3px;
+      background: linear-gradient(180deg, #5000ca 0%, #00d2ff 60%, rgba(255, 255, 255, 0.15) 100%);
+      z-index: 0;
+      border-radius: 3px;
     }
 
-    .company-name {
-        font-size: 0.85rem;
-        font-weight: 700;
-        color: #272822;
-        font-family: inherit;
-    }
-}
+    .promotion-step-card {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      gap: 20px;
+      background: #ffffff;
+      color: #272822;
+      border-radius: 14px;
+      padding: 22px 24px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      border-left: 5px solid #5000ca;
 
-.career-progression-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: #925400;
-    background: #fff8e6;
-    border: 1px solid #ffe58f;
-    padding: 3px 10px;
-    border-radius: 20px;
+      &:hover {
+        transform: translateX(4px);
+        box-shadow: 0 10px 28px rgba(80, 0, 202, 0.18);
+      }
 
-    svg {
-        color: #d48806;
-        font-size: 0.8rem;
-    }
-}
+      &.current-step {
+        border-left: 5px solid #00d2ff;
+        background: linear-gradient(135deg, #ffffff 0%, #f4f9ff 100%);
+        box-shadow: 0 8px 30px rgba(0, 210, 255, 0.18);
+      }
 
-.vertical-timeline-element h3.vertical-timeline-element-title {
-    color: #1a1a2e;
-    font-size: 1.18rem;
-    font-weight: 700;
-    margin: 4px 0 2px 0;
-    line-height: 1.35;
-}
-
-.vertical-timeline-element h4.vertical-timeline-element-subtitle {
-    color: #555;
-    font-size: 0.88rem;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
-.vertical-timeline-element ul {
-    margin: 12px 0 0 0;
-    padding-left: 18px;
-    text-align: left;
-
-    li {
-        color: #272822;
-        font-size: 0.90rem;
-        line-height: 1.55;
-        margin-bottom: 8px;
-
-        strong {
-            color: #5000ca;
-            font-weight: 700;
-        }
-    }
-}
-
-.vertical-timeline-element .vertical-timeline-element-date {
-    color: white;
-    font-weight: 600;
-}
-
-.light-mode .vertical-timeline-element .vertical-timeline-element-date {
-    color: #272822;
-}
-
-.svg-inline--fa {
-    color: white;
-}
-
-@media screen and (max-width: 1170px) {
-    .vertical-timeline-element .vertical-timeline-element-date {
-        color: #272822 !important;
-        font-weight: 700;
-        margin-bottom: 8px;
-    }
-
-    .timeline-header-block {
+      .step-elevation-badge {
+        flex-shrink: 0;
+        display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 6px;
+        align-items: center;
+        justify-content: center;
+        min-width: 85px;
+        padding: 8px 12px;
+        background: rgba(80, 0, 202, 0.08);
+        border-radius: 10px;
+        border: 1px solid rgba(80, 0, 202, 0.2);
+
+        .level-indicator {
+          font-size: 0.85rem;
+          font-weight: 800;
+          color: #5000ca;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+
+        .step-year {
+          font-size: 0.76rem;
+          color: #4b5563;
+          font-weight: 600;
+          margin-top: 4px;
+          text-align: center;
+          white-space: nowrap;
+
+          svg {
+            font-size: 0.72rem;
+            color: #5000ca;
+            margin-right: 3px;
+          }
+        }
+      }
+
+      .step-body {
+        flex: 1;
+
+        .company-logo-header {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 6px;
+          flex-wrap: wrap;
+
+          .company-logo-pill {
+            font-size: 0.70rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 2px 7px;
+            border-radius: 4px;
+            background: rgba(80, 0, 202, 0.09);
+            color: #5000ca;
+            border: 1px solid rgba(80, 0, 202, 0.22);
+          }
+
+          .company-title-text {
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: #4b5563;
+          }
+        }
+
+        .role-heading {
+          font-size: 1.22rem;
+          font-weight: 800;
+          color: #111827;
+          margin: 0 0 8px 0;
+          line-height: 1.35;
+        }
+
+        .promotion-milestone-pill {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          font-size: 0.80rem;
+          font-weight: 700;
+          color: #925400;
+          background: #fff8e6;
+          border: 1px solid #ffe58f;
+          padding: 4px 12px;
+          border-radius: 20px;
+          margin-bottom: 12px;
+
+          svg {
+            color: #d48806;
+            font-size: 0.85rem;
+          }
+        }
+
+        .skill-chips-row {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 6px;
+
+          .skill-chip {
+            font-size: 0.76rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            background: #f3f4f6;
+            color: #374151;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+          }
+        }
+      }
     }
+  }
+
+  /* ========================================================
+     VIEW 2: COMPANY WORKED WITH YEAR-ON-YEAR CHART
+     ======================================================== */
+  .yoy-company-section {
+    max-width: 950px;
+    margin: 0 auto;
+
+    .yoy-chart-container {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 26px;
+      backdrop-filter: blur(10px);
+
+      .yoy-scale-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 25px;
+        padding-bottom: 14px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+        .scale-title {
+          font-size: 1.1rem;
+          font-weight: 700;
+          color: #ffffff;
+        }
+
+        .scale-years {
+          display: flex;
+          gap: 16px;
+          font-size: 0.82rem;
+          color: #9ca3af;
+          font-family: 'Courier Prime', monospace;
+          font-weight: 600;
+        }
+      }
+
+      .yoy-cards-list {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+
+        .yoy-company-card {
+          background: #ffffff;
+          color: #272822;
+          border-radius: 12px;
+          padding: 20px 22px;
+          border-left: 6px solid #5000ca;
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+          }
+
+          .card-top-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 12px;
+
+            .company-info-group {
+              display: flex;
+              align-items: flex-start;
+              gap: 12px;
+
+              .company-logo-pill {
+                font-size: 0.70rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                padding: 4px 8px;
+                border-radius: 4px;
+                background: rgba(80, 0, 202, 0.09);
+                color: #5000ca;
+                border: 1px solid rgba(80, 0, 202, 0.24);
+                margin-top: 3px;
+              }
+
+              .company-main-name {
+                font-size: 1.18rem;
+                font-weight: 800;
+                color: #111827;
+                margin: 0 0 2px 0;
+              }
+
+              .company-designation {
+                font-size: 0.90rem;
+                color: #4b5563;
+                font-weight: 600;
+              }
+            }
+
+            .tenure-badge-box {
+              text-align: right;
+
+              .tenure-duration {
+                display: inline-block;
+                color: #ffffff;
+                font-size: 0.78rem;
+                font-weight: 700;
+                padding: 4px 10px;
+                border-radius: 12px;
+                margin-bottom: 4px;
+              }
+
+              .tenure-period {
+                display: block;
+                font-size: 0.78rem;
+                color: #6b7280;
+                font-weight: 600;
+              }
+            }
+          }
+
+          /* Progress Bar of Career Span */
+          .timeline-visual-bar-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 10px 0 14px 0;
+
+            .timeline-visual-track {
+              flex: 1;
+              height: 7px;
+              background: #e5e7eb;
+              border-radius: 4px;
+              overflow: hidden;
+
+              .timeline-visual-fill {
+                height: 100%;
+                border-radius: 4px;
+                transition: width 0.5s ease;
+              }
+            }
+
+            .tenure-percentage-label {
+              font-size: 0.74rem;
+              font-weight: 700;
+              color: #6b7280;
+              white-space: nowrap;
+            }
+          }
+
+          .card-milestone-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: #925400;
+            background: #fff8e6;
+            border: 1px solid #ffe58f;
+            padding: 3px 10px;
+            border-radius: 14px;
+            margin-bottom: 12px;
+
+            svg {
+              color: #d48806;
+              font-size: 0.8rem;
+            }
+          }
+
+          .yoy-highlights-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+
+            li {
+              font-size: 0.86rem;
+              color: #374151;
+              line-height: 1.45;
+              display: flex;
+              align-items: center;
+              gap: 8px;
+
+              svg {
+                color: #10b981;
+                font-size: 0.78rem;
+                flex-shrink: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Light Mode Overrides */
+.light-mode #history {
+  .history-header {
+    h1 {
+      color: #111827;
+    }
+    .timeline-subtitle {
+      color: #4b5563;
+    }
+  }
+
+  .career-view-tabs {
+    background: #e5e7eb;
+    border-color: #d1d5db;
+
+    .tab-btn {
+      color: #374151;
+
+      &.active {
+        background: #5000ca;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .graph-intro-bar .metric-box {
+    background: #ffffff;
+    border-color: #e5e7eb;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+    .metric-val {
+      color: #5000ca;
+    }
+
+    .metric-lbl {
+      color: #6b7280;
+    }
+  }
+
+  .yoy-company-section .yoy-chart-container {
+    background: #ffffff;
+    border-color: #e5e7eb;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+
+    .yoy-scale-header {
+      border-color: #e5e7eb;
+
+      .scale-title {
+        color: #111827;
+      }
+      .scale-years {
+        color: #6b7280;
+      }
+    }
+  }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  #history {
+    padding: 40px 15px 60px 15px;
+
+    .history-header h1 {
+      font-size: 1.85rem;
+    }
+
+    .career-view-tabs {
+      flex-direction: column;
+      width: 100%;
+      border-radius: 16px;
+
+      .tab-btn {
+        justify-content: center;
+        width: 100%;
+      }
+    }
+
+    .stepped-promotion-chart::before {
+      display: none;
+    }
+
+    .stepped-promotion-chart .promotion-step-card {
+      flex-direction: column;
+      padding: 16px;
+      gap: 12px;
+
+      .step-elevation-badge {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+
+    .yoy-company-section .yoy-chart-container {
+      padding: 16px;
+
+      .yoy-scale-header .scale-years {
+        display: none;
+      }
+
+      .yoy-cards-list .yoy-company-card .card-top-row {
+        flex-direction: column;
+
+        .tenure-badge-box {
+          text-align: left;
+        }
+      }
+    }
+  }
 }
