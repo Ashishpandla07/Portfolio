@@ -219,21 +219,28 @@
           flex-wrap: wrap;
 
           .company-logo-frame {
-            height: 42px;
-            width: 82px;
+            height: 56px;
+            min-width: 110px;
+            max-width: 125px;
             background: #ffffff;
-            border-radius: 8px;
-            border: 1px solid #e5e7eb;
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+            border-radius: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 3px 6px;
+            padding: 6px 12px;
             flex-shrink: 0;
+            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+
+            &:hover {
+              transform: translateY(-2px) scale(1.03);
+              box-shadow: 0 6px 18px rgba(80, 0, 202, 0.16);
+            }
 
             .company-logo-img {
-              max-height: 30px;
-              max-width: 74px;
+              max-height: 44px;
+              max-width: 100px;
               width: auto;
               height: auto;
               object-fit: contain;
