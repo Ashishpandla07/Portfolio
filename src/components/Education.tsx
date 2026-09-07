@@ -1,8 +1,8 @@
 import React from "react";
-import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
-import SchoolIcon from '@mui/icons-material/School';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import Chip from '@mui/material/Chip';
+import icaiLogo from '../assets/images/icai_logo.png';
+import rajasthanLogo from '../assets/images/rajasthan_university_logo.png';
 import '../assets/styles/Education.scss';
 
 const caSkills = [
@@ -44,8 +44,8 @@ function Education() {
             </div>
 
             <div className="card-header">
-              <div className="card-icon-wrapper" aria-label="Chartered Accountancy Credential">
-                <WorkspacePremiumIcon />
+              <div className="card-icon-wrapper" aria-label="ICAI Logo">
+                <img src={icaiLogo} alt="The Institute of Chartered Accountants of India" className="institution-logo" />
               </div>
               <div className="card-title-group">
                 <h2>Chartered Accountant (CA)</h2>
@@ -91,12 +91,12 @@ function Education() {
             </div>
 
             <div className="card-header">
-              <div className="card-icon-wrapper" aria-label="Academic Degrees">
-                <SchoolIcon />
+              <div className="card-icon-wrapper" aria-label="University of Rajasthan Logo">
+                <img src={rajasthanLogo} alt="University of Rajasthan" className="institution-logo" />
               </div>
               <div className="card-title-group">
                 <h2>Master's & Bachelor's Degrees</h2>
-                <p className="institution-name">University Education in Commerce & Finance</p>
+                <p className="institution-name">University of Rajasthan</p>
               </div>
             </div>
 
@@ -107,7 +107,7 @@ function Education() {
                   <h3>Master of Commerce (M.Com)</h3>
                   <span className="sub-year">Post-Graduation</span>
                 </div>
-                <p className="sub-institution">University of Delhi</p>
+                <p className="sub-institution">University of Rajasthan</p>
                 <p className="sub-description">
                   <strong>Specialization:</strong> Advanced Financial Management, Strategic Cost Accounting, and Quantitative Business Analysis with high academic distinction.
                 </p>
@@ -116,10 +116,10 @@ function Education() {
               {/* Bachelor's Degree Sub-entry */}
               <div className="degree-sub-entry">
                 <div className="sub-entry-header">
-                  <h3>Bachelor of Commerce (B.Com Hons)</h3>
+                  <h3>Bachelor of Commerce (B.Com)</h3>
                   <span className="sub-year">Graduation</span>
                 </div>
-                <p className="sub-institution">University of Delhi</p>
+                <p className="sub-institution">University of Rajasthan</p>
                 <p className="sub-description">
                   <strong>Specialization:</strong> Corporate & Mercantile Law, Auditing Principles, Financial Accounting, and Macroeconomic Governance.
                 </p>
