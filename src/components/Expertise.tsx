@@ -55,7 +55,7 @@ function Expertise() {
                 <div className="skill">
                     <FontAwesomeIcon icon={faChartLine} size="3x"/>
                     <h3>Strategic Finance & FP&A</h3>
-                    <p>7.5+ years driving FP&A, budgeting, forecasting, and financial modelling. Proven ability to deliver data-driven insights through MIS dashboards, KPI trackers, and variance analysis to support leadership decision-making.</p>
+                    <p> 8 years driving FP&A, budgeting, forecasting, and financial modelling. Proven ability to deliver data-driven insights through MIS dashboards, KPI trackers, and variance analysis to support leadership decision-making.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Key skills:</span>
                         {labelsFirst.map((label, index) => (

@@ -34,8 +34,8 @@ function Project() {
                     <img src={financeDashboard} className="zoom" alt="MIS Dashboards" width="100%" />
                     <h2>Financial Modeling & MIS Dashboards</h2>
                     <p>
-                        <li>Dynamic Dashboards: Built comprehensive MIS trackers (Budget vs. Actual, Sales Rankings, KPIs Report, ROP Tracker, and Volume Analysis).</li>
-                        <li>Business Insights: Delivered actionable financial models to enable real-time, data-driven decision-making for senior leadership.</li>
+                        <li><strong>Dynamic Dashboards:</strong> Built comprehensive MIS trackers (Budget vs. Actual, Sales Rankings, KPIs Report, ROP Tracker, and Volume Analysis).</li>
+                        <li><strong>Business Insights:</strong> Delivered actionable financial models to enable real-time, data-driven decision-making for senior leadership.</li>
                     </p>
                 </div>
                 <div className="project">
@@ -52,18 +52,18 @@ function Project() {
                     <img src={auditCompliance} className="zoom" alt="Audit & Compliance" width="100%" />
                     <h2>Capital Transactions & Audit Management</h2>
                     <p>
-                        <li> ₹80 Cr ESOP Buyback: Managed the complete financial execution and capital structuring for the share buyback program at Cars24.</li>
-                        <li> Audit Management: Spearheaded Statutory, Internal, Tax, and ICFR audits, liaising directly with Big-4 firms (EY and Grant Thornton).</li>
-                        <li> Process Excellence & Compliance: Successfully remediated previous high-risk audit points, driving the team to secure the company's first ever clean Internal Audit and ICFR reports at Cars24.</li>
+                        <li> <strong>₹80 Cr ESOP Buyback:</strong> Managed the complete financial execution and capital structuring for the share buyback program at Cars24.</li>
+                        <li> <strong>Audit Management:</strong> Spearheaded Statutory, Internal, Tax, and ICFR audits, liaising directly with Big-4 firms (EY and Grant Thornton).</li>
+                        <li> <strong>Process Excellence & Compliance:</strong> Successfully remediated previous high-risk audit points, driving the team to secure the company's first ever clean Internal Audit and ICFR reports at Cars24.</li>
                     </p>
                 </div>
                 <div className="project">
                     <img src={businessPartnering} className="zoom" alt="Business Partnering" width="100%" />
                     <h2>International Expansion & Business Partnering</h2>
                     <p>
-                        <li> Entity Structuring & Compliance: Managed banking setups, company structuring, and local compliance for overseas entities.</li>
-                        <li> End-to-End Process Setup: Scaled Indian operational workflows globally, establishing books of accounts, Setting up of finance function, and cross-functional business processes.</li>
-                        <li> Business Partnering: Partnered directly with business heads to drive cross-functional efficiency and business growth.</li>
+                        <li> <strong>Entity Structuring & Compliance:<strong> Managed banking setups, company structuring, and local compliance for overseas entities.</li>
+                        <li> <strong>End-to-End Process Setup:</strong> Scaled Indian operational workflows globally, establishing books of accounts, Setting up of finance function, and cross-functional business processes.</li>
+                        <li> <strong>Business Partnering:<strong> Partnered directly with business heads to drive cross-functional efficiency and business growth.</li>
                     </p>
                 </div>
             </div>
