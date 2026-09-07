@@ -10,8 +10,8 @@ import {
   faCheckCircle,
   faLocationDot
 } from '@fortawesome/free-solid-svg-icons';
-import cars24Logo from '../assets/images/cars24_logo.svg';
-import cargoPartnerLogo from '../assets/images/cargo_partner_logo.svg';
+import cars24Logo from '../assets/images/cars24_logo.png';
+import cargoPartnerLogo from '../assets/images/cargo_partner_logo.jpg';
 import icaiLogo from '../assets/images/icai_logo.png';
 import '../assets/styles/Timeline.scss';
 
@@ -26,6 +26,7 @@ interface PromotionNode {
   logo: string;
   type: "promotion" | "award" | "foundation";
   badge: string;
+  subheading: string;
   level: number;
   skills: string[];
 }
@@ -60,7 +61,8 @@ const promotionData: PromotionNode[] = [
     location: "Gurugram, Haryana, India",
     logo: icaiLogo,
     type: "foundation",
-    badge: "Post-Qualification Assurance & Taxation",
+    badge: "Statutory Assurance & Risk Advisory",
+    subheading: "Rigorous forensic verification & corporate compliance baseline",
     level: 1,
     skills: ["Audit & Assurance", "ICFR Frameworks", "GST Compliance", "Direct Tax Advisory"]
   },
@@ -74,7 +76,8 @@ const promotionData: PromotionNode[] = [
     workMode: "On-site",
     logo: cars24Logo,
     type: "foundation",
-    badge: "Corporate Controlling Transition",
+    badge: "Scalable Finance Process Architecture",
+    subheading: "Building enterprise transaction rails for rapid scale",
     level: 2,
     skills: ["Company Law", "P2P & O2C Workflows", "Financial Reconciliations", "Internal Controls"]
   },
@@ -86,8 +89,9 @@ const promotionData: PromotionNode[] = [
     companyShort: "CARS24",
     location: "Gurugram, Haryana, India",
     logo: cars24Logo,
-    type: "promotion",
-    badge: "Promotion · Employee of the Year 2021 Award",
+    type: "award",
+    badge: "Employee of the Year · FinOps",
+    subheading: "Continuous closing workflows & automated reconciliations",
     level: 3,
     skills: ["Account Reconciliation", "Teamwork", "Ind AS Reporting", "Financial Statements"]
   },
@@ -99,8 +103,9 @@ const promotionData: PromotionNode[] = [
     companyShort: "CARS24",
     location: "Gurugram, Haryana, India",
     logo: cars24Logo,
-    type: "promotion",
-    badge: "Promotion · Mr. Detail Oriented Award 2022",
+    type: "award",
+    badge: "Big-4 Audit & Ind AS Lead",
+    subheading: "Zero-defect statutory audit defense & technical accounting",
     level: 4,
     skills: ["Management", "Leadership", "Statutory & ICFR Audits (EY/GT)", "Ind AS 115 & 116"]
   },
@@ -114,7 +119,8 @@ const promotionData: PromotionNode[] = [
     workMode: "On-site",
     logo: cars24Logo,
     type: "promotion",
-    badge: "Promoted to Senior Manager / Controller · Outstanding 5/5 Rating",
+    badge: "Controllership & Capital Markets Lead",
+    subheading: "₹80 Cr ESOP buyback governance & international expansion",
     level: 5,
     skills: ["Business Ethics", "Team Management", "₹80 Cr ESOP Buyback", "Global Expansion"]
   },
@@ -127,8 +133,9 @@ const promotionData: PromotionNode[] = [
     location: "Gurugram, Haryana, India",
     workMode: "Hybrid",
     logo: cargoPartnerLogo,
-    type: "promotion",
-    badge: "GEM Award (2024 & 2025) · Top Support Function Award 2024",
+    type: "award",
+    badge: "GEM Award Winner · FP&A Lead",
+    subheading: "Budget forecasting & cross-border profitability turnaround",
     level: 5,
     skills: ["Budget Forecasting", "Business Partner Relations", "FP&A", "SAP & Power BI"]
   },
@@ -142,7 +149,8 @@ const promotionData: PromotionNode[] = [
     workMode: "Hybrid",
     logo: cargoPartnerLogo,
     type: "promotion",
-    badge: "Promoted to Senior Manager Controlling · India Lead",
+    badge: "India Lead · Strategic Controllership",
+    subheading: "Executive FP&A, commercial governance & leadership",
     level: 6,
     skills: ["Strategic FP&A", "India Controlling Lead", "Profitability Turnaround", "Executive Leadership"]
   }
@@ -165,14 +173,14 @@ const companyYoYData: CompanyYoY[] = [
         period: "Apr 2026 – Present",
         duration: "6 mos",
         workMode: "Hybrid",
-        badge: "Promotion · India Lead"
+        badge: "India Lead · Strategic Controllership"
       },
       {
         title: "Manager Controlling",
         period: "Aug 2023 – Mar 2026",
         duration: "2 yrs 8 mos",
         workMode: "Hybrid",
-        badge: "GEM Award (2024 & 2025) · Top Support Function Award 2024"
+        badge: "GEM Award Winner · FP&A Lead"
       }
     ],
     skillsSummary: ["Budget Forecasting", "Business Partner Relations", "Strategic FP&A", "Profitability Turnaround"]
@@ -192,26 +200,26 @@ const companyYoYData: CompanyYoY[] = [
         period: "Apr 2023 – Aug 2023",
         duration: "5 mos",
         workMode: "On-site",
-        badge: "Promotion · Rated 5/5"
+        badge: "Controllership & Capital Markets Lead"
       },
       {
         title: "Manager",
         period: "Apr 2022 – Mar 2023",
         duration: "1 yr",
-        badge: "Promotion · Mr. Detail Oriented Award 2022"
+        badge: "Big-4 Audit & Ind AS Lead"
       },
       {
         title: "Assistant Manager",
         period: "Apr 2021 – Mar 2022",
         duration: "1 yr",
-        badge: "Promotion · Employee of the Year 2021"
+        badge: "Employee of the Year · FinOps"
       },
       {
         title: "Team Lead",
         period: "Dec 2019 – Mar 2021",
         duration: "1 yr 4 mos",
         workMode: "On-site",
-        badge: "Corporate Controlling Entry"
+        badge: "Scalable Finance Process Architecture"
       }
     ],
     skillsSummary: ["Business Ethics", "Team Management", "Leadership", "Account Reconciliation", "Company Law"]
@@ -230,7 +238,7 @@ const companyYoYData: CompanyYoY[] = [
         title: "Audit Executive",
         period: "Jan 2019 – Dec 2019",
         duration: "1 yr",
-        badge: "Post-Qualification Assurance & Taxation"
+        badge: "Statutory Assurance & Risk Advisory"
       }
     ],
     skillsSummary: ["Internal Audits", "ICFR Assurance", "GST Compliances", "Direct Tax Advisory"]
@@ -313,6 +321,7 @@ function Timeline() {
                       </div>
 
                       <h3 className="role-heading">{node.role}</h3>
+                      <div className="role-subheading">{node.subheading}</div>
                       <div className="role-timeline-sub">{node.period} · {node.duration}</div>
 
                       <div className="promotion-milestone-pill">
