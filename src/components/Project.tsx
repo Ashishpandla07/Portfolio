@@ -61,9 +61,9 @@ function Project() {
                     <img src={businessPartnering} className="zoom" alt="Business Partnering" width="100%" />
                     <h2>International Expansion & Business Partnering</h2>
                     <p>
-                        <li> <strong>Entity Structuring & Compliance:<strong> Managed banking setups, company structuring, and local compliance for overseas entities.</li>
+                        <li> <strong>Entity Structuring & Compliance:</strong> Managed banking setups, company structuring, and local compliance for overseas entities.</li>
                         <li> <strong>End-to-End Process Setup:</strong> Scaled Indian operational workflows globally, establishing books of accounts, Setting up of finance function, and cross-functional business processes.</li>
-                        <li> <strong>Business Partnering:<strong> Partnered directly with business heads to drive cross-functional efficiency and business growth.</li>
+                        <li> <strong>Business Partnering:</strong> Partnered directly with business heads to drive cross-functional efficiency and business growth.</li>
                     </p>
                 </div>
             </div>
