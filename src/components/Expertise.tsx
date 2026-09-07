@@ -19,12 +19,12 @@ const labelsFirst = [
 
 const labelsSecond = [
     "Ind-AS/IFRS",
+    "ICFR",
     "Financial Reporting",
+    "Internal Audit",
     "Financial Consolidation",
     "Statutory Audit",
-    "Internal Audit",
     "Tax Audit",
-    "ICFR",
     "GST Compliance",
     "Transfer Pricing",
     "Risk Management",
