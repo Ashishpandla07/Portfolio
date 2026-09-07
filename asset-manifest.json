@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.b259b890.css",
-    "main.js": "./static/js/main.f91c5ea2.js",
+    "main.css": "./static/css/main.bf33997b.css",
+    "main.js": "./static/js/main.0b88d5c9.js",
     "static/js/206.0d512b19.chunk.js": "./static/js/206.0d512b19.chunk.js",
     "static/media/achievement_award.jpg": "./static/media/achievement_award.5d597fc10563e75ee7fb.jpg",
     "static/media/business_partnering.jpg": "./static/media/business_partnering.e038fbef533e15c6d352.jpg",
@@ -12,14 +12,14 @@
     "static/media/bg-light.png": "./static/media/bg-light.bac0efb485244a522981.png",
     "static/media/bg-dark.png": "./static/media/bg-dark.f420c6b8458af72de935.png",
     "static/media/icai_logo.png": "./static/media/icai_logo.22001c2fb96f8179e759.png",
+    "static/media/cargo_partner_logo.jpg": "./static/media/cargo_partner_logo.a3303aa83a3c326d2275.jpg",
     "static/media/rajasthan_university_logo.png": "./static/media/rajasthan_university_logo.1cc8d52f66f6e2452e93.png",
     "static/media/profile.jpg": "./static/media/profile.c1825c0b984d7e74c0f7.jpg",
-    "static/media/cargo_partner_logo.svg": "./static/media/cargo_partner_logo.de2857779508448470640b664eb7b63b.svg",
-    "static/media/cars24_logo.svg": "./static/media/cars24_logo.c8f7932bc870056e304a9555e503ca88.svg",
+    "static/media/cars24_logo.png": "./static/media/cars24_logo.9e2955564fb4d901ea06.png",
     "index.html": "./index.html"
   },
   "entrypoints": [
-    "static/css/main.b259b890.css",
-    "static/js/main.f91c5ea2.js"
+    "static/css/main.bf33997b.css",
+    "static/js/main.0b88d5c9.js"
   ]
 }
