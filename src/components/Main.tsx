@@ -1,6 +1,7 @@
 import React from "react";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
+import profileImg from '../assets/images/profile.jpg';
 import '../assets/styles/Main.scss';
 
 function Main() {
@@ -9,7 +10,7 @@ function Main() {
     <div className="container">
       <div className="about-section">
         <div className="image-wrapper">
-          <img src="https://ui-avatars.com/api/?name=Ashish+Pandla&size=300&background=5000ca&color=fff&bold=true&rounded=true&font-size=0.33" alt="Ashish Pandla" />
+          <img src={profileImg} alt="Ashish Pandla" />
         </div>
         <div className="content">
           <div className="social_icons">
