@@ -21,13 +21,16 @@
 }
   
 .zoom {
-    border-radius: 5px;
-    transition: transform .2s;
-    margin: 0 auto;
+    display: block;
+    width: 80%;
+    max-width: 80%;
+    border-radius: 8px;
+    transition: transform .2s ease;
+    margin: 0 auto 18px auto;
 }
   
 .zoom:hover {
-    transform: scale(1.05);
+    transform: scale(1.04);
 }
 
 @media screen {
