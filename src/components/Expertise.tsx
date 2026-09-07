@@ -7,13 +7,13 @@ import '../assets/styles/Expertise.scss';
 const labelsFirst = [
     "Financial Planning & Analysis",
     "Budgeting & Forecasting",
+    "Fundraising",
     "Financial Modelling",
     "Variance Analysis",
     "P&L Management",
     "Working Capital Management",
     "KPI Dashboards",
     "Business Partnering",
-    "Fundraising",
     "Investor Relations"
 ];
 
