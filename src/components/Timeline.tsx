@@ -27,10 +27,6 @@ interface ExperienceItem {
   level: number;
   badge: string;
   badgeType: "promotion" | "award" | "foundation";
-  responsibilities: {
-    competency: string;
-    detail: string;
-  }[];
   skills: string[];
   isCurrent?: boolean;
 }
@@ -50,20 +46,6 @@ const experienceData: ExperienceItem[] = [
     badge: "India Lead · Strategic Controllership",
     badgeType: "promotion",
     isCurrent: true,
-    responsibilities: [
-      {
-        competency: "Strategic FP&A & Leadership",
-        detail: "Direct annual operating plans (AOP) and dynamic rolling forecasts across business units; deliver real-time operating metrics and actionable intelligence to executive leadership."
-      },
-      {
-        competency: "Commercial Governance & Turnaround",
-        detail: "Oversee cross-border profitability turnaround programs, margin rationalization, and strategic revenue assurance models across multi-modal logistics divisions."
-      },
-      {
-        competency: "Business Intelligence & MIS",
-        detail: "Lead SAP S/4HANA and Power BI automated dashboard reporting for executive decision-making, performance tracking, and yield analysis."
-      }
-    ],
     skills: ["Strategic FP&A", "India Controlling Lead", "Profitability Turnaround", "Executive Leadership", "Budget Forecasting", "SAP & Power BI"]
   },
   {
@@ -78,20 +60,6 @@ const experienceData: ExperienceItem[] = [
     level: 5,
     badge: "GEM Award (2024 & 2025) · Top Support Function Award 2024",
     badgeType: "award",
-    responsibilities: [
-      {
-        competency: "Profitability & Turnaround",
-        detail: "Turned ~75% of profit centers profitable, boosted operational productivity by 20%, and scaled commercial ROI from 1x to 2x through targeted revenue assurance."
-      },
-      {
-        competency: "Cost Governance & Savings",
-        detail: "Spearheaded strategic cost-control initiatives across decentralized branches, eliminating operational leakages to unlock ₹50+ Lacs in annual recurring savings."
-      },
-      {
-        competency: "Business Partnering & Variance Analysis",
-        detail: "Partnered with operational heads on KPI trackers and dynamic variance reporting, optimizing P2P and O2C cycles to strengthen working capital liquidity."
-      }
-    ],
     skills: ["Budget Forecasting", "Business Partner Relations", "FP&A", "Cost Optimization", "Profitability Turnaround", "SAP"]
   },
   {
@@ -106,20 +74,6 @@ const experienceData: ExperienceItem[] = [
     level: 5,
     badge: "Controllership & Capital Markets Lead · Rated 5/5",
     badgeType: "promotion",
-    responsibilities: [
-      {
-        competency: "Capital Markets & ESOP Execution",
-        detail: "Managed the financial execution, regulatory reporting, and compliance governance for an ₹80 Cr ESOP share buyback transaction."
-      },
-      {
-        competency: "Global Entity Expansion",
-        detail: "Supported international expansion across Southeast Asia and Middle East markets, establishing banking channels, legal entity compliances, and controllership frameworks."
-      },
-      {
-        competency: "Team Mentorship & ICFR",
-        detail: "Mentored a 10-member finance team, embedding internal financial controls (ICFR) across scalable transaction processing systems."
-      }
-    ],
     skills: ["Business Ethics", "Team Management", "₹80 Cr ESOP Buyback", "Global Expansion", "Controllership"]
   },
   {
@@ -133,20 +87,6 @@ const experienceData: ExperienceItem[] = [
     level: 4,
     badge: "Big-4 Audit & Ind AS Lead · Mr. Detail Oriented Award 2022",
     badgeType: "award",
-    responsibilities: [
-      {
-        competency: "Big-4 Statutory Audits",
-        detail: "Spearheaded statutory, tax, and ICFR audits coordinating with top-tier audit firms (EY, Grant Thornton), institutionalizing robust Risk & Control Matrices (RCM)."
-      },
-      {
-        competency: "Technical Ind AS Reporting",
-        detail: "Governed complex multi-entity consolidation, revenue recognition under Ind AS 115, and lease accounting disclosures under Ind AS 116."
-      },
-      {
-        competency: "Process Optimization",
-        detail: "Redesigned financial workflows across inventory valuations and digital procurement rails, eliminating operational redundancies."
-      }
-    ],
     skills: ["Management", "Leadership", "Statutory & ICFR Audits (EY/GT)", "Ind AS 115 & 116", "Internal Controls"]
   },
   {
@@ -160,20 +100,6 @@ const experienceData: ExperienceItem[] = [
     level: 3,
     badge: "Employee of the Year 2021 · FinOps",
     badgeType: "award",
-    responsibilities: [
-      {
-        competency: "Accelerated Month-End Close",
-        detail: "Compressed financial closing cadence from the 11th to the 7th business day through process automation and continuous ledger reconciliations."
-      },
-      {
-        competency: "Balance Sheet Governance",
-        detail: "Supervised high-volume balance sheet reconciliations, inter-company settlements, and treasury allocations across regional operating centers."
-      },
-      {
-        competency: "Statutory Filings & Standards",
-        detail: "Directed preparation of financial statement schedules under Ind AS 109 and Ind AS 102 with zero compliance deviations."
-      }
-    ],
     skills: ["Account Reconciliation", "Teamwork", "Ind AS Reporting", "Financial Statements", "Process Automation"]
   },
   {
@@ -188,20 +114,6 @@ const experienceData: ExperienceItem[] = [
     level: 2,
     badge: "Scalable Finance Process Architecture",
     badgeType: "foundation",
-    responsibilities: [
-      {
-        competency: "P2P & O2C Process Controls",
-        detail: "Streamlined end-to-end Procure-to-Pay and Order-to-Cash operations, embedding validation gates to eliminate payment leakages."
-      },
-      {
-        competency: "Statutory Tax Compliances",
-        detail: "Managed direct/indirect tax withholdings, TDS/TCS filings, and corporate secretarial compliances under the Companies Act."
-      },
-      {
-        competency: "Automotive Transaction Rails",
-        detail: "Engineered scalable daily reconciliation frameworks for multi-crore automotive settlements with banking partners."
-      }
-    ],
     skills: ["Company Law", "P2P & O2C Workflows", "Financial Reconciliations", "Internal Controls"]
   },
   {
@@ -215,20 +127,6 @@ const experienceData: ExperienceItem[] = [
     level: 1,
     badge: "Statutory Assurance & Risk Advisory",
     badgeType: "foundation",
-    responsibilities: [
-      {
-        competency: "Risk-Based Internal Audits",
-        detail: "Conducted end-to-end internal audit reviews and physical control inspections across corporate and manufacturing entities to evaluate IFC effectiveness."
-      },
-      {
-        competency: "Standards on Auditing (SAs)",
-        detail: "Designed substantive testing procedures and analytical reviews of financial statements aligned with ICAI Standards on Auditing."
-      },
-      {
-        competency: "GST Compliance & Filings",
-        detail: "Led GST filings (GSTR-1, GSTR-3B, GSTR-9/9C) and Input Tax Credit (ITC) audits with zero penalty exposures."
-      }
-    ],
     skills: ["Audit & Assurance", "ICFR Frameworks", "GST Compliance", "Direct Tax Advisory"]
   }
 ];
@@ -332,18 +230,6 @@ function Timeline() {
                     {item.badgeType === 'promotion' && <FontAwesomeIcon icon={faArrowTrendUp} />}
                     {item.badgeType === 'foundation' && <FontAwesomeIcon icon={faCheckCircle} />}
                     <span className="badge-text">{item.badge}</span>
-                  </div>
-
-                  {/* Key Responsibilities */}
-                  <div className="responsibilities-block">
-                    <div className="responsibilities-title">Key Responsibilities & Impact:</div>
-                    <ul className="responsibilities-list">
-                      {item.responsibilities.map((resp, rIdx) => (
-                        <li key={rIdx}>
-                          <strong>{resp.competency}:</strong> {resp.detail}
-                        </li>
-                      ))}
-                    </ul>
                   </div>
 
                   {/* Associated Skills */}
