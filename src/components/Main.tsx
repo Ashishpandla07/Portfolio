@@ -1,7 +1,6 @@
 import React from "react";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
-import PhoneIcon from '@mui/icons-material/Phone';
 import '../assets/styles/Main.scss';
 
 function Main() {
@@ -13,15 +12,12 @@ function Main() {
 
           <div className="about-statement">
             <p className="statement-line lead">
-              Results-oriented finance leader with 8 years of experience in FP&A, financial controlling, and strategic business collaboration. Expertise in budgeting, forecasting, profitability analysis, financial reporting, and compliance, with a proven ability to drive cost optimization, improve controls, and support business growth through data-driven financial insights.</p>
+              Results-oriented finance leader with 8 years of experience in FP&A, financial controlling, and strategic business collaboration. Expertise in budgeting, forecasting, profitability analysis, financial reporting, and compliance, with a proven ability to drive cost optimization, improve controls, and support business growth through data-driven financial insights.
+            </p>
           </div>
 
-          {/* Clean Contact Badges */}
+          {/* Clean Contact Badges (Email & LinkedIn only) */}
           <div className="about-badges">
-            <a href="tel:+918058914286" className="badge-item phone">
-              <PhoneIcon className="badge-icon" />
-              <span>+91 80589 14286</span>
-            </a>
             <a href="mailto:ashishpandla07@gmail.com" className="badge-item email">
               <EmailIcon className="badge-icon" />
               <span>ashishpandla07@gmail.com</span>

@@ -55,7 +55,7 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
           <img src={profileImg} alt="CA Ashish Pandla" />
         </div>
         <h2 className="sidebar-name">CA Ashish Pandla</h2>
-        <p className="sidebar-role">Strategic Finance & FP&A</p>
+        <p className="sidebar-role">Senior Finance Leader</p>
         <a href="tel:+918058914286" className="sidebar-phone">
           <PhoneIcon sx={{ fontSize: '0.85rem' }} />
           <span>+91 80589 14286</span>

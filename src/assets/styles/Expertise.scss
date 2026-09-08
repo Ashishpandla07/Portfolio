@@ -1,10 +1,12 @@
 .skills-container {
     width: 100%;
     max-width: 1200px;
-    padding: 24px 4% 16px;
+    min-height: 100vh;
+    padding: 40px 4% 30px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     text-align: left;
 
     .skills-title {

@@ -1,7 +1,9 @@
 .education-container {
-  padding: 28px 5% 20px;
+  min-height: 100vh;
+  padding: 35px 5% 25px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   text-align: left;
   box-sizing: border-box;
   width: 100%;
