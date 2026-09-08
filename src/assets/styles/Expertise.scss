@@ -1,16 +1,16 @@
 .skills-container {
     width: 100%;
     max-width: 1200px;
-    padding: 35px 5% 30px;
+    padding: 24px 4% 16px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     text-align: left;
 
     .skills-title {
-        font-size: 2.5rem;
+        font-size: 2.1rem;
         font-weight: 800;
-        margin: 0 0 20px 0;
+        margin: 0 0 14px 0;
         letter-spacing: -0.5px;
         line-height: 1.1;
     }
@@ -19,7 +19,7 @@
 .skills-container .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+    grid-gap: 16px;
     align-items: stretch;
 }
   
@@ -30,57 +30,57 @@
     text-align: left;
     background: rgba(15, 23, 42, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 14px;
-    padding: 22px 20px 18px;
+    border-radius: 12px;
+    padding: 16px 16px 14px;
     box-sizing: border-box;
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 
     &:hover {
-        transform: translateY(-3px);
+        transform: translateY(-2px);
         border-color: rgba(99, 102, 241, 0.35);
-        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.4);
     }
 
     .skill-icon-wrapper {
-        width: 44px;
-        height: 44px;
-        border-radius: 10px;
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
         background: rgba(99, 102, 241, 0.12);
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 12px;
+        margin-bottom: 8px;
 
         svg {
             color: #818cf8;
-            font-size: 1.25rem;
+            font-size: 1.1rem;
         }
     }
 
     h3 {
-        font-size: 1.15rem;
+        font-size: 1.05rem;
         font-weight: 700;
-        margin: 0 0 8px 0;
+        margin: 0 0 6px 0;
         color: #ffffff;
         line-height: 1.3;
     }
 
     p {
-        font-size: 0.9rem;
-        line-height: 1.5;
+        font-size: 0.84rem;
+        line-height: 1.45;
         color: #cbd5e1;
-        margin: 0 0 12px 0;
+        margin: 0 0 10px 0;
     }
 }
   
 .chip {
     color: #0f172a !important;
     background-color: #f1f5f9 !important;
-    font-size: 0.76rem !important;
+    font-size: 0.72rem !important;
     font-weight: 500 !important;
-    height: 23px !important;
-    margin: 2px 3px 2px 0 !important;
-    border-radius: 12px !important;
+    height: 21px !important;
+    margin: 1px 2px !important;
+    border-radius: 10px !important;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
     transition: all 0.2s ease !important;
 
@@ -90,8 +90,8 @@
     }
   
     span {
-        padding-left: 7px !important;
-        padding-right: 7px !important;
+        padding-left: 6px !important;
+        padding-right: 6px !important;
         color: #0f172a;
     }
 }
@@ -100,19 +100,19 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 4px;
-    margin-top: 6px;
-    padding-top: 10px;
+    gap: 3px;
+    margin-top: 4px;
+    padding-top: 8px;
     border-top: 1px solid rgba(255, 255, 255, 0.06);
 
     .chip-title {
         color: #94a3b8;
-        font-size: 0.78rem;
+        font-size: 0.72rem;
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.4px;
         width: 100%;
-        margin-bottom: 4px;
+        margin-bottom: 3px;
         display: block;
     }
 }
@@ -126,7 +126,7 @@
 
         &:hover {
             border-color: rgba(99, 102, 241, 0.35);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.08);
         }
 
         .skill-icon-wrapper {
@@ -168,11 +168,11 @@
 /* Responsive adjustments */
 @media screen and (max-width: 992px) {
     .skills-container {
-        padding: 25px 4% 20px;
+        padding: 20px 4% 15px;
 
         .skills-grid {
             grid-template-columns: 1fr;
-            grid-gap: 16px;
+            grid-gap: 14px;
         }
     }
 }
