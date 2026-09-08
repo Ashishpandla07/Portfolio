@@ -16,26 +16,7 @@ collaboration. Expertise in budgeting, forecasting, profitability analysis, fina
 proven ability to drive cost optimization, improve controls, and support business growth through data-driven financial 
 insights. </p>
 
-          <div className="hero-action-buttons">
-            <a
-              href={`${process.env.PUBLIC_URL || ''}/Resume-Ashish.pdf`}
-              target="_blank"
-              rel="noreferrer"
-              className="hero-btn primary-btn"
-            >
-              📄 View Resume (PDF)
-            </a>
-            <a
-              href="#contact"
-              onClick={(e) => {
-                e.preventDefault();
-                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-              }}
-              className="hero-btn secondary-btn"
-            >
-              ✉️ Contact Me
-            </a>
-          </div>
+
 
           <div className="mobile_social_icons">
             <a href="https://linkedin.com/in/ipandla" target="_blank" rel="noreferrer">
