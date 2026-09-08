@@ -12,17 +12,7 @@ function Main() {
         <div className="image-wrapper">
           <img src={profileImg} alt="Ashish Pandla" />
         </div>
-        <div className="content">
-          <div className="social_icons">
-            <a href="https://linkedin.com/in/ipandla" target="_blank" rel="noreferrer">
-              <LinkedInIcon/>
-              <span className="contact-link-text">linkedin.com/in/ipandla</span>
-            </a>
-            <a href="mailto:ashishpandla07@gmail.com" target="_blank" rel="noreferrer">
-              <EmailIcon/>
-              <span className="contact-link-text">ashishpandla07@gmail.com</span>
-            </a>
-          </div>
+        
           <h1>About Me</h1>
           <p className="secondary hero-bio">
             Results-oriented finance leader with 8 years of experience in FP&A, financial controlling, and strategic business 
