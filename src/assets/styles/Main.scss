@@ -1,6 +1,6 @@
 .about-section {
   width: 100%;
-  padding: 90px 8% 70px;
+  padding: 65px 7% 50px;
   box-sizing: border-box;
   display: flex;
   justify-content: flex-start;
@@ -24,33 +24,33 @@
   .about-tag {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 6px 16px;
-    border-radius: 20px;
+    gap: 7px;
+    padding: 5px 14px;
+    border-radius: 18px;
     background: rgba(99, 102, 241, 0.12);
     border: 1px solid rgba(139, 92, 246, 0.25);
     color: #c4b5fd;
-    font-size: 0.82rem;
+    font-size: 0.75rem;
     font-weight: 600;
-    letter-spacing: 0.6px;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 
     .tag-dot {
-      width: 7px;
-      height: 7px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
       background-color: #10b981;
       box-shadow: 0 0 8px #10b981;
     }
   }
 
-  /* Bold Heading */
+  /* Bold Heading (trimmed to 90%) */
   .about-heading {
-    font-size: 3.5rem;
+    font-size: 2.85rem;
     font-weight: 800;
-    letter-spacing: -1px;
-    margin: 0 0 28px 0;
+    letter-spacing: -0.8px;
+    margin: 0 0 20px 0;
     line-height: 1.1;
     color: #ffffff;
     background: linear-gradient(135deg, #ffffff 40%, #cbd5e1 100%);
@@ -58,24 +58,24 @@
     -webkit-text-fill-color: transparent;
   }
 
-  /* Minimalist & Bold 3-Line Statement */
+  /* Minimalist Statement (trimmed to 90%) */
   .about-statement {
     display: flex;
     flex-direction: column;
-    gap: 18px;
-    margin-bottom: 36px;
+    gap: 14px;
+    margin-bottom: 28px;
 
     .statement-line {
-      font-size: 1.25rem;
-      line-height: 1.75;
+      font-size: 1.1rem;
+      line-height: 1.7;
       color: #cbd5e1;
       margin: 0;
       font-weight: 400;
 
       &.lead {
-        font-size: 1.35rem;
+        font-size: 1.18rem;
         color: #f1f5f9;
-        line-height: 1.7;
+        line-height: 1.65;
       }
 
       strong {
@@ -85,28 +85,28 @@
     }
   }
 
-  /* Clean Contact Badges */
+  /* Clean Contact Badges (trimmed to 90%) */
   .about-badges {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 10px;
     align-items: center;
-    padding-top: 12px;
+    padding-top: 8px;
 
     .badge-item {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 10px 20px;
-      border-radius: 24px;
-      font-size: 0.92rem;
+      gap: 7px;
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-size: 0.84rem;
       font-weight: 600;
       text-decoration: none;
       transition: all 0.25s ease;
       cursor: pointer;
 
       .badge-icon {
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
 
       &.phone {
@@ -231,23 +231,23 @@
 /* Responsive */
 @media screen and (max-width: 768px) {
   .about-section {
-    padding: 50px 6% 40px;
+    padding: 40px 5% 30px;
 
     .about-heading {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
+      font-size: 2.1rem;
+      margin-bottom: 16px;
     }
 
     .about-statement {
-      gap: 14px;
-      margin-bottom: 28px;
+      gap: 12px;
+      margin-bottom: 22px;
 
       .statement-line {
-        font-size: 1.1rem;
-        line-height: 1.65;
+        font-size: 0.98rem;
+        line-height: 1.6;
 
         &.lead {
-          font-size: 1.15rem;
+          font-size: 1.05rem;
         }
       }
     }
@@ -255,7 +255,7 @@
     .about-badges {
       flex-direction: column;
       align-items: stretch;
-      gap: 10px;
+      gap: 8px;
 
       .badge-item {
         justify-content: center;
