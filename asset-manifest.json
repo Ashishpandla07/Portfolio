@@ -1,8 +1,14 @@
 {
   "files": {
-    "main.css": "./static/css/main.919fd83e.css",
-    "main.js": "./static/js/main.59d16d0f.js",
+    "main.css": "./static/css/main.a066df9d.css",
+    "main.js": "./static/js/main.96c69b73.js",
     "static/js/206.0d512b19.chunk.js": "./static/js/206.0d512b19.chunk.js",
+    "static/media/achievement_award.jpg": "./static/media/achievement_award.5d597fc10563e75ee7fb.jpg",
+    "static/media/business_partnering.jpg": "./static/media/business_partnering.e038fbef533e15c6d352.jpg",
+    "static/media/finance_dashboard.jpg": "./static/media/finance_dashboard.fab9ca863e0a6cb4f195.jpg",
+    "static/media/audit_compliance.jpg": "./static/media/audit_compliance.2670c50167e5b393b318.jpg",
+    "static/media/financial_growth.jpg": "./static/media/financial_growth.0cf1561a7abcff52e23a.jpg",
+    "static/media/cost_optimization.jpg": "./static/media/cost_optimization.a3783d57f4450f12102c.jpg",
     "static/media/icai_logo.png": "./static/media/icai_logo.22001c2fb96f8179e759.png",
     "static/media/cargo_partner_logo.jpg": "./static/media/cargo_partner_logo.a3303aa83a3c326d2275.jpg",
     "static/media/rajasthan_university_logo.png": "./static/media/rajasthan_university_logo.1cc8d52f66f6e2452e93.png",
@@ -11,7 +17,7 @@
     "index.html": "./index.html"
   },
   "entrypoints": [
-    "static/css/main.919fd83e.css",
-    "static/js/main.59d16d0f.js"
+    "static/css/main.a066df9d.css",
+    "static/js/main.96c69b73.js"
   ]
 }
