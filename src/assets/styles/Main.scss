@@ -1,6 +1,7 @@
 .about-section {
   width: 100%;
-  padding: 65px 7% 50px;
+  min-height: 100vh;
+  padding: 60px 8%;
   box-sizing: border-box;
   display: flex;
   justify-content: flex-start;
@@ -231,6 +232,7 @@
 /* Responsive */
 @media screen and (max-width: 768px) {
   .about-section {
+    min-height: calc(100vh - 60px);
     padding: 40px 5% 30px;
 
     .about-heading {
