@@ -9,8 +9,7 @@ function Education() {
     <div className="education-container" id="credentials">
       <div className="section-header">
         <h1>Education & Credentials</h1>
-        <p className="section-subtitle">Professional statutory qualifications, financial credentials, and academic degrees</p>
-      </div>
+        </div>
 
       <div className="education-grid">
         {/* Entry 1: Chartered Accountant Qualification */}
