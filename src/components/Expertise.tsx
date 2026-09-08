@@ -8,11 +8,11 @@ const labelsFirst = [
     "Financial Planning & Analysis",
     "Budgeting & Forecasting",
     "Variance Analysis",
+    "Fundraising",
     "Working Capital",
     "KPI Dashboards",
     "Business Partnering",
-    "Investor Relations",
-    "Fundraising"
+    "Investor Relations"
 ];
 
 const labelsSecond = [
@@ -21,9 +21,10 @@ const labelsSecond = [
     "Financial Reporting",
     "Consolidation",
     "Statutory & Tax Audit",
+    "ESOP Buyback",
+    "Internal Audit",
     "GST Compliance",
-    "Transfer Pricing",
-    "ESOP Buyback"
+    "Transfer Pricing"
 ];
 
 const labelsThird = [
