@@ -40,14 +40,16 @@ function Project() {
                 </div>
                 <div className="project">
                     <img src={achievementAward} className="zoom" alt="FinOps Automation & Working Capital" width="100%" />
-                    <h2>FinOps Automation & Close Acceleration</h2>
+                    <h2>Awards and Recognition
+</h2>
                     <p>
-                        <li><strong>Month-End Close Compression:</strong> Re-engineered financial reporting workflows, slashing close cycle from 11th to 7th business day.</li>
-                        <li><strong>Reconciliation Automation:</strong> Governed multi-billion-rupee daily banking & vehicle inventory accounts with zero discrepancies.</li>
-                        <li><strong>Internal Controls:</strong> Embedded automated exception triggers and maker-checker gates, reducing transaction posting errors by 45%.</li>
+                        <li>Employee of the Year 2021 at Cars24.</li>
+                        <li>Detail-Oriented Awardee in 2022 at Cars24.</li>
+                        <li>Received GEM Award at Cargo Partner in 2024 & 2025.</li>
+                        <li>Outstanding/Excellent ratings in appraisal cycles of 2021, 2022, 2023, 2025, and 2026.</li>
                     </p>
                 </div>
-                <div className="project">
+                <div className="project"  style={{ width: "100%" }}>
                     <img src={auditCompliance} className="zoom" alt="Audit & Compliance" width="100%" />
                     <h2>Capital Transactions & Audit Management</h2>
                     <p>
