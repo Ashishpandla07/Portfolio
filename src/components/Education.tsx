@@ -10,7 +10,6 @@ function Education() {
       <div className="section-header">
         <h1>Education & Credentials</h1>
         </div>
-
       <div className="education-grid">
         {/* Entry 1: Chartered Accountant Qualification */}
         <div className="education-card">

@@ -7,7 +7,7 @@ import '../assets/styles/Main.scss';
 function Main() {
 
   return (
-    <div className="container" id="about">
+    <div className="container" id="about me">
       <div className="about-section">
         
           <h1>About Me</h1>
