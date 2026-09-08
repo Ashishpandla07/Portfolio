@@ -7,6 +7,7 @@ import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import SchoolIcon from '@mui/icons-material/School';
 import EmailIcon from '@mui/icons-material/Email';
+import PhoneIcon from '@mui/icons-material/Phone';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
@@ -55,6 +56,10 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
         </div>
         <h2 className="sidebar-name">CA Ashish Pandla</h2>
         <p className="sidebar-role">Senior Finance Leader</p>
+        <a href="tel:+918058914286" className="sidebar-phone">
+          <PhoneIcon sx={{ fontSize: '0.85rem' }} />
+          <span>+91 80589 14286</span>
+        </a>
       </div>
 
       {/* Nav Menu */}
