@@ -23,10 +23,12 @@ function Main() {
               <span className="contact-link-text">ashishpandla07@gmail.com</span>
             </a>
           </div>
-          <h1>CA Ashish Pandla</h1>
-          <p className="hero-bio">
-            Senior Finance Leader | FP&A, Controllership & Strategic Finance | 8 years of experience | Driving Profitability & Business Growth
-          </p>
+          <h1>About Me</h1>
+          <p className="secondary hero-bio">
+            Results-oriented finance leader with 8 years of experience in FP&A, financial controlling, and strategic business 
+collaboration. Expertise in budgeting, forecasting, profitability analysis, financial reporting, and compliance, with a 
+proven ability to drive cost optimization, improve controls, and support business growth through data-driven financial 
+insights. </p>
 
           <div className="hero-action-buttons">
             <a
