@@ -66,8 +66,8 @@ function Expertise() {
 
                 <div className="skill">
                     <FontAwesomeIcon icon={faShieldHalved} size="3x"/>
-                    <h3>Financial Controlling & Compliance</h3>
-                    <p>Expert in Ind-AS & IFRS financial reporting, statutory and tax audits (EY, GT), ICFR, GST compliance, and internal controls. Managed ₹80 Cr ESOP buyback and led international financial expansion across markets.</p>
+                    <h3>Financial Controlling & Governance</h3>
+                    <p>Expert in Ind-AS & IFRS reporting, multi-entity consolidation, ICFR implementation, transfer pricing, and seamless GST compliance.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Key skills:</span>
                         {labelsSecond.map((label, index) => (
