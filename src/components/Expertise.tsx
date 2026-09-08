@@ -78,8 +78,8 @@ function Expertise() {
 
                 <div className="skill">
                     <FontAwesomeIcon icon={faDatabase} size="3x"/>
-                    <h3>Systems & Analytics</h3>
-                    <p>Proficient in enterprise-grade ERP and analytics platforms. Leverages SAP, Power BI, and Advanced Excel to build dynamic financial dashboards, automate reporting, and derive actionable business intelligence.</p>
+                    <h3>Systems & Process Automation</h3>
+                    <p>Building dynamic management reporting dashboards, automating financial processes, and integrating ERPs with analytics tools.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
                         {labelsThird.map((label, index) => (
