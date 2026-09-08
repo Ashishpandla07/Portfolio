@@ -1,7 +1,6 @@
 import React from "react";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
-import profileImg from '../assets/images/profile.jpg';
 import '../assets/styles/Main.scss';
 
 function Main() {
@@ -9,9 +8,6 @@ function Main() {
   return (
     <div className="container" id="about">
       <div className="about-section">
-        <div className="image-wrapper">
-          <img src={profileImg} alt="Ashish Pandla" />
-        </div>
         
           <h1>About Me</h1>
           <p className="secondary hero-bio">
@@ -51,7 +47,6 @@ insights. </p>
               <span className="contact-link-text">ashishpandla07@gmail.com</span>
             </a>
           </div>
-        </div>
       </div>
     </div>
   );
