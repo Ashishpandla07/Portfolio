@@ -21,7 +21,7 @@ interface NavigationProps {
 }
 
 const navItems = [
-  { label: 'About', target: 'about', icon: <PersonIcon className="nav-icon" /> },
+  { label: 'About Me', target: 'about', icon: <PersonIcon className="nav-icon" /> },
   { label: 'Expertise', target: 'expertise', icon: <AssessmentIcon className="nav-icon" /> },
   { label: 'Experience', target: 'history', icon: <TrendingUpIcon className="nav-icon" /> },
   { label: 'Achievements', target: 'projects', icon: <EmojiEventsIcon className="nav-icon" /> },
