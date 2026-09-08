@@ -1,6 +1,7 @@
 import React from "react";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
+import PhoneIcon from '@mui/icons-material/Phone';
 import '../assets/styles/Main.scss';
 
 function Main() {
@@ -26,6 +27,10 @@ insights. </p>
             <a href="mailto:ashishpandla07@gmail.com" target="_blank" rel="noreferrer">
               <EmailIcon/>
               <span className="contact-link-text">ashishpandla07@gmail.com</span>
+            </a>
+            <a href="tel:+918058914286">
+              <PhoneIcon/>
+              <span className="contact-link-text">+91 80589 14286</span>
             </a>
           </div>
       </div>
