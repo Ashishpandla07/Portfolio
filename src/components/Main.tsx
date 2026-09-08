@@ -9,11 +9,6 @@ function Main() {
     <div className="container" id="about">
       <div className="about-section">
         <div className="about-content">
-          <div className="about-tag">
-            <span className="tag-dot"></span>
-            Strategic Finance & FP&A
-          </div>
-
           <h1 className="about-heading">About Me</h1>
 
           <div className="about-statement">
