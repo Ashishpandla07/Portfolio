@@ -9,23 +9,13 @@ function Main() {
     <div className="container" id="about">
       <div className="about-section">
         <div className="about-content">
-          <div className="about-tag">
-            <span className="tag-dot"></span>
-            Chartered Accountant • Strategic Finance Leader
-          </div>
+      
 
           <h1 className="about-heading">About Me</h1>
 
           <div className="about-statement">
             <p className="statement-line lead">
-              Results-oriented <strong>Chartered Accountant (ICAI)</strong> and <strong>Senior Finance Leader</strong> with <strong>8+ years</strong> of cross-functional leadership across Strategic FP&A, Financial Controlling, and Commercial Business Partnering.
-            </p>
-            <p className="statement-line">
-              Proven track record in driving long-range financial forecasting, multi-entity consolidation, working capital optimization, and executing high-stakes capital transactions — including steering an <strong>₹80 Cr share buyback</strong>.
-            </p>
-            <p className="statement-line">
-              Expert in navigating Big-4 statutory & ICFR audits (EY, Grant Thornton), establishing robust internal control frameworks, and transforming complex financial data into actionable, growth-focused business strategies.
-            </p>
+              Results-oriented finance leader with 8 years of experience in FP&A, financial controlling, and strategic business collaboration. Expertise in budgeting, forecasting, profitability analysis, financial reporting, and compliance, with a proven ability to drive cost optimization, improve controls, and support business growth through data-driven financial insights.</p>
           </div>
 
           {/* Clean Contact Badges */}
