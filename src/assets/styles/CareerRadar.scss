@@ -1,620 +1,508 @@
+/* ==========================================================================
+   CAREER RADAR - LINKEDIN STYLE SHORT & SWEET EXECUTIVE WIDGET
+   ========================================================================== */
+
 #career-radar {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   position: relative;
 
   .radar-header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 28px;
 
     .header-eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 6px 16px;
+      gap: 6px;
+      padding: 4px 14px;
       border-radius: 999px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 1px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.8px;
       text-transform: uppercase;
       background: rgba(80, 0, 202, 0.12);
-      color: #9d6fff;
-      border: 1px solid rgba(80, 0, 202, 0.28);
-      margin-bottom: 14px;
+      color: #a78bfa;
+      border: 1px solid rgba(80, 0, 202, 0.25);
+      margin-bottom: 10px;
     }
 
     h1 {
-      font-size: 2.4rem;
+      font-size: 2.1rem;
       font-weight: 800;
-      margin: 0 0 10px 0;
-      letter-spacing: -0.5px;
-      background: linear-gradient(135deg, #ffffff 40%, #a5b4fc 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      margin: 0 0 6px 0;
+      letter-spacing: -0.4px;
+      color: #ffffff;
     }
 
     .radar-subtitle {
-      font-size: 1.05rem;
+      font-size: 0.95rem;
       color: #94a3b8;
-      max-width: 720px;
-      margin: 0 auto 24px auto;
-      line-height: 1.6;
-    }
-  }
-
-  /* Interactive Career Scrubber & Role Selectors */
-  .career-controls-wrapper {
-    max-width: 1050px;
-    margin: 0 auto 36px auto;
-    background: rgba(15, 23, 42, 0.65);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 20px;
-    padding: 22px 28px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-
-    .scrubber-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 14px;
-
-      .scrubber-label {
-        font-size: 0.85rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.8px;
-        color: #94a3b8;
-      }
-
-      .compare-toggle-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 6px 14px;
-        border-radius: 8px;
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        background: rgba(255, 255, 255, 0.05);
-        color: #cbd5e1;
-        font-size: 0.82rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.2s ease;
-
-        &:hover {
-          background: rgba(255, 255, 255, 0.12);
-          border-color: rgba(255, 255, 255, 0.3);
-          color: #ffffff;
-        }
-
-        &.active {
-          background: rgba(16, 185, 129, 0.18);
-          border-color: #10b981;
-          color: #34d399;
-        }
-      }
-    }
-
-    .role-pills-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-
-      .role-pill {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 9px 18px;
-        border-radius: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        background: rgba(30, 41, 59, 0.5);
-        color: #cbd5e1;
-        cursor: pointer;
-        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-        font-size: 0.88rem;
-
-        .pill-tag {
-          font-size: 0.72rem;
-          font-weight: 700;
-          padding: 2px 7px;
-          border-radius: 6px;
-          text-transform: uppercase;
-          letter-spacing: 0.5px;
-        }
-
-        .pill-role-title {
-          font-weight: 600;
-        }
-
-        &:hover {
-          transform: translateY(-2px);
-          border-color: rgba(255, 255, 255, 0.25);
-          background: rgba(51, 65, 85, 0.6);
-          color: #ffffff;
-        }
-
-        &.active-cargo {
-          background: linear-gradient(135deg, rgba(80, 0, 202, 0.35) 0%, rgba(45, 0, 115, 0.5) 100%);
-          border-color: #7b2cbf;
-          box-shadow: 0 4px 18px rgba(123, 44, 191, 0.35);
-          color: #ffffff;
-
-          .pill-tag {
-            background: #5000ca;
-            color: #ffffff;
-          }
-        }
-
-        &.active-cars24 {
-          background: linear-gradient(135deg, rgba(255, 107, 0, 0.3) 0%, rgba(180, 60, 0, 0.45) 100%);
-          border-color: #ff6b00;
-          box-shadow: 0 4px 18px rgba(255, 107, 0, 0.32);
-          color: #ffffff;
-
-          .pill-tag {
-            background: #ff6b00;
-            color: #ffffff;
-          }
-        }
-      }
-    }
-  }
-
-  /* Dual-Pane Grid Layout */
-  .radar-dossier-grid {
-    display: grid;
-    grid-template-columns: 1.15fr 1.35fr;
-    gap: 30px;
-    max-width: 1150px;
-    margin: 0 auto;
-    align-items: stretch;
-
-    @media (max-width: 960px) {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  /* Left Pane: Radar Visualizer */
-  .radar-visualizer-card {
-    background: rgba(15, 23, 42, 0.7);
-    backdrop-filter: blur(14px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 20px;
-    padding: 26px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3);
-    position: relative;
-    overflow: hidden;
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: -40px;
-      left: -40px;
-      width: 150px;
-      height: 150px;
-      background: radial-gradient(circle, rgba(123, 44, 191, 0.25) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .radar-svg-container {
-      width: 100%;
-      max-width: 440px;
+      max-width: 680px;
       margin: 0 auto;
+      line-height: 1.5;
 
-      svg {
-        width: 100%;
-        height: auto;
-        display: block;
-        overflow: visible;
-      }
-    }
-
-    .radar-legend-bar {
-      display: flex;
-      gap: 18px;
-      align-items: center;
-      justify-content: center;
-      margin-top: 14px;
-      padding-top: 14px;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      width: 100%;
-
-      .legend-item {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-size: 0.8rem;
-        color: #94a3b8;
-
-        .legend-color-box {
-          width: 12px;
-          height: 12px;
-          border-radius: 3px;
-        }
-      }
-    }
-  }
-
-  /* Right Pane: Executive Dossier Card */
-  .executive-dossier-card {
-    background: rgba(15, 23, 42, 0.7);
-    backdrop-filter: blur(14px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 20px;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3);
-    position: relative;
-    border-left: 4px solid #5000ca;
-    transition: border-color 0.3s ease;
-
-    .dossier-header-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 20px;
-      gap: 16px;
-
-      .dossier-titles {
-        .company-badge {
-          display: inline-flex;
-          align-items: center;
-          gap: 6px;
-          font-size: 0.8rem;
-          font-weight: 700;
-          padding: 4px 10px;
-          border-radius: 6px;
-          text-transform: uppercase;
-          letter-spacing: 0.5px;
-          margin-bottom: 8px;
-        }
-
-        .dossier-role-title {
-          font-size: 1.65rem;
-          font-weight: 800;
-          margin: 0 0 6px 0;
-          color: #f8fafc;
-        }
-
-        .dossier-tenure {
-          font-size: 0.9rem;
-          color: #94a3b8;
-          display: flex;
-          align-items: center;
-          gap: 8px;
-
-          .duration-pill {
-            background: rgba(255, 255, 255, 0.08);
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.78rem;
-            color: #cbd5e1;
-          }
-        }
-      }
-
-      .dossier-level-badge {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background: rgba(255, 255, 255, 0.06);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        padding: 8px 16px;
-        border-radius: 12px;
-        min-width: 75px;
-
-        .level-number {
-          font-size: 1.3rem;
-          font-weight: 900;
-          color: #38bdf8;
-        }
-
-        .level-sub {
-          font-size: 0.68rem;
-          text-transform: uppercase;
-          letter-spacing: 0.6px;
-          color: #94a3b8;
-        }
-      }
-    }
-
-    /* Executive Headline Block */
-    .executive-headline-box {
-      background: linear-gradient(135deg, rgba(80, 0, 202, 0.15) 0%, rgba(15, 23, 42, 0.4) 100%);
-      border: 1px solid rgba(123, 44, 191, 0.3);
-      border-radius: 14px;
-      padding: 16px 20px;
-      margin-bottom: 22px;
-
-      .headline-tag {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        font-size: 0.74rem;
-        font-weight: 800;
-        text-transform: uppercase;
-        letter-spacing: 0.8px;
-        color: #a78bfa;
-        margin-bottom: 6px;
-      }
-
-      p {
-        margin: 0;
-        font-size: 0.98rem;
-        font-style: italic;
-        line-height: 1.55;
+      strong {
         color: #e2e8f0;
       }
     }
+  }
 
-    /* Key Competency Score Strip */
-    .competency-bars-strip {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
+  /* LinkedIn-Style Horizontal Role Tabs */
+  .radar-nav-tabs {
+    max-width: 980px;
+    margin: 0 auto 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+
+    .tabs-scroll-row {
+      display: flex;
       gap: 8px;
-      margin-bottom: 24px;
-      background: rgba(0, 0, 0, 0.2);
-      padding: 12px;
-      border-radius: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.04);
+      overflow-x: auto;
+      padding-bottom: 4px;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
 
-      .comp-cell {
-        display: flex;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .radar-tab-pill {
+        display: inline-flex;
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        align-items: flex-start;
+        padding: 6px 14px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        cursor: pointer;
+        transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        text-align: left;
+        white-space: nowrap;
 
-        .comp-score {
-          font-size: 1.15rem;
-          font-weight: 800;
-          color: #f8fafc;
-        }
-
-        .comp-shortname {
+        .tab-company {
           font-size: 0.68rem;
+          font-weight: 700;
           color: #94a3b8;
-          margin-top: 2px;
-          line-height: 1.2;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
         }
 
-        .comp-track {
-          width: 100%;
-          height: 4px;
-          background: rgba(255, 255, 255, 0.1);
-          border-radius: 2px;
-          margin-top: 6px;
-          overflow: hidden;
+        .tab-title {
+          font-size: 0.82rem;
+          font-weight: 700;
+          color: #cbd5e1;
+        }
 
-          .comp-fill {
-            height: 100%;
-            border-radius: 2px;
-            transition: width 0.4s ease;
+        &:hover {
+          background: rgba(255, 255, 255, 0.08);
+          border-color: rgba(255, 255, 255, 0.18);
+          transform: translateY(-1px);
+        }
+
+        &.is-selected {
+          background: rgba(80, 0, 202, 0.18);
+          border-color: #5000ca;
+          box-shadow: 0 4px 16px rgba(80, 0, 202, 0.25);
+
+          .tab-company {
+            color: #a78bfa;
+          }
+
+          .tab-title {
+            color: #ffffff;
           }
         }
       }
     }
 
-    /* Portfolio Bullets */
-    .dossier-bullets-section {
-      .bullets-header {
-        font-size: 0.82rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.8px;
-        color: #94a3b8;
-        margin-bottom: 12px;
+    .compare-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      background: rgba(148, 163, 184, 0.08);
+      color: #94a3b8;
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      flex-shrink: 0;
+
+      &:hover,
+      &.active {
+        background: rgba(148, 163, 184, 0.2);
+        color: #ffffff;
+        border-color: #94a3b8;
+      }
+    }
+  }
+
+  /* Compact Executive Card */
+  .radar-compact-card {
+    max-width: 980px;
+    margin: 0 auto;
+    background: #111827;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 24px 28px;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 32px;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+
+    /* Left Pane: SVG Radar */
+    .radar-chart-pane {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .svg-wrap {
+        width: 100%;
+        max-width: 300px;
+
+        svg {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+      }
+
+      .radar-legend-row {
         display: flex;
         align-items: center;
         gap: 6px;
-      }
+        margin-top: 10px;
+        font-size: 0.76rem;
+        color: #94a3b8;
 
-      .portfolio-bullet-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
+        .legend-dot {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          display: inline-block;
+
+          &.baseline {
+            background: #94a3b8;
+            border: 1px dashed #ffffff;
+          }
+        }
+
+        .legend-label strong {
+          color: #e2e8f0;
+        }
+
+        .legend-sep {
+          color: #475569;
+        }
+      }
+    }
+
+    /* Right Pane: Summary */
+    .radar-summary-pane {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+
+      .role-header-line {
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
         gap: 12px;
 
-        .bullet-item {
+        .role-tags {
           display: flex;
-          align-items: flex-start;
-          gap: 12px;
-          font-size: 0.93rem;
-          line-height: 1.6;
-          color: #cbd5e1;
+          align-items: center;
+          gap: 8px;
+          margin-bottom: 4px;
+          flex-wrap: wrap;
 
-          .bullet-icon {
-            margin-top: 4px;
-            font-size: 0.85rem;
-            color: #38bdf8;
-            flex-shrink: 0;
+          .company-chip {
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 4px;
+            border: 1px solid;
+            background: rgba(255, 255, 255, 0.04);
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
           }
 
-          strong {
-            color: #f8fafc;
+          .period-chip {
+            font-size: 0.72rem;
+            color: #94a3b8;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+          }
+        }
+
+        .role-heading {
+          font-size: 1.35rem;
+          font-weight: 800;
+          color: #ffffff;
+          margin: 0;
+          letter-spacing: -0.2px;
+        }
+
+        .score-badge {
+          background: rgba(80, 0, 202, 0.12);
+          border: 1px solid rgba(80, 0, 202, 0.3);
+          border-radius: 8px;
+          padding: 6px 12px;
+          text-align: center;
+          flex-shrink: 0;
+
+          .score-num {
+            font-size: 1.25rem;
+            font-weight: 900;
+            color: #a78bfa;
+            display: block;
+            line-height: 1;
+          }
+
+          .score-txt {
+            font-size: 0.62rem;
             font-weight: 700;
+            text-transform: uppercase;
+            color: #94a3b8;
+            letter-spacing: 0.5px;
+          }
+        }
+      }
+
+      .role-tagline {
+        font-size: 0.88rem;
+        line-height: 1.45;
+        font-style: italic;
+        color: #cbd5e1;
+        margin: 0;
+        padding-left: 10px;
+        border-left: 2px solid #5000ca;
+      }
+
+      /* 5-Competency Meters */
+      .competency-meters-list {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        background: rgba(0, 0, 0, 0.15);
+        padding: 10px 12px;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.04);
+
+        .meter-row {
+          .meter-label-wrap {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.74rem;
+            margin-bottom: 2px;
+
+            .meter-name {
+              color: #94a3b8;
+              font-weight: 600;
+            }
+
+            .meter-val {
+              color: #ffffff;
+              font-weight: 800;
+            }
+          }
+
+          .meter-track {
+            height: 4px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 2px;
+            overflow: hidden;
+
+            .meter-fill {
+              height: 100%;
+              border-radius: 2px;
+              transition: width 0.4s ease;
+            }
+          }
+        }
+      }
+
+      /* 3 Crisp Highlights */
+      .highlights-list {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        .highlight-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 8px;
+          font-size: 0.82rem;
+          color: #cbd5e1;
+          line-height: 1.4;
+
+          .highlight-check {
+            color: #10b981;
+            font-size: 0.78rem;
+            margin-top: 3px;
+            flex-shrink: 0;
           }
         }
       }
     }
   }
+
+  .radar-print-matrix {
+    display: none;
+  }
 }
 
-/* Light Mode Overrides */
+/* Light Mode Styling */
 .light-mode #career-radar {
   .radar-header {
     h1 {
-      background: linear-gradient(135deg, #0f172a 40%, #475569 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: #0f172a;
     }
 
     .radar-subtitle {
       color: #64748b;
+
+      strong {
+        color: #1e293b;
+      }
     }
   }
 
-  .career-controls-wrapper {
-    background: #ffffff;
+  .radar-nav-tabs .tabs-scroll-row .radar-tab-pill {
+    background: #f8fafc;
     border-color: #e2e8f0;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 
-    .scrubber-header {
-      .scrubber-label {
-        color: #64748b;
+    .tab-company {
+      color: #64748b;
+    }
+
+    .tab-title {
+      color: #1e293b;
+    }
+
+    &:hover {
+      background: #f1f5f9;
+      border-color: #cbd5e1;
+    }
+
+    &.is-selected {
+      background: #f5f3ff;
+      border-color: #5000ca;
+
+      .tab-company {
+        color: #5000ca;
       }
 
-      .compare-toggle-btn {
-        background: #f1f5f9;
-        border-color: #cbd5e1;
-        color: #334155;
+      .tab-title {
+        color: #5000ca;
+      }
+    }
+  }
 
-        &:hover {
-          background: #e2e8f0;
+  .radar-compact-card {
+    background: #ffffff;
+    border-color: #e2e8f0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+
+    .radar-chart-pane {
+      .radar-legend-row {
+        color: #64748b;
+
+        .legend-label strong {
+          color: #0f172a;
+        }
+      }
+    }
+
+    .radar-summary-pane {
+      .role-header-line {
+        .role-tags {
+          .period-chip {
+            color: #64748b;
+          }
+        }
+
+        .role-heading {
           color: #0f172a;
         }
 
-        &.active {
-          background: #ecfdf5;
-          border-color: #10b981;
-          color: #059669;
-        }
-      }
-    }
+        .score-badge {
+          background: #f5f3ff;
+          border-color: #ddd6fe;
 
-    .role-pills-row .role-pill {
-      background: #f8fafc;
-      border-color: #e2e8f0;
-      color: #334155;
+          .score-num {
+            color: #5000ca;
+          }
 
-      &:hover {
-        background: #f1f5f9;
-        color: #0f172a;
-      }
-
-      &.active-cargo {
-        background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
-        border-color: #5000ca;
-        color: #3b0764;
-      }
-
-      &.active-cars24 {
-        background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 100%);
-        border-color: #ff6b00;
-        color: #9a3412;
-      }
-    }
-  }
-
-  .radar-visualizer-card {
-    background: #ffffff;
-    border-color: #e2e8f0;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-
-    .radar-legend-bar {
-      border-top-color: #e2e8f0;
-
-      .legend-item {
-        color: #64748b;
-      }
-    }
-  }
-
-  .executive-dossier-card {
-    background: #ffffff;
-    border-color: #e2e8f0;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-
-    .dossier-header-bar {
-      .dossier-titles {
-        .dossier-role-title {
-          color: #0f172a;
-        }
-
-        .dossier-tenure {
-          color: #64748b;
-
-          .duration-pill {
-            background: #f1f5f9;
-            color: #475569;
+          .score-txt {
+            color: #64748b;
           }
         }
       }
 
-      .dossier-level-badge {
+      .role-tagline {
+        color: #334155;
+      }
+
+      .competency-meters-list {
         background: #f8fafc;
         border-color: #e2e8f0;
 
-        .level-number {
-          color: #0284c7;
-        }
+        .meter-row {
+          .meter-label-wrap {
+            .meter-name {
+              color: #64748b;
+            }
 
-        .level-sub {
-          color: #64748b;
-        }
-      }
-    }
+            .meter-val {
+              color: #0f172a;
+            }
+          }
 
-    .executive-headline-box {
-      background: #f5f3ff;
-      border-color: #c4b5fd;
-
-      .headline-tag {
-        color: #5000ca;
-      }
-
-      p {
-        color: #1e1b4b;
-      }
-    }
-
-    .competency-bars-strip {
-      background: #f8fafc;
-      border-color: #e2e8f0;
-
-      .comp-cell {
-        .comp-score {
-          color: #0f172a;
-        }
-
-        .comp-shortname {
-          color: #64748b;
-        }
-
-        .comp-track {
-          background: #e2e8f0;
+          .meter-track {
+            background: #e2e8f0;
+          }
         }
       }
-    }
 
-    .dossier-bullets-section {
-      .bullets-header {
-        color: #64748b;
-      }
-
-      .portfolio-bullet-list .bullet-item {
-        color: #334155;
-
-        .bullet-icon {
-          color: #0284c7;
-        }
-
-        strong {
-          color: #0f172a;
+      .highlights-list {
+        .highlight-item {
+          color: #334155;
         }
       }
     }
   }
 }
 
-.radar-print-matrix {
-  display: none;
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  #career-radar {
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+    .radar-compact-card {
+      grid-template-columns: 1fr;
+      padding: 18px 16px;
+      gap: 20px;
+    }
+
+    .radar-nav-tabs {
+      flex-direction: column;
+      align-items: stretch;
+
+      .tabs-scroll-row {
+        width: 100%;
+      }
+    }
+  }
 }

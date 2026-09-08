@@ -26,11 +26,6 @@ interface SubRole {
   level: number;
   badge: string;
   badgeType: "promotion" | "award" | "foundation";
-  headline?: string;
-  bullets?: {
-    category: string;
-    text: string;
-  }[];
   skills: string[];
   isCurrentRole?: boolean;
 }
@@ -68,28 +63,13 @@ const companyData: CompanyExperience[] = [
       {
         role: "Senior Manager Controlling",
         period: "Apr 2026 – Present",
-        duration: "6 mos",
+        duration: "Current",
         workMode: "Hybrid",
         level: 6,
-        badge: "India Lead · Strategic Controllership",
+        badge: "India Controlling Lead",
         badgeType: "promotion",
         isCurrentRole: true,
-        headline: "Spearheading enterprise controllership and strategic FP&A for the Indian entity, orchestrating multi-division Annual Operating Plans (AOP), SAP S/4HANA intelligence architectures, and executive decision-making for sustainable P&L expansion.",
-        bullets: [
-          {
-            category: "Strategic FP&A & Rolling Forecasts",
-            text: "Direct dynamic rolling forecasts and enterprise AOPs across multiple business units, deploying automated SAP S/4HANA and Power BI executive dashboards that slashed variance reporting latency by 40% and delivered real-time operational intelligence."
-          },
-          {
-            category: "Commercial Business Partnering & Turnaround",
-            text: "Partner with country leadership and divisional heads to enforce commercial governance, yield analysis, and margin optimization protocols, protecting bottom-line targets across volatile supply chain environments."
-          },
-          {
-            category: "Financial Control & Board-Level Leadership",
-            text: "Exercise comprehensive controllership over multi-branch statutory compliance, internal controls over financial reporting (ICFR), and audit governance, serving as the trusted finance advisor to regional and global executive management."
-          }
-        ],
-        skills: ["Strategic FP&A", "India Controlling Lead", "Profitability Turnaround", "Executive Leadership", "Budget Forecasting", "SAP & Power BI"]
+        skills: ["Enterprise FP&A", "AOP & Rolling Forecasts", "Statutory Controllership", "SAP S/4HANA & Power BI", "Board Advisory"]
       },
       {
         role: "Manager Controlling",
@@ -97,24 +77,9 @@ const companyData: CompanyExperience[] = [
         duration: "2 yrs 8 mos",
         workMode: "Hybrid",
         level: 5,
-        badge: "GEM Award (2024 & 2025) · Top Support Function Award 2024",
+        badge: "GEM Award (2024 & 2025) · Top Support Function Award",
         badgeType: "award",
-        headline: "Transformed ~75% of unprofitable business units into positive P&L contributors while unlocking ₹50+ Lacs in annual recurring savings through aggressive cost-governance, commercial modeling, and data-driven business partnering.",
-        bullets: [
-          {
-            category: "P&L Turnaround & ROI Escalation",
-            text: "Engineered performance intervention models that transitioned ~75% of decentralized profit centers to profitability, lifted branch operational productivity by 20%, and scaled commercial sales ROI from 1x to 2x through targeted revenue assurance."
-          },
-          {
-            category: "Cost Optimization & Budget Governance",
-            text: "Spearheaded zero-based budgetary reviews and operational leakage audits across all decentralized cost centers, securing ₹50+ Lacs in recurring annual SG&A savings (recognized with the GEM Award in 2024 & 2025)."
-          },
-          {
-            category: "Business Partnering & Liquidity Controls",
-            text: "Built unified KPI variance trackers and cash-conversion models for operational heads, institutionalizing strict P2P/O2C checkpoints that accelerated working capital velocity and customer collections."
-          }
-        ],
-        skills: ["Budget Forecasting", "Business Partner Relations", "FP&A", "Cost Optimization", "Profitability Turnaround", "SAP"]
+        skills: ["Commercial Business Partnering", "P&L Turnaround", "Cost Center Governance", "Working Capital Optimization", "SAP Analytics"]
       }
     ]
   },
@@ -135,48 +100,18 @@ const companyData: CompanyExperience[] = [
         duration: "5 mos",
         workMode: "On-site",
         level: 5,
-        badge: "Controllership & Capital Markets Lead · Rated 5/5",
+        badge: "Rated 5/5 · Capital Markets Lead",
         badgeType: "promotion",
-        headline: "Anchored complex capital market transactions including an ₹80 Cr ESOP buyback and spearheaded international finance architectures across Southeast Asia and Middle East markets during hyper-scale expansion.",
-        bullets: [
-          {
-            category: "Capital Transactions & Liquidity Execution",
-            text: "Led the end-to-end financial structuring, valuation mechanics, regulatory compliance, and banking disbursements for an ₹80 Cr ESOP buyback program under tight regulatory timelines."
-          },
-          {
-            category: "Global Entity Structuring & FP&A",
-            text: "Architected the complete financial, banking, and ERP infrastructure for newly launched overseas entities in Southeast Asia and the Middle East, embedding cross-border transfer pricing policies and local GAAP compliance."
-          },
-          {
-            category: "Executive Controllership & Mentorship",
-            text: "Mentored and scaled a high-performing 10-member finance controllership team, maintaining a 5/5 leadership rating and instituting robust enterprise internal financial controls (ICFR) across multi-million-dollar transaction rails."
-          }
-        ],
-        skills: ["Business Ethics", "Team Management", "₹80 Cr ESOP Buyback", "Global Expansion", "Controllership"]
+        skills: ["₹80 Cr ESOP Buyback", "Overseas Entity Structuring", "Cross-Border Transfer Pricing", "Team Leadership (10 Members)"]
       },
       {
         role: "Manager",
         period: "Apr 2022 – Mar 2023",
         duration: "1 yr",
         level: 4,
-        badge: "Big-4 Audit & Ind AS Lead · Mr. Detail Oriented Award 2022",
+        badge: "Mr. Detail Oriented Award 2022 · Big-4 Audit Lead",
         badgeType: "award",
-        headline: "Spearheaded statutory, tax, and ICFR audit closures in direct liaison with Big-4 firms (EY, Grant Thornton), delivering the company's first-ever clean ICFR and Internal Audit opinion alongside technical Ind AS 115/116 compliance.",
-        bullets: [
-          {
-            category: "Big-4 Audit Governance & Assurance",
-            text: "Managed comprehensive Statutory, Tax, and ICFR audits with Ernst & Young and Grant Thornton, remediating legacy high-risk audit observations to secure the organization's historic first unqualified (clean) audit opinion (awarded Mr. Detail-Oriented 2022)."
-          },
-          {
-            category: "Technical Ind AS Consolidation",
-            text: "Directed multi-entity financial consolidation and statutory disclosures under Ind AS 115 (Revenue from Contracts with Customers) and Ind AS 116 (Leases), standardizing accounting treatments across hundreds of retail hubs."
-          },
-          {
-            category: "Financial Control & Process Engineering",
-            text: "Formulated enterprise Risk and Control Matrices (RCM), re-engineering digital inventory valuation workflows and procurement approvals to eliminate operational risks at scale."
-          }
-        ],
-        skills: ["Management", "Leadership", "Statutory & ICFR Audits (EY/GT)", "Ind AS 115 & 116", "Internal Controls"]
+        skills: ["Statutory Audits (EY / GT)", "Unqualified ICFR Opinion", "Ind AS 115 & 116 Consolidation", "Risk & Control Matrix (RCM)"]
       },
       {
         role: "Assistant Manager",
@@ -185,22 +120,7 @@ const companyData: CompanyExperience[] = [
         level: 3,
         badge: "Employee of the Year 2021 · FinOps",
         badgeType: "award",
-        headline: "Compressed the multi-entity financial close cycle by 36% (11th to 7th business day) through continuous automation, ledger reconciliations, and balance sheet integrity controls across high-volume automotive settlement rails.",
-        bullets: [
-          {
-            category: "Month-End Close Acceleration & FP&A",
-            text: "Re-engineered the financial reporting cadence by automating journal allocations and continuous reconciliations, compressing the month-end close timeline from the 11th to the 7th business day (recognized as Employee of the Year 2021)."
-          },
-          {
-            category: "Balance Sheet Governance & Reconciliations",
-            text: "Governed multi-billion-rupee daily banking reconciliations, vehicle inventory accounts, and inter-company balances across pan-India operating centers with zero audit discrepancies."
-          },
-          {
-            category: "Financial Control & Statutory Alignment",
-            text: "Supervised preparation of audit schedules under Ind AS 109 and Ind AS 102, establishing automated exception alerts that reduced transaction posting errors by 45%."
-          }
-        ],
-        skills: ["Account Reconciliation", "Teamwork", "Ind AS Reporting", "Financial Statements", "Process Automation"]
+        skills: ["Close Cycle Compression (11th to 7th Day)", "High-Volume Auto Settlements", "Balance Sheet Governance", "Automated Reconciliations"]
       },
       {
         role: "Team Lead",
@@ -208,24 +128,9 @@ const companyData: CompanyExperience[] = [
         duration: "1 yr 4 mos",
         workMode: "On-site",
         level: 2,
-        badge: "Scalable Finance Process Architecture",
+        badge: "Foundational Process Architect",
         badgeType: "foundation",
-        headline: "Architected foundational Procure-to-Pay (P2P) and Order-to-Cash (O2C) transaction controls, establishing the scalable financial operational bedrock supporting unicorn-stage growth.",
-        bullets: [
-          {
-            category: "Internal Control Infrastructure",
-            text: "Designed end-to-end P2P and O2C transaction verification workflows with multi-tiered maker-checker authorization gates, completely preventing vendor overpayments and leakage."
-          },
-          {
-            category: "Statutory Compliance & Filings",
-            text: "Controlled direct and indirect tax withholding governance (TDS/TCS), corporate secretarial filings under the Companies Act, and vendor GST reconciliations with 100% on-time statutory adherence."
-          },
-          {
-            category: "Reconciliation Automation",
-            text: "Engineered automated reconciliation frameworks for multi-crore daily banking and vehicle financing settlements, safeguarding cash integrity during rapid regional expansion."
-          }
-        ],
-        skills: ["Company Law", "P2P & O2C Workflows", "Financial Reconciliations", "Internal Controls"]
+        skills: ["P2P & O2C Maker-Checker Controls", "Statutory Compliance (TDS / GST)", "Secretarial Filings", "Banking Reconciliation Rails"]
       }
     ]
   },
@@ -247,22 +152,7 @@ const companyData: CompanyExperience[] = [
         level: 1,
         badge: "Statutory Assurance & Risk Advisory",
         badgeType: "foundation",
-        headline: "Executed end-to-end statutory and internal audits across diversified corporate clients, strengthening ICFR frameworks and direct/indirect tax compliance.",
-        bullets: [
-          {
-            category: "Statutory & Internal Assurance",
-            text: "Conducted audit testing and compliance reviews for mid-market corporate clients under Indian GAAP and Companies Act provisions."
-          },
-          {
-            category: "ICFR & Internal Control Assessments",
-            text: "Evaluated standard operating procedures, identified process deficiencies, and delivered actionable management advisory reports."
-          },
-          {
-            category: "Tax Governance",
-            text: "Formulated tax audit schedules under Section 44AB and verified monthly GST reconciliations with 100% accuracy."
-          }
-        ],
-        skills: ["Audit & Assurance", "ICFR Frameworks", "GST Compliance", "Direct Tax Advisory"]
+        skills: ["Statutory & Internal Audits", "ICFR Assessment", "Corporate Tax Filings (Sec 44AB)", "GST Compliance Reviews"]
       }
     ]
   }
@@ -465,33 +355,9 @@ function Timeline() {
                                 <span>{role.badge}</span>
                               </div>
 
-                              {/* Executive Headline */}
-                              {role.headline && (
-                                <div className="subrole-executive-headline">
-                                  <p>"{role.headline}"</p>
-                                </div>
-                              )}
-
-                              {/* Executive Portfolio Bullets */}
-                              {role.bullets && role.bullets.length > 0 && (
-                                <div className="subrole-portfolio-bullets">
-                                  <ul className="timeline-bullets-list">
-                                    {role.bullets.map((bullet, bIdx) => (
-                                      <li key={bIdx} className="timeline-bullet-item">
-                                        <FontAwesomeIcon icon={faCheckCircle} className="bullet-check-icon" />
-                                        <span>
-                                          <strong>{bullet.category}: </strong>
-                                          {bullet.text}
-                                        </span>
-                                      </li>
-                                    ))}
-                                  </ul>
-                                </div>
-                              )}
-
-                              {/* Associated Skills */}
+                              {/* Core Functional Focus */}
                               <div className="subrole-skills-row">
-                                <span className="skills-prefix">Skills:</span>
+                                <span className="skills-prefix">Focus:</span>
                                 <div className="skills-chip-group">
                                   {role.skills.map((skill, sIdx) => (
                                     <span key={sIdx} className="subrole-skill-pill">{skill}</span>

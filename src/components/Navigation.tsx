@@ -1,123 +1,163 @@
-import React, { useEffect, useState } from "react";
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
-import Divider from '@mui/material/Divider';
+import React, { useState } from "react";
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
+import PersonIcon from '@mui/icons-material/Person';
+import AssessmentIcon from '@mui/icons-material/Assessment';
+import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
+import SchoolIcon from '@mui/icons-material/School';
+import EmailIcon from '@mui/icons-material/Email';
+import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
-import List from '@mui/material/List';
-import ListIcon from '@mui/icons-material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
-import Toolbar from '@mui/material/Toolbar';
+import profileImg from '../assets/images/profile.jpg';
+import '../assets/styles/Navigation.scss';
 
-const drawerWidth = 240;
-const navItems = [['Expertise', 'expertise'], ['History', 'history'], ['Career Radar', 'career-radar'], ['Credentials', 'credentials'], ['Achievements', 'projects'], ['Contact', 'contact']];
+interface NavigationProps {
+  parentToChild: { mode: string };
+  modeChange: () => void;
+}
 
-function Navigation({ parentToChild, modeChange }: any) {
+const navItems = [
+  { label: 'About', target: 'about', icon: <PersonIcon className="nav-icon" /> },
+  { label: 'Expertise', target: 'expertise', icon: <AssessmentIcon className="nav-icon" /> },
+  { label: 'Experience', target: 'history', icon: <TrendingUpIcon className="nav-icon" /> },
+  { label: 'Achievements', target: 'projects', icon: <EmojiEventsIcon className="nav-icon" /> },
+  { label: 'Education', target: 'credentials', icon: <SchoolIcon className="nav-icon" /> },
+  { label: 'Contact', target: 'contact', icon: <EmailIcon className="nav-icon" /> },
+];
 
+function Navigation({ parentToChild, modeChange }: NavigationProps) {
   const { mode } = parentToChild;
-
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
-  const [scrolled, setScrolled] = useState<boolean>(false);
 
   const handleDrawerToggle = () => {
-    setMobileOpen((prevState) => !prevState);
+    setMobileOpen((prev) => !prev);
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const navbar = document.getElementById("navigation");
-      if (navbar) {
-        const scrolled = window.scrollY > navbar.clientHeight;
-        setScrolled(scrolled);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  const scrollToSection = (section: string) => {
-    console.log(section)
-    const expertiseElement = document.getElementById(section);
-    if (expertiseElement) {
-      expertiseElement.scrollIntoView({ behavior: 'smooth' });
-      console.log('Scrolling to:', expertiseElement);  // Debugging: Ensure the element is found
-    } else {
-      console.error('Element with id "expertise" not found');  // Debugging: Log error if element is not found
+  const scrollToSection = (targetId: string) => {
+    const el = document.getElementById(targetId);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+    if (mobileOpen) {
+      setMobileOpen(false);
     }
   };
 
-  const drawer = (
-    <Box className="navigation-bar-responsive" onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <p className="mobile-menu-top"><ListIcon />Menu</p>
-      <Divider />
-      <List>
+  const renderSidebarContent = (isMobile = false) => (
+    <div className={isMobile ? "mobile-drawer-content" : "desktop-sidebar"}>
+      {/* Profile Header */}
+      <div className="sidebar-header">
+        <div className="avatar-wrapper">
+          <img src={profileImg} alt="CA Ashish Pandla" />
+        </div>
+        <h2 className="sidebar-name">CA Ashish Pandla</h2>
+        <p className="sidebar-role">Senior Finance Leader</p>
+      </div>
+
+      {/* Nav Menu */}
+      <nav className="sidebar-menu">
         {navItems.map((item) => (
-          <ListItem key={item[0]} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }} onClick={() => scrollToSection(item[1])}>
-              <ListItemText primary={item[0]} />
-            </ListItemButton>
-          </ListItem>
+          <button
+            key={item.target}
+            className="nav-link-btn"
+            onClick={() => scrollToSection(item.target)}
+          >
+            {item.icon}
+            <span>{item.label}</span>
+          </button>
         ))}
-      </List>
-    </Box>
+
+        {/* Direct Resume PDF Link */}
+        <a
+          href={`${process.env.PUBLIC_URL || ''}/Resume-Ashish.pdf`}
+          target="_blank"
+          rel="noreferrer"
+          className="nav-link-btn resume-link"
+        >
+          <PictureAsPdfIcon className="nav-icon" />
+          <span>Resume (PDF)</span>
+        </a>
+      </nav>
+
+      {/* Theme Toggle Footer */}
+      <div className="sidebar-footer">
+        <button className="theme-toggle-btn" onClick={modeChange}>
+          {mode === 'dark' ? (
+            <>
+              <LightModeIcon sx={{ fontSize: '1.1rem', color: '#facc15' }} />
+              <span>Light Mode</span>
+            </>
+          ) : (
+            <>
+              <DarkModeIcon sx={{ fontSize: '1.1rem', color: '#5000ca' }} />
+              <span>Dark Mode</span>
+            </>
+          )}
+        </button>
+      </div>
+    </div>
   );
 
   return (
-    <Box sx={{ display: 'flex' }}>
-      <CssBaseline />
-      <AppBar component="nav" id="navigation" className={`navbar-fixed-top${scrolled ? ' scrolled' : ''}`}>
-        <Toolbar className='navigation-bar'>
+    <>
+      {/* Desktop Fixed Left Sidebar */}
+      {renderSidebarContent(false)}
+
+      {/* Mobile Sticky Top Header */}
+      <header className="mobile-top-bar">
+        <div className="mobile-bar-left">
           <IconButton
-            color="inherit"
+            className="hamburger-btn"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
           >
             <MenuIcon />
           </IconButton>
-          {mode === 'dark' ? (
-            <LightModeIcon onClick={() => modeChange()} />
-          ) : (
-            <DarkModeIcon onClick={() => modeChange()} />
-          )}
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Button key={item[0]} onClick={() => scrollToSection(item[1])} sx={{ color: '#fff' }}>
-                {item[0]}
-              </Button>
-            ))}
-          </Box>
-        </Toolbar>
-      </AppBar>
-      <nav>
-        <Drawer
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-          }}
-        >
-          {drawer}
-        </Drawer>
-      </nav>
-    </Box>
+          <span className="mobile-bar-title">CA Ashish Pandla</span>
+        </div>
+
+        <div className="mobile-bar-right">
+          <a
+            href={`${process.env.PUBLIC_URL || ''}/Resume-Ashish.pdf`}
+            target="_blank"
+            rel="noreferrer"
+            className="mobile-resume-pill"
+          >
+            <PictureAsPdfIcon />
+            <span>Resume</span>
+          </a>
+          <IconButton onClick={modeChange} sx={{ color: 'inherit' }}>
+            {mode === 'dark' ? (
+              <LightModeIcon sx={{ color: '#facc15', fontSize: '1.25rem' }} />
+            ) : (
+              <DarkModeIcon sx={{ color: '#5000ca', fontSize: '1.25rem' }} />
+            )}
+          </IconButton>
+        </div>
+      </header>
+
+      {/* Mobile Drawer */}
+      <Drawer
+        variant="temporary"
+        open={mobileOpen}
+        onClose={handleDrawerToggle}
+        ModalProps={{ keepMounted: true }}
+        sx={{
+          display: { xs: 'block', md: 'none' },
+          '& .MuiDrawer-paper': {
+            boxSizing: 'border-box',
+            width: 270,
+            background: mode === 'dark' ? '#0e131f' : '#ffffff',
+          },
+        }}
+      >
+        {renderSidebarContent(true)}
+      </Drawer>
+    </>
   );
 }
 

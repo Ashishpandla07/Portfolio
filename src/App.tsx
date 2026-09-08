@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import {
     Main,
     Timeline,
-    CareerRadar,
     Education,
     Expertise,
     Project,
@@ -31,16 +30,17 @@ function App() {
     return (
         <div className={`main-container ${mode === 'dark' ? 'dark-mode' : 'light-mode'}`}>
             <Navigation parentToChild={{ mode }} modeChange={handleModeChange} />
-            <FadeIn transitionDuration={700}>
-                <Main />
-                <Expertise />
-                <Timeline />
-                <CareerRadar />
-                <Education />
-                <Project />
-                <Contact />
-            </FadeIn>
-            <Footer />
+            <div className="content-wrapper">
+                <FadeIn transitionDuration={700}>
+                    <Main />
+                    <Expertise />
+                    <Timeline />
+                    <Education />
+                    <Project />
+                    <Contact />
+                </FadeIn>
+                <Footer />
+            </div>
         </div>
     );
 }

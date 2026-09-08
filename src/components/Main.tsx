@@ -7,7 +7,7 @@ import '../assets/styles/Main.scss';
 function Main() {
 
   return (
-    <div className="container">
+    <div className="container" id="about">
       <div className="about-section">
         <div className="image-wrapper">
           <img src={profileImg} alt="Ashish Pandla" />
@@ -24,7 +24,30 @@ function Main() {
             </a>
           </div>
           <h1>CA Ashish Pandla</h1>
-          <p>Senior Finance Leader | FP&A, Controllership & Strategic Finance | 8 years of experience | Driving Profitability & Business Growth</p>
+          <p className="hero-bio">
+            Senior Finance Leader | FP&A, Controllership & Strategic Finance | 8 years of experience | Driving Profitability & Business Growth
+          </p>
+
+          <div className="hero-action-buttons">
+            <a
+              href={`${process.env.PUBLIC_URL || ''}/Resume-Ashish.pdf`}
+              target="_blank"
+              rel="noreferrer"
+              className="hero-btn primary-btn"
+            >
+              📄 View Resume (PDF)
+            </a>
+            <a
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="hero-btn secondary-btn"
+            >
+              ✉️ Contact Me
+            </a>
+          </div>
 
           <div className="mobile_social_icons">
             <a href="https://linkedin.com/in/ipandla" target="_blank" rel="noreferrer">
