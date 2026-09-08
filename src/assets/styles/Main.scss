@@ -24,8 +24,19 @@
     .social_icons {
         display: flex;
         flex-direction: row;
-        gap: 10px;
+        gap: 12px;
         color: white;
+
+        a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: inherit;
+        }
+
+        .contact-link-text {
+            display: none;
+        }
 
         svg {
             font-size: 1.8em;
@@ -34,6 +45,10 @@
 
     .mobile_social_icons {
         display: none;
+
+        .contact-link-text {
+            display: none;
+        }
     }
 
     p {

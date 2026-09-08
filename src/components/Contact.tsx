@@ -107,6 +107,27 @@ function Contact() {
               Send
             </Button>
           </Box>
+          {/* Printable Contact Details Card (displayed in @media print) */}
+          <div className="print-contact-dossier">
+            <div className="print-contact-grid">
+              <div className="contact-item">
+                <span className="contact-label">Email:</span>
+                <span className="contact-val">ashishpandla07@gmail.com</span>
+              </div>
+              <div className="contact-item">
+                <span className="contact-label">LinkedIn:</span>
+                <span className="contact-val">linkedin.com/in/ipandla</span>
+              </div>
+              <div className="contact-item">
+                <span className="contact-label">Location:</span>
+                <span className="contact-val">Gurugram, Haryana, India</span>
+              </div>
+              <div className="contact-item">
+                <span className="contact-label">Availability:</span>
+                <span className="contact-val">Senior Finance Leader / Controller Roles</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

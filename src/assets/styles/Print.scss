@@ -1,0 +1,1150 @@
+/* ==========================================================================
+   STRICT 4-PAGE PRINT & PDF OPTIMIZATION STYLESHEET (@media print)
+   Designed for A4 / Letter Export · Zero Content Omission · Maximum Density
+   ========================================================================== */
+
+@media print {
+  /* --------------------------------------------------------------------------
+     1. Base Page Geometry & Typography Setup
+     -------------------------------------------------------------------------- */
+  @page {
+    size: A4 portrait;
+    margin: 8mm 9mm 8mm 9mm;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box !important;
+    text-shadow: none !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    color: #111827 !important;
+    font-size: 8.5pt !important;
+    line-height: 1.25 !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Force all elements into crisp light theme contrast in print */
+  .main-container,
+  .dark-mode,
+  .light-mode {
+    background: #ffffff !important;
+    color: #111827 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  p, span, h1, h2, h3, h4, h5, strong, em, td, th, li, a {
+    color: #111827 !important;
+    font-family: inherit !important;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: #5000ca !important;
+  }
+
+  /* --------------------------------------------------------------------------
+     2. Hide Web-Only Interactive / Non-Printable Elements
+     -------------------------------------------------------------------------- */
+  #navigation,
+  .navbar-fixed-top,
+  .MuiDrawer-root,
+  .career-controls-wrapper,
+  .clubbed-controls-bar,
+  .timeline-flow-marker,
+  .contact-form,
+  .MuiButton-root,
+  .MuiInputBase-root,
+  .collapsed-preview-bar,
+  .mobile_social_icons {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* --------------------------------------------------------------------------
+     3. Global Container Density & Zero Margin Inflation
+     -------------------------------------------------------------------------- */
+  .container,
+  .items-container,
+  .skills-container,
+  .education-container,
+  .projects-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* --------------------------------------------------------------------------
+     4. PAGE 1: EXECUTIVE PROFILE & EXPERTISE GRID
+     -------------------------------------------------------------------------- */
+  .about-section {
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 8px !important;
+    padding: 10px 14px !important;
+    min-height: auto !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 16px !important;
+    margin-bottom: 10px !important;
+
+    .image-wrapper {
+      flex-shrink: 0 !important;
+      padding: 0 !important;
+      width: auto !important;
+
+      img {
+        width: 82px !important;
+        height: 82px !important;
+        border-radius: 50% !important;
+        border: 2px solid #5000ca !important;
+        box-shadow: none !important;
+        object-fit: cover !important;
+      }
+    }
+
+    .content {
+      flex: 1 !important;
+      padding: 0 !important;
+      width: auto !important;
+
+      h1 {
+        font-size: 16pt !important;
+        font-weight: 800 !important;
+        color: #0f172a !important;
+        margin: 0 0 2px 0 !important;
+        line-height: 1.15 !important;
+      }
+
+      p {
+        font-size: 9pt !important;
+        color: #334155 !important;
+        line-height: 1.25 !important;
+        margin: 0 0 6px 0 !important;
+        font-weight: 500 !important;
+      }
+
+      .social_icons {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 16px !important;
+        margin-bottom: 4px !important;
+
+        a {
+          display: inline-flex !important;
+          align-items: center !important;
+          gap: 4px !important;
+          font-size: 8pt !important;
+          color: #5000ca !important;
+          font-weight: 600 !important;
+
+          svg {
+            font-size: 11pt !important;
+            color: #5000ca !important;
+          }
+
+          .contact-link-text {
+            display: inline !important;
+          }
+        }
+      }
+    }
+  }
+
+  /* Expertise Section: High-Density 3-Column Grid */
+  #expertise {
+    margin-top: 0 !important;
+    padding: 0 !important;
+    page-break-after: always !important;
+    break-after: page !important;
+
+    .skills-container {
+      h1 {
+        font-size: 13pt !important;
+        font-weight: 800 !important;
+        color: #0f172a !important;
+        margin: 0 0 8px 0 !important;
+        padding-bottom: 3px !important;
+        border-bottom: 1.5px solid #5000ca !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.5px !important;
+      }
+
+      .skills-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 8px !important;
+        margin-top: 0 !important;
+
+        .skill {
+          background: #ffffff !important;
+          border: 1px solid #e2e8f0 !important;
+          border-radius: 6px !important;
+          padding: 8px 9px !important;
+          box-shadow: none !important;
+
+          svg {
+            font-size: 14pt !important;
+            color: #5000ca !important;
+            margin-bottom: 4px !important;
+          }
+
+          h3 {
+            font-size: 9.5pt !important;
+            font-weight: 800 !important;
+            color: #0f172a !important;
+            margin: 0 0 4px 0 !important;
+          }
+
+          p {
+            font-size: 8pt !important;
+            line-height: 1.25 !important;
+            color: #334155 !important;
+            margin: 0 0 6px 0 !important;
+          }
+
+          .flex-chips {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            gap: 3px !important;
+
+            .chip-title {
+              display: block !important;
+              width: 100% !important;
+              font-size: 7pt !important;
+              font-weight: 700 !important;
+              color: #64748b !important;
+              text-transform: uppercase !important;
+              margin-bottom: 2px !important;
+            }
+
+            .chip {
+              height: auto !important;
+              padding: 1px 5px !important;
+              font-size: 7.2pt !important;
+              font-weight: 600 !important;
+              background: #f1f5f9 !important;
+              color: #1e293b !important;
+              border: 1px solid #cbd5e1 !important;
+              border-radius: 3px !important;
+
+              .MuiChip-label {
+                padding: 0 !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* --------------------------------------------------------------------------
+     5. PAGE 2: CORPORATE CAREER HISTORY & PROMOTION LADDER
+     -------------------------------------------------------------------------- */
+  #history {
+    padding: 0 !important;
+    margin: 0 !important;
+    page-break-before: always !important;
+    break-before: page !important;
+    page-break-after: always !important;
+    break-after: page !important;
+
+    .experience-header {
+      margin-bottom: 6px !important;
+
+      .header-eyebrow {
+        display: none !important;
+      }
+
+      h1 {
+        font-size: 13pt !important;
+        font-weight: 800 !important;
+        color: #0f172a !important;
+        margin: 0 0 2px 0 !important;
+        padding-bottom: 3px !important;
+        border-bottom: 1.5px solid #5000ca !important;
+        text-transform: uppercase !important;
+      }
+
+      .experience-subtitle {
+        font-size: 8pt !important;
+        color: #64748b !important;
+        margin: 0 0 6px 0 !important;
+      }
+
+      .experience-metrics-strip {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 8px !important;
+        margin-bottom: 8px !important;
+
+        .metric-cell {
+          flex: 1 !important;
+          background: #f8fafc !important;
+          border: 1px solid #e2e8f0 !important;
+          border-radius: 4px !important;
+          padding: 4px 6px !important;
+          text-align: center !important;
+
+          .metric-number {
+            font-size: 10pt !important;
+            font-weight: 800 !important;
+            color: #5000ca !important;
+            display: block !important;
+          }
+
+          .metric-text {
+            font-size: 6.8pt !important;
+            color: #64748b !important;
+            font-weight: 600 !important;
+            text-transform: uppercase !important;
+          }
+        }
+      }
+    }
+
+    .clubbed-company-timeline {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 8px !important;
+      max-width: 100% !important;
+
+      .company-clubbed-card {
+        background: #ffffff !important;
+        border: 1px solid #cbd5e1 !important;
+        border-left-width: 4px !important;
+        border-radius: 6px !important;
+        padding: 7px 10px !important;
+        box-shadow: none !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+
+        .company-main-header {
+          display: flex !important;
+          justify-content: space-between !important;
+          align-items: center !important;
+          margin-bottom: 4px !important;
+
+          .company-meta-left {
+            display: flex !important;
+            align-items: center !important;
+            gap: 8px !important;
+
+            .company-logo-frame {
+              height: 24px !important;
+              min-width: 50px !important;
+              max-width: 65px !important;
+              padding: 2px 4px !important;
+              border: 1px solid #e2e8f0 !important;
+              border-radius: 4px !important;
+
+              .company-logo-img {
+                max-height: 20px !important;
+                max-width: 55px !important;
+              }
+            }
+
+            .company-identity-text {
+              .company-name-row {
+                display: flex !important;
+                align-items: center !important;
+                gap: 6px !important;
+
+                .company-title {
+                  font-size: 10pt !important;
+                  font-weight: 800 !important;
+                  color: #0f172a !important;
+                  margin: 0 !important;
+                }
+
+                .current-org-pill {
+                  font-size: 6.5pt !important;
+                  padding: 1px 4px !important;
+                  background: #dcfce7 !important;
+                  color: #166534 !important;
+                  border-radius: 3px !important;
+                  font-weight: 700 !important;
+                }
+              }
+
+              .company-submeta {
+                font-size: 7.2pt !important;
+                color: #64748b !important;
+                display: flex !important;
+                gap: 4px !important;
+              }
+            }
+          }
+
+          .company-toggle-right {
+            .tenure-badge {
+              font-size: 7.2pt !important;
+              font-weight: 700 !important;
+              color: #ffffff !important;
+              padding: 2px 6px !important;
+              border-radius: 3px !important;
+            }
+          }
+        }
+
+        /* Subrole entries list */
+        .nested-roles-ladder {
+          display: block !important;
+          margin-top: 4px !important;
+          padding-top: 4px !important;
+          border-top: 1px solid #f1f5f9 !important;
+
+          .ladder-header-title {
+            display: none !important;
+          }
+
+          .roles-list-track {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 6px !important;
+
+            &::before {
+              display: none !important;
+            }
+
+            .subrole-entry {
+              display: flex !important;
+              gap: 6px !important;
+
+              .track-bullet-column {
+                width: 22px !important;
+                padding-top: 3px !important;
+
+                .bullet-node {
+                  width: 8px !important;
+                  height: 8px !important;
+                  border-width: 2px !important;
+                }
+
+                .level-chip {
+                  font-size: 6pt !important;
+                  padding: 0 2px !important;
+                }
+              }
+
+              .subrole-body {
+                flex: 1 !important;
+                background: #f8fafc !important;
+                border: 1px solid #e2e8f0 !important;
+                border-radius: 4px !important;
+                padding: 5px 8px !important;
+
+                .subrole-top-line {
+                  display: flex !important;
+                  justify-content: space-between !important;
+                  align-items: center !important;
+                  margin-bottom: 3px !important;
+
+                  .subrole-heading-wrap {
+                    display: flex !important;
+                    align-items: center !important;
+                    gap: 5px !important;
+
+                    .subrole-title {
+                      font-size: 8.8pt !important;
+                      font-weight: 800 !important;
+                      color: #0f172a !important;
+                      margin: 0 !important;
+                    }
+
+                    .subrole-mode,
+                    .active-now-tag {
+                      font-size: 6pt !important;
+                      padding: 0 3px !important;
+                      border-radius: 2px !important;
+                    }
+                  }
+
+                  .subrole-duration-tag {
+                    font-size: 7.2pt !important;
+                    color: #64748b !important;
+
+                    .role-duration-pill {
+                      font-size: 6.5pt !important;
+                      padding: 1px 4px !important;
+                      border-radius: 3px !important;
+                    }
+                  }
+                }
+
+                .subrole-hero-badge {
+                  font-size: 6.8pt !important;
+                  font-weight: 700 !important;
+                  padding: 1px 5px !important;
+                  border-radius: 3px !important;
+                  margin-bottom: 4px !important;
+                }
+
+                .subrole-executive-headline {
+                  background: rgba(80, 0, 202, 0.03) !important;
+                  border-left: 2px solid #5000ca !important;
+                  padding: 3px 6px !important;
+                  margin-bottom: 4px !important;
+                  border-radius: 2px !important;
+
+                  p {
+                    font-size: 7.6pt !important;
+                    line-height: 1.25 !important;
+                    color: #334155 !important;
+                    margin: 0 !important;
+                    font-style: italic !important;
+                  }
+                }
+
+                .subrole-portfolio-bullets {
+                  margin-bottom: 4px !important;
+
+                  .timeline-bullets-list {
+                    display: flex !important;
+                    flex-direction: column !important;
+                    gap: 3px !important;
+
+                    .timeline-bullet-item {
+                      display: flex !important;
+                      gap: 4px !important;
+                      font-size: 7.5pt !important;
+                      line-height: 1.22 !important;
+                      color: #334155 !important;
+
+                      .bullet-check-icon {
+                        color: #10b981 !important;
+                        font-size: 7pt !important;
+                        margin-top: 2px !important;
+                      }
+
+                      strong {
+                        color: #0f172a !important;
+                      }
+                    }
+                  }
+                }
+
+                .subrole-skills-row {
+                  display: flex !important;
+                  gap: 3px !important;
+                  padding-top: 3px !important;
+                  border-top: 1px dashed #e2e8f0 !important;
+
+                  .skills-prefix {
+                    font-size: 6.5pt !important;
+                    color: #64748b !important;
+                  }
+
+                  .skills-chip-group {
+                    display: flex !important;
+                    flex-wrap: wrap !important;
+                    gap: 2px !important;
+
+                    .subrole-skill-pill {
+                      font-size: 6.5pt !important;
+                      padding: 0 4px !important;
+                      background: #e2e8f0 !important;
+                      color: #1e293b !important;
+                      border-radius: 2px !important;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* --------------------------------------------------------------------------
+     6. PAGE 3: QUANTITATIVE CAREER RADAR & EXECUTIVE DOSSIER
+     -------------------------------------------------------------------------- */
+  #career-radar {
+    padding: 0 !important;
+    margin: 0 !important;
+    page-break-before: always !important;
+    break-before: page !important;
+    page-break-after: always !important;
+    break-after: page !important;
+
+    .radar-header {
+      margin-bottom: 8px !important;
+
+      .header-eyebrow {
+        display: none !important;
+      }
+
+      h1 {
+        font-size: 13pt !important;
+        font-weight: 800 !important;
+        color: #0f172a !important;
+        margin: 0 0 2px 0 !important;
+        padding-bottom: 3px !important;
+        border-bottom: 1.5px solid #5000ca !important;
+        text-transform: uppercase !important;
+      }
+
+      .radar-subtitle {
+        font-size: 8pt !important;
+        color: #64748b !important;
+        margin: 0 0 8px 0 !important;
+      }
+    }
+
+    .radar-dossier-grid {
+      display: grid !important;
+      grid-template-columns: 240px 1fr !important;
+      gap: 12px !important;
+      align-items: start !important;
+      margin-bottom: 10px !important;
+
+      .radar-visualizer-card {
+        background: #f8fafc !important;
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 6px !important;
+        padding: 8px !important;
+        box-shadow: none !important;
+        text-align: center !important;
+
+        .radar-svg-container svg {
+          max-width: 220px !important;
+          height: auto !important;
+
+          text {
+            fill: #334155 !important;
+            font-weight: 700 !important;
+          }
+
+          polygon {
+            stroke-width: 2px !important;
+          }
+        }
+
+        .radar-legend-bar {
+          display: flex !important;
+          justify-content: center !important;
+          gap: 10px !important;
+          font-size: 7.2pt !important;
+          margin-top: 4px !important;
+
+          .legend-item {
+            display: flex !important;
+            align-items: center !important;
+            gap: 4px !important;
+
+            .legend-color-box {
+              width: 9px !important;
+              height: 9px !important;
+              border-radius: 2px !important;
+            }
+          }
+        }
+      }
+
+      .executive-dossier-card {
+        background: #ffffff !important;
+        border: 1px solid #e2e8f0 !important;
+        border-left: 3px solid #5000ca !important;
+        border-radius: 6px !important;
+        padding: 8px 12px !important;
+        box-shadow: none !important;
+
+        .dossier-header-bar {
+          display: flex !important;
+          justify-content: space-between !important;
+          align-items: center !important;
+          margin-bottom: 6px !important;
+
+          .dossier-titles {
+            .company-badge {
+              font-size: 6.8pt !important;
+              padding: 1px 5px !important;
+              border-radius: 3px !important;
+              font-weight: 700 !important;
+            }
+
+            .dossier-role-title {
+              font-size: 10pt !important;
+              font-weight: 800 !important;
+              color: #0f172a !important;
+              margin: 2px 0 !important;
+            }
+
+            .dossier-tenure {
+              font-size: 7.2pt !important;
+              color: #64748b !important;
+            }
+          }
+
+          .dossier-level-badge {
+            text-align: right !important;
+
+            .level-number {
+              font-size: 11pt !important;
+              font-weight: 800 !important;
+              color: #5000ca !important;
+              display: block !important;
+            }
+
+            .level-sub {
+              font-size: 6pt !important;
+              color: #64748b !important;
+            }
+          }
+        }
+
+        .executive-headline-box {
+          background: rgba(80, 0, 202, 0.04) !important;
+          border-left: 2px solid #5000ca !important;
+          padding: 4px 8px !important;
+          border-radius: 3px !important;
+          margin-bottom: 6px !important;
+
+          .headline-tag {
+            font-size: 6.5pt !important;
+            font-weight: 700 !important;
+            color: #5000ca !important;
+            text-transform: uppercase !important;
+          }
+
+          p {
+            font-size: 7.8pt !important;
+            line-height: 1.25 !important;
+            color: #334155 !important;
+            margin: 2px 0 0 0 !important;
+            font-style: italic !important;
+          }
+        }
+
+        .competency-bars-strip {
+          display: grid !important;
+          grid-template-columns: repeat(5, 1fr) !important;
+          gap: 4px !important;
+          background: #f8fafc !important;
+          border: 1px solid #e2e8f0 !important;
+          border-radius: 4px !important;
+          padding: 4px !important;
+          margin-bottom: 6px !important;
+
+          .comp-cell {
+            text-align: center !important;
+
+            .comp-score {
+              font-size: 8.5pt !important;
+              font-weight: 800 !important;
+              color: #5000ca !important;
+              display: block !important;
+            }
+
+            .comp-shortname {
+              font-size: 6.2pt !important;
+              color: #64748b !important;
+              font-weight: 600 !important;
+              display: block !important;
+            }
+
+            .comp-track {
+              height: 3px !important;
+              background: #e2e8f0 !important;
+              border-radius: 2px !important;
+              margin-top: 2px !important;
+
+              .comp-fill {
+                height: 100% !important;
+                background: #5000ca !important;
+                border-radius: 2px !important;
+              }
+            }
+          }
+        }
+
+        .dossier-bullets-section {
+          .bullets-header {
+            font-size: 7.5pt !important;
+            font-weight: 800 !important;
+            color: #0f172a !important;
+            margin-bottom: 4px !important;
+            text-transform: uppercase !important;
+          }
+
+          .portfolio-bullet-list {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 3px !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            list-style: none !important;
+
+            .bullet-item {
+              display: flex !important;
+              gap: 4px !important;
+              font-size: 7.5pt !important;
+              line-height: 1.25 !important;
+              color: #334155 !important;
+
+              .bullet-icon {
+                color: #10b981 !important;
+                font-size: 7pt !important;
+                margin-top: 2px !important;
+              }
+
+              strong {
+                color: #0f172a !important;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    /* Print Matrix Table: Full 6-Milestone Progression */
+    .radar-print-matrix {
+      display: block !important;
+      margin-top: 6px !important;
+      background: #ffffff !important;
+      border: 1px solid #e2e8f0 !important;
+      border-radius: 4px !important;
+      padding: 6px !important;
+
+      .print-matrix-title {
+        font-size: 7.8pt !important;
+        font-weight: 800 !important;
+        color: #0f172a !important;
+        margin-bottom: 4px !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.5px !important;
+      }
+
+      .print-competency-table {
+        width: 100% !important;
+        border-collapse: collapse !important;
+        font-size: 7.2pt !important;
+
+        th, td {
+          border: 1px solid #e2e8f0 !important;
+          padding: 3px 5px !important;
+          text-align: left !important;
+        }
+
+        th {
+          background: #f1f5f9 !important;
+          color: #1e293b !important;
+          font-weight: 700 !important;
+          text-transform: uppercase !important;
+          font-size: 6.8pt !important;
+        }
+
+        .score-cell {
+          text-align: center !important;
+          color: #5000ca !important;
+        }
+      }
+    }
+  }
+
+  /* --------------------------------------------------------------------------
+     7. PAGE 4: CREDENTIALS, KEY ACHIEVEMENTS & CONTACT DOSSIER
+     -------------------------------------------------------------------------- */
+  #credentials {
+    padding: 0 !important;
+    margin: 0 0 10px 0 !important;
+    page-break-before: always !important;
+    break-before: page !important;
+
+    .section-header {
+      margin-bottom: 6px !important;
+
+      h1 {
+        font-size: 13pt !important;
+        font-weight: 800 !important;
+        color: #0f172a !important;
+        margin: 0 0 2px 0 !important;
+        padding-bottom: 3px !important;
+        border-bottom: 1.5px solid #5000ca !important;
+        text-transform: uppercase !important;
+      }
+
+      .section-subtitle {
+        font-size: 8pt !important;
+        color: #64748b !important;
+        margin: 0 !important;
+      }
+    }
+
+    .education-grid {
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+      gap: 8px !important;
+
+      .education-card {
+        background: #ffffff !important;
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 4px !important;
+        padding: 6px 8px !important;
+        box-shadow: none !important;
+
+        .card-top-bar {
+          display: flex !important;
+          justify-content: space-between !important;
+          margin-bottom: 3px !important;
+
+          .credential-badge {
+            font-size: 6.5pt !important;
+            font-weight: 700 !important;
+            padding: 1px 4px !important;
+            background: #e0e7ff !important;
+            color: #3730a3 !important;
+            border-radius: 2px !important;
+          }
+
+          .year-pill {
+            font-size: 6.5pt !important;
+            color: #64748b !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 2px !important;
+
+            svg { font-size: 7pt !important; }
+          }
+        }
+
+        .card-header {
+          display: flex !important;
+          align-items: center !important;
+          gap: 6px !important;
+          margin-bottom: 4px !important;
+
+          .card-icon-wrapper {
+            width: 24px !important;
+            height: 24px !important;
+
+            img {
+              max-height: 22px !important;
+              max-width: 22px !important;
+              object-fit: contain !important;
+            }
+          }
+
+          .card-title-group {
+            h2 {
+              font-size: 9pt !important;
+              font-weight: 800 !important;
+              color: #0f172a !important;
+              margin: 0 !important;
+            }
+
+            .institution-name {
+              font-size: 7pt !important;
+              color: #64748b !important;
+              margin: 0 !important;
+            }
+          }
+        }
+
+        .card-body {
+          .highlights-heading {
+            font-size: 7pt !important;
+            font-weight: 700 !important;
+            color: #5000ca !important;
+            margin-bottom: 2px !important;
+            text-transform: uppercase !important;
+          }
+
+          .highlights-list {
+            padding: 0 0 0 12px !important;
+            margin: 0 !important;
+
+            li {
+              font-size: 7.2pt !important;
+              line-height: 1.25 !important;
+              color: #334155 !important;
+              margin-bottom: 2px !important;
+
+              strong {
+                color: #0f172a !important;
+              }
+            }
+          }
+
+          .degree-sub-entry {
+            margin-bottom: 4px !important;
+
+            .sub-entry-header {
+              display: flex !important;
+              justify-content: space-between !important;
+
+              h3 {
+                font-size: 8pt !important;
+                font-weight: 700 !important;
+                color: #0f172a !important;
+                margin: 0 !important;
+              }
+
+              .sub-year {
+                font-size: 6.8pt !important;
+                color: #64748b !important;
+              }
+            }
+
+            .sub-institution {
+              font-size: 6.8pt !important;
+              color: #64748b !important;
+              margin: 0 !important;
+            }
+
+            .sub-description {
+              font-size: 7.2pt !important;
+              line-height: 1.2 !important;
+              color: #334155 !important;
+              margin: 1px 0 0 0 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Projects Section: 3-Column Compact Grid */
+  #projects {
+    padding: 0 !important;
+    margin: 0 0 10px 0 !important;
+
+    h1 {
+      font-size: 13pt !important;
+      font-weight: 800 !important;
+      color: #0f172a !important;
+      margin: 0 0 6px 0 !important;
+      padding-bottom: 3px !important;
+      border-bottom: 1.5px solid #5000ca !important;
+      text-transform: uppercase !important;
+    }
+
+    .projects-grid {
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 6px !important;
+
+      .project {
+        background: #ffffff !important;
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 4px !important;
+        padding: 5px 6px !important;
+        box-shadow: none !important;
+
+        img {
+          height: 38px !important;
+          width: 100% !important;
+          object-fit: cover !important;
+          border-radius: 2px !important;
+          margin-bottom: 3px !important;
+        }
+
+        h2 {
+          font-size: 8pt !important;
+          font-weight: 800 !important;
+          color: #0f172a !important;
+          margin: 0 0 2px 0 !important;
+          line-height: 1.15 !important;
+        }
+
+        p {
+          margin: 0 !important;
+          padding: 0 !important;
+
+          li {
+            font-size: 6.8pt !important;
+            line-height: 1.2 !important;
+            color: #334155 !important;
+            margin-bottom: 2px !important;
+            list-style: square !important;
+            margin-left: 10px !important;
+
+            strong {
+              color: #0f172a !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Contact Section: Clean Executive Dossier Card */
+  #contact {
+    padding: 0 !important;
+    margin: 0 !important;
+
+    .contact_wrapper {
+      background: #f8fafc !important;
+      border: 1px solid #e2e8f0 !important;
+      border-left: 3px solid #5000ca !important;
+      border-radius: 4px !important;
+      padding: 6px 10px !important;
+
+      h1 {
+        font-size: 10pt !important;
+        font-weight: 800 !important;
+        color: #0f172a !important;
+        margin: 0 0 2px 0 !important;
+        text-transform: uppercase !important;
+      }
+
+      p {
+        font-size: 7.2pt !important;
+        color: #64748b !important;
+        margin: 0 0 4px 0 !important;
+      }
+
+      .print-contact-dossier {
+        display: block !important;
+
+        .print-contact-grid {
+          display: grid !important;
+          grid-template-columns: repeat(4, 1fr) !important;
+          gap: 6px !important;
+          background: #ffffff !important;
+          border: 1px solid #cbd5e1 !important;
+          border-radius: 3px !important;
+          padding: 4px 6px !important;
+
+          .contact-item {
+            .contact-label {
+              font-size: 6.2pt !important;
+              font-weight: 700 !important;
+              color: #64748b !important;
+              display: block !important;
+              text-transform: uppercase !important;
+            }
+
+            .contact-val {
+              font-size: 7.2pt !important;
+              font-weight: 700 !important;
+              color: #0f172a !important;
+              word-break: break-all !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    display: none !important;
+  }
+}

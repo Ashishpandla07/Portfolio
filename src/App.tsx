@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import {
     Main,
     Timeline,
+    CareerRadar,
     Education,
     Expertise,
     Project,
@@ -34,6 +35,7 @@ function App() {
                 <Main />
                 <Expertise />
                 <Timeline />
+                <CareerRadar />
                 <Education />
                 <Project />
                 <Contact />

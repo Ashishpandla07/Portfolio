@@ -14,15 +14,27 @@ function Main() {
         </div>
         <div className="content">
           <div className="social_icons">
-            <a href="https://linkedin.com/in/ipandla" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
-            <a href="mailto:ashishpandla07@gmail.com" target="_blank" rel="noreferrer"><EmailIcon/></a>
+            <a href="https://linkedin.com/in/ipandla" target="_blank" rel="noreferrer">
+              <LinkedInIcon/>
+              <span className="contact-link-text">linkedin.com/in/ipandla</span>
+            </a>
+            <a href="mailto:ashishpandla07@gmail.com" target="_blank" rel="noreferrer">
+              <EmailIcon/>
+              <span className="contact-link-text">ashishpandla07@gmail.com</span>
+            </a>
           </div>
           <h1>CA Ashish Pandla</h1>
           <p>Senior Finance Leader | FP&A, Controllership & Strategic Finance | 8 years of experience | Driving Profitability & Business Growth</p>
 
           <div className="mobile_social_icons">
-            <a href="https://linkedin.com/in/ipandla" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
-            <a href="mailto:ashishpandla07@gmail.com" target="_blank" rel="noreferrer"><EmailIcon/></a>
+            <a href="https://linkedin.com/in/ipandla" target="_blank" rel="noreferrer">
+              <LinkedInIcon/>
+              <span className="contact-link-text">linkedin.com/in/ipandla</span>
+            </a>
+            <a href="mailto:ashishpandla07@gmail.com" target="_blank" rel="noreferrer">
+              <EmailIcon/>
+              <span className="contact-link-text">ashishpandla07@gmail.com</span>
+            </a>
           </div>
         </div>
       </div>
