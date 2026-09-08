@@ -9,7 +9,7 @@ function Education() {
     <div className="education-container" id="credentials">
       <div className="section-header">
         <h1>Education & Credentials</h1>
-        </div>
+      </div>
       <div className="education-grid">
         {/* Entry 1: Chartered Accountant Qualification */}
         <div className="education-card">
@@ -47,7 +47,7 @@ function Education() {
                 <strong>Technology & Analytics:</strong> Hands-on command of digital auditing tools (CAATs), ERP systems, and Excel modeling gained via Advanced ITT.
               </li>
               <li>
-                <strong>Management & Leadership:</strong> Polished executive communication, negotiation, and decision-making skills honed through ICAI's GMCS courses.
+                <strong>Management & Leadership:</strong> Executive communication, negotiation, and decision-making skills honed through ICAI's GMCS courses.
               </li>
             </ul>
           </div>
@@ -74,18 +74,6 @@ function Education() {
           </div>
 
           <div className="card-body">
-            {/* Bachelor's Degree Sub-entry */}
-            <div className="degree-sub-entry">
-              <div className="sub-entry-header">
-                <h3>Bachelor of Commerce (B.Com)</h3>
-                <span className="sub-year">2014</span>
-              </div>
-              <p className="sub-institution">University of Rajasthan</p>
-              <p className="sub-description">
-                <strong>Specialization:</strong> Corporate & Mercantile Law, Auditing Principles, Financial Accounting, and Macroeconomic Governance.
-              </p>
-            </div>
-
             {/* Master's Degree Sub-entry */}
             <div className="degree-sub-entry">
               <div className="sub-entry-header">
@@ -95,6 +83,18 @@ function Education() {
               <p className="sub-institution">University of Rajasthan</p>
               <p className="sub-description">
                 <strong>Specialization:</strong> Advanced Financial Management, Strategic Cost Accounting, and Quantitative Business Analysis.
+              </p>
+            </div>
+
+            {/* Bachelor's Degree Sub-entry */}
+            <div className="degree-sub-entry">
+              <div className="sub-entry-header">
+                <h3>Bachelor of Commerce (B.Com)</h3>
+                <span className="sub-year">2014</span>
+              </div>
+              <p className="sub-institution">University of Rajasthan</p>
+              <p className="sub-description">
+                <strong>Specialization:</strong> Corporate & Mercantile Law, Auditing Principles, Financial Accounting, and Macroeconomic Governance.
               </p>
             </div>
           </div>
