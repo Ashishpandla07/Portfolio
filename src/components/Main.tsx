@@ -2,91 +2,44 @@ import React from "react";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
-import TrendingUpIcon from '@mui/icons-material/TrendingUp';
-import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
-import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
-import LanguageIcon from '@mui/icons-material/Language';
 import '../assets/styles/Main.scss';
 
 function Main() {
-  const highlights = [
-    {
-      icon: <TrendingUpIcon className="highlight-icon" />,
-      value: "8+ Years",
-      label: "Strategic FP&A & Controlling",
-      desc: "Budgeting, variance analysis & data-backed decision support"
-    },
-    {
-      icon: <AccountBalanceIcon className="highlight-icon" />,
-      value: "₹80 Cr+",
-      label: "Capital Transactions",
-      desc: "ESOP share buyback & capital structuring execution"
-    },
-    {
-      icon: <VerifiedUserIcon className="highlight-icon" />,
-      value: "Big-4 Audits",
-      label: "ICFR & Governance",
-      desc: "Clean reports with EY & Grant Thornton, risk remediation"
-    },
-    {
-      icon: <LanguageIcon className="highlight-icon" />,
-      value: "Multi-Entity",
-      label: "Global Operations",
-      desc: "Ind-AS, IFRS, transfer pricing & cross-border controllership"
-    }
-  ];
-
   return (
     <div className="container" id="about">
       <div className="about-section">
-        <div className="about-hero-card">
-          {/* Header Pill */}
-          <div className="about-badge">
-            <span className="badge-dot"></span>
-            Chartered Accountant (ICAI) • Strategic Finance Leader
+        <div className="about-content">
+          <div className="about-tag">
+            <span className="tag-dot"></span>
+            Chartered Accountant • Strategic Finance Leader
           </div>
 
-          <h1 className="about-title">About Me</h1>
-          
-          <h2 className="about-subtitle">
-            Driving Sustainable Growth Through Financial Precision & Strategic Leadership
-          </h2>
+          <h1 className="about-heading">About Me</h1>
 
-          <div className="about-bio-container">
-            <p className="about-bio-lead">
-              Results-driven <strong>Chartered Accountant</strong> and <strong>Senior Finance Leader</strong> with <strong>8+ years</strong> of cross-industry expertise spanning Strategic FP&A, Financial Controlling, and Commercial Business Partnering across high-growth startups (<em>Cars24</em>) and global logistics leaders (<em>cargo-partner</em>).
+          <div className="about-statement">
+            <p className="statement-line lead">
+              Results-oriented <strong>Chartered Accountant (ICAI)</strong> and <strong>Senior Finance Leader</strong> with <strong>8+ years</strong> of cross-functional leadership across Strategic FP&A, Financial Controlling, and Commercial Business Partnering.
             </p>
-            <p className="about-bio-body">
-              Specialized in budgeting & forecasting, multi-entity consolidation, working capital optimization, and corporate governance. Proven track record of spearheading complex capital transactions—including an <strong>₹80 Cr share buyback</strong>—and delivering clean statutory & ICFR audits with Big-4 firms through rigorous internal controls and financial process excellence.
+            <p className="statement-line">
+              Proven track record in driving long-range financial forecasting, multi-entity consolidation, working capital optimization, and executing high-stakes capital transactions — including steering an <strong>₹80 Cr share buyback</strong>.
+            </p>
+            <p className="statement-line">
+              Expert in navigating Big-4 statutory & ICFR audits (EY, Grant Thornton), establishing robust internal control frameworks, and transforming complex financial data into actionable, growth-focused business strategies.
             </p>
           </div>
 
-          {/* Quick Highlight Metrics */}
-          <div className="about-highlights-grid">
-            {highlights.map((item, idx) => (
-              <div className="highlight-card" key={idx}>
-                <div className="highlight-header">
-                  <div className="icon-box">{item.icon}</div>
-                  <span className="highlight-value">{item.value}</span>
-                </div>
-                <h3 className="highlight-label">{item.label}</h3>
-                <p className="highlight-desc">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Direct Quick Contact Pills */}
-          <div className="about-contact-bar">
-            <a href="tel:+918058914286" className="contact-pill phone-pill">
-              <PhoneIcon sx={{ fontSize: '1.1rem' }} />
+          {/* Clean Contact Badges */}
+          <div className="about-badges">
+            <a href="tel:+918058914286" className="badge-item phone">
+              <PhoneIcon className="badge-icon" />
               <span>+91 80589 14286</span>
             </a>
-            <a href="mailto:ashishpandla07@gmail.com" className="contact-pill email-pill">
-              <EmailIcon sx={{ fontSize: '1.1rem' }} />
+            <a href="mailto:ashishpandla07@gmail.com" className="badge-item email">
+              <EmailIcon className="badge-icon" />
               <span>ashishpandla07@gmail.com</span>
             </a>
-            <a href="https://linkedin.com/in/ipandla" target="_blank" rel="noreferrer" className="contact-pill linkedin-pill">
-              <LinkedInIcon sx={{ fontSize: '1.1rem' }} />
+            <a href="https://linkedin.com/in/ipandla" target="_blank" rel="noreferrer" className="badge-item linkedin">
+              <LinkedInIcon className="badge-icon" />
               <span>linkedin.com/in/ipandla</span>
             </a>
           </div>
