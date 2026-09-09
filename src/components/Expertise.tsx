@@ -35,7 +35,8 @@ const labelsThird = [
     "Tableau",
     "Advanced Excel",
     "Salesforce",
-    "Tally Prime"
+    "Tally Prime",
+    "Artificial Intelligence"
 ];
 
 function Expertise() {
