@@ -1,7 +1,7 @@
 import React from "react";
 import cars24Logo from "../assets/images/cars24_logo.png";
 import cargoPartnerLogo from "../assets/images/cargo_partner_logo.jpg";
-import icaiLogo from "../assets/images/icai_logo.png";
+import caLogo from "../assets/images/ca_logo.png";
 import "../assets/styles/Timeline.scss";
 
 interface Position {
@@ -76,7 +76,7 @@ const EXPERIENCE_DATA: CompanyExperience[] = [
   {
     id: "nk-jain",
     company: "N K Jain & Co.",
-    logo: icaiLogo,
+    logo: caLogo,
     employmentType: "Full-time",
     totalDuration: "1 yr",
     location: "Gurugram, Haryana, India",

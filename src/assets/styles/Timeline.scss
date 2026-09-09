@@ -1,6 +1,6 @@
 #history {
   min-height: 100vh;
-  padding: 24px 5% 20px;
+  padding: 20px 5% 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,10 +13,10 @@
     margin: 0 auto;
 
     .section-header {
-      margin-bottom: 12px;
+      margin-bottom: 10px;
 
       h2 {
-        font-size: 1.35rem;
+        font-size: 1.3rem;
         font-weight: 700;
         margin: 0;
         color: #ffffff;
@@ -29,17 +29,17 @@
       background: rgba(22, 27, 34, 0.75);
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 12px;
-      padding: 18px 22px;
+      padding: 16px 20px;
       backdrop-filter: blur(8px);
       box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
 
       .company-group {
         display: flex;
         align-items: flex-start;
-        gap: 14px;
+        gap: 12px;
         position: relative;
-        padding-bottom: 14px;
-        margin-bottom: 14px;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
 
         &:last-child {
           padding-bottom: 0;
@@ -53,7 +53,7 @@
         .company-divider {
           position: absolute;
           bottom: 0;
-          left: 58px;
+          left: 56px;
           right: 0;
           height: 1px;
           background: rgba(255, 255, 255, 0.06);
@@ -71,12 +71,14 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            padding: 3px;
+            box-sizing: border-box;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 
             img.logo-img-full {
               width: 100%;
               height: 100%;
-              object-fit: cover;
+              object-fit: contain;
               display: block;
             }
           }
@@ -86,25 +88,25 @@
           flex-grow: 1;
 
           .company-header {
-            margin-bottom: 8px;
+            margin-bottom: 6px;
 
             .company-name {
-              font-size: 0.98rem;
+              font-size: 0.96rem;
               font-weight: 700;
               color: #ffffff;
               margin: 0 0 1px 0;
-              line-height: 1.25;
+              line-height: 1.2;
             }
 
             .company-meta {
-              font-size: 0.80rem;
+              font-size: 0.78rem;
               color: #94a3b8;
               font-weight: 500;
               margin-bottom: 1px;
             }
 
             .company-location {
-              font-size: 0.76rem;
+              font-size: 0.75rem;
               color: #64748b;
               font-weight: 400;
             }
@@ -119,17 +121,17 @@
             position: relative;
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 6px;
 
             &.has-multiple-roles {
-              padding-left: 16px;
+              padding-left: 14px;
 
               &::before {
                 content: "";
                 position: absolute;
-                left: 4px;
-                top: 8px;
-                bottom: 8px;
+                left: 3px;
+                top: 7px;
+                bottom: 7px;
                 width: 2px;
                 background: rgba(255, 255, 255, 0.12);
               }
@@ -139,7 +141,7 @@
 
                 .timeline-node {
                   position: absolute;
-                  left: -16px;
+                  left: -14px;
                   top: 5px;
                   width: 6px;
                   height: 6px;
@@ -153,15 +155,15 @@
             .position-item {
               .position-details {
                 .position-title {
-                  font-size: 0.88rem;
+                  font-size: 0.86rem;
                   font-weight: 600;
                   color: #f1f5f9;
                   margin: 0 0 1px 0;
-                  line-height: 1.3;
+                  line-height: 1.25;
                 }
 
                 .position-period {
-                  font-size: 0.76rem;
+                  font-size: 0.75rem;
                   color: #94a3b8;
                   font-weight: 400;
 
@@ -242,22 +244,22 @@
 /* Responsive Layout */
 @media screen and (max-width: 768px) {
   #history {
-    padding: 20px 12px 30px;
+    padding: 16px 10px 24px;
     min-height: auto;
 
     .linkedin-experience-container .experience-card-wrapper {
-      padding: 14px 14px;
+      padding: 12px 12px;
 
       .company-group {
         gap: 10px;
 
         .company-divider {
-          left: 48px;
+          left: 44px;
         }
 
         .company-logo-col .logo-box {
-          width: 38px;
-          height: 38px;
+          width: 36px;
+          height: 36px;
         }
       }
     }
