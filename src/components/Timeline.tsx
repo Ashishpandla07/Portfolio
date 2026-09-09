@@ -9,8 +9,8 @@ import {
   faLocationDot, 
   faCircleCheck, 
   faBriefcase,
-  faPlus,
-  faMinus
+  faChevronLeft,
+  faChevronRight
 } from '@fortawesome/free-solid-svg-icons';
 import cars24Logo from '../assets/images/cars24_logo.png';
 import cargoPartnerLogo from '../assets/images/cargo_partner_logo.jpg';
@@ -31,6 +31,7 @@ interface SubRole {
 
 interface CompanyExperience {
   id: string;
+  slideNum: number;
   company: string;
   companyShort: string;
   logo: string;
@@ -44,10 +45,11 @@ interface CompanyExperience {
   roles: SubRole[];
 }
 
-// Clubbed Company-Wise Experience in Reverse Chronological Order (Present → Past)
+// 2 Primary Corporate Experience Slides
 const companyData: CompanyExperience[] = [
   {
     id: "cargo-partner",
+    slideNum: 1,
     company: "cargo-partner",
     companyShort: "cargo-partner",
     logo: cargoPartnerLogo,
@@ -84,6 +86,7 @@ const companyData: CompanyExperience[] = [
   },
   {
     id: "cars24",
+    slideNum: 2,
     company: "CARS24",
     companyShort: "CARS24",
     logo: cars24Logo,
@@ -136,28 +139,8 @@ const companyData: CompanyExperience[] = [
 ];
 
 function Timeline() {
-  // All companies expanded by default, with interactive +/- toggle
-  const [expandedCompanies, setExpandedCompanies] = useState<Record<string, boolean>>({
-    "cargo-partner": true,
-    "cars24": true
-  });
-
-  const toggleCompany = (id: string) => {
-    setExpandedCompanies(prev => ({
-      ...prev,
-      [id]: !prev[id]
-    }));
-  };
-
-  const areAllExpanded = Object.values(expandedCompanies).every(Boolean);
-
-  const toggleAll = () => {
-    const nextState = !areAllExpanded;
-    setExpandedCompanies({
-      "cargo-partner": nextState,
-      "cars24": nextState
-    });
-  };
+  const [activeSlide, setActiveSlide] = useState<number>(0);
+  const currentCompany = companyData[activeSlide];
 
   return (
     <div id="history">
@@ -169,193 +152,159 @@ function Timeline() {
           </div>
           <h1>Professional Experience</h1>
           <p className="experience-subtitle">
-            Company-Wise Progression & Promotion Ladder · Present → Past Reverse Chronological Track
+            2-Slide Executive Career Track · Present → Past
           </p>
 
-          {/* Metric Summary Strip */}
-          <div className="experience-metrics-strip">
-            <div className="metric-cell">
-              <span className="metric-number">2</span>
-              <span className="metric-text">Major Enterprises</span>
-            </div>
-            <div className="metric-cell">
-              <span className="metric-number">7.5+</span>
-              <span className="metric-text">Years Post-CA Impact</span>
-            </div>
-            <div className="metric-cell">
-              <span className="metric-number">5</span>
-              <span className="metric-text">Merit Promotions</span>
-            </div>
-            <div className="metric-cell">
-              <span className="metric-number">5+</span>
-              <span className="metric-text">Corporate Awards</span>
-            </div>
-          </div>
-
-          {/* Toggle All Expand / Collapse */}
-          <div className="clubbed-controls-bar">
-            <button className="toggle-all-btn" onClick={toggleAll}>
-              <FontAwesomeIcon icon={areAllExpanded ? faMinus : faPlus} />
-              <span>{areAllExpanded ? "Collapse All Companies" : "+ Expand All Companies"}</span>
-            </button>
-          </div>
-        </div>
-
-        {/* Timeline Flow Anchor Top */}
-        <div className="timeline-flow-marker top-marker">
-          <span className="marker-pill">
-            <span className="pulse-dot" /> PRESENT · LATEST TENURE
-          </span>
-        </div>
-
-        {/* Vertical Company-Wise Timeline */}
-        <div className="clubbed-company-timeline">
-          {companyData.map((company) => {
-            const isExpanded = !!expandedCompanies[company.id];
-            const isCurrent = company.isCurrent;
-
-            return (
-              <div 
-                key={company.id} 
-                className={`company-clubbed-card ${isCurrent ? 'is-current-company' : ''} ${isExpanded ? 'expanded' : 'collapsed'}`}
-                style={{ borderLeftColor: company.color }}
+          {/* 2-Slide Navigation Tabs */}
+          <div className="experience-slide-switcher">
+            {companyData.map((company, idx) => (
+              <button
+                key={company.id}
+                type="button"
+                className={`slide-nav-btn ${activeSlide === idx ? 'active' : ''}`}
+                onClick={() => setActiveSlide(idx)}
               >
-                {/* Company Header Row (Clickable to Toggle +/-) */}
-                <div className="company-main-header" onClick={() => toggleCompany(company.id)}>
-                  <div className="company-meta-left">
-                    <div className="company-logo-frame">
-                      <img src={company.logo} alt={company.companyShort} className="company-logo-img" />
-                    </div>
+                <span className="slide-badge">Slide {idx + 1} of 2</span>
+                <span className="company-tab-title">{company.company}</span>
+                <span className="company-tab-period">{company.period}</span>
+              </button>
+            ))}
+          </div>
+        </div>
 
-                    <div className="company-identity-text">
-                      <div className="company-name-row">
-                        <h2 className="company-title">{company.company}</h2>
-                        {isCurrent && (
-                          <span className="current-org-pill">
-                            <FontAwesomeIcon icon={faCircleCheck} /> Current Employer
-                          </span>
-                        )}
-                      </div>
-                      <div className="company-submeta">
-                        <span>{company.employmentType}</span>
-                        <span className="sep">•</span>
-                        <span>{company.duration}</span>
-                        <span className="sep">•</span>
-                        <span><FontAwesomeIcon icon={faLocationDot} /> {company.location}</span>
-                        {company.workMode && (
-                          <>
-                            <span className="sep">•</span>
-                            <span className="workmode-tag">{company.workMode}</span>
-                          </>
-                        )}
-                      </div>
-                    </div>
+        {/* Active Slide Display */}
+        <div className="experience-slide-container">
+          <div className="slide-card-wrapper">
+            <div 
+              className={`company-clubbed-card ${currentCompany.isCurrent ? 'is-current-company' : ''}`}
+              style={{ borderLeftColor: currentCompany.color }}
+            >
+              {/* Company Header Row */}
+              <div className="company-main-header">
+                <div className="company-meta-left">
+                  <div className="company-logo-frame">
+                    <img src={currentCompany.logo} alt={currentCompany.companyShort} className="company-logo-img" />
                   </div>
 
-                  <div className="company-toggle-right">
-                    <div className="tenure-badge" style={{ background: company.color }}>
-                      <FontAwesomeIcon icon={faCalendarAlt} /> {company.period}
+                  <div className="company-identity-text">
+                    <div className="company-name-row">
+                      <h2 className="company-title">{currentCompany.company}</h2>
+                      {currentCompany.isCurrent && (
+                        <span className="current-org-pill">
+                          <FontAwesomeIcon icon={faCircleCheck} /> Current Employer
+                        </span>
+                      )}
                     </div>
-
-                    {/* The + / - Interactive Sign */}
-                    <button 
-                      type="button" 
-                      className="plus-minus-btn"
-                      aria-label={isExpanded ? `Collapse ${company.company}` : `Expand ${company.company}`}
-                    >
-                      <FontAwesomeIcon icon={isExpanded ? faMinus : faPlus} />
-                      <span className="btn-label-text">
-                        {isExpanded ? "Collapse" : `+ ${company.roles.length} Roles`}
-                      </span>
-                    </button>
+                    <div className="company-submeta">
+                      <span>{currentCompany.employmentType}</span>
+                      <span className="sep">•</span>
+                      <span>{currentCompany.duration}</span>
+                      <span className="sep">•</span>
+                      <span><FontAwesomeIcon icon={faLocationDot} /> {currentCompany.location}</span>
+                      {currentCompany.workMode && (
+                        <>
+                          <span className="sep">•</span>
+                          <span className="workmode-tag">{currentCompany.workMode}</span>
+                        </>
+                      )}
+                    </div>
                   </div>
                 </div>
 
-                {/* Collapsed Preview Pill (when hidden) */}
-                {!isExpanded && (
-                  <div className="collapsed-preview-bar" onClick={() => toggleCompany(company.id)}>
-                    <span className="preview-label">
-                      Click <strong className="plus-symbol">+</strong> to view {company.roles.length} role{company.roles.length > 1 ? 's' : ''} & promotion hierarchy
-                    </span>
-                    <span className="preview-role-summary">
-                      Latest: <em>{company.roles[0].role}</em>
-                    </span>
+                <div className="company-toggle-right">
+                  <div className="tenure-badge" style={{ background: currentCompany.color }}>
+                    <FontAwesomeIcon icon={faCalendarAlt} /> {currentCompany.period}
                   </div>
-                )}
+                </div>
+              </div>
 
-                {/* Expanded Sub-Roles Ladder */}
-                {isExpanded && (
-                  <div className="nested-roles-ladder">
-                    <div className="ladder-header-title">
-                      Promotion & Career Hierarchy ({company.roles.length} Stage{company.roles.length > 1 ? 's' : ''}):
-                    </div>
+              {/* Sub-Roles Ladder */}
+              <div className="nested-roles-ladder">
+                <div className="ladder-header-title">
+                  Promotion & Career Hierarchy ({currentCompany.roles.length} Stage{currentCompany.roles.length > 1 ? 's' : ''}):
+                </div>
 
-                    <div className="roles-list-track">
-                      {company.roles.map((role, rIdx) => {
-                        const isLatestRole = role.isCurrentRole || rIdx === 0;
+                <div className="roles-list-track">
+                  {currentCompany.roles.map((role, rIdx) => {
+                    const isLatestRole = role.isCurrentRole || rIdx === 0;
 
-                        return (
-                          <div 
-                            key={rIdx} 
-                            className={`subrole-entry ${isLatestRole && isCurrent ? 'is-active-subrole' : ''}`}
-                          >
-                            {/* Track Bullet Node */}
-                            <div className="track-bullet-column">
-                              <div className="bullet-node" style={{ borderColor: company.color }} />
-                              <span className="level-chip">L{role.level}</span>
+                    return (
+                      <div 
+                        key={rIdx} 
+                        className={`subrole-entry ${isLatestRole && currentCompany.isCurrent ? 'is-active-subrole' : ''}`}
+                      >
+                        <div className="track-bullet-column">
+                          <div className="bullet-node" style={{ borderColor: currentCompany.color }} />
+                          <span className="level-chip">L{role.level}</span>
+                        </div>
+
+                        <div className="subrole-body">
+                          <div className="subrole-top-line">
+                            <div className="subrole-heading-wrap">
+                              <h3 className="subrole-title">{role.role}</h3>
+                              {role.workMode && <span className="subrole-mode">{role.workMode}</span>}
+                              {isLatestRole && currentCompany.isCurrent && (
+                                <span className="active-now-tag">Active Position</span>
+                              )}
                             </div>
 
-                            {/* Subrole Body Card */}
-                            <div className="subrole-body">
-                              <div className="subrole-top-line">
-                                <div className="subrole-heading-wrap">
-                                  <h3 className="subrole-title">{role.role}</h3>
-                                  {role.workMode && <span className="subrole-mode">{role.workMode}</span>}
-                                  {isLatestRole && isCurrent && (
-                                    <span className="active-now-tag">Active Position</span>
-                                  )}
-                                </div>
-
-                                <div className="subrole-duration-tag">
-                                  <span>{role.period}</span>
-                                  <span className="role-duration-pill">{role.duration}</span>
-                                </div>
-                              </div>
-
-                              {/* Hero Badge */}
-                              <div className={`subrole-hero-badge type-${role.badgeType}`}>
-                                {role.badgeType === 'award' && <FontAwesomeIcon icon={faTrophy} />}
-                                {role.badgeType === 'promotion' && <FontAwesomeIcon icon={faArrowTrendUp} />}
-                                {role.badgeType === 'foundation' && <FontAwesomeIcon icon={faCheckCircle} />}
-                                <span>{role.badge}</span>
-                              </div>
-
-                              {/* Core Functional Focus */}
-                              <div className="subrole-skills-row">
-                                <span className="skills-prefix">Focus:</span>
-                                <div className="skills-chip-group">
-                                  {role.skills.map((skill, sIdx) => (
-                                    <span key={sIdx} className="subrole-skill-pill">{skill}</span>
-                                  ))}
-                                </div>
-                              </div>
+                            <div className="subrole-duration-tag">
+                              <span>{role.period}</span>
+                              <span className="role-duration-pill">{role.duration}</span>
                             </div>
                           </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
 
-        {/* Timeline Flow Anchor Bottom */}
-        <div className="timeline-flow-marker bottom-marker">
-          <span className="marker-pill bottom-pill">
-            CAREER FOUNDATION · 2019
-          </span>
+                          <div className={`subrole-hero-badge type-${role.badgeType}`}>
+                            {role.badgeType === 'award' && <FontAwesomeIcon icon={faTrophy} />}
+                            {role.badgeType === 'promotion' && <FontAwesomeIcon icon={faArrowTrendUp} />}
+                            {role.badgeType === 'foundation' && <FontAwesomeIcon icon={faCheckCircle} />}
+                            <span>{role.badge}</span>
+                          </div>
+
+                          <div className="subrole-skills-row">
+                            <span className="skills-prefix">Focus:</span>
+                            <div className="skills-chip-group">
+                              {role.skills.map((skill, sIdx) => (
+                                <span key={sIdx} className="subrole-skill-pill">{skill}</span>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Slide Pagination Footer Controls */}
+          <div className="slide-footer-controls">
+            <button 
+              type="button" 
+              className="slide-arrow-btn" 
+              onClick={() => setActiveSlide(0)}
+              disabled={activeSlide === 0}
+            >
+              <FontAwesomeIcon icon={faChevronLeft} />
+              <span>Slide 1: cargo-partner</span>
+            </button>
+
+            <div className="slide-dots">
+              <span className={`dot ${activeSlide === 0 ? 'active' : ''}`} onClick={() => setActiveSlide(0)} />
+              <span className={`dot ${activeSlide === 1 ? 'active' : ''}`} onClick={() => setActiveSlide(1)} />
+            </div>
+
+            <button 
+              type="button" 
+              className="slide-arrow-btn" 
+              onClick={() => setActiveSlide(1)}
+              disabled={activeSlide === 1}
+            >
+              <span>Slide 2: CARS24</span>
+              <FontAwesomeIcon icon={faChevronRight} />
+            </button>
+          </div>
         </div>
       </div>
     </div>

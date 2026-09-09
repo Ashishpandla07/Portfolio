@@ -733,6 +733,181 @@
   }
 }
 
+/* 2-Slide Interactive Switcher */
+.experience-slide-switcher {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  max-width: 960px;
+  margin: 0 auto 30px auto;
+  flex-wrap: wrap;
+
+  .slide-nav-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 24px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #9ca3af;
+    cursor: pointer;
+    min-width: 220px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+    .slide-badge {
+      font-size: 0.70rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #00d2ff;
+      margin-bottom: 4px;
+    }
+
+    .company-tab-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 2px;
+    }
+
+    .company-tab-period {
+      font-size: 0.78rem;
+      color: #9ca3af;
+      font-weight: 500;
+    }
+
+    &:hover {
+      background: rgba(80, 0, 202, 0.15);
+      border-color: rgba(168, 85, 247, 0.35);
+      transform: translateY(-2px);
+    }
+
+    &.active {
+      background: linear-gradient(135deg, rgba(80, 0, 202, 0.35) 0%, rgba(142, 45, 226, 0.25) 100%);
+      border: 2px solid #a855f7;
+      box-shadow: 0 8px 25px rgba(80, 0, 202, 0.35);
+
+      .company-tab-title {
+        color: #ffffff;
+      }
+
+      .company-tab-period {
+        color: #e2e8f0;
+      }
+    }
+  }
+}
+
+.experience-slide-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.slide-footer-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  padding: 0 10px;
+
+  .slide-arrow-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s ease;
+
+    &:hover:not(:disabled) {
+      background: #5000ca;
+      border-color: #5000ca;
+      box-shadow: 0 4px 15px rgba(80, 0, 202, 0.4);
+    }
+
+    &:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+  }
+
+  .slide-dots {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+      transition: all 0.25s ease;
+
+      &.active {
+        width: 28px;
+        border-radius: 10px;
+        background: #00d2ff;
+        box-shadow: 0 0 10px rgba(0, 210, 255, 0.6);
+      }
+    }
+  }
+}
+
+/* Light Mode Overrides for 2-Slide Controls */
+.light-mode #history {
+  .experience-slide-switcher {
+    .slide-nav-btn {
+      background: #ffffff;
+      border-color: #e5e7eb;
+      color: #4b5563;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+      .company-tab-title {
+        color: #111827;
+      }
+
+      &.active {
+        background: #ffffff;
+        border-color: #5000ca;
+        box-shadow: 0 6px 20px rgba(80, 0, 202, 0.2);
+
+        .company-tab-title {
+          color: #5000ca;
+        }
+      }
+    }
+  }
+
+  .slide-footer-controls {
+    .slide-arrow-btn {
+      background: #ffffff;
+      border-color: #e5e7eb;
+      color: #111827;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+      &:hover:not(:disabled) {
+        background: #5000ca;
+        color: #ffffff;
+      }
+    }
+
+    .slide-dots .dot {
+      background: #d1d5db;
+
+      &.active {
+        background: #5000ca;
+      }
+    }
+  }
+}
+
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
   #history {
@@ -740,6 +915,25 @@
 
     .experience-header h1 {
       font-size: 1.9rem;
+    }
+
+    .experience-slide-switcher {
+      flex-direction: column;
+      align-items: stretch;
+
+      .slide-nav-btn {
+        min-width: unset;
+        width: 100%;
+      }
+    }
+
+    .slide-footer-controls {
+      flex-direction: column;
+      gap: 16px;
+
+      .slide-dots {
+        order: -1;
+      }
     }
 
     .company-clubbed-card {
