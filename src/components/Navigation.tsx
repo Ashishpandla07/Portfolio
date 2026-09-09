@@ -6,6 +6,7 @@ import AssessmentIcon from '@mui/icons-material/Assessment';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import SchoolIcon from '@mui/icons-material/School';
+import InterestsIcon from '@mui/icons-material/Interests';
 import EmailIcon from '@mui/icons-material/Email';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
@@ -25,6 +26,7 @@ const navItems = [
   { label: 'Experience', target: 'history', icon: <TrendingUpIcon className="nav-icon" /> },
   { label: 'Achievements', target: 'projects', icon: <EmojiEventsIcon className="nav-icon" /> },
   { label: 'Education', target: 'credentials', icon: <SchoolIcon className="nav-icon" /> },
+  { label: 'Hobbies', target: 'hobbies', icon: <InterestsIcon className="nav-icon" /> },
   { label: 'Contact', target: 'contact', icon: <EmailIcon className="nav-icon" /> },
 ];
 
