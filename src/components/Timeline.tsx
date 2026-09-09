@@ -1,310 +1,181 @@
-import React, { useState } from "react";
-import '@fortawesome/free-regular-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  faTrophy, 
-  faArrowTrendUp, 
-  faCalendarAlt, 
-  faCheckCircle, 
-  faLocationDot, 
-  faCircleCheck, 
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
   faBriefcase,
-  faChevronLeft,
-  faChevronRight
-} from '@fortawesome/free-solid-svg-icons';
-import cars24Logo from '../assets/images/cars24_logo.png';
-import cargoPartnerLogo from '../assets/images/cargo_partner_logo.jpg';
-import '../assets/styles/Timeline.scss';
+  faCalendarAlt,
+  faCheckCircle,
+  faTrophy,
+  faArrowTrendUp
+} from "@fortawesome/free-solid-svg-icons";
+import cars24Logo from "../assets/images/cars24_logo.png";
+import cargoPartnerLogo from "../assets/images/cargo_partner_logo.jpg";
+import "../assets/styles/Timeline.scss";
 
-interface SubRole {
-  role: string;
+interface MinimalRole {
+  title: string;
   period: string;
   duration: string;
-  location?: string;
-  workMode?: string;
-  level: number;
   badge: string;
   badgeType: "promotion" | "award" | "foundation";
-  skills: string[];
-  isCurrentRole?: boolean;
+  highlights: string[];
 }
 
-interface CompanyExperience {
+interface ExecutiveCompany {
   id: string;
-  slideNum: number;
-  company: string;
-  companyShort: string;
+  name: string;
   logo: string;
-  employmentType: string;
   period: string;
   duration: string;
   location: string;
-  workMode?: string;
+  workMode: string;
   color: string;
   isCurrent?: boolean;
-  roles: SubRole[];
+  tagline: string;
+  roles: MinimalRole[];
 }
 
-// 2 Primary Corporate Experience Slides
-const companyData: CompanyExperience[] = [
+const EXECUTIVE_EXPERIENCE: ExecutiveCompany[] = [
   {
     id: "cargo-partner",
-    slideNum: 1,
-    company: "cargo-partner",
-    companyShort: "cargo-partner",
+    name: "cargo-partner",
     logo: cargoPartnerLogo,
-    employmentType: "Full-time",
     period: "Aug 2023 – Present",
     duration: "3 yrs 2 mos",
-    location: "Gurugram, Haryana, India",
+    location: "Gurugram, India",
     workMode: "Hybrid",
     color: "#5000ca",
     isCurrent: true,
+    tagline: "Leading India Financial Controlling, Enterprise AOPs & SAP S/4HANA Analytics",
     roles: [
       {
-        role: "Senior Manager Controlling",
+        title: "Senior Manager Controlling",
         period: "Apr 2026 – Present",
         duration: "Current",
-        workMode: "Hybrid",
-        level: 6,
         badge: "India Controlling Lead",
         badgeType: "promotion",
-        isCurrentRole: true,
-        skills: ["Enterprise FP&A", "AOP & Rolling Forecasts", "Statutory Controllership", "SAP S/4HANA & Power BI", "Board Advisory"]
+        highlights: [
+          "Enterprise FP&A, rolling forecasts & strategic board advisory",
+          "SAP S/4HANA & Power BI automated financial intelligence"
+        ]
       },
       {
-        role: "Manager Controlling",
+        title: "Manager Controlling",
         period: "Aug 2023 – Mar 2026",
         duration: "2 yrs 8 mos",
-        workMode: "Hybrid",
-        level: 5,
-        badge: "GEM Award (2024 & 2025) · Top Support Function Award",
+        badge: "GEM Awardee (2024 & 2025)",
         badgeType: "award",
-        skills: ["Commercial Business Partnering", "P&L Turnaround", "Cost Center Governance", "Working Capital Optimization", "SAP Analytics"]
+        highlights: [
+          "P&L turnaround & cost center governance across business units",
+          "Working capital optimization & commercial business partnering"
+        ]
       }
     ]
   },
   {
     id: "cars24",
-    slideNum: 2,
-    company: "CARS24",
-    companyShort: "CARS24",
+    name: "CARS24",
     logo: cars24Logo,
-    employmentType: "Full-time",
     period: "Dec 2019 – Aug 2023",
     duration: "3 yrs 9 mos",
-    location: "Gurugram, Haryana, India",
+    location: "Gurugram, India",
+    workMode: "On-site",
     color: "#ff6b00",
+    tagline: "Scaled Finance Function from Growth Stage to Capital Transactions & Big-4 Audits",
     roles: [
       {
-        role: "Senior Manager",
-        period: "Apr 2023 – Aug 2023",
-        duration: "5 mos",
-        workMode: "On-site",
-        level: 5,
-        badge: "Rated 5/5 · Capital Markets Lead",
+        title: "Senior Manager & Manager",
+        period: "Apr 2022 – Aug 2023",
+        duration: "1 yr 5 mos",
+        badge: "Rated 5/5 · Mr. Detail Oriented Award",
         badgeType: "promotion",
-        skills: ["₹80 Cr ESOP Buyback", "Overseas Entity Structuring", "Cross-Border Transfer Pricing", "Team Leadership (10 Members)"]
+        highlights: [
+          "Executed ₹80 Cr ESOP Buyback & overseas entity structuring",
+          "Led Big-4 Statutory Audits (EY / GT) with unqualified ICFR opinion"
+        ]
       },
       {
-        role: "Manager",
-        period: "Apr 2022 – Mar 2023",
-        duration: "1 yr",
-        level: 4,
-        badge: "Mr. Detail Oriented Award 2022 · Big-4 Audit Lead",
+        title: "Assistant Manager & Team Lead",
+        period: "Dec 2019 – Mar 2022",
+        duration: "2 yrs 4 mos",
+        badge: "Employee of the Year 2021",
         badgeType: "award",
-        skills: ["Statutory Audits (EY / GT)", "Unqualified ICFR Opinion", "Ind AS 115 & 116 Consolidation", "Risk & Control Matrix (RCM)"]
-      },
-      {
-        role: "Assistant Manager",
-        period: "Apr 2021 – Mar 2022",
-        duration: "1 yr",
-        level: 3,
-        badge: "Employee of the Year 2021 · FinOps",
-        badgeType: "award",
-        skills: ["Close Cycle Compression (11th to 7th Day)", "High-Volume Auto Settlements", "Balance Sheet Governance", "Automated Reconciliations"]
-      },
-      {
-        role: "Team Lead",
-        period: "Dec 2019 – Mar 2021",
-        duration: "1 yr 4 mos",
-        workMode: "On-site",
-        level: 2,
-        badge: "Foundational Process Architect",
-        badgeType: "foundation",
-        skills: ["P2P & O2C Maker-Checker Controls", "Statutory Compliance (TDS / GST)", "Secretarial Filings", "Banking Reconciliation Rails"]
+        highlights: [
+          "Compressed month-end close cycle from 11th to 7th business day",
+          "Architected P2P, O2C controls & balance sheet governance"
+        ]
       }
     ]
   }
 ];
 
 function Timeline() {
-  const [activeSlide, setActiveSlide] = useState<number>(0);
-  const currentCompany = companyData[activeSlide];
-
   return (
     <div id="history">
       <div className="items-container">
-        {/* Header Section */}
+        {/* Minimalist Section Header */}
         <div className="experience-header">
           <div className="header-eyebrow">
-            <FontAwesomeIcon icon={faBriefcase} /> Corporate History
+            <FontAwesomeIcon icon={faBriefcase} /> Experience Track
           </div>
           <h1>Professional Experience</h1>
           <p className="experience-subtitle">
-            2-Slide Executive Career Track · Present → Past
+            8+ years driving strategic FP&A, controllership, and business growth across hyper-growth enterprises.
           </p>
-
-          {/* 2-Slide Navigation Tabs */}
-          <div className="experience-slide-switcher">
-            {companyData.map((company, idx) => (
-              <button
-                key={company.id}
-                type="button"
-                className={`slide-nav-btn ${activeSlide === idx ? 'active' : ''}`}
-                onClick={() => setActiveSlide(idx)}
-              >
-                <span className="slide-badge">Slide {idx + 1} of 2</span>
-                <span className="company-tab-title">{company.company}</span>
-                <span className="company-tab-period">{company.period}</span>
-              </button>
-            ))}
-          </div>
         </div>
 
-        {/* Active Slide Display */}
-        <div className="experience-slide-container">
-          <div className="slide-card-wrapper">
-            <div 
-              className={`company-clubbed-card ${currentCompany.isCurrent ? 'is-current-company' : ''}`}
-              style={{ borderLeftColor: currentCompany.color }}
-            >
-              {/* Company Header Row */}
-              <div className="company-main-header">
-                <div className="company-meta-left">
-                  <div className="company-logo-frame">
-                    <img src={currentCompany.logo} alt={currentCompany.companyShort} className="company-logo-img" />
+        {/* Minimalist Executive Cards Grid */}
+        <div className="executive-grid">
+          {EXECUTIVE_EXPERIENCE.map((company) => (
+            <div key={company.id} className="exec-card" style={{ "--brand-color": company.color } as React.CSSProperties}>
+              {/* Card Header */}
+              <div className="exec-card-header">
+                <div className="company-info-row">
+                  <div className="logo-box">
+                    <img src={company.logo} alt={company.name} />
                   </div>
-
-                  <div className="company-identity-text">
-                    <div className="company-name-row">
-                      <h2 className="company-title">{currentCompany.company}</h2>
-                      {currentCompany.isCurrent && (
-                        <span className="current-org-pill">
-                          <FontAwesomeIcon icon={faCircleCheck} /> Current Employer
-                        </span>
-                      )}
+                  <div className="title-block">
+                    <div className="name-wrap">
+                      <h2>{company.name}</h2>
+                      {company.isCurrent && <span className="active-badge">Current</span>}
                     </div>
-                    <div className="company-submeta">
-                      <span>{currentCompany.employmentType}</span>
-                      <span className="sep">•</span>
-                      <span>{currentCompany.duration}</span>
-                      <span className="sep">•</span>
-                      <span><FontAwesomeIcon icon={faLocationDot} /> {currentCompany.location}</span>
-                      {currentCompany.workMode && (
-                        <>
-                          <span className="sep">•</span>
-                          <span className="workmode-tag">{currentCompany.workMode}</span>
-                        </>
-                      )}
-                    </div>
+                    <span className="meta-text">
+                      {company.duration} · {company.location} ({company.workMode})
+                    </span>
                   </div>
                 </div>
 
-                <div className="company-toggle-right">
-                  <div className="tenure-badge" style={{ background: currentCompany.color }}>
-                    <FontAwesomeIcon icon={faCalendarAlt} /> {currentCompany.period}
-                  </div>
-                </div>
+                <span className="period-pill" style={{ backgroundColor: company.color }}>
+                  <FontAwesomeIcon icon={faCalendarAlt} /> {company.period}
+                </span>
               </div>
 
-              {/* Sub-Roles Ladder */}
-              <div className="nested-roles-ladder">
-                <div className="ladder-header-title">
-                  Promotion & Career Hierarchy ({currentCompany.roles.length} Stage{currentCompany.roles.length > 1 ? 's' : ''}):
-                </div>
+              {/* Company Mission Tagline */}
+              <p className="company-tagline">{company.tagline}</p>
 
-                <div className="roles-list-track">
-                  {currentCompany.roles.map((role, rIdx) => {
-                    const isLatestRole = role.isCurrentRole || rIdx === 0;
+              {/* Roles Snippets */}
+              <div className="roles-stack">
+                {company.roles.map((role, idx) => (
+                  <div key={idx} className="role-snippet">
+                    <div className="role-snippet-header">
+                      <h3>{role.title}</h3>
+                      <span className="badge-chip">
+                        {role.badgeType === "award" && <FontAwesomeIcon icon={faTrophy} />}
+                        {role.badgeType === "promotion" && <FontAwesomeIcon icon={faArrowTrendUp} />}
+                        {role.badgeType === "foundation" && <FontAwesomeIcon icon={faCheckCircle} />}
+                        <span>{role.badge}</span>
+                      </span>
+                    </div>
 
-                    return (
-                      <div 
-                        key={rIdx} 
-                        className={`subrole-entry ${isLatestRole && currentCompany.isCurrent ? 'is-active-subrole' : ''}`}
-                      >
-                        <div className="track-bullet-column">
-                          <div className="bullet-node" style={{ borderColor: currentCompany.color }} />
-                          <span className="level-chip">L{role.level}</span>
-                        </div>
-
-                        <div className="subrole-body">
-                          <div className="subrole-top-line">
-                            <div className="subrole-heading-wrap">
-                              <h3 className="subrole-title">{role.role}</h3>
-                              {role.workMode && <span className="subrole-mode">{role.workMode}</span>}
-                              {isLatestRole && currentCompany.isCurrent && (
-                                <span className="active-now-tag">Active Position</span>
-                              )}
-                            </div>
-
-                            <div className="subrole-duration-tag">
-                              <span>{role.period}</span>
-                              <span className="role-duration-pill">{role.duration}</span>
-                            </div>
-                          </div>
-
-                          <div className={`subrole-hero-badge type-${role.badgeType}`}>
-                            {role.badgeType === 'award' && <FontAwesomeIcon icon={faTrophy} />}
-                            {role.badgeType === 'promotion' && <FontAwesomeIcon icon={faArrowTrendUp} />}
-                            {role.badgeType === 'foundation' && <FontAwesomeIcon icon={faCheckCircle} />}
-                            <span>{role.badge}</span>
-                          </div>
-
-                          <div className="subrole-skills-row">
-                            <span className="skills-prefix">Focus:</span>
-                            <div className="skills-chip-group">
-                              {role.skills.map((skill, sIdx) => (
-                                <span key={sIdx} className="subrole-skill-pill">{skill}</span>
-                              ))}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
+                    <ul className="mini-bullet-list">
+                      {role.highlights.map((bullet, bIdx) => (
+                        <li key={bIdx}>{bullet}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
             </div>
-          </div>
-
-          {/* Slide Pagination Footer Controls */}
-          <div className="slide-footer-controls">
-            <button 
-              type="button" 
-              className="slide-arrow-btn" 
-              onClick={() => setActiveSlide(0)}
-              disabled={activeSlide === 0}
-            >
-              <FontAwesomeIcon icon={faChevronLeft} />
-              <span>Slide 1: cargo-partner</span>
-            </button>
-
-            <div className="slide-dots">
-              <span className={`dot ${activeSlide === 0 ? 'active' : ''}`} onClick={() => setActiveSlide(0)} />
-              <span className={`dot ${activeSlide === 1 ? 'active' : ''}`} onClick={() => setActiveSlide(1)} />
-            </div>
-
-            <button 
-              type="button" 
-              className="slide-arrow-btn" 
-              onClick={() => setActiveSlide(1)}
-              disabled={activeSlide === 1}
-            >
-              <span>Slide 2: CARS24</span>
-              <FontAwesomeIcon icon={faChevronRight} />
-            </button>
-          </div>
+          ))}
         </div>
       </div>
     </div>
