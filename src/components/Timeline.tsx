@@ -101,10 +101,10 @@ function Timeline() {
         <div className="experience-card-wrapper">
           {EXPERIENCE_DATA.map((company, cIdx) => (
             <div key={company.id} className="company-group">
-              {/* Company Logo */}
+              {/* Company Logo Box */}
               <div className="company-logo-col">
                 <div className="logo-box">
-                  <img src={company.logo} alt={company.company} />
+                  <img src={company.logo} alt={company.company} className="logo-img-full" />
                 </div>
               </div>
 
