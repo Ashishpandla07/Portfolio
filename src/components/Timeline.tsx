@@ -14,7 +14,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import cars24Logo from '../assets/images/cars24_logo.png';
 import cargoPartnerLogo from '../assets/images/cargo_partner_logo.jpg';
-import icaiLogo from '../assets/images/icai_logo.png';
 import '../assets/styles/Timeline.scss';
 
 interface SubRole {
@@ -133,28 +132,6 @@ const companyData: CompanyExperience[] = [
         skills: ["P2P & O2C Maker-Checker Controls", "Statutory Compliance (TDS / GST)", "Secretarial Filings", "Banking Reconciliation Rails"]
       }
     ]
-  },
-  {
-    id: "nkjain",
-    company: "N K Jain & Co.",
-    companyShort: "N K Jain & Co.",
-    logo: icaiLogo,
-    employmentType: "Full-time",
-    period: "Jan 2019 – Dec 2019",
-    duration: "1 yr",
-    location: "Gurugram, Haryana, India",
-    color: "#0284c7",
-    roles: [
-      {
-        role: "Audit Executive",
-        period: "Jan 2019 – Dec 2019",
-        duration: "1 yr",
-        level: 1,
-        badge: "Statutory Assurance & Risk Advisory",
-        badgeType: "foundation",
-        skills: ["Statutory & Internal Audits", "ICFR Assessment", "Corporate Tax Filings (Sec 44AB)", "GST Compliance Reviews"]
-      }
-    ]
   }
 ];
 
@@ -162,8 +139,7 @@ function Timeline() {
   // All companies expanded by default, with interactive +/- toggle
   const [expandedCompanies, setExpandedCompanies] = useState<Record<string, boolean>>({
     "cargo-partner": true,
-    "cars24": true,
-    "nkjain": true
+    "cars24": true
   });
 
   const toggleCompany = (id: string) => {
@@ -179,8 +155,7 @@ function Timeline() {
     const nextState = !areAllExpanded;
     setExpandedCompanies({
       "cargo-partner": nextState,
-      "cars24": nextState,
-      "nkjain": nextState
+      "cars24": nextState
     });
   };
 
@@ -200,8 +175,8 @@ function Timeline() {
           {/* Metric Summary Strip */}
           <div className="experience-metrics-strip">
             <div className="metric-cell">
-              <span className="metric-number">3</span>
-              <span className="metric-text">Corporate Brands</span>
+              <span className="metric-number">2</span>
+              <span className="metric-text">Major Enterprises</span>
             </div>
             <div className="metric-cell">
               <span className="metric-number">7.5+</span>
