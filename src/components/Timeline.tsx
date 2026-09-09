@@ -1,92 +1,181 @@
 import React from "react";
-import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
-import cars24Logo from '../assets/images/cars24_logo.png';
-import cargoPartnerLogo from '../assets/images/cargo_partner_logo.jpg';
-import '../assets/styles/Education.scss';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBriefcase,
+  faCalendarAlt,
+  faCheckCircle,
+  faTrophy,
+  faArrowTrendUp
+} from "@fortawesome/free-solid-svg-icons";
+import cars24Logo from "../assets/images/cars24_logo.png";
+import cargoPartnerLogo from "../assets/images/cargo_partner_logo.jpg";
+import "../assets/styles/Timeline.scss";
+
+interface MinimalRole {
+  title: string;
+  period: string;
+  duration: string;
+  badge: string;
+  badgeType: "promotion" | "award" | "foundation";
+  highlights: string[];
+}
+
+interface ExecutiveCompany {
+  id: string;
+  name: string;
+  logo: string;
+  period: string;
+  duration: string;
+  location: string;
+  workMode: string;
+  color: string;
+  isCurrent?: boolean;
+  tagline: string;
+  roles: MinimalRole[];
+}
+
+const EXECUTIVE_EXPERIENCE: ExecutiveCompany[] = [
+  {
+    id: "cargo-partner",
+    name: "cargo-partner",
+    logo: cargoPartnerLogo,
+    period: "Aug 2023 – Present",
+    duration: "3 yrs 2 mos",
+    location: "Gurugram, India",
+    workMode: "Hybrid",
+    color: "#5000ca",
+    isCurrent: true,
+    tagline: "Leading India Financial Controlling, Enterprise AOPs & SAP S/4HANA Analytics",
+    roles: [
+      {
+        title: "Senior Manager Controlling",
+        period: "Apr 2026 – Present",
+        duration: "Current",
+        badge: "India Controlling Lead",
+        badgeType: "promotion",
+        highlights: [
+          "Enterprise FP&A, rolling forecasts & strategic board advisory",
+          "SAP S/4HANA & Power BI automated financial intelligence"
+        ]
+      },
+      {
+        title: "Manager Controlling",
+        period: "Aug 2023 – Mar 2026",
+        duration: "2 yrs 8 mos",
+        badge: "GEM Awardee (2024 & 2025)",
+        badgeType: "award",
+        highlights: [
+          "P&L turnaround & cost center governance across business units",
+          "Working capital optimization & commercial business partnering"
+        ]
+      }
+    ]
+  },
+  {
+    id: "cars24",
+    name: "CARS24",
+    logo: cars24Logo,
+    period: "Dec 2019 – Aug 2023",
+    duration: "3 yrs 9 mos",
+    location: "Gurugram, India",
+    workMode: "On-site",
+    color: "#ff6b00",
+    tagline: "Scaled Finance Function from Growth Stage to Capital Transactions & Big-4 Audits",
+    roles: [
+      {
+        title: "Senior Manager & Manager",
+        period: "Apr 2022 – Aug 2023",
+        duration: "1 yr 5 mos",
+        badge: "Rated 5/5 · Detail Award",
+        badgeType: "promotion",
+        highlights: [
+          "Executed ₹80 Cr ESOP Buyback & overseas entity structuring",
+          "Led Big-4 Statutory Audits (EY / GT) with unqualified ICFR opinion"
+        ]
+      },
+      {
+        title: "Assistant Manager & Team Lead",
+        period: "Dec 2019 – Mar 2022",
+        duration: "2 yrs 4 mos",
+        badge: "Employee of the Year 2021",
+        badgeType: "award",
+        highlights: [
+          "Compressed month-end close cycle from 11th to 7th business day",
+          "Architected P2P, O2C controls & balance sheet governance"
+        ]
+      }
+    ]
+  }
+];
 
 function Timeline() {
   return (
-    <div className="education-container" id="history">
-      <div className="section-header">
-        <h1>Professional Experience</h1>
-      </div>
-      <div className="education-grid">
-        {/* Entry 1: cargo-partner */}
-        <div className="education-card">
-          <div className="card-top-bar">
-            <span className="credential-badge">Current Employer · Hybrid</span>
-            <span className="year-pill">
-              <CalendarTodayIcon />
-              <span>Aug 2023 – Present</span>
-            </span>
+    <div id="history">
+      <div className="items-container">
+        {/* Minimalist Section Header */}
+        <div className="experience-header">
+          <div className="header-eyebrow">
+            <FontAwesomeIcon icon={faBriefcase} /> Experience Track
           </div>
-
-          <div className="card-header">
-            <div className="card-icon-wrapper" aria-label="cargo-partner Logo">
-              <img src={cargoPartnerLogo} alt="cargo-partner" className="institution-logo" />
-            </div>
-            <div className="card-title-group">
-              <h2>cargo-partner</h2>
-              <p className="institution-name">Senior Manager & Manager Controlling</p>
-            </div>
-          </div>
-
-          <div className="card-body">
-            <div className="highlights-heading">Key Career Highlights</div>
-            <ul className="highlights-list">
-              <li>
-                <strong>India Controlling Lead:</strong> Direct financial controllership & strategic board advisory across Indian entities.
-              </li>
-              <li>
-                <strong>Enterprise FP&A:</strong> Orchestrated annual AOPs, rolling forecasts, and variance analysis for executive leadership.
-              </li>
-              <li>
-                <strong>SAP S/4HANA & Power BI:</strong> Deployed automated financial dashboards, cutting reporting latency by 40%.
-              </li>
-              <li>
-                <strong>GEM Awardee:</strong> Winner of GEM Award (2024 & 2025) for top support function & commercial business partnering.
-              </li>
-            </ul>
-          </div>
+          <h1>Professional Experience</h1>
+          <p className="experience-subtitle">
+            8+ years driving strategic FP&A, controllership, and business growth across hyper-growth enterprises.
+          </p>
         </div>
 
-        {/* Entry 2: CARS24 */}
-        <div className="education-card">
-          <div className="card-top-bar">
-            <span className="credential-badge">Full-time · Gurugram</span>
-            <span className="year-pill">
-              <CalendarTodayIcon />
-              <span>Dec 2019 – Aug 2023</span>
-            </span>
-          </div>
+        {/* Minimalist Executive Cards Grid */}
+        <div className="executive-grid">
+          {EXECUTIVE_EXPERIENCE.map((company) => (
+            <div key={company.id} className="exec-card" style={{ "--brand-color": company.color } as React.CSSProperties}>
+              {/* Card Header */}
+              <div className="exec-card-header">
+                <div className="company-info-row">
+                  <div className="logo-box">
+                    <img src={company.logo} alt={company.name} />
+                  </div>
+                  <div className="title-block">
+                    <div className="name-wrap">
+                      <h2>{company.name}</h2>
+                      {company.isCurrent && <span className="active-badge">Current</span>}
+                    </div>
+                    <span className="meta-text">
+                      {company.duration} · {company.location} ({company.workMode})
+                    </span>
+                  </div>
+                </div>
 
-          <div className="card-header">
-            <div className="card-icon-wrapper" aria-label="CARS24 Logo">
-              <img src={cars24Logo} alt="CARS24" className="institution-logo" />
-            </div>
-            <div className="card-title-group">
-              <h2>CARS24</h2>
-              <p className="institution-name">Senior Manager, Manager & AM</p>
-            </div>
-          </div>
+                <span className="period-pill" style={{ backgroundColor: company.color }}>
+                  <FontAwesomeIcon icon={faCalendarAlt} /> {company.period}
+                </span>
+              </div>
 
-          <div className="card-body">
-            <div className="highlights-heading">Key Career Highlights</div>
-            <ul className="highlights-list">
-              <li>
-                <strong>Capital Transactions:</strong> Executed ₹80 Cr ESOP Buyback & managed overseas entity structuring and transfer pricing.
-              </li>
-              <li>
-                <strong>Big-4 Audit Lead:</strong> Spearheaded Statutory Audits (EY / GT) securing CARS24's first clean, unqualified ICFR opinion.
-              </li>
-              <li>
-                <strong>Close Cycle Compression:</strong> Compressed month-end close cycle from 11th to 7th day via FinOps automation.
-              </li>
-              <li>
-                <strong>Awards & Ratings:</strong> Employee of the Year 2021, Detail-Oriented Awardee 2022, and consistently rated 5/5.
-              </li>
-            </ul>
-          </div>
+              {/* Company Mission Tagline */}
+              <p className="company-tagline">{company.tagline}</p>
+
+              {/* Roles Snippets */}
+              <div className="roles-stack">
+                {company.roles.map((role, idx) => (
+                  <div key={idx} className="role-snippet">
+                    <div className="role-snippet-header">
+                      <h3>{role.title}</h3>
+                      <span className="badge-chip">
+                        {role.badgeType === "award" && <FontAwesomeIcon icon={faTrophy} />}
+                        {role.badgeType === "promotion" && <FontAwesomeIcon icon={faArrowTrendUp} />}
+                        {role.badgeType === "foundation" && <FontAwesomeIcon icon={faCheckCircle} />}
+                        <span>{role.badge}</span>
+                      </span>
+                    </div>
+
+                    <ul className="mini-bullet-list">
+                      {role.highlights.map((bullet, bIdx) => (
+                        <li key={bIdx}>{bullet}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
