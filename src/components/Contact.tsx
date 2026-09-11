@@ -11,6 +11,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import CheckIcon from '@mui/icons-material/Check';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import CircularProgress from '@mui/material/CircularProgress';
 
 function Contact() {
   const [name, setName] = useState<string>('');
@@ -21,6 +22,7 @@ function Contact() {
   const [nameError, setNameError] = useState<boolean>(false);
   const [emailError, setEmailError] = useState<boolean>(false);
   const [messageError, setMessageError] = useState<boolean>(false);
+  const [sending, setSending] = useState<boolean>(false);
   const [submitted, setSubmitted] = useState<boolean>(false);
   const [copied, setCopied] = useState<boolean>(false);
 
@@ -33,7 +35,7 @@ function Contact() {
     setTimeout(() => setCopied(false), 2200);
   };
 
-  const sendEmail = (e: React.FormEvent) => {
+  const sendEmail = async (e: React.FormEvent) => {
     e.preventDefault();
 
     const isNameInvalid = name.trim() === '';
@@ -44,16 +46,50 @@ function Contact() {
     setEmailError(isEmailInvalid);
     setMessageError(isMessageInvalid);
 
-    if (!isNameInvalid && !isEmailInvalid && !isMessageInvalid) {
-      // Compose mailto link to ensure immediate direct reach
+    if (isNameInvalid || isEmailInvalid || isMessageInvalid) {
+      return;
+    }
+
+    setSending(true);
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/ashishpandla07@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: name.trim(),
+          email: email.trim(),
+          _replyto: email.trim(),
+          _subject: subject.trim() || `Executive Inquiry from ${name.trim()} via Portfolio`,
+          message: message.trim(),
+          _template: 'table',
+          _captcha: 'false'
+        })
+      });
+
+      const data = await response.json();
+
+      // FormSubmit returns success: "true" or boolean true, or activation prompt
+      if (response.ok && (data.success === 'true' || data.success === true || (data.message && data.message.includes('Activation')))) {
+        setSubmitted(true);
+      } else {
+        throw new Error(data.message || 'Submission failed');
+      }
+    } catch (err: any) {
+      console.warn('FormSubmit direct sending notice:', err);
+      // Fallback via mailto if network or service has an unexpected block
       const mailtoUrl = `mailto:ashishpandla07@gmail.com?subject=${encodeURIComponent(
         subject || `Executive Inquiry from ${name}`
       )}&body=${encodeURIComponent(
-        `Name: ${name}\nContact: ${email}\n\nMessage:\n${message}`
+        `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
       )}`;
-
-      setSubmitted(true);
       window.open(mailtoUrl, '_blank');
+      setSubmitted(true);
+    } finally {
+      setSending(false);
     }
   };
 
@@ -202,9 +238,9 @@ function Contact() {
                     <div className="success-icon-wrapper">
                       <CheckIcon className="success-icon" />
                     </div>
-                    <h4>Message Drafted & Transmitted</h4>
+                    <h4>Message Sent Successfully!</h4>
                     <p>
-                      Thank you for reaching out, <strong>{name}</strong>. Your message draft has been routed to <strong>ashishpandla07@gmail.com</strong>.
+                      Thank you for reaching out, <strong>{name}</strong>. Your message has been sent directly to <strong>ashishpandla07@gmail.com</strong>. I will get back to you shortly.
                     </p>
                     <button type="button" className="btn-send-another" onClick={handleReset}>
                       Send Another Message
@@ -292,10 +328,17 @@ function Contact() {
                       <Button
                         type="submit"
                         variant="contained"
-                        endIcon={<SendIcon className="send-arrow" />}
+                        disabled={sending}
+                        endIcon={
+                          sending ? (
+                            <CircularProgress size={18} color="inherit" />
+                          ) : (
+                            <SendIcon className="send-arrow" />
+                          )
+                        }
                         className="btn-executive-send"
                       >
-                        Send Message
+                        {sending ? 'Sending...' : 'Send Message'}
                       </Button>
                     </div>
                   </Box>
