@@ -64,11 +64,14 @@
   /* 5-Column Single-Row Desktop Grid */
   .hobbies-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 14px;
     align-items: stretch;
+    width: 100%;
+    padding: 0 8px;
+  }
 
-    .hobby-card {
+    .hobbies-grid .hobby-card {
       background: rgba(22, 27, 34, 0.75);
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 14px;
@@ -78,6 +81,8 @@
       justify-content: space-between;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
       backdrop-filter: blur(10px);
+      height: 100%;
+      overflow: visible;
       transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
       overflow: hidden;
@@ -134,14 +139,16 @@
 
         .hobby-badge {
           display: inline-block;
-          width: fit-content;
-          font-size: 0.63rem;
+          width: 100%;
+          font-size: 0.58rem;
           font-weight: 700;
           text-transform: uppercase;
           letter-spacing: 0.4px;
-          padding: 3px 8px;
+          padding: 3px 6px;
           border-radius: 6px;
           margin-bottom: 8px;
+          text-align: center;
+          white-space: normal;
         }
 
         .hobby-title {
@@ -197,16 +204,31 @@
       }
     }
   }
+
+@media (max-width: 640px) {
+  .hobbies-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 0 8px;
+    overflow: visible;
+  }
+  .hobbies-grid .hobby-card {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
 }
+
 
 /* Light mode overrides */
 .light-mode {
   .hobbies-container {
     .section-header {
       .hobbies-eyebrow {
-        background: rgba(99, 102, 241, 0.08);
-        border-color: rgba(99, 102, 241, 0.2);
-        color: #4f46e5;
+         background: rgba(59, 130, 246, 0.1); /* lighter blue background */
+         border-color: rgba(59, 130, 246, 0.25); /* slightly stronger border */
+         color: #2563eb; /* blue-600 text */
       }
 
       .hobbies-title {
