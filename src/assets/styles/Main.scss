@@ -19,6 +19,11 @@
     max-width: 960px;
     width: 100%;
     z-index: 2;
+
+    /* Mobile Profile Photo: Strictly hidden on desktop web version */
+    .mobile-profile-photo {
+      display: none;
+    }
   }
 
   /* Executive Tag */
@@ -226,14 +231,67 @@
         }
       }
     }
+
+    .mobile-profile-photo {
+      .mobile-avatar-wrapper img {
+        border-color: #5000ca;
+        box-shadow: 0 6px 20px rgba(80, 0, 202, 0.22);
+      }
+    }
   }
 }
 
 /* Responsive */
+@media screen and (max-width: 992px) {
+  .about-section {
+    .about-content {
+      .mobile-profile-photo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 24px;
+
+        .mobile-avatar-wrapper {
+          position: relative;
+          display: inline-block;
+
+          img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top center;
+            border: 3px solid #5000ca;
+            box-shadow: 0 6px 22px rgba(80, 0, 202, 0.45);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            &:hover,
+            &:active {
+              transform: scale(1.03);
+              box-shadow: 0 8px 28px rgba(80, 0, 202, 0.6);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   .about-section {
     min-height: calc(100vh - 60px);
-    padding: 40px 5% 30px;
+    padding: 30px 5% 30px;
+
+    .about-content {
+      .mobile-profile-photo {
+        margin-bottom: 20px;
+
+        .mobile-avatar-wrapper img {
+          width: 130px;
+          height: 130px;
+        }
+      }
+    }
 
     .about-heading {
       font-size: 2.1rem;

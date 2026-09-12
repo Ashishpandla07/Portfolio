@@ -130,9 +130,17 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ minWidth: '44px', minHeight: '44px' }}
+            sx={{
+              minWidth: '44px',
+              minHeight: '44px',
+              padding: '6px',
+              color: mode === 'dark' ? '#ffffff' : '#0f172a',
+              '&:hover': {
+                backgroundColor: mode === 'dark' ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.06)',
+              },
+            }}
           >
-            <MenuIcon />
+            <MenuIcon sx={{ fontSize: '1.75rem', color: mode === 'dark' ? '#ffffff' : '#0f172a' }} />
           </IconButton>
           <span className="mobile-bar-title">CA Ashish Pandla</span>
         </div>

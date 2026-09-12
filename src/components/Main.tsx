@@ -2,6 +2,7 @@ import React from "react";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
+import profileImg from '../assets/images/profile.webp';
 import '../assets/styles/Main.scss';
 
 function Main() {
@@ -9,6 +10,22 @@ function Main() {
     <div className="container" id="about">
       <div className="about-section">
         <div className="about-content">
+          {/* Mobile Profile Photo (Visible ONLY on mobile screens <= 992px, strictly hidden on desktop web version) */}
+          <div className="mobile-profile-photo" aria-label="Profile photo of CA Ashish Pandla">
+            <div className="mobile-avatar-wrapper">
+              <img
+                src={profileImg}
+                srcSet={`${profileImg} 1x`}
+                alt="CA Ashish Pandla"
+                width={140}
+                height={140}
+                fetchPriority="high"
+                loading="eager"
+                decoding="async"
+              />
+            </div>
+          </div>
+
           <h1 className="about-heading">About Me</h1>
 
           <div className="about-statement">
