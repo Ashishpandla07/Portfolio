@@ -13,10 +13,7 @@ function Main() {
 
           <div className="about-statement">
             <p className="statement-line lead">
-              Results-driven Finance Leader with 8 years of experience across FP&A, financial controlling, and strategic business 
-collaborating at Cars24 and Cargo-Partner. Expertise in budgeting, forecasting, profitability analysis, financial reporting, 
-cost optimization, and compliances. Proven record of driving profitability improvement, cost efficiency, and stronger 
-financial control. Trusted partner to senior leadership, translating financial insights into strategic decisions, business growth.
+              Results-driven Finance Leader with 8 years of experience across FP&A, financial controlling, and strategic business partnering at CARS24 and cargo-partner. Expertise in budgeting, forecasting, profitability analysis, financial reporting, cost optimization, and regulatory compliance. Proven record of driving profitability improvement, cost efficiency, and stronger financial control. Trusted partner to senior leadership, translating financial insights into strategic decisions and sustainable business growth.
             </p>
           </div>
 

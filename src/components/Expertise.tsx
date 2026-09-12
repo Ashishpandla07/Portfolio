@@ -65,7 +65,7 @@ function Expertise() {
                             <FontAwesomeIcon icon={faShieldHalved} size="2x" />
                         </div>
                         <h3>Financial Controlling & Governance</h3>
-                        <p>Expert in Ind-AS & IFRS reporting, multi-entity consolidation, Audits, ICFR, Cross charge, transfer pricing, and seamless GST compliance.</p>
+                        <p>Expert in Ind-AS & IFRS reporting, multi-entity consolidation, audits, ICFR, cross-charge, transfer pricing, and seamless GST compliance.</p>
                         <div className="flex-chips">
                             <span className="chip-title">Key skills:</span>
                             {labelsSecond.map((label, index) => (

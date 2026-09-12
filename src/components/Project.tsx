@@ -67,7 +67,7 @@ function Project() {
                         <h2>Capital Transactions & Audit Management</h2>
                         <ul className="achievement-list">
                             <li><strong>₹80 Cr ESOP Buyback:</strong> Managed complete financial execution and capital structuring for share buyback at Cars24.</li>
-                            <li><strong>Audit Management:</strong> Spearheaded Statutory, Internal, Tax, and ICFR audits with Big-4 firms (EY and Grant Thornton).</li>
+                            <li><strong>Audit Management:</strong> Spearheaded Statutory, Internal, Tax, and ICFR audits with Big-4 and leading global firms (EY and Grant Thornton).</li>
                             <li><strong>Process Excellence:</strong> Remediated high-risk audit points, securing Cars24's first clean Internal Audit & ICFR reports.</li>
                         </ul>
                     </div>
@@ -84,6 +84,7 @@ function Project() {
                             <li><strong>Entity Structuring & Compliance:</strong> Managed banking setups, company structuring, and local compliance for overseas entities.</li>
                             <li><strong>End-to-End Process Setup:</strong> Scaled operational workflows globally, setting up finance function and books of accounts.</li>
                             <li><strong>Business Partnering:</strong> Partnered directly with business heads to drive cross-functional efficiency and growth.</li>
+                        <li><strong>MRL Financial Architecture:</strong> Established end-to-end accounting for CARS24’s Mega Refurbishment Labs (MRL)—governing spare parts procurement, refurbishment costing (denting, painting, repair), and service revenue recognition.</li>
                         </ul>
                     </div>
                 </div>
