@@ -1,6 +1,7 @@
 import React from "react";
-import cars24Logo from "../assets/images/cars24_logo.webp";
-import cargoPartnerLogo from "../assets/images/cargo_partner_logo.webp";
+import cars24Logo from "../assets/images/cars24_logo.png";
+import cargoPartnerLogo from "../assets/images/cargo_partner_logo.jpg";
+import caLogo from "../assets/images/ca_logo.png";
 import "../assets/styles/Timeline.scss";
 
 interface Position {
@@ -22,44 +23,68 @@ interface CompanyExperience {
 
 const EXPERIENCE_DATA: CompanyExperience[] = [
   {
-    id: "cars24",
-    company: "CARS24",
-    logo: cars24Logo,
-    employmentType: "Full-time",
-    totalDuration: "4 yrs 5 mos",
-    location: "Gurugram, Haryana, India",
-    workMode: "On-site",
-    positions: [
-      {
-        title: "Lead - Financial Planning & Controlling",
-        period: "Apr 2024 - Present",
-        duration: "1 yr 12 mos"
-      },
-      {
-        title: "Lead - Strategic Finance & Commercial Partnering",
-        period: "Apr 2023 - Mar 2024",
-        duration: "1 yr"
-      },
-      {
-        title: "Senior Manager - Financial Planning & Controlling",
-        period: "Nov 2021 - Mar 2023",
-        duration: "1 yr 5 mos"
-      }
-    ]
-  },
-  {
     id: "cargo-partner",
     company: "cargo-partner",
     logo: cargoPartnerLogo,
     employmentType: "Full-time",
-    totalDuration: "3 yrs 3 mos",
+    totalDuration: "3 yrs 2 mos",
     location: "Gurugram, Haryana, India",
-    workMode: "On-site",
+    workMode: "Hybrid",
     positions: [
       {
-        title: "Assistant Manager - Financial Controlling & Accounting",
-        period: "Sep 2018 - Nov 2021",
-        duration: "3 yrs 3 mos"
+        title: "Senior Manager Controlling",
+        period: "Apr 2026 – Present",
+        duration: "6 mos"
+      },
+      {
+        title: "Manager Controlling",
+        period: "Aug 2023 – Mar 2026",
+        duration: "2 yrs 8 mos"
+      }
+    ]
+  },
+  {
+    id: "cars24",
+    company: "CARS24",
+    logo: cars24Logo,
+    employmentType: "Full-time",
+    totalDuration: "3 yrs 9 mos",
+    location: "Gurugram, Haryana, India",
+    positions: [
+      {
+        title: "Senior Manager",
+        period: "Apr 2023 – Aug 2023",
+        duration: "5 mos"
+      },
+      {
+        title: "Manager",
+        period: "Apr 2022 – Mar 2023",
+        duration: "1 yr"
+      },
+      {
+        title: "Assistant Manager",
+        period: "Apr 2021 – Mar 2022",
+        duration: "1 yr"
+      },
+      {
+        title: "Team Lead",
+        period: "Dec 2019 – Mar 2021",
+        duration: "1 yr 4 mos"
+      }
+    ]
+  },
+  {
+    id: "nk-jain",
+    company: "N K Jain & Co.",
+    logo: caLogo,
+    employmentType: "Full-time",
+    totalDuration: "1 yr",
+    location: "Gurugram, Haryana, India",
+    positions: [
+      {
+        title: "Audit Executive",
+        period: "Jan 2019 – Dec 2019",
+        duration: "1 yr"
       }
     ]
   }
@@ -67,8 +92,8 @@ const EXPERIENCE_DATA: CompanyExperience[] = [
 
 function Timeline() {
   return (
-    <div className="timeline-container" id="history">
-      <div className="timeline-content">
+    <div id="history">
+      <div className="linkedin-experience-container">
         <div className="section-header">
           <h2>Experience</h2>
         </div>
@@ -81,13 +106,12 @@ function Timeline() {
                 <div className="logo-box">
                   <img
                     src={company.logo}
-                    srcSet={`${company.logo} 1x`}
                     alt={company.company}
                     className="logo-img-full"
                     width={48}
                     height={48}
-                    fetchPriority={company.company === "cargo-partner" ? "high" : "auto"}
-                    loading={company.company === "cargo-partner" ? "eager" : "lazy"}
+                    fetchPriority="high"
+                    loading="eager"
                     decoding="async"
                   />
                 </div>

@@ -95,7 +95,12 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
 
       {/* Theme Toggle Footer */}
       <div className="sidebar-footer">
-        <button className="theme-toggle-btn" onClick={modeChange}>
+        <button
+          className="theme-toggle-btn"
+          onClick={modeChange}
+          aria-label={mode === 'dark' ? "Switch to light mode" : "Switch to dark mode"}
+          title={mode === 'dark' ? "Switch to light mode" : "Switch to dark mode"}
+        >
           {mode === 'dark' ? (
             <>
               <LightModeIcon sx={{ fontSize: '1.1rem', color: '#facc15' }} />
@@ -125,6 +130,7 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
+            sx={{ minWidth: '44px', minHeight: '44px' }}
           >
             <MenuIcon />
           </IconButton>
@@ -141,7 +147,12 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
             <PictureAsPdfIcon />
             <span>Resume</span>
           </a>
-          <IconButton onClick={modeChange} sx={{ color: 'inherit' }}>
+          <IconButton
+            onClick={modeChange}
+            aria-label={mode === 'dark' ? "Switch to light mode" : "Switch to dark mode"}
+            title={mode === 'dark' ? "Switch to light mode" : "Switch to dark mode"}
+            sx={{ color: 'inherit', minWidth: '44px', minHeight: '44px' }}
+          >
             {mode === 'dark' ? (
               <LightModeIcon sx={{ color: '#facc15', fontSize: '1.25rem' }} />
             ) : (
