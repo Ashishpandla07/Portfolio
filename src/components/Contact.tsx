@@ -211,7 +211,7 @@ function Contact() {
                   </div>
                   <div className="channel-details">
                     <span className="channel-label">Base Location</span>
-                    <span className="channel-value">Gurugram / Delhi NCR, India</span>
+                    <span className="channel-value">Gurugram</span>
                   </div>
                   <div className="channel-actions">
                     <span className="location-pill">Open to Hybrid / Global</span>
@@ -362,7 +362,7 @@ function Contact() {
               </div>
               <div className="contact-item">
                 <span className="contact-label">Location:</span>
-                <span className="contact-val">Gurugram, Haryana, India</span>
+                <span className="contact-val">Gurugram</span>
               </div>
               <div className="contact-item">
                 <span className="contact-label">Availability:</span>
