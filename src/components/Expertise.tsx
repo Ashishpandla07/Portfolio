@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChartLine, faShieldHalved, faDatabase } from '@fortawesome/free-solid-svg-icons';
-import Chip from '@mui/material/Chip';
+import SkillIcon from './SkillIcon';
 import '../assets/styles/Expertise.scss';
 
 const labelsFirst = [
@@ -54,9 +54,14 @@ function Expertise() {
                         <p>Driving annual budgeting, driver-based financial models, monthly variance analysis, working capital optimization, and investor relations.</p>
                         <div className="flex-chips">
                             <span className="chip-title">Key skills:</span>
-                            {labelsFirst.map((label, index) => (
-                                <Chip key={index} className='chip' label={label} />
-                            ))}
+                            <div className="chips-list">
+                                {labelsFirst.map((label, index) => (
+                                    <div key={index} className="skill-chip-img" title={label}>
+                                        <span className="chip-media"><SkillIcon name={label} size={15} /></span>
+                                        <span className="chip-text">{label}</span>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
 
@@ -68,9 +73,14 @@ function Expertise() {
                         <p>Expert in Ind-AS & IFRS reporting, multi-entity consolidation, audits, ICFR, cross-charge, transfer pricing, and seamless GST compliance.</p>
                         <div className="flex-chips">
                             <span className="chip-title">Key skills:</span>
-                            {labelsSecond.map((label, index) => (
-                                <Chip key={index} className='chip' label={label} />
-                            ))}
+                            <div className="chips-list">
+                                {labelsSecond.map((label, index) => (
+                                    <div key={index} className="skill-chip-img" title={label}>
+                                        <span className="chip-media"><SkillIcon name={label} size={15} /></span>
+                                        <span className="chip-text">{label}</span>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
 
@@ -82,9 +92,14 @@ function Expertise() {
                         <p>Building dynamic management reporting dashboards, automating financial processes, and integrating ERPs with analytics tools.</p>
                         <div className="flex-chips">
                             <span className="chip-title">Tech stack:</span>
-                            {labelsThird.map((label, index) => (
-                                <Chip key={index} className='chip' label={label} />
-                            ))}
+                            <div className="chips-list">
+                                {labelsThird.map((label, index) => (
+                                    <div key={index} className="skill-chip-img" title={label}>
+                                        <span className="chip-media"><SkillIcon name={label} size={15} /></span>
+                                        <span className="chip-text">{label}</span>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>

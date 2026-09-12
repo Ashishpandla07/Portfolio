@@ -2,15 +2,16 @@
     width: 100%;
     max-width: 1200px;
     min-height: 100vh;
-    padding: 40px 4% 30px;
+    padding: 30px 4% 20px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: left;
+    margin: 0 auto;
 
     .skills-title {
-        font-size: 2.1rem;
+        font-size: 1.85rem;
         font-weight: 800;
         margin: 0 0 14px 0;
         letter-spacing: -0.5px;
@@ -33,7 +34,7 @@
     background: rgba(15, 23, 42, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 12px;
-    padding: 16px 16px 14px;
+    padding: 18px 16px 18px;
     box-sizing: border-box;
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 
@@ -44,78 +45,118 @@
     }
 
     .skill-icon-wrapper {
-        width: 36px;
-        height: 36px;
+        width: 38px;
+        height: 38px;
         border-radius: 8px;
         background: rgba(99, 102, 241, 0.12);
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 8px;
+        margin-bottom: 10px;
 
         svg {
             color: #818cf8;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
         }
     }
 
+    /* Standardized title baseline starting from top so all titles and descriptions align */
     h3 {
         font-size: 1.05rem;
         font-weight: 700;
-        margin: 0 0 6px 0;
+        margin: 0 0 8px 0;
         color: #ffffff;
         line-height: 1.3;
+        min-height: 2.75rem;
+        display: flex;
+        align-items: flex-start;
     }
 
+    /* Standardized description height so divider lines align at the exact same vertical pixel */
     p {
-        font-size: 0.84rem;
+        font-size: 0.81rem;
         line-height: 1.45;
         color: #cbd5e1;
-        margin: 0 0 10px 0;
-    }
-}
-  
-.chip {
-    color: #0f172a !important;
-    background-color: #f1f5f9 !important;
-    font-size: 0.72rem !important;
-    font-weight: 500 !important;
-    height: 21px !important;
-    margin: 1px 2px !important;
-    border-radius: 10px !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    transition: all 0.2s ease !important;
-
-    &:hover {
-        background-color: #ffffff !important;
-        transform: translateY(-1px);
-    }
-  
-    span {
-        padding-left: 6px !important;
-        padding-right: 6px !important;
-        color: #0f172a;
+        margin: 0 0 12px 0;
+        min-height: 4.8rem;
+        display: flex;
+        align-items: flex-start;
     }
 }
 
+/* Chips Section perfectly aligned across all 3 columns with no awkward gaps */
 .flex-chips {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 3px;
-    margin-top: 4px;
-    padding-top: 8px;
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    flex-direction: column;
+    flex: 1;
+    margin-top: 0;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 
     .chip-title {
         color: #94a3b8;
         font-size: 0.72rem;
         font-weight: 600;
         text-transform: uppercase;
-        letter-spacing: 0.4px;
-        width: 100%;
-        margin-bottom: 3px;
+        letter-spacing: 0.5px;
+        margin-bottom: 8px;
         display: block;
+        line-height: 1;
+    }
+
+    .chips-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        align-items: center;
+        align-content: flex-start;
+        min-height: 135px;
+    }
+}
+
+/* Uniform Visual Skill Chips */
+.skill-chip-img {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    height: 24px;
+    padding: 0 9px 0 6px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+    cursor: default;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.12);
+        border-color: rgba(129, 140, 248, 0.45);
+        transform: translateY(-1px);
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+    }
+
+    .chip-media {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 16px;
+        height: 16px;
+
+        svg {
+            display: block;
+            max-width: 16px;
+            max-height: 16px;
+        }
+    }
+
+    .chip-text {
+        font-size: 0.71rem;
+        font-weight: 600;
+        color: #f1f5f9;
+        white-space: nowrap;
+        letter-spacing: -0.1px;
+        line-height: 1;
     }
 }
 
@@ -148,21 +189,25 @@
         }
     }
 
-    .chip {
-        background-color: #f1f5f9 !important;
-        border-color: rgba(0, 0, 0, 0.06) !important;
-        color: #334155 !important;
-
-        span {
-            color: #334155;
-        }
-    }
-
     .flex-chips {
         border-top-color: rgba(0, 0, 0, 0.06);
 
         .chip-title {
             color: #64748b;
+        }
+    }
+
+    .skill-chip-img {
+        background: #f1f5f9;
+        border-color: #e2e8f0;
+
+        &:hover {
+            background: #e0e7ff;
+            border-color: #6366f1;
+        }
+
+        .chip-text {
+            color: #0f172a;
         }
     }
 }
@@ -175,6 +220,18 @@
         .skills-grid {
             grid-template-columns: 1fr;
             grid-gap: 14px;
+        }
+
+        .skill h3 {
+            min-height: auto;
+        }
+
+        .skill p {
+            min-height: auto;
+        }
+
+        .flex-chips .chips-list {
+            min-height: auto;
         }
     }
 }
