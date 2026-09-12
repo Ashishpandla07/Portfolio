@@ -23,12 +23,14 @@
 
   .education-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
     align-items: stretch;
   }
 
   .education-card {
+    min-width: 0;
+    box-sizing: border-box;
     background: rgba(22, 27, 34, 0.75);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 11px;
