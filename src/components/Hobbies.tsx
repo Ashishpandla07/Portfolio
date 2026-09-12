@@ -23,7 +23,7 @@ const HOBBIES_DATA: HobbyItem[] = [
     emoji: "📚",
     title: "Reading",
     description: "Finance, business strategy, executive leadership, and personal growth.",
-    badge: "Continuous Learning",
+    badge: "⟡ Continuous Learning",
     accent: "indigo"
   },
   {
@@ -32,7 +32,7 @@ const HOBBIES_DATA: HobbyItem[] = [
     emoji: "🏋️",
     title: "Fitness",
     description: "Strength training, disciplined workouts, and maintaining peak energy.",
-    badge: "Health & Discipline",
+    badge: "⟡ Health & Discipline",
     accent: "emerald"
   },
   {
@@ -41,7 +41,7 @@ const HOBBIES_DATA: HobbyItem[] = [
     emoji: "✈️",
     title: "Traveling",
     description: "Exploring new destinations, diverse cultures, and architectural heritage.",
-    badge: "Global Perspective",
+    badge: "⟡ Global Perspective",
     accent: "cyan"
   },
   {
@@ -50,7 +50,7 @@ const HOBBIES_DATA: HobbyItem[] = [
     emoji: "🎵",
     title: "Music",
     description: "Instrumental, acoustic, and modern tunes to unwind, focus, and reflect.",
-    badge: "Recreation & Focus",
+    badge: "⟡ Recreation & Focus",
     accent: "rose"
   },
   {
@@ -59,7 +59,7 @@ const HOBBIES_DATA: HobbyItem[] = [
     emoji: "💻",
     title: "Technology",
     description: "Fintech innovations, AI developments, and emerging analytics tools.",
-    badge: "Digital Explorer",
+    badge: "⟡ Digital Explorer",
     accent: "violet"
   }
 ];
