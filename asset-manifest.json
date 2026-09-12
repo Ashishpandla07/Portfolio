@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "./static/css/main.bb7b1c32.css",
+    "main.css": "./static/css/main.b02c7e6c.css",
     "main.js": "./static/js/main.b9eb0936.js",
     "static/js/206.0d512b19.chunk.js": "./static/js/206.0d512b19.chunk.js",
     "static/media/achievement_award.jpg": "./static/media/achievement_award.5d597fc10563e75ee7fb.jpg",
@@ -17,7 +17,7 @@
     "index.html": "./index.html"
   },
   "entrypoints": [
-    "static/css/main.bb7b1c32.css",
+    "static/css/main.b02c7e6c.css",
     "static/js/main.b9eb0936.js"
   ]
 }
