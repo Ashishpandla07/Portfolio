@@ -118,9 +118,6 @@ function Contact() {
             <h1 className="contact-title">
               Get In <span className="highlight-gradient">Touch</span>
             </h1>
-            <p className="contact-subtitle">
-              Open to Senior Finance Leadership opportunities, strategic FP&A advisory, multi-entity controller roles, and executive discussions.
-            </p>
           </div>
 
           <div className="contact-grid">
@@ -278,7 +275,7 @@ function Contact() {
                           required
                           fullWidth
                           id="contact-email"
-                          label="Email / Contact Info"
+                          label="Email ID"
                           placeholder="e.g. name@company.com"
                           variant="outlined"
                           value={email}

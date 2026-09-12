@@ -387,6 +387,12 @@
     .MuiOutlinedInput-notchedOutline {
       border-color: rgba(255, 255, 255, 0.12);
       transition: border-color 0.2s ease;
+
+      legend {
+        user-select: none;
+        -webkit-user-select: none;
+        pointer-events: none;
+      }
     }
 
     &:hover .MuiOutlinedInput-notchedOutline {
