@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.0b2c0cea.css",
-    "main.js": "./static/js/main.4fd85204.js",
+    "main.css": "./static/css/main.aa7aed37.css",
+    "main.js": "./static/js/main.e0a34e18.js",
     "static/js/206.0d512b19.chunk.js": "./static/js/206.0d512b19.chunk.js",
     "static/media/business_partnering.webp": "./static/media/business_partnering.612ef8a8dc7a6dff022f.webp",
     "static/media/achievement_award.webp": "./static/media/achievement_award.0e86cf503e596533b4c5.webp",
@@ -23,7 +23,7 @@
     "index.html": "./index.html"
   },
   "entrypoints": [
-    "static/css/main.0b2c0cea.css",
-    "static/js/main.4fd85204.js"
+    "static/css/main.aa7aed37.css",
+    "static/js/main.e0a34e18.js"
   ]
 }
