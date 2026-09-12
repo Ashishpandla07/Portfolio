@@ -1,10 +1,16 @@
 import React from "react";
-import financeDashboard from '../assets/images/finance_dashboard.jpg';
-import achievementAward from '../assets/images/achievement_award.jpg';
-import costOptimization from '../assets/images/cost_optimization.jpg';
-import businessPartnering from '../assets/images/business_partnering.jpg';
-import auditCompliance from '../assets/images/audit_compliance.jpg';
-import financialGrowth from '../assets/images/financial_growth.jpg';
+import costOptimization from '../assets/images/cost_optimization.webp';
+import costOptimizationSm from '../assets/images/cost_optimization-sm.webp';
+import financialGrowth from '../assets/images/financial_growth.webp';
+import financialGrowthSm from '../assets/images/financial_growth-sm.webp';
+import financeDashboard from '../assets/images/finance_dashboard.webp';
+import financeDashboardSm from '../assets/images/finance_dashboard-sm.webp';
+import auditCompliance from '../assets/images/audit_compliance.webp';
+import auditComplianceSm from '../assets/images/audit_compliance-sm.webp';
+import businessPartnering from '../assets/images/business_partnering.webp';
+import businessPartneringSm from '../assets/images/business_partnering-sm.webp';
+import achievementAward from '../assets/images/achievement_award.webp';
+import achievementAwardSm from '../assets/images/achievement_award-sm.webp';
 import '../assets/styles/Project.scss';
 
 function Project() {
@@ -17,7 +23,17 @@ function Project() {
                 {/* 1. Cost Optimization */}
                 <div className="project-card">
                     <div className="card-img-wrapper">
-                        <img src={costOptimization} className="zoom" alt="Cost Optimization" />
+                        <img
+                            src={costOptimization}
+                            srcSet={`${costOptimizationSm} 400w, ${costOptimization} 1264w`}
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+                            width={400}
+                            height={268}
+                            loading="lazy"
+                            decoding="async"
+                            className="zoom"
+                            alt="Cost Optimization"
+                        />
                     </div>
                     <div className="card-content">
                         <h3>Cost Optimization</h3>
@@ -32,7 +48,17 @@ function Project() {
                 {/* 2. Turnaround & Profitability */}
                 <div className="project-card">
                     <div className="card-img-wrapper">
-                        <img src={financialGrowth} className="zoom" alt="Profitability Turnaround" />
+                        <img
+                            src={financialGrowth}
+                            srcSet={`${financialGrowthSm} 400w, ${financialGrowth} 1264w`}
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+                            width={400}
+                            height={268}
+                            loading="lazy"
+                            decoding="async"
+                            className="zoom"
+                            alt="Profitability Turnaround"
+                        />
                     </div>
                     <div className="card-content">
                         <h3>Financial Turnaround & Profitability</h3>
@@ -47,7 +73,17 @@ function Project() {
                 {/* 3. Modeling & MIS */}
                 <div className="project-card">
                     <div className="card-img-wrapper">
-                        <img src={financeDashboard} className="zoom" alt="MIS Dashboards" />
+                        <img
+                            src={financeDashboard}
+                            srcSet={`${financeDashboardSm} 400w, ${financeDashboard} 1264w`}
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+                            width={400}
+                            height={268}
+                            loading="lazy"
+                            decoding="async"
+                            className="zoom"
+                            alt="MIS Dashboards"
+                        />
                     </div>
                     <div className="card-content">
                         <h3>Financial Modeling & MIS Dashboards</h3>
@@ -61,7 +97,17 @@ function Project() {
                 {/* 4. Capital Transactions & Audits */}
                 <div className="project-card">
                     <div className="card-img-wrapper">
-                        <img src={auditCompliance} className="zoom" alt="Audit & Compliance" />
+                        <img
+                            src={auditCompliance}
+                            srcSet={`${auditComplianceSm} 400w, ${auditCompliance} 1264w`}
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+                            width={400}
+                            height={268}
+                            loading="lazy"
+                            decoding="async"
+                            className="zoom"
+                            alt="Audit & Compliance"
+                        />
                     </div>
                     <div className="card-content">
                         <h3>Capital Transactions & Audit Management</h3>
@@ -76,7 +122,17 @@ function Project() {
                 {/* 5. International Expansion */}
                 <div className="project-card">
                     <div className="card-img-wrapper">
-                        <img src={businessPartnering} className="zoom" alt="Business Partnering" />
+                        <img
+                            src={businessPartnering}
+                            srcSet={`${businessPartneringSm} 400w, ${businessPartnering} 1264w`}
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+                            width={400}
+                            height={268}
+                            loading="lazy"
+                            decoding="async"
+                            className="zoom"
+                            alt="Business Partnering"
+                        />
                     </div>
                     <div className="card-content">
                         <h3>International Expansion & Partnering</h3>
@@ -91,7 +147,17 @@ function Project() {
                 {/* 6. Awards & Recognition */}
                 <div className="project-card highlight-award-card">
                     <div className="card-img-wrapper">
-                        <img src={achievementAward} className="zoom" alt="Awards and Recognition" />
+                        <img
+                            src={achievementAward}
+                            srcSet={`${achievementAwardSm} 400w, ${achievementAward} 1264w`}
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+                            width={400}
+                            height={268}
+                            loading="lazy"
+                            decoding="async"
+                            className="zoom"
+                            alt="Awards and Recognition"
+                        />
                     </div>
                     <div className="card-content">
                         <h3>Awards & Recognition</h3>

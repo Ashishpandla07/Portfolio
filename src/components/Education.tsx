@@ -1,7 +1,7 @@
 import React from "react";
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
-import icaiLogo from '../assets/images/icai_logo.png';
-import rajasthanLogo from '../assets/images/rajasthan_university_logo.png';
+import icaiLogo from '../assets/images/icai_logo.webp';
+import rajasthanLogo from '../assets/images/rajasthan_university_logo.webp';
 import '../assets/styles/Education.scss';
 
 function Education() {
@@ -23,7 +23,16 @@ function Education() {
 
           <div className="card-header">
             <div className="card-icon-wrapper" aria-label="ICAI Logo">
-              <img src={icaiLogo} alt="The Institute of Chartered Accountants of India" className="institution-logo" />
+              <img
+                src={icaiLogo}
+                srcSet={`${icaiLogo} 1x`}
+                alt="The Institute of Chartered Accountants of India"
+                className="institution-logo"
+                width={36}
+                height={36}
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div className="card-title-group">
               <h3>Chartered Accountant (CA)</h3>
@@ -65,7 +74,16 @@ function Education() {
 
           <div className="card-header">
             <div className="card-icon-wrapper" aria-label="University of Rajasthan Logo">
-              <img src={rajasthanLogo} alt="University of Rajasthan" className="institution-logo" />
+              <img
+                src={rajasthanLogo}
+                srcSet={`${rajasthanLogo} 1x`}
+                alt="University of Rajasthan"
+                className="institution-logo"
+                width={36}
+                height={36}
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div className="card-title-group">
               <h3>Master's & Bachelor's Degrees</h3>

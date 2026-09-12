@@ -12,7 +12,7 @@ import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import MenuIcon from '@mui/icons-material/Menu';
-import profileImg from '../assets/images/profile.jpg';
+import profileImg from '../assets/images/profile.webp';
 import '../assets/styles/Navigation.scss';
 
 interface NavigationProps {
@@ -53,7 +53,16 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
       {/* Profile Header */}
       <div className="sidebar-header">
         <div className="avatar-wrapper">
-          <img src={profileImg} alt="CA Ashish Pandla" fetchPriority="high" loading="eager" decoding="async" />
+          <img
+            src={profileImg}
+            srcSet={`${profileImg} 1x`}
+            alt="CA Ashish Pandla"
+            width={144}
+            height={144}
+            fetchPriority="high"
+            loading="eager"
+            decoding="async"
+          />
         </div>
         <div className="sidebar-name">CA Ashish Pandla</div>
         <p className="sidebar-role">Senior Finance Leader</p>
