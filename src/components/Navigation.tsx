@@ -16,6 +16,7 @@ import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 import profileImg from '../assets/images/profile.webp';
 import '../assets/styles/Navigation.scss';
 
@@ -163,8 +164,8 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
         <div className="mobile-bar-left">
           <IconButton
             className="hamburger-btn"
-            aria-label="open sections navigator"
-            title="Sections Navigator"
+            aria-label={mobileOpen ? "close sections navigator" : "open sections navigator"}
+            title={mobileOpen ? "Close Navigator" : "Sections Navigator"}
             edge="start"
             onClick={handleDrawerToggle}
             sx={{
@@ -180,7 +181,11 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
               },
             }}
           >
-            <MenuIcon sx={{ fontSize: '1.85rem', color: mode === 'dark' ? '#ffffff !important' : '#0f172a !important' }} />
+            {mobileOpen ? (
+              <CloseIcon sx={{ fontSize: '1.85rem', color: mode === 'dark' ? '#ffffff !important' : '#0f172a !important' }} />
+            ) : (
+              <MenuIcon sx={{ fontSize: '1.85rem', color: mode === 'dark' ? '#ffffff !important' : '#0f172a !important' }} />
+            )}
           </IconButton>
           <span
             className="mobile-bar-title"
@@ -226,10 +231,19 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
         ModalProps={{ keepMounted: true }}
         sx={{
           display: { xs: 'block', lg: 'none' },
+          zIndex: 9998,
           '& .MuiDrawer-paper': {
             boxSizing: 'border-box',
             width: 270,
+            top: '60px !important',
+            height: 'calc(100% - 60px) !important',
             background: mode === 'dark' ? '#0e131f' : '#ffffff',
+            borderRight: mode === 'dark' ? '1px solid rgba(255, 255, 255, 0.08)' : '1px solid #e2e8f0',
+            boxShadow: '4px 0 24px rgba(0, 0, 0, 0.45)',
+          },
+          '& .MuiBackdrop-root': {
+            top: '60px !important',
+            height: 'calc(100% - 60px) !important',
           },
         }}
       >

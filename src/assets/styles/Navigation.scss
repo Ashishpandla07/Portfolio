@@ -190,19 +190,19 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: max(20px, env(safe-area-inset-top, 20px));
+  padding: 14px 10px;
   box-sizing: border-box;
 
   .sidebar-header {
-    display: none;
+    display: none !important;
   }
 
   .sidebar-menu {
     flex: 1;
-    padding: 12px 14px;
+    padding: 2px 2px 8px;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 4px;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 
@@ -228,9 +228,12 @@
         font-size: 1.25rem;
         color: #64748b;
         flex-shrink: 0;
-        display: flex;
+        width: 24px;
+        min-width: 24px;
+        display: inline-flex;
         align-items: center;
         justify-content: center;
+        text-align: center;
       }
 
       span {
@@ -249,7 +252,7 @@
       }
 
       &.resume-link {
-        margin-top: 8px;
+        margin-top: 6px;
         background: linear-gradient(135deg, rgba(80, 0, 202, 0.25) 0%, rgba(142, 45, 226, 0.3) 100%);
         border: 1px solid rgba(168, 85, 247, 0.4);
         color: #c084fc;
@@ -268,7 +271,7 @@
   }
 
   .sidebar-footer {
-    padding: 14px 16px max(14px, env(safe-area-inset-bottom, 14px));
+    padding: 12px 6px max(8px, env(safe-area-inset-bottom, 8px));
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 
     .theme-toggle-btn {
@@ -491,6 +494,20 @@
 @media screen and (max-width: 992px) {
   .desktop-sidebar {
     display: none !important;
+  }
+
+  .MuiDrawer-root {
+    .MuiDrawer-paper {
+      top: 60px !important;
+      height: calc(100% - 60px) !important;
+      height: calc(100dvh - 60px) !important;
+    }
+
+    .MuiBackdrop-root {
+      top: 60px !important;
+      height: calc(100% - 60px) !important;
+      height: calc(100dvh - 60px) !important;
+    }
   }
 
   .mobile-top-bar {
