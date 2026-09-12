@@ -72,7 +72,10 @@
   .MuiInputBase-root,
   .collapsed-preview-bar,
   .mobile_social_icons,
-  .mobile-profile-photo {
+  .mobile-profile-photo,
+  .mobile-bottom-bar,
+  .mobile-scroll-top-btn,
+  .mobile-scroll-progress-bar {
     display: none !important;
     visibility: hidden !important;
     height: 0 !important;

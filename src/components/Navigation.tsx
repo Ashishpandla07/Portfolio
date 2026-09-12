@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import PersonIcon from '@mui/icons-material/Person';
@@ -8,6 +8,9 @@ import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import SchoolIcon from '@mui/icons-material/School';
 import InterestsIcon from '@mui/icons-material/Interests';
 import EmailIcon from '@mui/icons-material/Email';
+import PhoneIcon from '@mui/icons-material/Phone';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
@@ -33,6 +36,22 @@ const navItems = [
 function Navigation({ parentToChild, modeChange }: NavigationProps) {
   const { mode } = parentToChild;
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
+  const [scrollProgress, setScrollProgress] = useState<number>(0);
+  const [showScrollTop, setShowScrollTop] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (totalHeight > 0) {
+        const currentProgress = (window.scrollY / totalHeight) * 100;
+        setScrollProgress(Math.min(100, Math.max(0, currentProgress)));
+      }
+      setShowScrollTop(window.scrollY > 320);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prev) => !prev);
@@ -124,6 +143,13 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
 
       {/* Mobile Sticky Top Header */}
       <header className="mobile-top-bar">
+        {/* Subtle Reading Progress Indicator on Mobile */}
+        <div
+          className="mobile-scroll-progress-bar"
+          style={{ width: `${scrollProgress}%` }}
+          aria-hidden="true"
+        />
+
         <div className="mobile-bar-left">
           <IconButton
             className="hamburger-btn"
@@ -142,7 +168,15 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
           >
             <MenuIcon sx={{ fontSize: '1.75rem', color: mode === 'dark' ? '#ffffff' : '#0f172a' }} />
           </IconButton>
-          <span className="mobile-bar-title">CA Ashish Pandla</span>
+          <span
+            className="mobile-bar-title"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            role="button"
+            tabIndex={0}
+            title="Tap to scroll back to top"
+          >
+            CA Ashish Pandla
+          </span>
         </div>
 
         <div className="mobile-bar-right">
@@ -187,6 +221,48 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
       >
         {renderSidebarContent(true)}
       </Drawer>
+
+      {/* Mobile Floating Scroll-to-Top Button (Mobile Only <= 992px) */}
+      <button
+        className={`mobile-scroll-top-btn ${showScrollTop ? 'visible' : ''}`}
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        aria-label="Scroll back to top"
+        title="Scroll to top"
+      >
+        <KeyboardArrowUpIcon />
+      </button>
+
+      {/* Mobile Floating Quick-Action Bar (Mobile Only <= 992px) */}
+      <nav className="mobile-bottom-bar" aria-label="Quick contact actions">
+        <a href="tel:+918058914286" className="action-pill-item call" aria-label="Call Ashish Pandla">
+          <PhoneIcon className="action-pill-icon" />
+          <span>Call</span>
+        </a>
+        <a
+          href="https://wa.me/918058914286?text=Hi%20Ashish,%20I%20viewed%20your%20portfolio"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="action-pill-item whatsapp"
+          aria-label="Chat on WhatsApp"
+        >
+          <WhatsAppIcon className="action-pill-icon" />
+          <span>WhatsApp</span>
+        </a>
+        <a href="mailto:ashishpandla07@gmail.com" className="action-pill-item email" aria-label="Email Ashish Pandla">
+          <EmailIcon className="action-pill-icon" />
+          <span>Email</span>
+        </a>
+        <a
+          href={`${process.env.PUBLIC_URL || ''}/Resume-Ashish.pdf`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="action-pill-item resume"
+          aria-label="View Resume PDF"
+        >
+          <PictureAsPdfIcon className="action-pill-icon" />
+          <span>Resume</span>
+        </a>
+      </nav>
     </>
   );
 }
