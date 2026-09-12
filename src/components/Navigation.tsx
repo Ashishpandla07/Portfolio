@@ -53,7 +53,7 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
       {/* Profile Header */}
       <div className="sidebar-header">
         <div className="avatar-wrapper">
-          <img src={profileImg} alt="CA Ashish Pandla" />
+          <img src={profileImg} alt="CA Ashish Pandla" fetchPriority="high" loading="eager" decoding="async" />
         </div>
         <div className="sidebar-name">CA Ashish Pandla</div>
         <p className="sidebar-role">Senior Finance Leader</p>

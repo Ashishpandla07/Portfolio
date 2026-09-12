@@ -1,15 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import createCache from '@emotion/cache';
+import { CacheProvider } from '@emotion/react';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+// Fast CSSOM injection: avoids injecting unminified style tag text into the DOM
+const emotionCache = createCache({
+  key: 'css',
+  speedy: true,
+});
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <CacheProvider value={emotionCache}>
+      <App />
+    </CacheProvider>
   </React.StrictMode>
 );
 

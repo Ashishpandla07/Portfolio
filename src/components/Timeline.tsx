@@ -104,7 +104,14 @@ function Timeline() {
               {/* Company Logo Box */}
               <div className="company-logo-col">
                 <div className="logo-box">
-                  <img src={company.logo} alt={company.company} className="logo-img-full" />
+                  <img
+                    src={company.logo}
+                    alt={company.company}
+                    className="logo-img-full"
+                    fetchPriority="high"
+                    loading="eager"
+                    decoding="async"
+                  />
                 </div>
               </div>
 
