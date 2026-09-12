@@ -37,9 +37,9 @@ function Project() {
                     <div className="card-content">
                         <h2>Financial Turnaround & Profitability</h2>
                         <ul className="achievement-list">
-                            <li>Led profitability turnaround initiatives, making <strong>~75% of profit centers profitable</strong> through margin improvement and cost optimization.</li>
-                            <li>Improved operational productivity by <strong>20%</strong> by identifying performance gaps and driving corrective actions.</li>
-                            <li>Enhanced ROI from <strong>1x to 2x</strong> through sales performance analysis and targeted interventions.</li>
+                            <li>Led turnaround of <strong>~75% profit centers</strong> to profitability via margin improvement and cost optimization.</li>
+                            <li>Improved operational productivity by <strong>20%</strong> through corrective actions.</li>
+                            <li>Doubled ROI from <strong>1x to 2x</strong> via targeted sales interventions.</li>
                         </ul>
                     </div>
                 </div>
