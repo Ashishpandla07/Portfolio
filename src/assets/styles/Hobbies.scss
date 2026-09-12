@@ -1,18 +1,19 @@
 .hobbies-container {
   min-height: 100vh;
-  padding: 24px 4% 20px;
+  padding: 20px 4% 14px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: left;
   box-sizing: border-box;
   width: 100%;
-  max-width: 1240px;
+  max-width: 1200px;
   margin: 0 auto;
 
-  /* Executive Section Header */
+  /* Executive Section Header - Left-aligned to match all other sections */
   .section-header {
-    text-align: center;
-    margin-bottom: 20px;
+    text-align: left;
+    margin-bottom: 14px;
 
     .hobbies-eyebrow {
       display: inline-flex;
@@ -55,8 +56,8 @@
     .subtitle {
       color: #94a3b8;
       font-size: 0.88rem;
-      max-width: 620px;
-      margin: 0 auto;
+      max-width: 680px;
+      margin: 0;
       line-height: 1.4;
     }
   }
@@ -67,6 +68,8 @@
     grid-template-columns: repeat(5, 1fr);
     gap: 14px;
     align-items: stretch;
+    width: 100%;
+    box-sizing: border-box;
 
     .hobby-card {
       background: rgba(22, 27, 34, 0.75);
@@ -81,6 +84,9 @@
       transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
       overflow: hidden;
+      box-sizing: border-box;
+      height: 100%;
+      text-align: left;
 
       /* Top accent strip */
       &::before {
@@ -131,6 +137,7 @@
         display: flex;
         flex-direction: column;
         flex-grow: 1;
+        text-align: left;
 
         .hobby-badge {
           display: inline-block;
@@ -144,6 +151,7 @@
           border-radius: 6px;
           margin-bottom: 8px;
           white-space: nowrap;
+          text-align: left;
         }
 
         .hobby-title {
@@ -264,9 +272,14 @@
   .hobbies-container {
     padding: 20px 4% 24px;
     min-height: auto;
+    text-align: left;
 
-    .section-header .hobbies-title {
-      font-size: 1.45rem;
+    .section-header {
+      text-align: left;
+
+      .hobbies-title {
+        font-size: 1.45rem;
+      }
     }
 
     .hobbies-grid {
