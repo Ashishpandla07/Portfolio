@@ -81,10 +81,9 @@ function Project() {
                     <div className="card-content">
                         <h2>International Expansion & Partnering</h2>
                         <ul className="achievement-list">
-                            <li><strong>Entity Structuring & Compliance:</strong> Managed banking setups, company structuring, and local compliance for overseas entities.</li>
-                            <li><strong>End-to-End Process Setup:</strong> Scaled operational workflows globally, setting up finance function and books of accounts.</li>
+                            <li><strong>Entity & Process Setup:</strong> Managed global banking setups, international corporate structuring, local compliance, and end-to-end finance workflows for overseas entities.</li>
                             <li><strong>Business Partnering:</strong> Partnered directly with business heads to drive cross-functional efficiency and growth.</li>
-                        <li><strong>MRL Financial Architecture:</strong> Established end-to-end accounting for CARS24’s Mega Refurbishment Labs (MRL)—governing spare parts procurement, refurbishment costing (denting, painting, repair), and service revenue recognition.</li>
+                        <li><strong>MRL Financial Setup:</strong> Established end-to-end accounting for CARS24’s Mega Refurbishment Labs (MRL),governing spare parts procurement, refurbishment costing and service revenue recognition.</li>
                         </ul>
                     </div>
                 </div>

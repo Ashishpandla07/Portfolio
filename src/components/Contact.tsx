@@ -312,7 +312,7 @@ function Contact() {
                         label="Your Message"
                         placeholder="Briefly describe the opportunity, project, or topic you would like to discuss..."
                         multiline
-                        rows={5}
+                        rows={3}
                         variant="outlined"
                         value={message}
                         onChange={(e) => {

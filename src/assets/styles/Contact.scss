@@ -6,7 +6,17 @@
 .contact-section {
   position: relative;
   width: 100%;
-  padding-bottom: 30px;
+  min-height: calc(100vh - 45px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 12px 4% 8px;
+
+  .items-container {
+    padding: 0;
+    width: 100%;
+  }
 }
 
 .contact_wrapper {
@@ -19,26 +29,26 @@
    1. Section Header & Badges
    -------------------------------------------------------------------------- */
 .contact-header {
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   text-align: left;
 
   .contact-eyebrow {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 6px 14px;
+    gap: 6px;
+    padding: 4px 10px;
     border-radius: 20px;
     background: rgba(99, 102, 241, 0.1);
     border: 1px solid rgba(99, 102, 241, 0.25);
     color: #a5b4fc;
-    font-size: 0.76rem;
+    font-size: 0.7rem;
     font-weight: 700;
-    letter-spacing: 1.2px;
-    margin-bottom: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
 
     .pulse-indicator {
-      width: 7px;
-      height: 7px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
       background-color: #10b981;
       box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
@@ -47,9 +57,9 @@
   }
 
   .contact-title {
-    font-size: 2rem;
+    font-size: 1.65rem;
     font-weight: 800;
-    margin: 0 0 10px 0;
+    margin: 0 0 4px 0;
     letter-spacing: -0.5px;
     line-height: 1.15;
     color: #ffffff;
@@ -62,8 +72,8 @@
   }
 
   .contact-subtitle {
-    font-size: 0.9rem;
-    line-height: 1.55;
+    font-size: 0.82rem;
+    line-height: 1.35;
     color: #94a3b8;
     max-width: 750px;
     margin: 0;
@@ -83,13 +93,13 @@
 }
 
 /* --------------------------------------------------------------------------
-   2. Main Dual-Column Grid
+   2. Main Dual-Column Grid (Side-by-Side to guarantee single-slide layout)
    -------------------------------------------------------------------------- */
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-  align-items: start;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 18px;
+  align-items: stretch;
 }
 
 /* --------------------------------------------------------------------------
@@ -98,15 +108,15 @@
 .contact-info-panel {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
 }
 
 /* Availability Dossier Card */
 .availability-card {
   background: linear-gradient(145deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.8) 100%);
   border: 1px solid rgba(99, 102, 241, 0.25);
-  border-radius: 14px;
-  padding: 18px 20px;
+  border-radius: 12px;
+  padding: 10px 14px;
   backdrop-filter: blur(12px);
   position: relative;
   overflow: hidden;
@@ -124,29 +134,29 @@
   .status-pill {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     background: rgba(16, 185, 129, 0.12);
     border: 1px solid rgba(16, 185, 129, 0.3);
-    padding: 4px 10px;
-    border-radius: 12px;
-    font-size: 0.78rem;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.72rem;
     font-weight: 600;
     color: #34d399;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 
     .dot-live {
-      width: 6px;
-      height: 6px;
+      width: 5px;
+      height: 5px;
       border-radius: 50%;
       background: #10b981;
     }
   }
 
   .status-desc {
-    font-size: 0.88rem;
-    line-height: 1.45;
+    font-size: 0.8rem;
+    line-height: 1.35;
     color: #cbd5e1;
-    margin: 4px 0 10px 0;
+    margin: 2px 0 6px 0;
 
     strong {
       color: #ffffff;
@@ -157,12 +167,12 @@
   .response-time {
     display: flex;
     align-items: center;
-    gap: 6px;
-    font-size: 0.78rem;
+    gap: 5px;
+    font-size: 0.72rem;
     color: #94a3b8;
 
     .response-icon {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
     }
   }
 }
@@ -171,16 +181,16 @@
 .direct-channels-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 7px;
 }
 
 .channel-card {
   display: flex;
   align-items: center;
-  padding: 12px 16px;
+  padding: 7px 12px;
   background: rgba(15, 23, 42, 0.55);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
+  border-radius: 10px;
   text-decoration: none;
   transition: all 0.25s ease;
   position: relative;
@@ -193,19 +203,19 @@
   }
 
   .channel-icon-box {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
     background: rgba(99, 102, 241, 0.12);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 14px;
+    margin-right: 10px;
     flex-shrink: 0;
 
     .channel-icon {
       color: #818cf8;
-      font-size: 1.25rem;
+      font-size: 1.05rem;
     }
   }
 
@@ -216,16 +226,16 @@
     min-width: 0;
 
     .channel-label {
-      font-size: 0.72rem;
+      font-size: 0.65rem;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.6px;
+      letter-spacing: 0.5px;
       color: #94a3b8;
-      margin-bottom: 2px;
+      margin-bottom: 1px;
     }
 
     .channel-value {
-      font-size: 0.92rem;
+      font-size: 0.82rem;
       font-weight: 600;
       color: #f1f5f9;
       text-decoration: none;
@@ -313,8 +323,8 @@
 .form-card-wrapper {
   background: rgba(15, 23, 42, 0.65);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  padding: 20px 20px 18px;
+  border-radius: 12px;
+  padding: 12px 16px 10px;
   backdrop-filter: blur(16px);
   box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.45);
   position: relative;
@@ -332,17 +342,17 @@
   }
 
   .form-card-header {
-    margin-bottom: 20px;
+    margin-bottom: 8px;
 
     h3 {
-      font-size: 1.25rem;
+      font-size: 1.05rem;
       font-weight: 700;
       color: #ffffff;
-      margin: 0 0 4px 0;
+      margin: 0 0 2px 0;
     }
 
     p {
-      font-size: 0.85rem;
+      font-size: 0.78rem;
       color: #94a3b8;
       margin: 0;
     }
@@ -352,12 +362,12 @@
 .executive-contact-form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
 
   .form-row-dual {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 14px;
+    gap: 10px;
   }
 
   .field-group {
@@ -371,7 +381,7 @@
 
   .MuiOutlinedInput-root {
     background-color: rgba(15, 23, 42, 0.5);
-    border-radius: 10px;
+    border-radius: 8px;
     transition: all 0.25s ease;
 
     .MuiOutlinedInput-notchedOutline {
@@ -400,9 +410,9 @@
 
   .MuiInputBase-input {
     color: #f8fafc !important;
-    font-size: 0.92rem;
+    font-size: 0.84rem;
     font-family: inherit;
-    padding: 13px 14px !important;
+    padding: 8px 12px !important;
 
     &::placeholder {
       color: #64748b;
@@ -416,7 +426,7 @@
 
   .MuiInputLabel-root {
     color: #94a3b8 !important;
-    font-size: 0.88rem;
+    font-size: 0.8rem;
 
     &.Mui-focused {
       color: #a5b4fc !important;
@@ -428,31 +438,31 @@
   }
 
   .MuiFormHelperText-root {
-    font-size: 0.74rem;
-    margin-top: 4px;
+    font-size: 0.7rem;
+    margin-top: 2px;
     margin-left: 4px;
   }
 
   .form-submit-row {
     display: flex;
     justify-content: flex-end;
-    margin-top: 4px;
+    margin-top: 2px;
 
     .btn-executive-send {
       background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%) !important;
       color: #ffffff !important;
       font-weight: 700 !important;
-      font-size: 0.92rem !important;
+      font-size: 0.84rem !important;
       text-transform: none !important;
-      padding: 10px 24px !important;
-      border-radius: 10px !important;
-      box-shadow: 0 8px 20px -4px rgba(79, 70, 229, 0.5) !important;
+      padding: 7px 20px !important;
+      border-radius: 8px !important;
+      box-shadow: 0 6px 16px -3px rgba(79, 70, 229, 0.5) !important;
       transition: all 0.25s ease !important;
 
       &:hover {
         background: linear-gradient(135deg, #4338ca 0%, #6d28d9 100%) !important;
         transform: translateY(-2px);
-        box-shadow: 0 12px 26px -4px rgba(99, 102, 241, 0.6) !important;
+        box-shadow: 0 10px 22px -3px rgba(99, 102, 241, 0.6) !important;
       }
 
       .send-arrow {
