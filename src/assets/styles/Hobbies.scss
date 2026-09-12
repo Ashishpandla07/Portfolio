@@ -64,13 +64,11 @@
   /* 5-Column Single-Row Desktop Grid */
   .hobbies-grid {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(5, 1fr);
     gap: 14px;
     align-items: stretch;
 
     .hobby-card {
-      min-width: 0;
-      box-sizing: border-box;
       background: rgba(22, 27, 34, 0.75);
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 14px;
@@ -251,10 +249,10 @@
 }
 
 /* Responsive adjustments */
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1024px) {
   .hobbies-container {
     .hobbies-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 12px;
     }
   }
