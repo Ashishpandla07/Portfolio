@@ -30,8 +30,9 @@ function App() {
 
     return (
         <div className={`main-container ${mode === 'dark' ? 'dark-mode' : 'light-mode'}`}>
+            <a href="#main-content" className="skip-to-content-link">Skip to content</a>
             <Navigation parentToChild={{ mode }} modeChange={handleModeChange} />
-            <div className="content-wrapper">
+            <main className="content-wrapper" id="main-content" tabIndex={-1}>
                 <FadeIn transitionDuration={700}>
                     <Main />
                     <Expertise />
@@ -42,7 +43,7 @@ function App() {
                     <Contact />
                 </FadeIn>
                 <Footer />
-            </div>
+            </main>
         </div>
     );
 }
