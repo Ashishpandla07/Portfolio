@@ -83,16 +83,14 @@ function Hobbies() {
       <div className="hobbies-grid">
         {HOBBIES_DATA.map((item) => (
           <div key={item.id} className={`hobby-card accent-${item.accent}`}>
-            <div className="card-top">
+            <div className="card-header-row">
               <div className="icon-wrapper">
                 {item.icon}
               </div>
-              <span className="hobby-badge">{item.badge}</span>
             </div>
             <div className="card-body">
-              <h3 className="hobby-title">
-                <span className="emoji-span">{item.emoji}</span> {item.title}
-              </h3>
+              <span className="hobby-badge">{item.badge}</span>
+              <h3 className="hobby-title">{item.title}</h3>
               <p className="hobby-description">{item.description}</p>
             </div>
           </div>
