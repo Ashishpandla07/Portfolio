@@ -301,6 +301,35 @@
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(255, 255, 255, 0.08);
       color: #cbd5e1;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+
+      &.whatsapp-btn {
+        gap: 4px;
+        background: rgba(37, 211, 102, 0.12);
+        border-color: rgba(37, 211, 102, 0.3);
+        color: #25d366;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        .whatsapp-icon {
+          font-size: 0.95rem;
+          color: #25d366;
+        }
+
+        &:hover {
+          background: rgba(37, 211, 102, 0.25);
+          border-color: #25d366;
+          color: #ffffff;
+          transform: translateY(-1px);
+          box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+
+          .whatsapp-icon {
+            color: #ffffff;
+          }
+        }
+      }
     }
 
     .location-pill {
@@ -639,6 +668,26 @@
         background: #f1f5f9;
         border-color: #e2e8f0;
         color: #475569;
+
+        &.whatsapp-btn {
+          background: rgba(37, 211, 102, 0.12);
+          border-color: rgba(37, 211, 102, 0.35);
+          color: #059669;
+
+          .whatsapp-icon {
+            color: #059669;
+          }
+
+          &:hover {
+            background: #10b981;
+            border-color: #10b981;
+            color: #ffffff;
+
+            .whatsapp-icon {
+              color: #ffffff;
+            }
+          }
+        }
       }
     }
   }

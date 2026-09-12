@@ -12,6 +12,7 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import CheckIcon from '@mui/icons-material/Check';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import CircularProgress from '@mui/material/CircularProgress';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 function Contact() {
   const [name, setName] = useState<string>('');
@@ -187,22 +188,31 @@ function Contact() {
                   </div>
                 </a>
 
-                {/* Phone Card */}
-                <a
-                  href="tel:+918058914286"
-                  className="channel-card phone-card"
-                >
+                {/* Phone & WhatsApp Card */}
+                <div className="channel-card phone-card">
                   <div className="channel-icon-box">
                     <PhoneIcon className="channel-icon" />
                   </div>
                   <div className="channel-details">
                     <span className="channel-label">Direct Line / WhatsApp</span>
-                    <span className="channel-value">+91 80589 14286</span>
+                    <a href="tel:+918058914286" className="channel-value" title="Call +91 80589 14286">
+                      +91 80589 14286
+                    </a>
                   </div>
                   <div className="channel-actions">
-                    <span className="action-badge">Connect</span>
+                    <a
+                      href="https://wa.me/918058914286"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="action-badge whatsapp-btn"
+                      title="Chat on WhatsApp"
+                      aria-label="Chat with CA Ashish Pandla on WhatsApp"
+                    >
+                      <WhatsAppIcon className="whatsapp-icon" />
+                      <span>WhatsApp</span>
+                    </a>
                   </div>
-                </a>
+                </div>
 
                 {/* Location Card */}
                 <div className="channel-card location-card">
