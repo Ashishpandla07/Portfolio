@@ -61,7 +61,7 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
   const scrollToSection = (targetId: string) => {
     const el = document.getElementById(targetId);
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
     if (mobileOpen) {
       setMobileOpen(false);
@@ -72,18 +72,20 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
     <div className={isMobile ? "mobile-drawer-content" : "desktop-sidebar"}>
       {/* Profile Header */}
       <div className="sidebar-header">
-        <div className="avatar-wrapper">
-          <img
-            src={profileImg}
-            srcSet={`${profileImg} 1x`}
-            alt="CA Ashish Pandla"
-            width={144}
-            height={144}
-            fetchPriority="high"
-            loading="eager"
-            decoding="async"
-          />
-        </div>
+        {!isMobile && (
+          <div className="avatar-wrapper">
+            <img
+              src={profileImg}
+              srcSet={`${profileImg} 1x`}
+              alt="CA Ashish Pandla"
+              width={144}
+              height={144}
+              fetchPriority="high"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+        )}
         <div className="sidebar-name">CA Ashish Pandla</div>
         <p className="sidebar-role">Senior Finance Leader</p>
       </div>
@@ -266,16 +268,6 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
         <a href="mailto:ashishpandla07@gmail.com" className="action-pill-item email" aria-label="Email Ashish Pandla">
           <EmailIcon className="action-pill-icon" />
           <span>Email</span>
-        </a>
-        <a
-          href={`${process.env.PUBLIC_URL || ''}/Resume-Ashish.pdf`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="action-pill-item resume"
-          aria-label="View Resume PDF"
-        >
-          <PictureAsPdfIcon className="action-pill-icon" />
-          <span>Resume</span>
         </a>
       </nav>
     </>

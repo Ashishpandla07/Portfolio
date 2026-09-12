@@ -192,28 +192,21 @@
   justify-content: space-between;
 
   .sidebar-header {
-    padding: 28px 16px 16px;
+    padding: 20px 16px 14px;
     text-align: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
-    .avatar-wrapper img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #5000ca;
-    }
-
     .sidebar-name {
-      margin: 8px 0 0;
-      font-size: 1.1rem;
+      margin: 0;
+      font-size: 1.15rem;
       font-weight: 700;
       color: #ffffff;
+      letter-spacing: -0.2px;
     }
 
     .sidebar-role {
-      margin: 2px 0 0;
-      font-size: 0.78rem;
+      margin: 3px 0 0;
+      font-size: 0.8rem;
       color: #94a3b8;
     }
   }
