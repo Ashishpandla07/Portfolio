@@ -68,10 +68,6 @@ function Hobbies() {
   return (
     <div className="hobbies-container" id="hobbies">
       <div className="section-header">
-        <div className="hobbies-eyebrow">
-          <span className="pulse-dot"></span>
-          <span>PERSONAL DIMENSION</span>
-        </div>
         <h1 className="hobbies-title">
           Hobbies & <span className="highlight-gradient">Interests</span>
         </h1>
