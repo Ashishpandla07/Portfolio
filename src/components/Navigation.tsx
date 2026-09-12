@@ -70,10 +70,6 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
   };
 
   const renderSidebarContent = (isMobile = false) => {
-    const itemsToRender = isMobile
-      ? navItems.filter((item) => item.target !== 'about')
-      : navItems;
-
     return (
       <div className={isMobile ? "mobile-drawer-content" : "desktop-sidebar"}>
         {/* Profile Header (Desktop Web Version Only) */}
@@ -98,7 +94,7 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
 
         {/* Nav Menu */}
         <nav className="sidebar-menu">
-          {itemsToRender.map((item) => (
+          {navItems.map((item) => (
             <button
               key={item.target}
               className="nav-link-btn"
