@@ -154,7 +154,8 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
         <div className="mobile-bar-left">
           <IconButton
             className="hamburger-btn"
-            aria-label="open drawer"
+            aria-label="open sections navigator"
+            title="Sections Navigator"
             edge="start"
             onClick={handleDrawerToggle}
             sx={{
