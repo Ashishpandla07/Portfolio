@@ -68,76 +68,83 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
     }
   };
 
-  const renderSidebarContent = (isMobile = false) => (
-    <div className={isMobile ? "mobile-drawer-content" : "desktop-sidebar"}>
-      {/* Profile Header */}
-      <div className="sidebar-header">
+  const renderSidebarContent = (isMobile = false) => {
+    const itemsToRender = isMobile
+      ? navItems.filter((item) => item.target !== 'about')
+      : navItems;
+
+    return (
+      <div className={isMobile ? "mobile-drawer-content" : "desktop-sidebar"}>
+        {/* Profile Header (Desktop Web Version Only) */}
         {!isMobile && (
-          <div className="avatar-wrapper">
-            <img
-              src={profileImg}
-              srcSet={`${profileImg} 1x`}
-              alt="CA Ashish Pandla"
-              width={144}
-              height={144}
-              fetchPriority="high"
-              loading="eager"
-              decoding="async"
-            />
+          <div className="sidebar-header">
+            <div className="avatar-wrapper">
+              <img
+                src={profileImg}
+                srcSet={`${profileImg} 1x`}
+                alt="CA Ashish Pandla"
+                width={144}
+                height={144}
+                fetchPriority="high"
+                loading="eager"
+                decoding="async"
+              />
+            </div>
+            <div className="sidebar-name">CA Ashish Pandla</div>
+            <p className="sidebar-role">Senior Finance Leader</p>
           </div>
         )}
-        <div className="sidebar-name">CA Ashish Pandla</div>
-        <p className="sidebar-role">Senior Finance Leader</p>
-      </div>
 
-      {/* Nav Menu */}
-      <nav className="sidebar-menu">
-        {navItems.map((item) => (
-          <button
-            key={item.target}
-            className="nav-link-btn"
-            onClick={() => scrollToSection(item.target)}
+        {/* Nav Menu */}
+        <nav className="sidebar-menu">
+          {itemsToRender.map((item) => (
+            <button
+              key={item.target}
+              className="nav-link-btn"
+              onClick={() => scrollToSection(item.target)}
+            >
+              {item.icon}
+              <span>{item.label}</span>
+            </button>
+          ))}
+
+          {/* Direct Resume PDF Link */}
+          <a
+            href={`${process.env.PUBLIC_URL || ''}/Resume-Ashish.pdf`}
+            target="_blank"
+            rel="noreferrer"
+            className="nav-link-btn resume-link"
           >
-            {item.icon}
-            <span>{item.label}</span>
+            <PictureAsPdfIcon className="nav-icon" />
+            <span>Resume (PDF)</span>
+          </a>
+        </nav>
+
+
+        {/* Theme Toggle Footer */}
+        <div className="sidebar-footer">
+          <button
+            className="theme-toggle-btn"
+            onClick={modeChange}
+            aria-label={mode === 'dark' ? "Switch to light mode" : "Switch to dark mode"}
+            title={mode === 'dark' ? "Switch to light mode" : "Switch to dark mode"}
+          >
+            {mode === 'dark' ? (
+              <>
+                <LightModeIcon sx={{ fontSize: '1.1rem', color: '#facc15' }} />
+                <span>Light Mode</span>
+              </>
+            ) : (
+              <>
+                <DarkModeIcon sx={{ fontSize: '1.1rem', color: '#5000ca' }} />
+                <span>Dark Mode</span>
+              </>
+            )}
           </button>
-        ))}
-
-        {/* Direct Resume PDF Link */}
-        <a
-          href={`${process.env.PUBLIC_URL || ''}/Resume-Ashish.pdf`}
-          target="_blank"
-          rel="noreferrer"
-          className="nav-link-btn resume-link"
-        >
-          <PictureAsPdfIcon className="nav-icon" />
-          <span>Resume (PDF)</span>
-        </a>
-      </nav>
-
-      {/* Theme Toggle Footer */}
-      <div className="sidebar-footer">
-        <button
-          className="theme-toggle-btn"
-          onClick={modeChange}
-          aria-label={mode === 'dark' ? "Switch to light mode" : "Switch to dark mode"}
-          title={mode === 'dark' ? "Switch to light mode" : "Switch to dark mode"}
-        >
-          {mode === 'dark' ? (
-            <>
-              <LightModeIcon sx={{ fontSize: '1.1rem', color: '#facc15' }} />
-              <span>Light Mode</span>
-            </>
-          ) : (
-            <>
-              <DarkModeIcon sx={{ fontSize: '1.1rem', color: '#5000ca' }} />
-              <span>Dark Mode</span>
-            </>
-          )}
-        </button>
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   return (
     <>
