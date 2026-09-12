@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.fd5f0087.css",
-    "main.js": "./static/js/main.7b5e7dad.js",
+    "main.css": "./static/css/main.0b2c0cea.css",
+    "main.js": "./static/js/main.4fd85204.js",
     "static/js/206.0d512b19.chunk.js": "./static/js/206.0d512b19.chunk.js",
     "static/media/business_partnering.webp": "./static/media/business_partnering.612ef8a8dc7a6dff022f.webp",
     "static/media/achievement_award.webp": "./static/media/achievement_award.0e86cf503e596533b4c5.webp",
@@ -10,20 +10,20 @@
     "static/media/financial_growth.webp": "./static/media/financial_growth.da5725649ccd2548d32b.webp",
     "static/media/cost_optimization.webp": "./static/media/cost_optimization.6f9aa0b329e42a2e61e4.webp",
     "static/media/icai_logo.webp": "./static/media/icai_logo.29e6131547786f34a3cc.webp",
-    "static/media/cargo_partner_logo.webp": "./static/media/cargo_partner_logo.531629f55da1bc176c11.webp",
+    "static/media/cargo_partner_logo.jpg": "./static/media/cargo_partner_logo.a3303aa83a3c326d2275.jpg",
     "static/media/rajasthan_university_logo.webp": "./static/media/rajasthan_university_logo.b7257876aeebcbbb0f44.webp",
     "static/media/business_partnering-sm.webp": "./static/media/business_partnering-sm.8ddb140de483cd7b363c.webp",
     "static/media/achievement_award-sm.webp": "./static/media/achievement_award-sm.1b7d0e6e5724629b1568.webp",
     "static/media/finance_dashboard-sm.webp": "./static/media/finance_dashboard-sm.46fa442c2ecdc7eccc22.webp",
     "static/media/audit_compliance-sm.webp": "./static/media/audit_compliance-sm.95f15e365fba4cc839fb.webp",
+    "static/media/cars24_logo.png": "./static/media/cars24_logo.9e2955564fb4d901ea06.png",
     "static/media/financial_growth-sm.webp": "./static/media/financial_growth-sm.979748335dbebee6524f.webp",
     "static/media/cost_optimization-sm.webp": "./static/media/cost_optimization-sm.5d236cc9aec6b60ef447.webp",
     "static/media/profile.webp": "./static/media/profile.83ef77cdd5ec483f4501.webp",
-    "index.html": "./index.html",
-    "static/media/cars24_logo.webp": "./static/media/cars24_logo.2ae6533600d065ac9da1.webp"
+    "index.html": "./index.html"
   },
   "entrypoints": [
-    "static/css/main.fd5f0087.css",
-    "static/js/main.7b5e7dad.js"
+    "static/css/main.0b2c0cea.css",
+    "static/js/main.4fd85204.js"
   ]
 }
