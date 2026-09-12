@@ -13,6 +13,7 @@ interface HobbyItem {
   title: string;
   description: string;
   badge: string;
+  accent: string;
 }
 
 const HOBBIES_DATA: HobbyItem[] = [
@@ -21,40 +22,45 @@ const HOBBIES_DATA: HobbyItem[] = [
     icon: <MenuBookIcon className="hobby-icon" />,
     emoji: "📚",
     title: "Reading",
-    description: "Finance, business strategy, executive leadership, and self-development.",
-    badge: "Continuous Learning"
+    description: "Finance, business strategy, executive leadership, and personal growth.",
+    badge: "Continuous Learning",
+    accent: "indigo"
   },
   {
     id: "fitness",
     icon: <FitnessCenterIcon className="hobby-icon" />,
     emoji: "🏋️",
-    title: "Fitness & Wellness",
-    description: "Staying active, disciplined workouts, and maintaining a healthy routine.",
-    badge: "Health & Discipline"
+    title: "Fitness",
+    description: "Strength training, disciplined workouts, and maintaining peak energy.",
+    badge: "Health & Discipline",
+    accent: "emerald"
   },
   {
     id: "traveling",
     icon: <FlightTakeoffIcon className="hobby-icon" />,
     emoji: "✈️",
     title: "Traveling",
-    description: "Exploring new destinations, experiencing diverse cultures, and heritage.",
-    badge: "Global Perspective"
+    description: "Exploring new destinations, diverse cultures, and architectural heritage.",
+    badge: "Global Perspective",
+    accent: "cyan"
   },
   {
     id: "music",
     icon: <HeadphonesIcon className="hobby-icon" />,
     emoji: "🎵",
     title: "Music",
-    description: "Listening to acoustic, instrumental, and modern tunes to unwind and focus.",
-    badge: "Recreation & Focus"
+    description: "Instrumental, acoustic, and modern tunes to unwind, focus, and reflect.",
+    badge: "Recreation & Focus",
+    accent: "rose"
   },
   {
     id: "technology",
     icon: <LaptopMacIcon className="hobby-icon" />,
     emoji: "💻",
     title: "Technology",
-    description: "Exploring emerging digital tools, AI trends, and fintech innovations.",
-    badge: "Digital Explorer"
+    description: "Fintech innovations, AI developments, and emerging analytics tools.",
+    badge: "Digital Explorer",
+    accent: "violet"
   }
 ];
 
@@ -62,14 +68,21 @@ function Hobbies() {
   return (
     <div className="hobbies-container" id="hobbies">
       <div className="section-header">
-        <span className="eyebrow-tag">Personal Life</span>
-        <h1>Hobbies & Interests</h1>
-        <p className="subtitle">Beyond numbers and spreadsheets: activities that fuel balance, curiosity, and growth.</p>
+        <div className="hobbies-eyebrow">
+          <span className="pulse-dot"></span>
+          <span>PERSONAL DIMENSION</span>
+        </div>
+        <h1 className="hobbies-title">
+          Hobbies & <span className="highlight-gradient">Interests</span>
+        </h1>
+        <p className="subtitle">
+          Beyond balance sheets: passions and disciplines that fuel energy, curiosity, and high performance.
+        </p>
       </div>
 
       <div className="hobbies-grid">
         {HOBBIES_DATA.map((item) => (
-          <div key={item.id} className="hobby-card">
+          <div key={item.id} className={`hobby-card accent-${item.accent}`}>
             <div className="card-top">
               <div className="icon-wrapper">
                 {item.icon}

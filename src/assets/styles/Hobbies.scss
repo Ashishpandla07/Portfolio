@@ -1,108 +1,150 @@
 .hobbies-container {
   min-height: 100vh;
-  padding: 35px 5% 25px;
+  padding: 24px 4% 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
   width: 100%;
-  max-width: 1160px;
+  max-width: 1240px;
   margin: 0 auto;
 
+  /* Executive Section Header */
   .section-header {
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 
-    .eyebrow-tag {
-      display: inline-block;
-      font-size: 0.74rem;
+    .hobbies-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(99, 102, 241, 0.25);
+      color: #a5b4fc;
+      font-size: 0.72rem;
       font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: #00d2ff;
-      margin-bottom: 6px;
+      letter-spacing: 1.2px;
+      margin-bottom: 8px;
+
+      .pulse-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #38bdf8;
+        box-shadow: 0 0 6px rgba(56, 189, 248, 0.8);
+      }
     }
 
-    h1 {
+    .hobbies-title {
       font-size: 1.75rem;
       font-weight: 800;
       margin: 0 0 4px 0;
       letter-spacing: -0.5px;
-      line-height: 1.1;
+      line-height: 1.15;
       color: #ffffff;
+
+      .highlight-gradient {
+        background: linear-gradient(135deg, #818cf8 0%, #38bdf8 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
 
     .subtitle {
       color: #94a3b8;
-      font-size: 0.95rem;
-      max-width: 640px;
+      font-size: 0.88rem;
+      max-width: 620px;
       margin: 0 auto;
-      line-height: 1.45;
+      line-height: 1.4;
     }
   }
 
+  /* 5-Column Single-Row Desktop Grid */
   .hobbies-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 18px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
     align-items: stretch;
 
     .hobby-card {
       background: rgba(22, 27, 34, 0.75);
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 14px;
-      padding: 20px;
+      padding: 16px 14px 14px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
-      backdrop-filter: blur(8px);
-      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+      transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+
+      /* Top accent strip */
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2.5px;
+        opacity: 0.7;
+        transition: opacity 0.25s ease;
+      }
 
       &:hover {
-        transform: translateY(-3px);
-        border-color: rgba(99, 102, 241, 0.4);
-        box-shadow: 0 10px 24px -4px rgba(0, 0, 0, 0.35);
+        transform: translateY(-4px);
+        box-shadow: 0 12px 28px -4px rgba(0, 0, 0, 0.45);
+
+        &::before {
+          opacity: 1;
+        }
+
+        .icon-wrapper {
+          transform: scale(1.08);
+        }
       }
 
       .card-top {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 14px;
+        margin-bottom: 12px;
 
         .icon-wrapper {
-          width: 42px;
-          height: 42px;
-          border-radius: 10px;
-          background: rgba(99, 102, 241, 0.12);
-          border: 1px solid rgba(139, 92, 246, 0.25);
+          width: 36px;
+          height: 36px;
+          border-radius: 9px;
           display: flex;
           align-items: center;
           justify-content: center;
+          transition: transform 0.25s ease;
 
           .hobby-icon {
-            font-size: 1.25rem;
-            color: #c084fc;
+            font-size: 1.15rem;
           }
         }
 
         .hobby-badge {
-          font-size: 0.70rem;
-          font-weight: 600;
+          font-size: 0.65rem;
+          font-weight: 700;
           text-transform: uppercase;
-          letter-spacing: 0.5px;
-          color: #38bdf8;
-          background: rgba(14, 165, 233, 0.1);
-          border: 1px solid rgba(14, 165, 233, 0.25);
-          padding: 2px 9px;
+          letter-spacing: 0.4px;
+          padding: 3px 8px;
           border-radius: 12px;
+          white-space: nowrap;
         }
       }
 
       .card-body {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
         .hobby-title {
-          font-size: 1.1rem;
+          font-size: 0.98rem;
           font-weight: 700;
           color: #ffffff;
           margin: 0 0 6px 0;
@@ -111,16 +153,52 @@
           gap: 6px;
 
           .emoji-span {
-            font-size: 1.15rem;
+            font-size: 1.05rem;
           }
         }
 
         .hobby-description {
-          font-size: 0.85rem;
+          font-size: 0.78rem;
           color: #94a3b8;
-          line-height: 1.42;
+          line-height: 1.4;
           margin: 0;
         }
+      }
+
+      /* Tailored Color Themes per Hobby */
+      &.accent-indigo {
+        &::before { background: linear-gradient(90deg, #6366f1, #818cf8); }
+        .icon-wrapper { background: rgba(99, 102, 241, 0.14); border: 1px solid rgba(99, 102, 241, 0.28); color: #818cf8; }
+        .hobby-badge { background: rgba(99, 102, 241, 0.12); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.25); }
+        &:hover { border-color: rgba(99, 102, 241, 0.5); box-shadow: 0 12px 28px -4px rgba(99, 102, 241, 0.25); }
+      }
+
+      &.accent-emerald {
+        &::before { background: linear-gradient(90deg, #10b981, #34d399); }
+        .icon-wrapper { background: rgba(16, 185, 129, 0.14); border: 1px solid rgba(16, 185, 129, 0.28); color: #34d399; }
+        .hobby-badge { background: rgba(16, 185, 129, 0.12); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.25); }
+        &:hover { border-color: rgba(16, 185, 129, 0.5); box-shadow: 0 12px 28px -4px rgba(16, 185, 129, 0.25); }
+      }
+
+      &.accent-cyan {
+        &::before { background: linear-gradient(90deg, #0ea5e9, #38bdf8); }
+        .icon-wrapper { background: rgba(14, 165, 233, 0.14); border: 1px solid rgba(14, 165, 233, 0.28); color: #38bdf8; }
+        .hobby-badge { background: rgba(14, 165, 233, 0.12); color: #7dd3fc; border: 1px solid rgba(14, 165, 233, 0.25); }
+        &:hover { border-color: rgba(14, 165, 233, 0.5); box-shadow: 0 12px 28px -4px rgba(14, 165, 233, 0.25); }
+      }
+
+      &.accent-rose {
+        &::before { background: linear-gradient(90deg, #f43f5e, #fb7185); }
+        .icon-wrapper { background: rgba(244, 63, 94, 0.14); border: 1px solid rgba(244, 63, 94, 0.28); color: #fb7185; }
+        .hobby-badge { background: rgba(244, 63, 94, 0.12); color: #fda4af; border: 1px solid rgba(244, 63, 94, 0.25); }
+        &:hover { border-color: rgba(244, 63, 94, 0.5); box-shadow: 0 12px 28px -4px rgba(244, 63, 94, 0.25); }
+      }
+
+      &.accent-violet {
+        &::before { background: linear-gradient(90deg, #a855f7, #c084fc); }
+        .icon-wrapper { background: rgba(168, 85, 247, 0.14); border: 1px solid rgba(168, 85, 247, 0.28); color: #c084fc; }
+        .hobby-badge { background: rgba(168, 85, 247, 0.12); color: #d8b4fe; border: 1px solid rgba(168, 85, 247, 0.25); }
+        &:hover { border-color: rgba(168, 85, 247, 0.5); box-shadow: 0 12px 28px -4px rgba(168, 85, 247, 0.25); }
       }
     }
   }
@@ -130,9 +208,22 @@
 .light-mode {
   .hobbies-container {
     .section-header {
-      h1 {
-        color: #0f172a;
+      .hobbies-eyebrow {
+        background: rgba(99, 102, 241, 0.08);
+        border-color: rgba(99, 102, 241, 0.2);
+        color: #4f46e5;
       }
+
+      .hobbies-title {
+        color: #0f172a;
+
+        .highlight-gradient {
+          background: linear-gradient(135deg, #4f46e5 0%, #0284c7 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+
       .subtitle {
         color: #475569;
       }
@@ -143,28 +234,6 @@
       border: 1px solid rgba(0, 0, 0, 0.08);
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
 
-      &:hover {
-        border-color: rgba(99, 102, 241, 0.35);
-        box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.08);
-      }
-
-      .card-top {
-        .icon-wrapper {
-          background: rgba(99, 102, 241, 0.08);
-          border-color: rgba(99, 102, 241, 0.2);
-
-          .hobby-icon {
-            color: #5000ca;
-          }
-        }
-
-        .hobby-badge {
-          color: #0284c7;
-          background: rgba(14, 165, 233, 0.08);
-          border-color: rgba(14, 165, 233, 0.2);
-        }
-      }
-
       .card-body {
         .hobby-title {
           color: #0f172a;
@@ -174,23 +243,38 @@
           color: #475569;
         }
       }
+
+      &.accent-indigo:hover { box-shadow: 0 8px 24px -4px rgba(99, 102, 241, 0.16); }
+      &.accent-emerald:hover { box-shadow: 0 8px 24px -4px rgba(16, 185, 129, 0.16); }
+      &.accent-cyan:hover { box-shadow: 0 8px 24px -4px rgba(14, 165, 233, 0.16); }
+      &.accent-rose:hover { box-shadow: 0 8px 24px -4px rgba(244, 63, 94, 0.16); }
+      &.accent-violet:hover { box-shadow: 0 8px 24px -4px rgba(168, 85, 247, 0.16); }
     }
   }
 }
 
 /* Responsive adjustments */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
   .hobbies-container {
-    padding: 24px 4% 30px;
+    .hobbies-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hobbies-container {
+    padding: 20px 4% 24px;
     min-height: auto;
 
-    .section-header h1 {
-      font-size: 1.8rem;
+    .section-header .hobbies-title {
+      font-size: 1.5rem;
     }
 
     .hobbies-grid {
       grid-template-columns: 1fr;
-      gap: 12px;
+      gap: 10px;
     }
   }
 }
