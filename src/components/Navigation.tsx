@@ -8,6 +8,7 @@ import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import SchoolIcon from '@mui/icons-material/School';
 import InterestsIcon from '@mui/icons-material/Interests';
 import EmailIcon from '@mui/icons-material/Email';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import PhoneIcon from '@mui/icons-material/Phone';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
@@ -247,6 +248,16 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
         >
           <WhatsAppIcon className="action-pill-icon" />
           <span>WhatsApp</span>
+        </a>
+        <a
+          href="https://linkedin.com/in/ipandla"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="action-pill-item linkedin"
+          aria-label="LinkedIn Profile"
+        >
+          <LinkedInIcon className="action-pill-icon" />
+          <span>LinkedIn</span>
         </a>
         <a href="mailto:ashishpandla07@gmail.com" className="action-pill-item email" aria-label="Email Ashish Pandla">
           <EmailIcon className="action-pill-icon" />
