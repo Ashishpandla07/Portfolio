@@ -205,12 +205,19 @@
     }
   }
 
-@media (max-width: 640px) {
+@media screen and (max-width: 768px) {
+  .hobbies-container {
+    min-height: auto;
+    padding: 30px 4% 24px;
+  }
+}
+
+@media screen and (max-width: 640px) {
   .hobbies-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 12px;
-    padding: 0 8px;
+    padding: 0;
     overflow: visible;
   }
   .hobbies-grid .hobby-card {
