@@ -2,3 +2,8 @@ User-agent: *
 Allow: /
 
 Sitemap: https://ashishpandla07.github.io/Portfolio/sitemap.xml
+
+# AI & LLM Discoverability
+# https://llmstxt.org/
+# https://ashishpandla07.github.io/Portfolio/llms.txt
+
