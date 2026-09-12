@@ -249,6 +249,14 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
+
+    .channel-address {
+      font-style: normal;
+      font-size: 0.76rem;
+      font-weight: 500;
+      color: #e2e8f0;
+      line-height: 1.35;
+    }
   }
 
   .channel-actions {

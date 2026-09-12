@@ -33,9 +33,19 @@ Ashish Pandla is a qualified Chartered Accountant (ICAI, 2018) with a strong tra
 - **Master of Commerce (M.Com):** University of Rajasthan, 2016 (Financial Management & Strategic Cost Accounting).
 - **Bachelor of Commerce (B.Com):** University of Rajasthan, 2014.
 
+## Physical Address & Primary Office
+
+- **Registered Location:** DLF Cyber City, Sector 24 / 25A, Gurugram, Haryana 122002, India
+
+## Editorial Policy & Disclaimers (YMYL)
+
+- [Editorial Policy](https://ashishpandla07.github.io/Portfolio/editorial-policy.html): Professional standards, data accuracy, and review policies.
+- [Financial Disclaimers](https://ashishpandla07.github.io/Portfolio/editorial-policy.html#disclaimers): Formal YMYL non-advisory disclaimer for recruitment and portfolio evaluation.
+
 ## Contact & Links
 
 - [Website](https://ashishpandla07.github.io/Portfolio/): Official executive portfolio
 - [LinkedIn](https://linkedin.com/in/ipandla): Professional profile
 - [Resume PDF](https://ashishpandla07.github.io/Portfolio/resume.pdf): Official curriculum vitae
 - [Full LLM Context](https://ashishpandla07.github.io/Portfolio/llms-full.txt): Complete detailed text version
+- [Editorial Policy](https://ashishpandla07.github.io/Portfolio/editorial-policy.html): Editorial standards & disclaimers

@@ -204,14 +204,16 @@ function Contact() {
                   </div>
                 </a>
 
-                {/* Location Card */}
+                {/* Physical Address / Location Card */}
                 <div className="channel-card location-card">
                   <div className="channel-icon-box">
                     <LocationOnIcon className="channel-icon" />
                   </div>
                   <div className="channel-details">
-                    <span className="channel-label">Base Location</span>
-                    <span className="channel-value">Gurugram</span>
+                    <span className="channel-label">Physical Office &amp; Base Location</span>
+                    <address className="channel-address">
+                      DLF Cyber City, Sector 24 / 25A, Gurugram, Haryana 122002, India
+                    </address>
                   </div>
                   <div className="channel-actions">
                     <span className="location-pill">Open to Hybrid / Global</span>
