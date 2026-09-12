@@ -161,14 +161,17 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
             sx={{
               minWidth: '44px',
               minHeight: '44px',
-              padding: '6px',
-              color: mode === 'dark' ? '#ffffff' : '#0f172a',
+              padding: '6px 8px',
+              color: mode === 'dark' ? '#ffffff !important' : '#0f172a !important',
+              backgroundColor: mode === 'dark' ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.05)',
+              border: mode === 'dark' ? '1px solid rgba(255, 255, 255, 0.16)' : '1px solid rgba(0, 0, 0, 0.1)',
+              borderRadius: '8px',
               '&:hover': {
-                backgroundColor: mode === 'dark' ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.06)',
+                backgroundColor: mode === 'dark' ? 'rgba(255, 255, 255, 0.15)' : 'rgba(0, 0, 0, 0.09)',
               },
             }}
           >
-            <MenuIcon sx={{ fontSize: '1.75rem', color: mode === 'dark' ? '#ffffff' : '#0f172a' }} />
+            <MenuIcon sx={{ fontSize: '1.85rem', color: mode === 'dark' ? '#ffffff !important' : '#0f172a !important' }} />
           </IconButton>
           <span
             className="mobile-bar-title"
@@ -213,7 +216,7 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
         onClose={handleDrawerToggle}
         ModalProps={{ keepMounted: true }}
         sx={{
-          display: { xs: 'block', md: 'none' },
+          display: { xs: 'block', lg: 'none' },
           '& .MuiDrawer-paper': {
             boxSizing: 'border-box',
             width: 270,

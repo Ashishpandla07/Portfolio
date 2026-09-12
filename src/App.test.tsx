@@ -15,3 +15,10 @@ test('renders mobile profile photo in Main component', () => {
   expect(photo).toBeInTheDocument();
   expect(photo.closest('.mobile-profile-photo')).toBeInTheDocument();
 });
+
+test('renders sections navigator button with accessible label', () => {
+  render(<App />);
+  const navigatorBtn = screen.getByLabelText(/open sections navigator/i);
+  expect(navigatorBtn).toBeInTheDocument();
+});
+
