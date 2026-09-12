@@ -115,9 +115,9 @@ function Contact() {
               <span className="pulse-indicator"></span>
               <span>CONNECT & COLLABORATE</span>
             </div>
-            <h1 className="contact-title">
+            <h2 className="contact-title">
               Get In <span className="highlight-gradient">Touch</span>
-            </h1>
+            </h2>
           </div>
 
           <div className="contact-grid">

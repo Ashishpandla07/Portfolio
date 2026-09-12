@@ -8,7 +8,7 @@ function Education() {
   return (
     <div className="education-container" id="credentials">
       <div className="section-header">
-        <h1>Education & Credentials</h1>
+        <h2>Education & Credentials</h2>
       </div>
       <div className="education-grid">
         {/* Entry 1: Chartered Accountant Qualification */}
@@ -26,7 +26,7 @@ function Education() {
               <img src={icaiLogo} alt="The Institute of Chartered Accountants of India" className="institution-logo" />
             </div>
             <div className="card-title-group">
-              <h2>Chartered Accountant (CA)</h2>
+              <h3>Chartered Accountant (CA)</h3>
               <p className="institution-name">The Institute of Chartered Accountants of India (ICAI)</p>
             </div>
           </div>
@@ -68,7 +68,7 @@ function Education() {
               <img src={rajasthanLogo} alt="University of Rajasthan" className="institution-logo" />
             </div>
             <div className="card-title-group">
-              <h2>Master's & Bachelor's Degrees</h2>
+              <h3>Master's & Bachelor's Degrees</h3>
               <p className="institution-name">University of Rajasthan</p>
             </div>
           </div>
@@ -77,7 +77,7 @@ function Education() {
             {/* Master's Degree Sub-entry */}
             <div className="degree-sub-entry">
               <div className="sub-entry-header">
-                <h3>Master of Commerce (M.Com)</h3>
+                <h4>Master of Commerce (M.Com)</h4>
                 <span className="sub-year">2016</span>
               </div>
               <p className="sub-institution">University of Rajasthan</p>
@@ -89,7 +89,7 @@ function Education() {
             {/* Bachelor's Degree Sub-entry */}
             <div className="degree-sub-entry">
               <div className="sub-entry-header">
-                <h3>Bachelor of Commerce (B.Com)</h3>
+                <h4>Bachelor of Commerce (B.Com)</h4>
                 <span className="sub-year">2014</span>
               </div>
               <p className="sub-institution">University of Rajasthan</p>

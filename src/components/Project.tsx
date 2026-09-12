@@ -11,7 +11,7 @@ function Project() {
     return (
         <div className="projects-container" id="projects">
             <div className="section-header">
-                <h1>Key Achievements</h1>
+                <h2>Key Achievements</h2>
             </div>
             <div className="projects-grid">
                 {/* 1. Cost Optimization */}
@@ -20,7 +20,7 @@ function Project() {
                         <img src={costOptimization} className="zoom" alt="Cost Optimization" />
                     </div>
                     <div className="card-content">
-                        <h2>Cost Optimization</h2>
+                        <h3>Cost Optimization</h3>
                         <ul className="achievement-list">
                             <li>Led strategic cost-control initiatives across multiple cost centers to identify operational leakages.</li>
                             <li>Delivered <strong>₹50 lakhs</strong> in annual savings through targeted cost optimization initiatives.</li>
@@ -35,7 +35,7 @@ function Project() {
                         <img src={financialGrowth} className="zoom" alt="Profitability Turnaround" />
                     </div>
                     <div className="card-content">
-                        <h2>Financial Turnaround & Profitability</h2>
+                        <h3>Financial Turnaround & Profitability</h3>
                         <ul className="achievement-list">
                             <li>Led turnaround of <strong>~75% profit centers</strong> to profitability via margin improvement and cost optimization.</li>
                             <li>Improved operational productivity by <strong>20%</strong> through corrective actions.</li>
@@ -50,7 +50,7 @@ function Project() {
                         <img src={financeDashboard} className="zoom" alt="MIS Dashboards" />
                     </div>
                     <div className="card-content">
-                        <h2>Financial Modeling & MIS Dashboards</h2>
+                        <h3>Financial Modeling & MIS Dashboards</h3>
                         <ul className="achievement-list">
                             <li><strong>Dynamic Dashboards:</strong> Built comprehensive MIS trackers (Budget vs. Actual, Sales Rankings, KPIs Report, ROP Tracker, and Volume Analysis).</li>
                             <li><strong>Business Insights:</strong> Delivered actionable financial models to enable real-time, data-driven decision-making for senior leadership.</li>
@@ -64,7 +64,7 @@ function Project() {
                         <img src={auditCompliance} className="zoom" alt="Audit & Compliance" />
                     </div>
                     <div className="card-content">
-                        <h2>Capital Transactions & Audit Management</h2>
+                        <h3>Capital Transactions & Audit Management</h3>
                         <ul className="achievement-list">
                             <li><strong>₹80 Cr ESOP Buyback:</strong> Managed complete financial execution and capital structuring for share buyback at Cars24.</li>
                             <li><strong>Audit Management:</strong> Spearheaded Statutory, Internal, Tax, and ICFR audits with Big-4 and leading global firms (EY and Grant Thornton).</li>
@@ -79,7 +79,7 @@ function Project() {
                         <img src={businessPartnering} className="zoom" alt="Business Partnering" />
                     </div>
                     <div className="card-content">
-                        <h2>International Expansion & Partnering</h2>
+                        <h3>International Expansion & Partnering</h3>
                         <ul className="achievement-list">
                             <li><strong>Entity & Process Setup:</strong> Managed global banking setups, international corporate structuring, local compliance, and end-to-end finance workflows for overseas entities.</li>
                             <li><strong>Business Partnering:</strong> Partnered directly with business heads to drive cross-functional efficiency and growth.</li>
@@ -94,7 +94,7 @@ function Project() {
                         <img src={achievementAward} className="zoom" alt="Awards and Recognition" />
                     </div>
                     <div className="card-content">
-                        <h2>Awards & Recognition</h2>
+                        <h3>Awards & Recognition</h3>
                         <ul className="achievement-list">
                             <li><strong>Employee of the Year 2021</strong> at Cars24.</li>
                             <li><strong>Detail-Oriented Awardee 2022</strong> at Cars24.</li>

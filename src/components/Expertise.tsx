@@ -44,7 +44,7 @@ function Expertise() {
     return (
         <div className="container" id="expertise">
             <div className="skills-container">
-                <h1 className="skills-title">Expertise</h1>
+                <h2 className="skills-title">Expertise</h2>
                 <div className="skills-grid">
                     <div className="skill">
                         <div className="skill-icon-wrapper">

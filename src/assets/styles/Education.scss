@@ -12,7 +12,7 @@
   .section-header {
     margin-bottom: 8px;
 
-    h1 {
+    h1, h2 {
       font-size: 1.45rem;
       font-weight: 800;
       margin: 0;
@@ -115,7 +115,7 @@
       }
 
       .card-title-group {
-        h2 {
+        h2, h3 {
           font-size: 1.04rem;
           margin: 0 0 1px 0;
           font-weight: 700;
@@ -191,7 +191,7 @@
           align-items: center;
           margin-bottom: 1px;
 
-          h3 {
+          h3, h4 {
             font-size: 0.89rem;
             margin: 0;
             color: #ffffff;

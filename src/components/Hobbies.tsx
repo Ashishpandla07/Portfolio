@@ -68,9 +68,9 @@ function Hobbies() {
   return (
     <div className="hobbies-container" id="hobbies">
       <div className="section-header">
-        <h1 className="hobbies-title">
+        <h2 className="hobbies-title">
           Hobbies & <span className="highlight-gradient">Interests</span>
-        </h1>
+        </h2>
         <p className="subtitle">
           Beyond balance sheets: passions and disciplines that fuel energy, curiosity, and high performance.
         </p>

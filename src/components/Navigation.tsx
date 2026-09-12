@@ -55,7 +55,7 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
         <div className="avatar-wrapper">
           <img src={profileImg} alt="CA Ashish Pandla" />
         </div>
-        <h2 className="sidebar-name">CA Ashish Pandla</h2>
+        <div className="sidebar-name">CA Ashish Pandla</div>
         <p className="sidebar-role">Senior Finance Leader</p>
       </div>
 

@@ -13,7 +13,7 @@ function Main() {
 
           <div className="about-statement">
             <p className="statement-line lead">
-              Results-driven Finance Leader with 8 years of experience across FP&A, financial controlling, and strategic business partnering at CARS24 and cargo-partner. Expertise in budgeting, forecasting, profitability analysis, financial reporting, cost optimization, and regulatory compliance. Proven record of driving profitability improvement, cost efficiency, and stronger financial control. Trusted partner to senior leadership, translating financial insights into strategic decisions and sustainable business growth.
+              Senior Finance Leader and Chartered Accountant (CA) with over 8 years of cross-functional experience. Leading FP&amp;A, financial controlling, and commercial strategy across high-growth environments including CARS24 and cargo-partner. Specializing in annual operating plans, rolling forecasts, unit economics, and audit governance. Partnering with executive leadership to turn financial data into decisive business growth.
             </p>
           </div>
 
