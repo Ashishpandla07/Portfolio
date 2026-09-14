@@ -30,7 +30,7 @@ function Main() {
 
           <div className="about-statement">
             <p className="statement-line lead">
-              Senior Finance Leader and Chartered Accountant with over 8 years of cross-functional experience. Leading FP&amp;A, financial controlling, and commercial strategy across high-growth environments including CARS24 and cargo-partner. Specializing in annual operating plans, rolling forecasts, unit economics, and audit governance. Partnering with executive leadership to turn financial data into decisive business growth.
+              Chartered Accountant and Senior Finance Leader with over 8 years of cross-functional experience across high-growth tech (CARS24) and global MNC freight forwarding (cargo-partner). Specializing in annual operating plans, rolling forecasts, unit economics, and audit governance. Partnering with executive leadership to turn financial data into decisive business growth.
             </p>
           </div>
 
