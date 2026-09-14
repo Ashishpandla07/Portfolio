@@ -88,7 +88,7 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
               />
             </div>
             <div className="sidebar-name">CA Ashish Pandla</div>
-            <p className="sidebar-role">Senior Finance Leader</p>
+            <p className="sidebar-role">Head of Finance | Financial Controller</p>
           </div>
         )}
 

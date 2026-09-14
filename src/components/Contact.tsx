@@ -376,7 +376,7 @@ function Contact() {
               </div>
               <div className="contact-item">
                 <span className="contact-label">Availability:</span>
-                <span className="contact-val">Senior Finance Leader / Controller Roles</span>
+                <span className="contact-val">Head of Finance / Financial Controller Roles</span>
               </div>
             </div>
           </div>
