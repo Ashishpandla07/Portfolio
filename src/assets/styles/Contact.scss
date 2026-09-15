@@ -41,7 +41,7 @@
     background: rgba(99, 102, 241, 0.1);
     border: 1px solid rgba(99, 102, 241, 0.25);
     color: #a5b4fc;
-    font-size: 0.7rem;
+    font-size: 0.74rem;
     font-weight: 700;
     letter-spacing: 1px;
     margin-bottom: 6px;
@@ -57,7 +57,7 @@
   }
 
   .contact-title {
-    font-size: 1.45rem;
+    font-size: 1.52rem;
     font-weight: 800;
     margin: 0 0 4px 0;
     letter-spacing: -0.5px;
@@ -72,7 +72,7 @@
   }
 
   .contact-subtitle {
-    font-size: 0.82rem;
+    font-size: 0.86rem;
     line-height: 1.35;
     color: #94a3b8;
     max-width: 750px;
@@ -145,7 +145,7 @@
     border: 1px solid rgba(16, 185, 129, 0.3);
     padding: 2px 8px;
     border-radius: 10px;
-    font-size: 0.72rem;
+    font-size: 0.76rem;
     font-weight: 600;
     color: #34d399;
     margin-bottom: 4px;
@@ -159,7 +159,7 @@
   }
 
   .status-desc {
-    font-size: 0.8rem;
+    font-size: 0.84rem;
     line-height: 1.35;
     color: #cbd5e1;
     margin: 2px 0 6px 0;
@@ -174,11 +174,11 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    font-size: 0.72rem;
+    font-size: 0.76rem;
     color: #94a3b8;
 
     .response-icon {
-      font-size: 0.8rem;
+      font-size: 0.84rem;
     }
   }
 }
@@ -221,7 +221,7 @@
 
     .channel-icon {
       color: #818cf8;
-      font-size: 1.05rem;
+      font-size: 1.1rem;
     }
   }
 
@@ -232,7 +232,7 @@
     min-width: 0;
 
     .channel-label {
-      font-size: 0.65rem;
+      font-size: 0.68rem;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -241,7 +241,7 @@
     }
 
     .channel-value {
-      font-size: 0.82rem;
+      font-size: 0.86rem;
       font-weight: 600;
       color: #f1f5f9;
       text-decoration: none;
@@ -260,7 +260,7 @@
       align-items: center;
       gap: 5px;
       padding: 5px 10px;
-      font-size: 0.75rem;
+      font-size: 0.79rem;
       font-weight: 600;
       color: #cbd5e1;
       background: rgba(255, 255, 255, 0.06);
@@ -282,7 +282,7 @@
       }
 
       svg {
-        font-size: 0.88rem;
+        font-size: 0.92rem;
       }
     }
 
@@ -294,7 +294,7 @@
     }
 
     .action-badge {
-      font-size: 0.72rem;
+      font-size: 0.76rem;
       font-weight: 600;
       padding: 4px 8px;
       border-radius: 6px;
@@ -314,7 +314,7 @@
         transition: all 0.2s ease;
 
         .whatsapp-icon {
-          font-size: 0.95rem;
+          font-size: 1rem;
           color: #25d366;
         }
 
@@ -333,7 +333,7 @@
     }
 
     .location-pill {
-      font-size: 0.72rem;
+      font-size: 0.76rem;
       font-weight: 600;
       padding: 4px 8px;
       border-radius: 6px;
@@ -380,14 +380,14 @@
     margin-bottom: 8px;
 
     h3 {
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       font-weight: 700;
       color: #ffffff;
       margin: 0 0 2px 0;
     }
 
     p {
-      font-size: 0.78rem;
+      font-size: 0.82rem;
       color: #94a3b8;
       margin: 0;
     }
@@ -451,7 +451,7 @@
 
   .MuiInputBase-input {
     color: #f8fafc !important;
-    font-size: 0.84rem;
+    font-size: 0.88rem;
     font-family: inherit;
     padding: 8px 12px !important;
 
@@ -467,7 +467,7 @@
 
   .MuiInputLabel-root {
     color: #94a3b8 !important;
-    font-size: 0.8rem;
+    font-size: 0.84rem;
 
     &.Mui-focused {
       color: #a5b4fc !important;
@@ -479,7 +479,7 @@
   }
 
   .MuiFormHelperText-root {
-    font-size: 0.7rem;
+    font-size: 0.74rem;
     margin-top: 2px;
     margin-left: 4px;
   }
@@ -493,7 +493,7 @@
       background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%) !important;
       color: #ffffff !important;
       font-weight: 700 !important;
-      font-size: 0.84rem !important;
+      font-size: 0.88rem !important;
       text-transform: none !important;
       padding: 7px 20px !important;
       border-radius: 8px !important;
@@ -538,19 +538,19 @@
 
     .success-icon {
       color: #10b981;
-      font-size: 1.8rem;
+      font-size: 1.89rem;
     }
   }
 
   h4 {
-    font-size: 1.2rem;
+    font-size: 1.26rem;
     font-weight: 700;
     color: #ffffff;
     margin: 0 0 8px 0;
   }
 
   p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: #cbd5e1;
     line-height: 1.5;
     max-width: 420px;
@@ -567,7 +567,7 @@
     color: #e2e8f0;
     padding: 8px 18px;
     border-radius: 8px;
-    font-size: 0.85rem;
+    font-size: 0.89rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -785,7 +785,7 @@
 
   .contact-header {
     .contact-title {
-      font-size: 1.95rem;
+      font-size: 2.05rem;
     }
   }
 

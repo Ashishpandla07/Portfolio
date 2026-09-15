@@ -15,7 +15,7 @@
     margin: 0 auto;
 
     .skills-title {
-        font-size: 1.45rem;
+        font-size: 1.52rem;
         font-weight: 800;
         margin: 0 0 10px 0;
         letter-spacing: -0.5px;
@@ -61,29 +61,29 @@
 
         svg {
             color: #818cf8;
-            font-size: 0.95rem;
+            font-size: 1rem;
         }
     }
 
     /* Standardized title baseline starting from top so all titles and descriptions align */
     h3 {
-        font-size: 0.95rem;
+        font-size: 1rem;
         font-weight: 700;
         margin: 0 0 5px 0;
         color: #ffffff;
         line-height: 1.25;
-        min-height: 2.45rem;
+        min-height: 2.58rem;
         display: flex;
         align-items: flex-start;
     }
 
     /* Standardized description height so divider lines align at the exact same vertical pixel */
     p {
-        font-size: 0.77rem;
+        font-size: 0.81rem;
         line-height: 1.4;
         color: #cbd5e1;
         margin: 0 0 8px 0;
-        min-height: 3.85rem;
+        min-height: 4.05rem;
         display: flex;
         align-items: flex-start;
     }
@@ -100,7 +100,7 @@
 
     .chip-title {
         color: #94a3b8;
-        font-size: 0.67rem;
+        font-size: 0.7rem;
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.5px;
@@ -156,7 +156,7 @@
     }
 
     .chip-text {
-        font-size: 0.67rem;
+        font-size: 0.7rem;
         font-weight: 600;
         color: #f1f5f9;
         white-space: nowrap;
