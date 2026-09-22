@@ -44,30 +44,36 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
 
   useEffect(() => {
     const sectionIds = ['about', 'expertise', 'history', 'projects', 'credentials', 'hobbies', 'contact'];
+    let ticking = false;
 
     const handleScroll = () => {
-      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-      if (totalHeight > 0) {
-        const currentProgress = (window.scrollY / totalHeight) * 100;
+      const scrollY = window.scrollY || window.pageYOffset;
+      const windowHeight = window.innerHeight;
+      const docHeight = document.documentElement.scrollHeight;
+      const totalScrollable = docHeight - windowHeight;
+
+      if (totalScrollable > 0) {
+        const currentProgress = (scrollY / totalScrollable) * 100;
         setScrollProgress(Math.min(100, Math.max(0, currentProgress)));
       }
-      setShowScrollTop(window.scrollY > 320);
+      setShowScrollTop(scrollY > 300);
 
-      // If at bottom of page, highlight the last section
-      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 60) {
+      // If reached near bottom of page, highlight the last section (contact)
+      if (windowHeight + scrollY >= docHeight - 80) {
         setActiveSection('contact');
         return;
       }
 
-      // ScrollSpy: find section currently in active viewport zone
-      const viewportTrigger = window.scrollY + window.innerHeight * 0.35;
+      // ScrollSpy: Calculate section positions relative to viewport trigger line
+      const triggerLine = scrollY + windowHeight * 0.35;
       let current = 'about';
 
       for (const id of sectionIds) {
         const el = document.getElementById(id);
         if (el) {
-          const top = el.offsetTop;
-          if (viewportTrigger >= top) {
+          const rect = el.getBoundingClientRect();
+          const elementTop = rect.top + scrollY;
+          if (triggerLine >= elementTop) {
             current = id;
           }
         }
@@ -75,9 +81,48 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
       setActiveSection(current);
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
     handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    // IntersectionObserver fallback & enhancement
+    const observerCallback: IntersectionObserverCallback = (entries) => {
+      const visibleEntries = entries.filter((e) => e.isIntersecting);
+      if (visibleEntries.length > 0) {
+        // Find most prominent entry in viewport
+        visibleEntries.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        const targetId = visibleEntries[0].target.id;
+        const scrollY = window.scrollY || window.pageYOffset;
+        const totalScrollable = document.documentElement.scrollHeight - window.innerHeight;
+        if (scrollY < totalScrollable - 80) {
+          setActiveSection(targetId);
+        }
+      }
+    };
+
+    const observer = new IntersectionObserver(observerCallback, {
+      rootMargin: '-20% 0px -40% 0px',
+      threshold: [0.1, 0.3, 0.6]
+    });
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      observer.disconnect();
+    };
   }, []);
 
   const handleDrawerToggle = () => {
@@ -85,6 +130,7 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
   };
 
   const scrollToSection = (targetId: string) => {
+    setActiveSection(targetId);
     const el = document.getElementById(targetId);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -146,7 +192,6 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
           </a>
         </nav>
 
-
         {/* Theme Toggle Footer */}
         <div className="sidebar-footer">
           <button
@@ -176,6 +221,26 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
     <>
       {/* Desktop Fixed Left Sidebar */}
       {renderSidebarContent(false)}
+
+      {/* Desktop Floating Right-Hand Slide Navigation Indicators */}
+      <nav className="desktop-slide-indicators" aria-label="Slide section navigation">
+        <div className="indicators-track" />
+        {navItems.map((item) => {
+          const isActive = activeSection === item.target;
+          return (
+            <button
+              key={item.target}
+              className={`slide-dot-btn ${isActive ? 'active' : ''}`}
+              onClick={() => scrollToSection(item.target)}
+              aria-label={`Scroll to ${item.label}`}
+              aria-current={isActive ? 'step' : undefined}
+            >
+              <span className="slide-dot-core" />
+              <span className="slide-dot-tooltip">{item.label}</span>
+            </button>
+          );
+        })}
+      </nav>
 
       {/* Mobile Sticky Top Header */}
       <header className="mobile-top-bar">

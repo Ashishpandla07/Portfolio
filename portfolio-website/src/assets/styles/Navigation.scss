@@ -6,11 +6,12 @@
   top: 0;
   left: 0;
   bottom: 0;
-  width: 250px;
-  max-width: 250px;
+  width: var(--sidebar-width, 250px);
+  max-width: var(--sidebar-width, 250px);
   height: 100vh;
-  background-color: #0e131f;
-  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  height: 100dvh;
+  background-color: var(--bg-secondary, #0e131f);
+  border-right: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -31,7 +32,7 @@
 
   .sidebar-header {
     flex-shrink: 0;
-    padding: 14px 16px 10px;
+    padding: clamp(10px, 2vh, 16px) 16px clamp(8px, 1.5vh, 12px);
     text-align: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 
@@ -41,8 +42,8 @@
       margin-bottom: 8px;
 
       img {
-        width: 144px;
-        height: 144px;
+        width: clamp(100px, 11vw, 140px);
+        height: clamp(100px, 11vw, 140px);
         border-radius: 50%;
         object-fit: cover;
         object-position: top center;
@@ -59,7 +60,7 @@
 
     .sidebar-name {
       margin: 0;
-      font-size: 1.02rem;
+      font-size: clamp(0.95rem, 1.1vw, 1.05rem);
       font-weight: 700;
       color: #ffffff;
       letter-spacing: -0.2px;
@@ -68,7 +69,7 @@
 
     .sidebar-role {
       margin: 2px 0 0;
-      font-size: 0.74rem;
+      font-size: clamp(0.7rem, 0.8vw, 0.76rem);
       color: #94a3b8;
       font-weight: 500;
       line-height: 1.2;
@@ -76,24 +77,24 @@
   }
 
   .sidebar-menu {
-    flex: 0 0 auto;
-    padding: 6px 10px 2px;
+    flex: 1 1 auto;
+    padding: clamp(4px, 1vh, 8px) 10px 4px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 2px;
+    gap: clamp(2px, 0.5vh, 4px);
 
     .nav-link-btn {
       display: flex;
       align-items: center;
       gap: 10px;
       width: 100%;
-      padding: 6px 12px;
+      padding: clamp(5px, 1vh, 8px) 12px;
       border-radius: 8px;
       background: transparent;
       border: none;
       color: #94a3b8;
-      font-size: 1.02rem; /* reduced size for navigation labels */
+      font-size: clamp(0.85rem, 0.95vw, 0.98rem);
       font-weight: 600;
       font-family: "Lato", sans-serif;
       text-align: left;
@@ -157,8 +158,8 @@
 
   .sidebar-footer {
     flex-shrink: 0;
-    margin-top: 6px;
-    padding: 6px 10px 10px;
+    margin-top: auto;
+    padding: 8px 10px clamp(8px, 1.5vh, 14px);
     border-top: 1px solid rgba(255, 255, 255, 0.06);
 
     .theme-toggle-btn {
@@ -167,12 +168,12 @@
       justify-content: center;
       gap: 8px;
       width: 100%;
-      padding: 6px 12px;
+      padding: clamp(6px, 1vh, 8px) 12px;
       border-radius: 7px;
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(255, 255, 255, 0.1);
       color: #94a3b8;
-      font-size: 0.85rem; /* reduced size for theme toggle */
+      font-size: 0.84rem;
       font-weight: 600;
       cursor: pointer;
       transition: all 0.2s ease;
@@ -185,12 +186,154 @@
   }
 }
 
+/* ==========================================================================
+   Desktop Right-Hand Side Floating Slide Indicators Dock
+   ========================================================================== */
+.desktop-slide-indicators {
+  position: fixed;
+  right: clamp(14px, 1.8vw, 24px);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 950;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 6px;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  .indicators-track {
+    position: absolute;
+    top: 18px;
+    bottom: 18px;
+    left: 50%;
+    width: 2px;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.08);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .slide-dot-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+    outline: none;
+    transition: transform 0.25s ease;
+
+    .slide-dot-core {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(148, 163, 184, 0.45);
+      border: 1.5px solid rgba(255, 255, 255, 0.15);
+      transition: all 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .slide-dot-tooltip {
+      position: absolute;
+      right: calc(100% + 12px);
+      top: 50%;
+      transform: translateY(-50%) translateX(6px);
+      background: rgba(14, 19, 31, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      color: #ffffff;
+      font-size: 0.74rem;
+      font-weight: 700;
+      white-space: nowrap;
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      letter-spacing: 0.3px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        border-width: 4px;
+        border-style: solid;
+        border-color: transparent transparent transparent rgba(14, 19, 31, 0.92);
+      }
+    }
+
+    &:hover {
+      transform: scale(1.15);
+
+      .slide-dot-core {
+        background: #a855f7;
+        border-color: #c084fc;
+        box-shadow: 0 0 10px rgba(168, 85, 247, 0.6);
+      }
+
+      .slide-dot-tooltip {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+      }
+    }
+
+    &.active {
+      transform: scale(1.1);
+
+      .slide-dot-core {
+        width: 10px;
+        height: 18px;
+        border-radius: 8px;
+        background: linear-gradient(180deg, #a855f7 0%, #5000ca 100%);
+        border-color: #ffffff;
+        box-shadow: 0 0 12px rgba(168, 85, 247, 0.8), 0 0 24px rgba(80, 0, 202, 0.4);
+      }
+
+      .slide-dot-tooltip {
+        opacity: 0;
+      }
+
+      &:hover .slide-dot-tooltip {
+        opacity: 1;
+      }
+    }
+
+    &:focus-visible {
+      outline: 2px solid #a855f7;
+      outline-offset: 2px;
+    }
+  }
+}
+
 /* Mobile-only interactive elements: Strictly hidden on desktop web version (> 992px) */
 @media screen and (min-width: 993px) {
   .mobile-top-bar,
   .mobile-bottom-bar,
   .mobile-scroll-top-btn,
   .mobile-scroll-progress-bar {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .desktop-slide-indicators {
     display: none !important;
   }
 }
@@ -327,6 +470,50 @@
 
 /* Light Mode Overrides for Navigation */
 .light-mode {
+  .desktop-slide-indicators {
+    background: rgba(255, 255, 255, 0.88);
+    border-color: rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+
+    .indicators-track {
+      background: rgba(0, 0, 0, 0.08);
+    }
+
+    .slide-dot-btn {
+      .slide-dot-core {
+        background: rgba(100, 116, 139, 0.35);
+        border-color: rgba(0, 0, 0, 0.1);
+      }
+
+      .slide-dot-tooltip {
+        background: rgba(255, 255, 255, 0.98);
+        color: #0f172a;
+        border-color: rgba(0, 0, 0, 0.12);
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.14);
+
+        &::after {
+          border-color: transparent transparent transparent rgba(255, 255, 255, 0.98);
+        }
+      }
+
+      &:hover {
+        .slide-dot-core {
+          background: #5000ca;
+          border-color: #6e00ff;
+          box-shadow: 0 0 10px rgba(80, 0, 202, 0.45);
+        }
+      }
+
+      &.active {
+        .slide-dot-core {
+          background: linear-gradient(180deg, #6e00ff 0%, #5000ca 100%);
+          border-color: #ffffff;
+          box-shadow: 0 0 12px rgba(80, 0, 202, 0.5);
+        }
+      }
+    }
+  }
+
   .desktop-sidebar {
     background-color: #ffffff;
     border-right: 1px solid #e2e8f0;

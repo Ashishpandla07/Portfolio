@@ -20,6 +20,9 @@ function App() {
             if (savedTheme === 'light' || savedTheme === 'dark') {
                 return savedTheme;
             }
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                return 'dark';
+            }
             if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
                 return 'light';
             }
@@ -40,22 +43,31 @@ function App() {
     // Listen to OS system color scheme changes if user hasn't explicitly set a preference
     useEffect(() => {
         if (typeof window === 'undefined' || !window.matchMedia) return;
-        const mediaQuery = window.matchMedia('(prefers-color-scheme: light)');
+        const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        
         const handleChange = (e: MediaQueryListEvent) => {
             const hasUserPreference = localStorage.getItem('portfolio_theme');
             if (!hasUserPreference) {
-                setMode(e.matches ? 'light' : 'dark');
+                setMode(e.matches ? 'dark' : 'light');
             }
         };
 
-        if (mediaQuery.addEventListener) {
-            mediaQuery.addEventListener('change', handleChange);
-            return () => mediaQuery.removeEventListener('change', handleChange);
-        } else if ((mediaQuery as any).addListener) {
-            (mediaQuery as any).addListener(handleChange);
-            return () => (mediaQuery as any).removeListener(handleChange);
+        if (darkModeQuery.addEventListener) {
+            darkModeQuery.addEventListener('change', handleChange);
+            return () => darkModeQuery.removeEventListener('change', handleChange);
+        } else if ((darkModeQuery as any).addListener) {
+            (darkModeQuery as any).addListener(handleChange);
+            return () => (darkModeQuery as any).removeListener(handleChange);
         }
     }, []);
+
+    // Sync theme attribute to documentElement for global CSS variables
+    useEffect(() => {
+        if (typeof document !== 'undefined') {
+            document.documentElement.setAttribute('data-theme', mode);
+            document.documentElement.style.colorScheme = mode;
+        }
+    }, [mode]);
 
     useEffect(() => {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
