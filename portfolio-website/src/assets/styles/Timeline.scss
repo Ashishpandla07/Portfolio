@@ -1,0 +1,268 @@
+#history {
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: clamp(20px, 3.5vh, 40px) clamp(16px, 3.5vw, 5%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+
+  .linkedin-experience-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+
+    .section-header {
+      margin-bottom: 10px;
+
+      h2 {
+        font-size: clamp(1.3rem, 1.8vw, 1.52rem);
+        font-weight: 800;
+        margin: 0;
+        color: #ffffff;
+        letter-spacing: -0.5px;
+        line-height: 1.1;
+      }
+    }
+
+    .experience-card-wrapper {
+      background: rgba(22, 27, 34, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 16px 20px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+
+      .company-group {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        position: relative;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+
+        &:last-child {
+          padding-bottom: 0;
+          margin-bottom: 0;
+
+          .company-divider {
+            display: none;
+          }
+        }
+
+        .company-divider {
+          position: absolute;
+          bottom: 0;
+          left: 56px;
+          right: 0;
+          height: 1px;
+          background: rgba(255, 255, 255, 0.06);
+        }
+
+        .company-logo-col {
+          flex-shrink: 0;
+
+          .logo-box {
+            width: 48px;
+            height: 48px;
+            border-radius: 6px;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 0;
+            box-sizing: border-box;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+            img.logo-img-full {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              display: block;
+            }
+          }
+        }
+
+        .company-details-col {
+          flex-grow: 1;
+
+          .company-header {
+            margin-bottom: 6px;
+
+            .company-name {
+              font-size: 1.01rem;
+              font-weight: 700;
+              color: #ffffff;
+              margin: 0 0 1px 0;
+              line-height: 1.2;
+            }
+
+            .company-meta {
+              font-size: 0.82rem;
+              color: #94a3b8;
+              font-weight: 500;
+              margin-bottom: 1px;
+            }
+
+            .company-location {
+              font-size: 0.79rem;
+              color: #64748b;
+              font-weight: 400;
+            }
+
+            .bullet-sep {
+              margin: 0 4px;
+              color: #64748b;
+            }
+          }
+
+          .positions-timeline {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+
+            &.has-multiple-roles {
+              padding-left: 14px;
+
+              &::before {
+                content: "";
+                position: absolute;
+                left: 3px;
+                top: 7px;
+                bottom: 7px;
+                width: 2px;
+                background: rgba(255, 255, 255, 0.12);
+              }
+
+              .position-item {
+                position: relative;
+
+                .timeline-node {
+                  position: absolute;
+                  left: -14px;
+                  top: 5px;
+                  width: 6px;
+                  height: 6px;
+                  border-radius: 50%;
+                  background: #94a3b8;
+                  border: 2px solid #161b22;
+                }
+              }
+            }
+
+            .position-item {
+              .position-details {
+                .position-title {
+                  font-size: 0.9rem;
+                  font-weight: 600;
+                  color: #f1f5f9;
+                  margin: 0 0 1px 0;
+                  line-height: 1.25;
+                }
+
+                .position-period {
+                  font-size: 0.79rem;
+                  color: #94a3b8;
+                  font-weight: 400;
+
+                  .bullet-sep {
+                    margin: 0 4px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Light Mode Overrides */
+.light-mode #history {
+  .linkedin-experience-container {
+    .section-header h2 {
+      color: #0f172a;
+    }
+
+    .experience-card-wrapper {
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+
+      .company-group {
+        .company-divider {
+          background: rgba(0, 0, 0, 0.06);
+        }
+
+        .company-logo-col .logo-box {
+          border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .company-details-col {
+          .company-header {
+            .company-name {
+              color: #0f172a;
+            }
+            .company-meta {
+              color: #475569;
+            }
+            .company-location {
+              color: #64748b;
+            }
+          }
+
+          .positions-timeline {
+            &.has-multiple-roles::before {
+              background: rgba(0, 0, 0, 0.12);
+            }
+
+            .position-item {
+              .timeline-node {
+                background: #64748b;
+                border-color: #ffffff;
+              }
+
+              .position-details {
+                .position-title {
+                  color: #0f172a;
+                }
+                .position-period {
+                  color: #475569;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+  #history {
+    padding: 16px 10px 24px;
+    min-height: auto;
+
+    .linkedin-experience-container .experience-card-wrapper {
+      padding: 12px 12px;
+
+      .company-group {
+        gap: 10px;
+
+        .company-divider {
+          left: 44px;
+        }
+
+        .company-logo-col .logo-box {
+          width: 36px;
+          height: 36px;
+        }
+      }
+    }
+  }
+}

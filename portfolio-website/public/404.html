@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Redirecting...</title>
+  <script>
+    // GitHub Pages SPA & Case Normalization Router
+    (function () {
+      var path = window.location.pathname;
+      var lower = path.toLowerCase();
+      
+      // If user/crawler requested /portfolio/ with lowercase or any variation, redirect to active route
+      if (lower.indexOf('/portfolio') === 0) {
+        var rest = path.slice(10); // strip '/portfolio'
+        // Preserve query parameters and hash
+        var target = '/Portfolio' + rest + window.location.search + window.location.hash;
+        if (target !== path) {
+          window.location.replace(target);
+          return;
+        }
+      }
+
+      // Default fallback redirect to homepage
+      window.location.replace('/Portfolio/');
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting to <a href="/Portfolio/">Portfolio</a>...</p>
+</body>
+</html>
