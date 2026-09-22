@@ -36,11 +36,11 @@ function Project() {
                         />
                     </div>
                     <div className="card-content">
-                        <h3>Cost Optimization</h3>
+                        <h3>Enterprise Cost Discipline</h3>
                         <ul className="achievement-list">
-                            <li>Led strategic cost-control initiatives across multiple cost centers to identify operational leakages.</li>
-                            <li>Delivered <strong>₹50 lakhs</strong> in annual savings through targeted cost optimization initiatives.</li>
-                            <li>Strengthened cost efficiency and operational performance through data-driven analysis and corrective actions.</li>
+                            <li>Led company-wide cost-control and zero-based reviews across operating cost centers to eradicate leakages.</li>
+                            <li>Delivered <strong>₹50+ Lakhs</strong> in recurring annual savings through targeted operational interventions.</li>
+                            <li>Enhanced operating cash flows and margin discipline via continuous driver-based variance reviews.</li>
                         </ul>
                     </div>
                 </div>
@@ -61,11 +61,11 @@ function Project() {
                         />
                     </div>
                     <div className="card-content">
-                        <h3>Financial Turnaround & Profitability</h3>
+                        <h3>Commercial Turnaround & Profitability</h3>
                         <ul className="achievement-list">
-                            <li>Led turnaround of <strong>~75% profit centers</strong> to profitability via margin improvement and cost optimization.</li>
-                            <li>Improved operational productivity by <strong>20%</strong> through corrective actions.</li>
-                            <li>Doubled ROI from <strong>1x to 2x</strong> via targeted sales interventions.</li>
+                            <li>Turned around <strong>~75% of unprofitable profit centers</strong> into profitable units through pricing and unit cost restructuring.</li>
+                            <li>Improved operational productivity by <strong>20%</strong> through automated controls.</li>
+                            <li>Lifted commercial sales ROI from <strong>1x to 2x</strong> via high-margin business interventions.</li>
                         </ul>
                     </div>
                 </div>
@@ -86,10 +86,10 @@ function Project() {
                         />
                     </div>
                     <div className="card-content">
-                        <h3>Financial Modeling & MIS Dashboards</h3>
+                        <h3>Strategic Modeling & Board MIS</h3>
                         <ul className="achievement-list">
-                            <li><strong>Dynamic Dashboards:</strong> Built comprehensive MIS trackers (Budget vs. Actual, Sales Rankings, KPIs Report, ROP Tracker, and Volume Analysis).</li>
-                            <li><strong>Business Insights:</strong> Delivered actionable financial models to enable real-time, data-driven decision-making for senior leadership.</li>
+                            <li><strong>Dynamic Executive Dashboards:</strong> Built comprehensive MIS suites (Budget vs. Actual, Sales Rankings, KPI Scorecards, and Volume Analysis).</li>
+                            <li><strong>Executive Decision Support:</strong> Delivered multi-year valuation and scenario models to steer Board and C-suite growth strategy.</li>
                         </ul>
                     </div>
                 </div>
@@ -110,11 +110,11 @@ function Project() {
                         />
                     </div>
                     <div className="card-content">
-                        <h3>Capital Transactions & Audit Management</h3>
+                        <h3>Capital Transactions & Governance</h3>
                         <ul className="achievement-list">
-                            <li><strong>₹80 Cr ESOP Buyback:</strong> Managed complete financial execution and capital structuring for share buyback at Cars24.</li>
-                            <li><strong>Audit Management:</strong> Spearheaded Statutory, Internal, Tax, and ICFR audits with Big-4 and leading global firms (EY and Grant Thornton).</li>
-                            <li><strong>Process Excellence:</strong> Remediated high-risk audit points, securing Cars24's first clean Internal Audit & ICFR reports.</li>
+                            <li><strong>₹80 Cr ESOP Buyback:</strong> Executed end-to-end capital structuring, valuation, and disbursement at CARS24.</li>
+                            <li><strong>Big-4 Audit Management:</strong> Led Statutory, Internal, Tax, and ICFR audits with leading global firms (EY and Grant Thornton).</li>
+                            <li><strong>Clean Opinions:</strong> Remediated high-risk audit items, securing 100% clean ICFR and internal audit reports.</li>
                         </ul>
                     </div>
                 </div>
@@ -135,11 +135,11 @@ function Project() {
                         />
                     </div>
                     <div className="card-content">
-                        <h3>International Expansion & Partnering</h3>
+                        <h3>Global Expansion & Partnering</h3>
                         <ul className="achievement-list">
-                            <li><strong>Entity & Process Setup:</strong> Managed global banking setups, international corporate structuring, local compliance, and end-to-end finance workflows for overseas entities.</li>
-                            <li><strong>Business Partnering:</strong> Partnered directly with business heads to drive cross-functional efficiency and growth.</li>
-                        <li><strong>MRL Financial Setup:</strong> Established end-to-end accounting for CARS24’s Mega Refurbishment Labs (MRL), governing spare parts procurement, refurbishment costing, and service revenue recognition.</li>
+                            <li><strong>Overseas Entity Architecture:</strong> Established cross-border banking, international transfer pricing, and finance workflows for overseas entities.</li>
+                            <li><strong>Executive Partnering:</strong> Collaborated with business heads to evaluate new business lines and optimize unit margins.</li>
+                            <li><strong>MRL Infrastructure:</strong> Set up end-to-end accounting governance for Mega Refurbishment Labs, managing supply chain and refurbishment costing.</li>
                         </ul>
                     </div>
                 </div>
@@ -160,12 +160,12 @@ function Project() {
                         />
                     </div>
                     <div className="card-content">
-                        <h3>Awards & Recognition</h3>
+                        <h3>Executive Recognition & Honors</h3>
                         <ul className="achievement-list">
-                            <li><strong>Employee of the Year 2021</strong> at Cars24.</li>
-                            <li><strong>Detail-Oriented Awardee 2022</strong> at Cars24.</li>
-                            <li><strong>GEM Award</strong> at Cargo Partner in 2024 & 2025.</li>
-                            <li><strong>Outstanding/Excellent ratings</strong> in appraisal cycles of 2021, 2022, 2023, 2025, and 2026.</li>
+                            <li><strong>Employee of the Year 2021</strong> at CARS24.</li>
+                            <li><strong>Detail-Oriented Awardee 2022</strong> at CARS24.</li>
+                            <li><strong>GEM Award</strong> at cargo-partner in 2024 & 2025.</li>
+                            <li><strong>Top appraisal ratings (5/5)</strong> across multiple leadership cycles (2021, 2022, 2023, 2025, and 2026).</li>
                         </ul>
                     </div>
                 </div>

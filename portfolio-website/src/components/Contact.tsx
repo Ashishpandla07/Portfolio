@@ -129,10 +129,10 @@ function Contact() {
               <div className="availability-card">
                 <div className="status-pill">
                   <span className="dot-live"></span>
-                  <span className="status-text">Available for Leadership Roles</span>
+                  <span className="status-text">Available for Executive Finance Leadership</span>
                 </div>
                 <p className="status-desc">
-                  Exploring Senior Finance Roles: <strong>FP&A Lead</strong>, <strong>Financial Controller</strong>, or <strong>Head of Finance</strong>.
+                  Actively exploring executive roles: <strong>Head of Finance</strong>, <strong>Director of Finance</strong>, or <strong>Financial Controller</strong>.
                 </p>
                 <div className="response-time">
                   <span className="response-icon">⚡</span>
@@ -376,7 +376,7 @@ function Contact() {
               </div>
               <div className="contact-item">
                 <span className="contact-label">Availability:</span>
-                <span className="contact-val">Senior Finance Leader / Controller Roles</span>
+                <span className="contact-val">Head of Finance / Director of Finance / Financial Controller</span>
               </div>
             </div>
           </div>

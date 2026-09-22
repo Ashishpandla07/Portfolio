@@ -7,9 +7,10 @@ import '../assets/styles/Expertise.scss';
 const labelsFirst = [
     "Financial Planning & Analysis",
     "Budgeting & Forecasting",
+    "Long-Term Financial Modeling",
     "Variance Analysis",
-    "Fundraising",
-    "Working Capital",
+    "Capital Allocation",
+    "Unit Economics & ROI",
     "KPI Dashboards",
     "Business Partnering",
     "Investor Relations"
@@ -17,11 +18,11 @@ const labelsFirst = [
 
 const labelsSecond = [
     "Ind-AS / IFRS",
-    "ICFR Framework",
     "Financial Reporting",
-    "Consolidation",
-    "Cross Charge",
+    "Working Capital & Treasury",
+    "ICFR Framework",
     "Statutory & Tax Audit",
+    "Consolidation",
     "ESOP Buyback",
     "Internal Audit",
     "GST Compliance",
@@ -31,12 +32,13 @@ const labelsSecond = [
 const labelsThird = [
     "SAP S/4HANA",
     "SAP B1",
-    "CargoWise Certified",
     "Power BI",
     "Tableau",
+    "CargoWise Certified",
     "Advanced Excel",
     "Salesforce",
     "Tally Prime",
+    "Process Automation",
     "Artificial Intelligence"
 ];
 
@@ -50,8 +52,8 @@ function Expertise() {
                         <div className="skill-icon-wrapper">
                             <FontAwesomeIcon icon={faChartLine} size="2x" />
                         </div>
-                        <h3>Strategic Finance & FP&A</h3>
-                        <p>Driving annual budgeting, driver-based financial models, monthly variance analysis, working capital optimization, and investor relations.</p>
+                        <h3>Strategic FP&A & Modeling</h3>
+                        <p>Directing annual budgeting (AOP), rolling 12–24 month forecasts, capital allocation, unit economics, cohort profitability, and executive board reporting.</p>
                         <div className="flex-chips">
                             <span className="chip-title">Key skills:</span>
                             <div className="chips-list">
@@ -69,8 +71,8 @@ function Expertise() {
                         <div className="skill-icon-wrapper">
                             <FontAwesomeIcon icon={faShieldHalved} size="2x" />
                         </div>
-                        <h3>Financial Controlling & Governance</h3>
-                        <p>Expert in Ind-AS & IFRS reporting, multi-entity consolidation, audits, ICFR, cross-charge, transfer pricing, and seamless GST compliance.</p>
+                        <h3>Controllership, Treasury & Governance</h3>
+                        <p>Leading Ind-AS/IFRS financial reporting, multi-entity consolidation, working capital liquidity, ICFR risk matrices, and Big-4 statutory & tax audits.</p>
                         <div className="flex-chips">
                             <span className="chip-title">Key skills:</span>
                             <div className="chips-list">
@@ -88,8 +90,8 @@ function Expertise() {
                         <div className="skill-icon-wrapper">
                             <FontAwesomeIcon icon={faDatabase} size="2x" />
                         </div>
-                        <h3>Systems & Process Automation</h3>
-                        <p>Building dynamic management reporting dashboards, automating financial processes, and integrating ERPs with analytics tools.</p>
+                        <h3>ERP Architecture & Automation</h3>
+                        <p>Architecting executive BI dashboards, ERP migrations (SAP S/4HANA), automated banking reconciliations, and close cycle acceleration.</p>
                         <div className="flex-chips">
                             <span className="chip-title">Tech stack:</span>
                             <div className="chips-list">
