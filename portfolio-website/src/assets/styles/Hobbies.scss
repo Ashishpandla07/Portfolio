@@ -1,38 +1,36 @@
 .hobbies-container {
-  min-height: 100vh;
-  min-height: 100dvh;
-  padding: clamp(18px, 3vh, 36px) clamp(16px, 3.5vw, 4%);
+  width: 100%;
+  max-width: min(1360px, 94%);
+  padding: clamp(44px, 5.5vh, 76px) clamp(16px, 3vw, 3%);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: left;
   box-sizing: border-box;
-  width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
 
   /* Executive Section Header - Left-aligned to match all other sections */
   .section-header {
     text-align: left;
-    margin-bottom: 14px;
+    margin-bottom: 20px;
 
     .hobbies-eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 4px 12px;
+      padding: 5px 14px;
       border-radius: 20px;
       background: rgba(99, 102, 241, 0.1);
       border: 1px solid rgba(99, 102, 241, 0.25);
       color: #a5b4fc;
-      font-size: 0.76rem;
+      font-size: 0.8rem;
       font-weight: 700;
       letter-spacing: 1.2px;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
 
       .pulse-dot {
-        width: 6px;
-        height: 6px;
+        width: 7px;
+        height: 7px;
         border-radius: 50%;
         background-color: #38bdf8;
         box-shadow: 0 0 6px rgba(56, 189, 248, 0.8);
@@ -40,9 +38,9 @@
     }
 
     .hobbies-title {
-      font-size: clamp(1.3rem, 1.8vw, 1.52rem);
+      font-size: clamp(1.6rem, 1.4rem + 0.8vw, 2.1rem);
       font-weight: 800;
-      margin: 0 0 4px 0;
+      margin: 0 0 6px 0;
       letter-spacing: -0.5px;
       line-height: 1.15;
       color: #ffffff;

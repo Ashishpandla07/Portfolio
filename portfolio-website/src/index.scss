@@ -18,17 +18,17 @@
 
 [data-theme="light"],
 .light-mode {
-  --bg-primary: #f8f9fa;
+  --bg-primary: #f8fafc;
   --bg-secondary: #ffffff;
   --bg-surface: #ffffff;
   --bg-surface-hover: #f1f5f9;
   --text-primary: #0f172a;
-  --text-secondary: #475569;
+  --text-secondary: #334155;
   --text-muted: #64748b;
   --accent-primary: #5000ca;
   --accent-secondary: #6e00ff;
   --accent-glow: rgba(80, 0, 202, 0.15);
-  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-subtle: #e2e8f0;
   --border-hover: rgba(80, 0, 202, 0.35);
 }
 
@@ -53,7 +53,7 @@ html, body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: clamp(0.92rem, 0.88rem + 0.22vw, 1.02rem);
+  font-size: clamp(0.94rem, 0.9rem + 0.25vw, 1.05rem);
   background-color: var(--bg-primary);
   color: var(--text-primary);
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -173,43 +173,37 @@ p, h1, h2, h3, h4, h5, label, button {
 
 /* Light Mode Support */
 .light-mode {
-  background-color: #f8f9fa;
-
-  p, a, h1, h2, h3, h4, h5, label, button {
-    color: #0d1116;
-  }
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
 
   a:hover {
-    color: #5000ca;
-  }
-
-  .skills-container svg {
-    color: #0d1116;
+    color: var(--accent-primary);
   }
 
   .chip {
-    background-color: rgba(0, 0, 0, 0.08);
-    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    background-color: #f1f5f9;
+    color: #0f172a;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   }
 
   .vertical-timeline::before {
-    background-color: rgba(0, 0, 0, 0.08);
+    background-color: #e2e8f0;
   }
 
   .vertical-timeline--animate .vertical-timeline-element-content.bounce-in {
-    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
   }
 
   .vertical-timeline--two-columns .vertical-timeline-element-content .vertical-timeline-element-date {
-    color: gray;
+    color: #64748b;
   }
 
   .vertical-timeline-element-content-arrow {
-    border-right: 7px solid rgba(0, 0, 0, 0.08) !important;
+    border-right: 7px solid #e2e8f0 !important;
   }
 
   .flex-chips .chip-title {
-    color: #0d1116;
+    color: #475569;
   }
 }
 

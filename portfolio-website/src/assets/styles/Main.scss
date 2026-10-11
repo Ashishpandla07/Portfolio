@@ -17,7 +17,7 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 
   .about-content {
-    max-width: 960px;
+    max-width: min(1180px, 100%);
     width: 100%;
     z-index: 2;
 
@@ -32,20 +32,20 @@
     display: inline-flex;
     align-items: center;
     gap: 7px;
-    padding: 5px 14px;
-    border-radius: 18px;
+    padding: 6px 16px;
+    border-radius: 20px;
     background: rgba(99, 102, 241, 0.12);
     border: 1px solid rgba(139, 92, 246, 0.25);
     color: #c4b5fd;
-    font-size: 0.75rem;
+    font-size: 0.82rem;
     font-weight: 600;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
 
     .tag-dot {
-      width: 6px;
-      height: 6px;
+      width: 7px;
+      height: 7px;
       border-radius: 50%;
       background-color: #10b981;
       box-shadow: 0 0 8px #10b981;
@@ -54,35 +54,35 @@
 
   /* Bold Heading (Fluid scaling across laptops and monitors) */
   .about-heading {
-    font-size: clamp(2.1rem, 3.2vw, 2.85rem);
+    font-size: clamp(2.3rem, 3.6vw, 3.3rem);
     font-weight: 800;
     letter-spacing: -0.8px;
-    margin: 0 0 20px 0;
-    line-height: 1.1;
+    margin: 0 0 22px 0;
+    line-height: 1.15;
     color: #ffffff;
     background: linear-gradient(135deg, #ffffff 40%, #cbd5e1 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
-  /* Minimalist Statement (trimmed to 90%) */
+  /* Minimalist Statement */
   .about-statement {
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    margin-bottom: 28px;
+    gap: 16px;
+    margin-bottom: 32px;
 
     .statement-line {
-      font-size: 0.99rem;
-      line-height: 1.7;
+      font-size: clamp(1rem, 0.94rem + 0.25vw, 1.12rem);
+      line-height: 1.75;
       color: #cbd5e1;
       margin: 0;
       font-weight: 400;
 
       &.lead {
-        font-size: 1.06rem;
+        font-size: clamp(1.08rem, 1rem + 0.35vw, 1.25rem);
         color: #f1f5f9;
-        line-height: 1.65;
+        line-height: 1.7;
       }
 
       strong {

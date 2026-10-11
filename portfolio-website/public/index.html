@@ -5,6 +5,22 @@
   <meta charset="utf-8" />
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    (function() {
+      try {
+        localStorage.removeItem('portfolio_theme');
+        var sessionTheme = sessionStorage.getItem('portfolio_user_theme');
+        var theme = 'light';
+        if (sessionTheme === 'light' || sessionTheme === 'dark') {
+          theme = sessionTheme;
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          theme = 'dark';
+        }
+        document.documentElement.setAttribute('data-theme', theme);
+        document.documentElement.style.colorScheme = theme;
+      } catch (e) {}
+    })();
+  </script>
   <meta name="theme-color" content="#0d1116" />
   <title>Ashish Pandla | CA & Finance Leader</title>
   <meta

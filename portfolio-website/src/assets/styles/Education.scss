@@ -1,32 +1,30 @@
 .education-container {
-  min-height: 100vh;
-  min-height: 100dvh;
-  padding: clamp(18px, 3vh, 36px) clamp(16px, 3.5vw, 4%);
+  width: 100%;
+  max-width: min(1360px, 94%);
+  padding: clamp(44px, 5.5vh, 76px) clamp(16px, 3vw, 3%);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: left;
   box-sizing: border-box;
-  width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
 
   .section-header {
-    margin-bottom: 8px;
+    margin-bottom: 20px;
 
     h1, h2 {
-      font-size: clamp(1.3rem, 1.8vw, 1.52rem);
+      font-size: clamp(1.6rem, 1.4rem + 0.8vw, 2.1rem);
       font-weight: 800;
       margin: 0;
       letter-spacing: -0.5px;
-      line-height: 1.1;
+      line-height: 1.15;
     }
   }
 
   .education-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
+    gap: clamp(16px, 1.8vw, 24px);
     align-items: stretch;
   }
 
@@ -264,7 +262,7 @@
 
       .card-header {
         .card-title-group {
-          h2 {
+          h2, h3 {
             color: #0f172a;
           }
 
@@ -295,10 +293,10 @@
 
         .degree-sub-entry {
           background: rgba(0, 0, 0, 0.02);
-          border: 1px solid rgba(0, 0, 0, 0.05);
+          border: 1px solid rgba(0, 0, 0, 0.06);
 
           .sub-entry-header {
-            h3 {
+            h3, h4 {
               color: #0f172a;
             }
 

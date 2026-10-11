@@ -1,15 +1,16 @@
 footer {
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 12px;
-
-  svg {
-    width: 1.1em !important;
-    height: 1.1em !important;
-    margin-right: 10px;
-  }
+  padding: 24px 16px clamp(28px, 4vh, 40px);
+  color: #94a3b8;
 
   p {
-    font-size: 0.8em;
+    font-size: 0.85rem;
+    margin: 0;
+    line-height: 1.5;
   }
+}
+
+.light-mode footer {
+  color: #64748b;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
