@@ -73,6 +73,7 @@ export const SkillIcon: React.FC<SkillIconProps> = ({ name, size = 16 }) => {
         </svg>
       );
 
+    case 'Antigravity':
     case 'Artificial Intelligence':
       return (
         <svg width={size} height={size} viewBox="0 0 20 20" fill="none">

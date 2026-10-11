@@ -24,17 +24,17 @@ interface CompanyExperience {
 const EXPERIENCE_DATA: CompanyExperience[] = [
   {
     id: "cargo-partner",
-    company: "cargo-partner",
+    company: "Cargo Partner Logistics (Subsidiary of Nippon Express)",
     logo: cargoPartnerLogo,
     employmentType: "Full-time",
-    totalDuration: "3 yrs 2 mos",
+    totalDuration: "Aug 2023 – Present",
     location: "Gurugram, Haryana, India",
     workMode: "Hybrid",
     positions: [
       {
-        title: "Senior Manager Controlling",
+        title: "Senior Manager (India Lead) - Controlling/Business Finance",
         period: "Apr 2026 – Present",
-        duration: "6 mos"
+        duration: "Current"
       },
       {
         title: "Manager Controlling",
@@ -45,14 +45,14 @@ const EXPERIENCE_DATA: CompanyExperience[] = [
   },
   {
     id: "cars24",
-    company: "CARS24",
+    company: "Cars24 Services Pvt. Ltd.",
     logo: cars24Logo,
     employmentType: "Full-time",
-    totalDuration: "3 yrs 9 mos",
+    totalDuration: "3 yrs 9 mos (Dec 2019 – Aug 2023)",
     location: "Gurugram, Haryana, India",
     positions: [
       {
-        title: "Senior Manager",
+        title: "Senior Manager / Finance Controller",
         period: "Apr 2023 – Aug 2023",
         duration: "5 mos"
       },

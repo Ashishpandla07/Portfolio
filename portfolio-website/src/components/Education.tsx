@@ -44,7 +44,7 @@ function Education() {
             <div className="highlights-heading">Key Highlights & Honors</div>
             <ul className="highlights-list">
               <li>
-                <strong>Exemptions:</strong> Secured exemptions in Strategic Financial Management (SFM), Advanced Management Accounting (AMA), and ISCA.
+                <strong>Score & Exemptions:</strong> 55% aggregate; earned merit exemptions in AMA, ISCA, and SFM (Strategic Financial Management).
               </li>
               <li>
                 <strong>Articleship Experience:</strong> 3 years of hands-on exposure managing client engagements, statutory audits, and regulatory filings.
@@ -96,7 +96,7 @@ function Education() {
             <div className="degree-sub-entry">
               <div className="sub-entry-header">
                 <h4>Master of Commerce (M.Com)</h4>
-                <span className="sub-year">2016</span>
+                <span className="sub-year">2016 • 50%</span>
               </div>
               <p className="sub-institution">University of Rajasthan</p>
               <p className="sub-description">
@@ -108,7 +108,7 @@ function Education() {
             <div className="degree-sub-entry">
               <div className="sub-entry-header">
                 <h4>Bachelor of Commerce (B.Com)</h4>
-                <span className="sub-year">2014</span>
+                <span className="sub-year">2014 • 61%</span>
               </div>
               <p className="sub-institution">University of Rajasthan</p>
               <p className="sub-description">

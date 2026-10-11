@@ -10,32 +10,33 @@ Ashish Pandla is a qualified Chartered Accountant (ICAI, 2018) with a strong tra
 
 - **Financial Planning & Analysis (FP&A):** Annual operating plans, rolling forecasts, unit economics, cohort analysis, variance tracking, and executive MIS dashboards.
 - **Financial Controlling & Governance:** Ind-AS/IFRS compliance, statutory audits with Big-4 firms (EY, Grant Thornton), ICFR/IFC implementation, and tax governance.
-- **Systems & Process Automation:** ERP migration and architecture, Chart of Accounts overhaul, automated reconciliation pipelines, Oracle, SAP, Power BI, and Advanced Excel.
+- **Systems & Process Automation:** ERP migration and architecture, Chart of Accounts overhaul, automated reconciliation pipelines, SAP S/4HANA, SAP B1, Cargowise Certified, Power BI, Tableau, Advanced Excel, Salesforce, Tally Prime, and Antigravity.
 - **Strategic Business Partnering:** Commercial pricing models, Capex/Opex evaluation, working capital management, and M&A integration.
 
 ## Key Career Highlights
 
 - **Cost Optimization:** Delivered ₹50 lakhs in annual recurring savings across operational cost centers.
 - **Profitability Turnaround:** Guided turnaround of ~75% profit centers to positive margins, improving productivity by 20% and doubling ROI from 1x to 2x.
-- **Capital Transactions:** Executed capital structuring and financial operations for an ₹80 Crore ESOP share buyback at CARS24.
-- **Audit Leadership:** Spearheaded statutory, internal, tax, and ICFR audits with zero adverse qualifications.
+- **Capital Transactions:** Executed capital structuring and financial operations for a $10 Million (₹80 Crore) ESOP share buyback at CARS24.
+- **Audit Leadership:** Spearheaded statutory, internal, tax, and ICFR audits with zero adverse qualifications (100% clean internal audit report).
 - **Global Expansion:** Structured international entities, overseas corporate banking setups, and end-to-end accounting for CARS24 Mega Refurbishment Labs (MRL).
-- **Awards:** Employee of the Year 2021 & Detail-Oriented Awardee 2022 (CARS24); GEM Awards 2024 & 2025 (cargo-partner).
+- **Awards:** GEM Awards 2024, 2025 & 2026 and Top Support Function Award in Process Excellence 2024, 2025 (cargo-partner); Employee of the Year 2021 & Detail-Oriented Awardee 2022 (CARS24); Ranked in top appraisal tier (2021–2026).
 
 ## Professional Experience
 
-- **CARS24** (2021 – Present): Lead / Senior Manager — Financial Planning & Controlling
-- **cargo-partner** (2018 – 2021): Assistant Manager — Finance & Accounts
+- **Cargo Partner Logistics India Pvt. Ltd. (Subsidiary of Nippon Express)** (08/2023 – Present): Senior Manager (India Lead) — Controlling/Business Finance
+- **Cars24 Services Pvt. Ltd.** (12/2019 – 08/2023): Senior Manager / Finance Controller
+- **N K Jain & Co.** (01/2019 – 12/2019): Audit Executive
 
 ## Education & Credentials
 
-- **Chartered Accountant (CA):** The Institute of Chartered Accountants of India (ICAI), 2018 (Merit exemptions in SFM, AMA, and ISCA).
-- **Master of Commerce (M.Com):** University of Rajasthan, 2016 (Financial Management & Strategic Cost Accounting).
-- **Bachelor of Commerce (B.Com):** University of Rajasthan, 2014.
+- **Chartered Accountant (CA):** The Institute of Chartered Accountants of India (ICAI), 2018 (55%, Merit exemptions in SFM, AMA, and ISCA).
+- **Master of Commerce (M.Com):** University of Rajasthan, 2016 (50%, Financial Management & Strategic Cost Accounting).
+- **Bachelor of Commerce (B.Com):** University of Rajasthan, 2014 (61%).
 
 ## Physical Address & Primary Office
 
-- **Registered Location:** DLF Cyber City, Sector 24 / 25A, Gurugram, Haryana 122002, India
+- **Registered Location:** DLF Cyber City, Sector 24 / 25A, Gurugram, Haryana 122001, India
 
 ## Editorial Policy & Disclaimers (YMYL)
 
@@ -46,6 +47,6 @@ Ashish Pandla is a qualified Chartered Accountant (ICAI, 2018) with a strong tra
 
 - [Website](https://ashishpandla07.github.io/Portfolio/): Official executive portfolio
 - [LinkedIn](https://linkedin.com/in/ipandla): Professional profile
-- [Resume PDF](https://ashishpandla07.github.io/Portfolio/resume.pdf): Official curriculum vitae
+- [Resume PDF](https://ashishpandla07.github.io/Portfolio/Resume-Ashish.pdf): Official curriculum vitae
 - [Full LLM Context](https://ashishpandla07.github.io/Portfolio/llms-full.txt): Complete detailed text version
 - [Editorial Policy](https://ashishpandla07.github.io/Portfolio/editorial-policy.html): Editorial standards & disclaimers

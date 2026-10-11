@@ -13,7 +13,7 @@ Ashish Pandla is a Senior Finance Leader and Chartered Accountant (CA) based in 
 - Phone: +91 80589 14286
 - LinkedIn: https://linkedin.com/in/ipandla
 - Portfolio URL: https://ashishpandla07.github.io/Portfolio/
-- Resume URL: https://ashishpandla07.github.io/Portfolio/resume.pdf
+- Resume URL: https://ashishpandla07.github.io/Portfolio/Resume-Ashish.pdf
 
 ## Areas of Core Competence
 
@@ -34,7 +34,7 @@ Ashish Pandla is a Senior Finance Leader and Chartered Accountant (CA) based in 
 
 ### 3. Systems, Architecture & Process Automation
 - ERP Migration, Chart of Accounts (COA) Design, and Financial Systems Engineering
-- Software Proficiency: Oracle ERP, SAP, Tally Prime, Zoho Books
+- Software Proficiency: SAP S/4HANA, SAP B1, Cargowise Certified, Tableau, Power BI, Advanced Excel, Salesforce, Tally Prime, Antigravity
 - Data Analytics & BI Tools: Power BI, Advanced Excel (Macros, Power Query, Financial Models)
 - Automated Order-to-Cash (O2C) and Procure-to-Pay (P2P) Workflows
 
@@ -47,38 +47,39 @@ Ashish Pandla is a Senior Finance Leader and Chartered Accountant (CA) based in 
 ## Key Career Projects & Achievements
 
 ### ₹50 Lakhs Annual Cost Optimization
-Led enterprise-wide cost-control initiatives across CARS24 operational hubs and cost centers. Analyzed operational leakages and implemented targeted vendor re-negotiations and process efficiencies that yielded recurring ₹50 lakhs in annual bottom-line savings.
+Led enterprise-wide cost-control initiatives across operational hubs and cost centers. Analyzed operational leakages and implemented targeted vendor re-negotiations and process efficiencies that yielded recurring ₹50 lakhs in annual bottom-line savings.
 
 ### Profitability Turnaround of ~75% Profit Centers
 Led commercial and operational finance turnaround of operational units. Designed diagnostic unit-level profitability models that restored ~75% of previously loss-making centers to profitability, elevated productivity by 20%, and doubled ROI from 1x to 2x.
 
-### ₹80 Crore ESOP Share Buyback
-Orchestrated end-to-end financial operations, regulatory clearances, capital allocation, and valuation reconciliation for an ₹80 Crore employee stock ownership plan (ESOP) buyback at CARS24.
+### $10 Million (₹80 Crore) ESOP Share Buyback
+Orchestrated end-to-end financial operations, regulatory clearances, capital allocation, and valuation reconciliation for a $10 Million (₹80 Crore) employee stock ownership plan (ESOP) buyback at CARS24 in compliance with Ind-AS 102/32 and Companies Act.
 
 ### Big-4 Audit Clean Opinion & ICFR Excellence
-Spearheaded statutory, internal, tax, and ICFR audits with Ernst & Young (EY) and Grant Thornton. Closed all complex legacy audit points and secured the company’s first clean Internal Audit & ICFR reports with zero major qualifications.
+Spearheaded statutory, internal, tax, and ICFR audits with Ernst & Young (EY) and Grant Thornton. Closed all complex legacy audit points and secured the company’s first clean Internal Audit & ICFR reports with zero major qualifications (100% clean internal audit report).
 
 ### International Entity Structuring & Refurbishment Facilities (MRL)
-Established international banking relationships, corporate structuring, and tax compliance frameworks for overseas corporate entities. Structured end-to-end accounting mechanisms for CARS24 Mega Refurbishment Labs (MRL), encompassing spare parts inventory controls, refurbishment labor costing, and warranty service revenue recognition.
+Established international banking relationships, corporate structuring, and tax compliance frameworks for overseas corporate entities. Structured end-to-end accounting mechanisms for CARS24 Mega Refurbishment Labs (MRL), encompassing spare parts inventory controls, Ind-AS 2 cost vs. NRV valuations, refurbishment labor costing, and warranty service revenue recognition.
 
 ## Awards and Professional Recognition
-- Employee of the Year (2021) — CARS24
-- Detail-Oriented Awardee (2022) — CARS24
-- GEM Award (2024 & 2025) — cargo-partner
-- Consecutive Outstanding & Excellent Performance Ratings (2021, 2022, 2023, 2025, 2026)
+- GEM Award recipient (2024, 2025, 2026) — Cargo-Partner
+- Top Support Function Award in Process Excellence (2024, 2025) — Cargo-Partner
+- Employee of the Year (2021) — Cars24
+- Detail-Oriented Excellence Award (2022) — Cars24
+- Consecutive Outstanding & Excellent Performance Ratings (2021–2026)
 
 ## Employment History
-1. CARS24 (2021 – Present)
-   - Lead / Senior Manager — Financial Planning & Controlling
-   - Promoted consecutively across 3 leadership assignments managing corporate FP&A, business finance, and entity controllership.
-2. cargo-partner (2018 – 2021)
-   - Assistant Manager — Finance & Accounts
-   - Managed accounting, audits, taxation, Ind-AS financial reporting, and treasury operations for multinational logistics operations.
+1. Cargo Partner Logistics India Pvt. Ltd. (Subsidiary of Nippon Express) (08/2023 – Present)
+   - Senior Manager (India Lead) — Controlling/Business Finance
+   - Managed annual operating plans, 3-statement financial models, Capex/Opex allocation frameworks, revenue assurance audits, and board reporting.
+2. Cars24 Services Pvt. Ltd. (12/2019 – 08/2023)
+   - Senior Manager / Finance Controller
+   - Month-end close acceleration (11th to 7th day), $10M ESOP buyback, Big-4 audit leadership, international entity rollout, and 10-member team management.
+3. N K Jain & Co. (01/2019 – 12/2019)
+   - Audit Executive
+   - End-to-end internal audits, physical verifications, and regulatory GST filings.
 
 ## Education & Professional Credentials
-- Chartered Accountant (CA) — The Institute of Chartered Accountants of India (ICAI), 2018
-  - Exemptions achieved in Strategic Financial Management (SFM), Advanced Management Accounting (AMA), and Information Systems Control & Audit (ISCA).
-- Master of Commerce (M.Com) — University of Rajasthan, 2016
-  - Focus: Advanced Financial Management and Quantitative Cost Accounting.
-- Bachelor of Commerce (B.Com) — University of Rajasthan, 2014
-  - Focus: Mercantile Law, Corporate Auditing, and Financial Accounting.
+- Chartered Accountant (CA) — The Institute of Chartered Accountants of India (ICAI), 2018 (55%, Exemptions in AMA, ISCA, SFM)
+- Master of Commerce (M.Com) — University of Rajasthan, 2016 (50%)
+- Bachelor of Commerce (B.Com) — University of Rajasthan, 2014 (61%)

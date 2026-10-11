@@ -7,22 +7,22 @@ import '../assets/styles/Expertise.scss';
 const labelsFirst = [
     "Financial Planning & Analysis",
     "Budgeting & Forecasting",
-    "Long-Term Financial Modeling",
     "Variance Analysis",
-    "Capital Allocation",
-    "Unit Economics & ROI",
+    "Fundraising",
+    "Working Capital",
     "KPI Dashboards",
     "Business Partnering",
-    "Investor Relations"
+    "Capital Allocation",
+    "Unit Economics & ROI"
 ];
 
 const labelsSecond = [
     "Ind-AS / IFRS",
-    "Financial Reporting",
-    "Working Capital & Treasury",
     "ICFR Framework",
-    "Statutory & Tax Audit",
+    "Financial Reporting",
     "Consolidation",
+    "Cross Charge",
+    "Statutory & Tax Audit",
     "ESOP Buyback",
     "Internal Audit",
     "GST Compliance",
@@ -39,7 +39,7 @@ const labelsThird = [
     "Salesforce",
     "Tally Prime",
     "Process Automation",
-    "Artificial Intelligence"
+    "Antigravity"
 ];
 
 function Expertise() {

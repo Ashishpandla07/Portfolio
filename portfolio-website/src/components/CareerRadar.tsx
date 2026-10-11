@@ -43,8 +43,8 @@ const ROLES_DATA: PortfolioRole[] = [
   {
     id: "cargo-sm",
     company: "cargo-partner",
-    companyName: "cargo-partner",
-    title: "Senior Manager Controlling",
+    companyName: "Cargo Partner (Nippon Express)",
+    title: "Senior Manager (India Lead) - Controlling",
     period: "Apr 2026 – Present",
     duration: "Current",
     level: 6,
@@ -67,12 +67,12 @@ const ROLES_DATA: PortfolioRole[] = [
   {
     id: "cargo-mgr",
     company: "cargo-partner",
-    companyName: "cargo-partner",
+    companyName: "Cargo Partner (Nippon Express)",
     title: "Manager Controlling",
     period: "Aug 2023 – Mar 2026",
     duration: "2y 8m",
     level: 5,
-    badge: "GEM Award 2024 & 2025",
+    badge: "GEM Award 2024, 2025 & 2026",
     themeColor: "#6d28d9",
     tagline: "Turned around 75% of unprofitable branches & unlocked ₹50L+ recurring annual SG&A savings.",
     highlights: [
@@ -91,16 +91,16 @@ const ROLES_DATA: PortfolioRole[] = [
   {
     id: "cars24-sm",
     company: "CARS24",
-    companyName: "CARS24",
-    title: "Senior Manager",
+    companyName: "Cars24 Services Pvt. Ltd.",
+    title: "Senior Manager / Finance Controller",
     period: "Apr 2023 – Aug 2023",
     duration: "5m",
     level: 5,
     badge: "5/5 Leadership Rating",
     themeColor: "#ff6b00",
-    tagline: "Anchored ₹80 Cr ESOP buyback transaction & established overseas finance architectures.",
+    tagline: "Anchored $10M (₹80 Cr) ESOP buyback transaction & established overseas finance architectures.",
     highlights: [
-      "Led valuation, compliance & disbursement for ₹80 Cr ESOP buyback",
+      "Led valuation, compliance & disbursement for $10M (₹80 Cr) ESOP buyback",
       "Architected finance & ERP infrastructure for Southeast Asia & Middle East entities",
       "Mentored & scaled high-performing 10-member finance controllership team"
     ],

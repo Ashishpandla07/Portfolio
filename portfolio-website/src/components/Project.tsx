@@ -38,9 +38,9 @@ function Project() {
                     <div className="card-content">
                         <h3>Capital Allocation & Cost Discipline</h3>
                         <ul className="achievement-list">
-                            <li>Led company-wide Zero-Based Budgeting (ZBB) reviews across operating cost centers to eliminate structural leakages.</li>
-                            <li>Delivered <strong>₹50+ Lakhs</strong> in recurring annual SG&A savings, sustainably expanding operating margins and ROIC.</li>
-                            <li>Institutionalized driver-based rolling variance reviews, restricting budget-to-actual deviations within <strong>±3%</strong>.</li>
+                            <li><strong>AOP & Board Reporting:</strong> Managed annual budgeting & rolling forecasts across business divisions, created integrated 3-statement models, Capex/Opex allocation frameworks, and board presentation decks.</li>
+                            <li><strong>₹50+ Lakhs Cost Optimization:</strong> Led strategic cost-control reviews across cost centers, plugged operational leakages, and achieved ~₹50 lacs in annual bottom-line savings.</li>
+                            <li><strong>Revenue Assurance:</strong> Implemented cross-functional audits across business verticals, tracked profit-center billing accuracy, and safeguarded gross margins.</li>
                         </ul>
                     </div>
                 </div>
@@ -63,9 +63,9 @@ function Project() {
                     <div className="card-content">
                         <h3>Commercial Turnaround & Unit Economics</h3>
                         <ul className="achievement-list">
-                            <li>Turned around <strong>~75% of unprofitable business units</strong> into positive EBITDA centers via pricing and cost restructuring.</li>
-                            <li>Enhanced operational workforce productivity by <strong>20%</strong> through automated internal control benchmarks.</li>
-                            <li>Lifted commercial sales ROI from <strong>1x to 2x</strong> through strategic high-margin portfolio reallocation.</li>
+                            <li><strong>P&L Turnaround:</strong> Developed contribution-margin and unit economics frameworks, turning <strong>~75% of previously losing profit centers</strong> profitable.</li>
+                            <li><strong>Productivity & ROI:</strong> Enhanced operational productivity by <strong>20%</strong> and doubled commercial sales ROI from <strong>1x to 2x</strong>.</li>
+                            <li><strong>Working Capital Management:</strong> Optimized receivables, payables, and cash flow to maintain liquidity and operational efficiency.</li>
                         </ul>
                     </div>
                 </div>
@@ -88,8 +88,8 @@ function Project() {
                     <div className="card-content">
                         <h3>Strategic Modeling & Board Intelligence</h3>
                         <ul className="achievement-list">
-                            <li><strong>Executive BI Suites:</strong> Built automated Power BI suites monitoring multi-entity P&L, cohort economics, DSO, and cash burn.</li>
-                            <li><strong>Predictive Scenario Models:</strong> Directed 12–24 month rolling forecast models to guide C-suite capital deployment and Board strategy.</li>
+                            <li><strong>Financial Modeling:</strong> Developed end-to-end financial models and live MIS dashboards (budget vs. actual, sales rankings, KPI trackers) enabling data-driven leadership decisions.</li>
+                            <li><strong>Business Partnering:</strong> Collaborated closely with business heads to co-pilot strategic growth, margin improvement, and cross-functional operational efficiency.</li>
                         </ul>
                     </div>
                 </div>
@@ -112,9 +112,8 @@ function Project() {
                     <div className="card-content">
                         <h3>Capital Transactions & Governance</h3>
                         <ul className="achievement-list">
-                            <li><strong>₹80 Cr ESOP Buyback:</strong> Steered end-to-end capital structuring, statutory valuation, and disbursement at CARS24.</li>
-                            <li><strong>Big-4 Audit Management:</strong> Led Statutory, Tax, and ICFR audit cycles with global leaders (EY and Grant Thornton).</li>
-                            <li><strong>100% Clean Opinions:</strong> Remediated high-risk audit items, consistently achieving zero material audit adjustments.</li>
+                            <li><strong>$10M (₹80 Cr) ESOP Buyback:</strong> Steered end-to-end execution across independent share valuation, board approvals, and withholding tax (TDS) calculations in compliance with Ind-AS 102/32 and Companies Act.</li>
+                            <li><strong>Audit & Due Diligence:</strong> Led Statutory, Tax, and Internal/ICFR audits with external auditors (EY, Grant Thornton), resolving critical control deficiencies to achieve a <strong>100% clean internal audit report</strong>.</li>
                         </ul>
                     </div>
                 </div>
@@ -137,9 +136,9 @@ function Project() {
                     <div className="card-content">
                         <h3>Global Expansion & Close Velocity</h3>
                         <ul className="achievement-list">
-                            <li><strong>DCO Compression:</strong> Slashed Days Close Outstanding (DCO) by <strong>36% (11th to 7th business day)</strong> via reconciliation automation.</li>
-                            <li><strong>Cross-Border Architecture:</strong> Established international banking rails, transfer pricing, and multi-currency consolidation for overseas entities.</li>
-                            <li><strong>Operations Costing:</strong> Formulated end-to-end financial controls and supply chain unit costing for Mega Refurbishment Labs (MRLs).</li>
+                            <li><strong>Month-End Closing:</strong> Streamlined book closures and compliance, compressing closing deadlines from the <strong>11th to the 7th day</strong>.</li>
+                            <li><strong>Cross-Border Structuring:</strong> Partnered with leadership to execute international market entry, capital structures, FEMA, and transfer pricing frameworks.</li>
+                            <li><strong>ERP Automation & Inventory Controls:</strong> Implemented scalable SAP S/4HANA & Power BI workflows; governed periodic physical verifications, Ind-AS 2 cost vs. NRV valuations, and refurbishment inventory controls.</li>
                         </ul>
                     </div>
                 </div>
@@ -162,9 +161,9 @@ function Project() {
                     <div className="card-content">
                         <h3>Executive Recognition & Honors</h3>
                         <ul className="achievement-list">
-                            <li><strong>Employee of the Year 2021</strong> & <strong>Detail-Oriented Awardee 2022</strong> at CARS24.</li>
-                            <li><strong>GEM Award</strong> at cargo-partner in 2024 & 2025 for driving fiscal transformation.</li>
-                            <li><strong>Top appraisal ratings (5/5)</strong> across multiple consecutive leadership cycles (2021, 2022, 2023, 2025, and 2026).</li>
+                            <li><strong>Cargo-Partner:</strong> GEM Award recipient (2024, 2025, 2026) & Top Support Function Award in Process Excellence (2024, 2025).</li>
+                            <li><strong>CARS24:</strong> Employee of the Year (2021) & Detail-Oriented Excellence Award (2022).</li>
+                            <li><strong>Performance Ratings:</strong> Ranked in the top appraisal tier (Outstanding/Excellent) across all cycles (2021–2026).</li>
                         </ul>
                     </div>
                 </div>
