@@ -1,18 +1,18 @@
 @import './assets/styles/Print.scss';
 
 :root {
-  --bg-primary: #0d1116;
-  --bg-secondary: #0e131f;
-  --bg-surface: rgba(22, 27, 34, 0.75);
-  --bg-surface-hover: rgba(30, 41, 59, 0.7);
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-surface: #ffffff;
+  --bg-surface-hover: #f1f5f9;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
   --text-muted: #64748b;
   --accent-primary: #5000ca;
-  --accent-secondary: #a855f7;
-  --accent-glow: rgba(80, 0, 202, 0.35);
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-hover: rgba(99, 102, 241, 0.35);
+  --accent-secondary: #6e00ff;
+  --accent-glow: rgba(80, 0, 202, 0.15);
+  --border-subtle: #e2e8f0;
+  --border-hover: rgba(80, 0, 202, 0.35);
   --sidebar-width: clamp(230px, 18vw, 260px);
 }
 

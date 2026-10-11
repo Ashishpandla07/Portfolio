@@ -9,19 +9,13 @@
     (function() {
       try {
         localStorage.removeItem('portfolio_theme');
-        var sessionTheme = sessionStorage.getItem('portfolio_user_theme');
-        var theme = 'light';
-        if (sessionTheme === 'light' || sessionTheme === 'dark') {
-          theme = sessionTheme;
-        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          theme = 'dark';
-        }
-        document.documentElement.setAttribute('data-theme', theme);
-        document.documentElement.style.colorScheme = theme;
+        sessionStorage.removeItem('portfolio_user_theme');
+        document.documentElement.setAttribute('data-theme', 'light');
+        document.documentElement.style.colorScheme = 'light';
       } catch (e) {}
     })();
   </script>
-  <meta name="theme-color" content="#0d1116" />
+  <meta name="theme-color" content="#ffffff" />
   <title>Ashish Pandla | CA & Finance Leader</title>
   <meta
     name="description"

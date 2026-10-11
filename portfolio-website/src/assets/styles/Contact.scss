@@ -6,10 +6,13 @@
 .contact-section {
   position: relative;
   width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   box-sizing: border-box;
-  padding: clamp(44px, 5.5vh, 76px) clamp(16px, 3.5vw, 4%);
+  padding: clamp(14px, 2.5vh, 28px) clamp(16px, 3.5vw, 4%);
 
   .items-container {
     padding: 0;
@@ -19,7 +22,7 @@
 
 .contact_wrapper {
   width: 100%;
-  max-width: min(1360px, 94%);
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -27,22 +30,22 @@
    1. Section Header & Badges
    -------------------------------------------------------------------------- */
 .contact-header {
-  margin-bottom: 20px;
+  margin-bottom: clamp(6px, 1.2vh, 12px);
   text-align: left;
 
   .contact-eyebrow {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 5px 12px;
+    padding: 3px 10px;
     border-radius: 20px;
-    background: rgba(99, 102, 241, 0.1);
-    border: 1px solid rgba(99, 102, 241, 0.25);
-    color: #a5b4fc;
-    font-size: 0.78rem;
+    background: rgba(80, 0, 202, 0.08);
+    border: 1px solid rgba(80, 0, 202, 0.2);
+    color: #5000ca;
+    font-size: 0.74rem;
     font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
+    letter-spacing: 0.8px;
+    margin-bottom: 4px;
 
     .pulse-indicator {
       width: 6px;
@@ -55,24 +58,24 @@
   }
 
   .contact-title {
-    font-size: clamp(1.6rem, 1.4rem + 0.8vw, 2.1rem);
+    font-size: clamp(1.4rem, 1.8vw, 1.65rem);
     font-weight: 800;
-    margin: 0 0 6px 0;
+    margin: 0 0 3px 0;
     letter-spacing: -0.5px;
     line-height: 1.15;
-    color: #ffffff;
+    color: #0f172a;
 
     .highlight-gradient {
-      background: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
+      background: linear-gradient(135deg, #4f46e5 0%, #9333ea 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
   }
 
   .contact-subtitle {
-    font-size: 0.92rem;
-    line-height: 1.4;
-    color: #94a3b8;
+    font-size: 0.85rem;
+    line-height: 1.35;
+    color: #64748b;
     max-width: 750px;
     margin: 0;
   }
@@ -117,11 +120,11 @@
 
 /* Availability Dossier Card */
 .availability-card {
-  background: linear-gradient(145deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.8) 100%);
-  border: 1px solid rgba(99, 102, 241, 0.25);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: 12px;
   padding: 10px 14px;
-  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
   position: relative;
   overflow: hidden;
 
@@ -139,13 +142,13 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    background: rgba(16, 185, 129, 0.12);
+    background: rgba(16, 185, 129, 0.1);
     border: 1px solid rgba(16, 185, 129, 0.3);
     padding: 2px 8px;
     border-radius: 10px;
-    font-size: 0.76rem;
+    font-size: 0.74rem;
     font-weight: 600;
-    color: #34d399;
+    color: #059669;
     margin-bottom: 4px;
 
     .dot-live {
@@ -157,13 +160,13 @@
   }
 
   .status-desc {
-    font-size: 0.84rem;
+    font-size: 0.82rem;
     line-height: 1.35;
-    color: #cbd5e1;
+    color: #475569;
     margin: 2px 0 6px 0;
 
     strong {
-      color: #ffffff;
+      color: #0f172a;
       font-weight: 600;
     }
   }
@@ -172,11 +175,11 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    font-size: 0.76rem;
-    color: #94a3b8;
+    font-size: 0.74rem;
+    color: #64748b;
 
     .response-icon {
-      font-size: 0.84rem;
+      font-size: 0.82rem;
     }
   }
 }
@@ -192,25 +195,26 @@
   display: flex;
   align-items: center;
   padding: 7px 12px;
-  background: rgba(15, 23, 42, 0.55);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: 10px;
   text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
   transition: all 0.25s ease;
   position: relative;
 
   &:hover {
     transform: translateY(-2px);
-    background: rgba(30, 41, 59, 0.7);
-    border-color: rgba(99, 102, 241, 0.4);
-    box-shadow: 0 10px 24px -6px rgba(0, 0, 0, 0.35);
+    background: #f8fafc;
+    border-color: rgba(80, 0, 202, 0.3);
+    box-shadow: 0 8px 18px -4px rgba(0, 0, 0, 0.08);
   }
 
   .channel-icon-box {
     width: 32px;
     height: 32px;
     border-radius: 8px;
-    background: rgba(99, 102, 241, 0.12);
+    background: rgba(80, 0, 202, 0.08);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -218,7 +222,7 @@
     flex-shrink: 0;
 
     .channel-icon {
-      color: #818cf8;
+      color: #5000ca;
       font-size: 1.1rem;
     }
   }
@@ -234,14 +238,14 @@
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      color: #94a3b8;
+      color: #64748b;
       margin-bottom: 1px;
     }
 
     .channel-value {
       font-size: 0.86rem;
       font-weight: 600;
-      color: #f1f5f9;
+      color: #0f172a;
       text-decoration: none;
       white-space: nowrap;
       overflow: hidden;
@@ -354,39 +358,27 @@
 }
 
 .form-card-wrapper {
-  background: rgba(15, 23, 42, 0.65);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: 12px;
   padding: 12px 16px 10px;
-  backdrop-filter: blur(16px);
-  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
   position: relative;
   overflow: hidden;
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: -50px;
-    right: -50px;
-    width: 140px;
-    height: 140px;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
-    pointer-events: none;
-  }
 
   .form-card-header {
     margin-bottom: 8px;
 
     h3 {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       font-weight: 700;
-      color: #ffffff;
+      color: #0f172a;
       margin: 0 0 2px 0;
     }
 
     p {
-      font-size: 0.82rem;
-      color: #94a3b8;
+      font-size: 0.80rem;
+      color: #64748b;
       margin: 0;
     }
   }
@@ -413,12 +405,12 @@
   }
 
   .MuiOutlinedInput-root {
-    background-color: rgba(15, 23, 42, 0.5);
+    background-color: #f8fafc;
     border-radius: 8px;
     transition: all 0.25s ease;
 
     .MuiOutlinedInput-notchedOutline {
-      border-color: rgba(255, 255, 255, 0.12);
+      border-color: #e2e8f0;
       transition: border-color 0.2s ease;
 
       legend {
@@ -429,16 +421,16 @@
     }
 
     &:hover .MuiOutlinedInput-notchedOutline {
-      border-color: rgba(129, 140, 248, 0.45);
+      border-color: #cbd5e1;
     }
 
     &.Mui-focused {
-      background-color: rgba(15, 23, 42, 0.75);
+      background-color: #ffffff;
 
       .MuiOutlinedInput-notchedOutline {
-        border-color: #818cf8;
+        border-color: #5000ca;
         border-width: 1.5px;
-        box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+        box-shadow: 0 0 0 3px rgba(80, 0, 202, 0.12);
       }
     }
 
@@ -448,13 +440,13 @@
   }
 
   .MuiInputBase-input {
-    color: #f8fafc !important;
+    color: #0f172a !important;
     font-size: 0.88rem;
     font-family: inherit;
     padding: 8px 12px !important;
 
     &::placeholder {
-      color: #64748b;
+      color: #94a3b8;
       opacity: 1;
     }
   }
@@ -464,11 +456,11 @@
   }
 
   .MuiInputLabel-root {
-    color: #94a3b8 !important;
+    color: #64748b !important;
     font-size: 0.84rem;
 
     &.Mui-focused {
-      color: #a5b4fc !important;
+      color: #5000ca !important;
     }
 
     &.Mui-error {
@@ -527,7 +519,7 @@
     width: 52px;
     height: 52px;
     border-radius: 50%;
-    background: rgba(16, 185, 129, 0.15);
+    background: rgba(16, 185, 129, 0.12);
     border: 1px solid rgba(16, 185, 129, 0.3);
     display: flex;
     align-items: center;
@@ -541,39 +533,39 @@
   }
 
   h4 {
-    font-size: 1.26rem;
+    font-size: 1.2rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #0f172a;
     margin: 0 0 8px 0;
   }
 
   p {
-    font-size: 0.95rem;
-    color: #cbd5e1;
+    font-size: 0.90rem;
+    color: #475569;
     line-height: 1.5;
     max-width: 420px;
     margin: 0 0 20px 0;
 
     strong {
-      color: #ffffff;
+      color: #0f172a;
     }
   }
 
   .btn-send-another {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    color: #e2e8f0;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    color: #334155;
     padding: 8px 18px;
     border-radius: 8px;
-    font-size: 0.89rem;
+    font-size: 0.85rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s ease;
 
     &:hover {
-      background: rgba(99, 102, 241, 0.2);
-      border-color: #818cf8;
-      color: #ffffff;
+      background: #e0e7ff;
+      border-color: #6366f1;
+      color: #4338ca;
     }
   }
 }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import {
     Main,
     Timeline,
@@ -14,77 +14,24 @@ import FadeIn from './components/FadeIn';
 import './index.scss';
 
 function App() {
-    const [mode, setMode] = useState<string>(() => {
+    useEffect(() => {
+        if (typeof document !== 'undefined') {
+            document.documentElement.setAttribute('data-theme', 'light');
+            document.documentElement.style.colorScheme = 'light';
+        }
         if (typeof window !== 'undefined') {
             try {
                 localStorage.removeItem('portfolio_theme');
-                const sessionTheme = sessionStorage.getItem('portfolio_user_theme');
-                if (sessionTheme === 'light' || sessionTheme === 'dark') {
-                    return sessionTheme;
-                }
-            } catch (e) {}
-
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                return 'dark';
-            }
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-                return 'light';
-            }
-        }
-        return 'light';
-    });
-
-    const handleModeChange = () => {
-        setMode((prevMode) => {
-            const newMode = prevMode === 'dark' ? 'light' : 'dark';
-            if (typeof window !== 'undefined') {
-                try {
-                    sessionStorage.setItem('portfolio_user_theme', newMode);
-                    localStorage.removeItem('portfolio_theme');
-                } catch (e) {}
-            }
-            return newMode;
-        });
-    };
-
-    // Dynamically react to OS/browser theme changes in real-time
-    useEffect(() => {
-        if (typeof window === 'undefined' || !window.matchMedia) return;
-        const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
-        
-        const handleChange = (e: MediaQueryListEvent) => {
-            try {
                 sessionStorage.removeItem('portfolio_user_theme');
-                localStorage.removeItem('portfolio_theme');
-            } catch (err) {}
-            setMode(e.matches ? 'dark' : 'light');
-        };
-
-        if (darkModeQuery.addEventListener) {
-            darkModeQuery.addEventListener('change', handleChange);
-            return () => darkModeQuery.removeEventListener('change', handleChange);
-        } else if ((darkModeQuery as any).addListener) {
-            (darkModeQuery as any).addListener(handleChange);
-            return () => (darkModeQuery as any).removeListener(handleChange);
+            } catch (e) {}
         }
-    }, []);
-
-    // Sync theme attribute to documentElement for global CSS variables
-    useEffect(() => {
-        if (typeof document !== 'undefined') {
-            document.documentElement.setAttribute('data-theme', mode);
-            document.documentElement.style.colorScheme = mode;
-        }
-    }, [mode]);
-
-    useEffect(() => {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     }, []);
 
     return (
-        <div className={`main-container ${mode === 'dark' ? 'dark-mode' : 'light-mode'}`}>
+        <div className="main-container light-mode">
             <a href="#main-content" className="skip-to-content-link">Skip to content</a>
-            <Navigation parentToChild={{ mode }} modeChange={handleModeChange} />
+            <Navigation parentToChild={{ mode: 'light' }} modeChange={() => {}} />
             <main className="content-wrapper" id="main-content" tabIndex={-1}>
                 <FadeIn transitionDuration={700}>
                     <Main />
@@ -101,4 +48,4 @@ function App() {
     );
 }
 
-export default App
+export default App;

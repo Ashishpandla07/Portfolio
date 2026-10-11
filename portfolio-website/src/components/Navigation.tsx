@@ -13,8 +13,6 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
-import LightModeIcon from '@mui/icons-material/LightMode';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import profileImg from '../assets/images/profile.webp';
@@ -191,28 +189,6 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
             <span>Resume (PDF)</span>
           </a>
         </nav>
-
-        {/* Theme Toggle Footer */}
-        <div className="sidebar-footer">
-          <button
-            className="theme-toggle-btn"
-            onClick={modeChange}
-            aria-label={mode === 'dark' ? "Switch to light mode" : "Switch to dark mode"}
-            title={mode === 'dark' ? "Switch to light mode" : "Switch to dark mode"}
-          >
-            {mode === 'dark' ? (
-              <>
-                <LightModeIcon sx={{ fontSize: '1.1rem', color: '#facc15' }} />
-                <span>Light Mode</span>
-              </>
-            ) : (
-              <>
-                <DarkModeIcon sx={{ fontSize: '1.1rem', color: '#5000ca' }} />
-                <span>Dark Mode</span>
-              </>
-            )}
-          </button>
-        </div>
       </div>
     );
   };
@@ -298,18 +274,6 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
             <PictureAsPdfIcon />
             <span>Resume</span>
           </a>
-          <IconButton
-            onClick={modeChange}
-            aria-label={mode === 'dark' ? "Switch to light mode" : "Switch to dark mode"}
-            title={mode === 'dark' ? "Switch to light mode" : "Switch to dark mode"}
-            sx={{ color: 'inherit', minWidth: '44px', minHeight: '44px' }}
-          >
-            {mode === 'dark' ? (
-              <LightModeIcon sx={{ color: '#facc15', fontSize: '1.25rem' }} />
-            ) : (
-              <DarkModeIcon sx={{ color: '#5000ca', fontSize: '1.25rem' }} />
-            )}
-          </IconButton>
         </div>
       </header>
 
@@ -327,9 +291,9 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
             width: 270,
             top: '60px !important',
             height: 'calc(100% - 60px) !important',
-            background: mode === 'dark' ? '#0e131f' : '#ffffff',
-            borderRight: mode === 'dark' ? '1px solid rgba(255, 255, 255, 0.08)' : '1px solid #e2e8f0',
-            boxShadow: '4px 0 24px rgba(0, 0, 0, 0.45)',
+            background: '#ffffff',
+            borderRight: '1px solid #e2e8f0',
+            boxShadow: '4px 0 24px rgba(0, 0, 0, 0.15)',
           },
           '& .MuiBackdrop-root': {
             top: '60px !important',
