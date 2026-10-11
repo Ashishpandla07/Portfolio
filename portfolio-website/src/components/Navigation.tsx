@@ -159,7 +159,7 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
               />
             </div>
             <div className="sidebar-name">CA Ashish Pandla</div>
-            <p className="sidebar-role">Senior Finance Leader</p>
+            <p className="sidebar-role">Executive Finance Leader</p>
           </div>
         )}
 
@@ -182,7 +182,7 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
 
           {/* Direct Resume PDF Link */}
           <a
-            href={`${process.env.PUBLIC_URL || ''}/Resume-Ashish.pdf`}
+            href={`${process.env.PUBLIC_URL || ''}/Resume-Ashish.pdf?v=20261011`}
             target="_blank"
             rel="noreferrer"
             className="nav-link-btn resume-link"
@@ -290,7 +290,7 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
 
         <div className="mobile-bar-right">
           <a
-            href={`${process.env.PUBLIC_URL || ''}/Resume-Ashish.pdf`}
+            href={`${process.env.PUBLIC_URL || ''}/Resume-Ashish.pdf?v=20261011`}
             target="_blank"
             rel="noreferrer"
             className="mobile-resume-pill"

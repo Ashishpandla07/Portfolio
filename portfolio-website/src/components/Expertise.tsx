@@ -52,8 +52,8 @@ function Expertise() {
                         <div className="skill-icon-wrapper">
                             <FontAwesomeIcon icon={faChartLine} size="2x" />
                         </div>
-                        <h3>Strategic FP&A & Modeling</h3>
-                        <p>Directing annual budgeting (AOP), rolling 12–24 month forecasts, capital allocation, unit economics, cohort profitability, and executive board reporting.</p>
+                        <h3>Strategic FP&A & Capital Allocation</h3>
+                        <p>Directing Annual Operating Plans (AOP), dynamic rolling forecasts, ROIC benchmarking, unit economics, cohort margin analysis, and Board-level financial intelligence.</p>
                         <div className="flex-chips">
                             <span className="chip-title">Key skills:</span>
                             <div className="chips-list">
@@ -72,7 +72,7 @@ function Expertise() {
                             <FontAwesomeIcon icon={faShieldHalved} size="2x" />
                         </div>
                         <h3>Controllership, Treasury & Governance</h3>
-                        <p>Leading Ind-AS/IFRS financial reporting, multi-entity consolidation, working capital liquidity, ICFR risk matrices, and Big-4 statutory & tax audits.</p>
+                        <p>Leading Ind-AS/IFRS multi-entity consolidation, working capital & cash runway optimization, ICFR risk frameworks, and 100% clean Big-4 audit closures.</p>
                         <div className="flex-chips">
                             <span className="chip-title">Key skills:</span>
                             <div className="chips-list">
@@ -90,8 +90,8 @@ function Expertise() {
                         <div className="skill-icon-wrapper">
                             <FontAwesomeIcon icon={faDatabase} size="2x" />
                         </div>
-                        <h3>ERP Architecture & Automation</h3>
-                        <p>Architecting executive BI dashboards, ERP migrations (SAP S/4HANA), automated banking reconciliations, and close cycle acceleration.</p>
+                        <h3>ERP Architecture & Close Acceleration</h3>
+                        <p>Standardizing enterprise ERP systems (SAP S/4HANA), Days Close Outstanding (DCO) compression, automated banking reconciliations, and executive BI dashboards.</p>
                         <div className="flex-chips">
                             <span className="chip-title">Tech stack:</span>
                             <div className="chips-list">

@@ -138,6 +138,23 @@ export const SkillIcon: React.FC<SkillIconProps> = ({ name, size = 16 }) => {
         </svg>
       );
 
+    case 'Capital Allocation':
+    case 'ROIC & Unit Economics':
+      return (
+        <svg width={size} height={size} viewBox="0 0 20 20" fill="none">
+          <path d="M10 2L12.5 7H18L13.5 10.5L15 16L10 12.5L5 16L6.5 10.5L2 7H7.5L10 2Z" fill="#FBBF24" />
+        </svg>
+      );
+
+    case 'Working Capital & Treasury':
+    case 'Treasury & Liquidity':
+      return (
+        <svg width={size} height={size} viewBox="0 0 20 20" fill="none">
+          <circle cx="7" cy="10" r="5" stroke="#34D399" strokeWidth="1.5" />
+          <circle cx="13" cy="10" r="5" stroke="#10B981" strokeWidth="1.5" strokeDasharray="2 2" />
+        </svg>
+      );
+
     case 'Investor Relations':
       return (
         <svg width={size} height={size} viewBox="0 0 20 20" fill="none">

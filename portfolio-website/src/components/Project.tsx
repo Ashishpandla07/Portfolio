@@ -20,7 +20,7 @@ function Project() {
                 <h2>Key Achievements</h2>
             </div>
             <div className="projects-grid">
-                {/* 1. Cost Optimization */}
+                {/* 1. Cost Optimization & Capital Allocation */}
                 <div className="project-card">
                     <div className="card-img-wrapper">
                         <img
@@ -32,15 +32,15 @@ function Project() {
                             loading="lazy"
                             decoding="async"
                             className="zoom"
-                            alt="Cost Optimization"
+                            alt="Cost Optimization and Capital Discipline"
                         />
                     </div>
                     <div className="card-content">
-                        <h3>Enterprise Cost Discipline</h3>
+                        <h3>Capital Allocation & Cost Discipline</h3>
                         <ul className="achievement-list">
-                            <li>Led company-wide cost-control and zero-based reviews across operating cost centers to eradicate leakages.</li>
-                            <li>Delivered <strong>₹50+ Lakhs</strong> in recurring annual savings through targeted operational interventions.</li>
-                            <li>Enhanced operating cash flows and margin discipline via continuous driver-based variance reviews.</li>
+                            <li>Led company-wide Zero-Based Budgeting (ZBB) reviews across operating cost centers to eliminate structural leakages.</li>
+                            <li>Delivered <strong>₹50+ Lakhs</strong> in recurring annual SG&A savings, sustainably expanding operating margins and ROIC.</li>
+                            <li>Institutionalized driver-based rolling variance reviews, restricting budget-to-actual deviations within <strong>±3%</strong>.</li>
                         </ul>
                     </div>
                 </div>
@@ -61,11 +61,11 @@ function Project() {
                         />
                     </div>
                     <div className="card-content">
-                        <h3>Commercial Turnaround & Profitability</h3>
+                        <h3>Commercial Turnaround & Unit Economics</h3>
                         <ul className="achievement-list">
-                            <li>Turned around <strong>~75% of unprofitable profit centers</strong> into profitable units through pricing and unit cost restructuring.</li>
-                            <li>Improved operational productivity by <strong>20%</strong> through automated controls.</li>
-                            <li>Lifted commercial sales ROI from <strong>1x to 2x</strong> via high-margin business interventions.</li>
+                            <li>Turned around <strong>~75% of unprofitable business units</strong> into positive EBITDA centers via pricing and cost restructuring.</li>
+                            <li>Enhanced operational workforce productivity by <strong>20%</strong> through automated internal control benchmarks.</li>
+                            <li>Lifted commercial sales ROI from <strong>1x to 2x</strong> through strategic high-margin portfolio reallocation.</li>
                         </ul>
                     </div>
                 </div>
@@ -86,10 +86,10 @@ function Project() {
                         />
                     </div>
                     <div className="card-content">
-                        <h3>Strategic Modeling & Board MIS</h3>
+                        <h3>Strategic Modeling & Board Intelligence</h3>
                         <ul className="achievement-list">
-                            <li><strong>Dynamic Executive Dashboards:</strong> Built comprehensive MIS suites (Budget vs. Actual, Sales Rankings, KPI Scorecards, and Volume Analysis).</li>
-                            <li><strong>Executive Decision Support:</strong> Delivered multi-year valuation and scenario models to steer Board and C-suite growth strategy.</li>
+                            <li><strong>Executive BI Suites:</strong> Built automated Power BI suites monitoring multi-entity P&L, cohort economics, DSO, and cash burn.</li>
+                            <li><strong>Predictive Scenario Models:</strong> Directed 12–24 month rolling forecast models to guide C-suite capital deployment and Board strategy.</li>
                         </ul>
                     </div>
                 </div>
@@ -106,20 +106,20 @@ function Project() {
                             loading="lazy"
                             decoding="async"
                             className="zoom"
-                            alt="Audit & Compliance"
+                            alt="Audit and Capital Transactions"
                         />
                     </div>
                     <div className="card-content">
                         <h3>Capital Transactions & Governance</h3>
                         <ul className="achievement-list">
-                            <li><strong>₹80 Cr ESOP Buyback:</strong> Executed end-to-end capital structuring, valuation, and disbursement at CARS24.</li>
-                            <li><strong>Big-4 Audit Management:</strong> Led Statutory, Internal, Tax, and ICFR audits with leading global firms (EY and Grant Thornton).</li>
-                            <li><strong>Clean Opinions:</strong> Remediated high-risk audit items, securing 100% clean ICFR and internal audit reports.</li>
+                            <li><strong>₹80 Cr ESOP Buyback:</strong> Steered end-to-end capital structuring, statutory valuation, and disbursement at CARS24.</li>
+                            <li><strong>Big-4 Audit Management:</strong> Led Statutory, Tax, and ICFR audit cycles with global leaders (EY and Grant Thornton).</li>
+                            <li><strong>100% Clean Opinions:</strong> Remediated high-risk audit items, consistently achieving zero material audit adjustments.</li>
                         </ul>
                     </div>
                 </div>
 
-                {/* 5. International Expansion */}
+                {/* 5. Close Acceleration & Global Expansion */}
                 <div className="project-card">
                     <div className="card-img-wrapper">
                         <img
@@ -131,15 +131,15 @@ function Project() {
                             loading="lazy"
                             decoding="async"
                             className="zoom"
-                            alt="Business Partnering"
+                            alt="Global Expansion and Fast Close"
                         />
                     </div>
                     <div className="card-content">
-                        <h3>Global Expansion & Partnering</h3>
+                        <h3>Global Expansion & Close Velocity</h3>
                         <ul className="achievement-list">
-                            <li><strong>Overseas Entity Architecture:</strong> Established cross-border banking, international transfer pricing, and finance workflows for overseas entities.</li>
-                            <li><strong>Executive Partnering:</strong> Collaborated with business heads to evaluate new business lines and optimize unit margins.</li>
-                            <li><strong>MRL Infrastructure:</strong> Set up end-to-end accounting governance for Mega Refurbishment Labs, managing supply chain and refurbishment costing.</li>
+                            <li><strong>DCO Compression:</strong> Slashed Days Close Outstanding (DCO) by <strong>36% (11th to 7th business day)</strong> via reconciliation automation.</li>
+                            <li><strong>Cross-Border Architecture:</strong> Established international banking rails, transfer pricing, and multi-currency consolidation for overseas entities.</li>
+                            <li><strong>Operations Costing:</strong> Formulated end-to-end financial controls and supply chain unit costing for Mega Refurbishment Labs (MRLs).</li>
                         </ul>
                     </div>
                 </div>
@@ -156,16 +156,15 @@ function Project() {
                             loading="lazy"
                             decoding="async"
                             className="zoom"
-                            alt="Awards and Recognition"
+                            alt="Executive Awards and Honors"
                         />
                     </div>
                     <div className="card-content">
                         <h3>Executive Recognition & Honors</h3>
                         <ul className="achievement-list">
-                            <li><strong>Employee of the Year 2021</strong> at CARS24.</li>
-                            <li><strong>Detail-Oriented Awardee 2022</strong> at CARS24.</li>
-                            <li><strong>GEM Award</strong> at cargo-partner in 2024 & 2025.</li>
-                            <li><strong>Top appraisal ratings (5/5)</strong> across multiple leadership cycles (2021, 2022, 2023, 2025, and 2026).</li>
+                            <li><strong>Employee of the Year 2021</strong> & <strong>Detail-Oriented Awardee 2022</strong> at CARS24.</li>
+                            <li><strong>GEM Award</strong> at cargo-partner in 2024 & 2025 for driving fiscal transformation.</li>
+                            <li><strong>Top appraisal ratings (5/5)</strong> across multiple consecutive leadership cycles (2021, 2022, 2023, 2025, and 2026).</li>
                         </ul>
                     </div>
                 </div>
