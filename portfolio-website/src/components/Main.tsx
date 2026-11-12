@@ -30,10 +30,10 @@ function Main() {
 
           <div className="about-statement">
             <p className="statement-line lead">
-              Chartered accountant and finance leader with 8+ years of post-qualification experience driving FP&A, financial controlling, and corporate governance across high-growth startups and MNCs (<strong>Cars24</strong>, <strong>Cargo-Partner</strong>).
+              Chartered Accountant and Senior Finance Leader with over 8 years of cross-functional experience across high-growth startup (<strong>CARS24</strong>) and global MNC freight forwarding (<strong>cargo-partner</strong>). Specializing in budgeting, rolling forecasts, unit economics, and audit governance.
             </p>
             <p className="statement-line lead">
-              Proven track record in AOP formulation, multi-entity Ind-AS/IFRS financial closures, cross-border restructuring, and automated P2P/O2C ERP rollouts. Trusted partner to executive leadership, optimizing working capital and turning around regional P&Ls.
+              Partnering with executive leadership to turn financial data into decisive business growth. Versatile finance co-pilot with proven career progression across automotive, tech, and logistics sectors—recognized for strategic leadership, executive stakeholder alignment, and data-driven business storytelling.
             </p>
           </div>
 
