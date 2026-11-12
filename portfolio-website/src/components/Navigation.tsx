@@ -180,7 +180,7 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
 
           {/* Direct Resume PDF Link */}
           <a
-            href={`${process.env.PUBLIC_URL || ''}/Resume-Ashish.pdf?v=20261011`}
+            href={`${process.env.PUBLIC_URL || ''}/Resume-Ashish.pdf?v=20261112`}
             target="_blank"
             rel="noreferrer"
             className="nav-link-btn resume-link"
@@ -266,7 +266,7 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
 
         <div className="mobile-bar-right">
           <a
-            href={`${process.env.PUBLIC_URL || ''}/Resume-Ashish.pdf?v=20261011`}
+            href={`${process.env.PUBLIC_URL || ''}/Resume-Ashish.pdf?v=20261112`}
             target="_blank"
             rel="noreferrer"
             className="mobile-resume-pill"
